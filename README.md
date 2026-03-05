@@ -1,6 +1,6 @@
 # NexusLife
 
-Projeto Django criado com estrutura completa.
+Projeto Django criado com estrutura completa e sistema de autenticação.
 
 ## Estrutura do Projeto
 
@@ -10,10 +10,17 @@ NexusLife/
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
+│   ├── forms.py            # Formulários de autenticação
 │   ├── models.py
 │   ├── tests.py
-│   ├── views.py
-│   └── migrations/
+│   ├── views.py            # Views de login/cadastro
+│   ├── migrations/
+│   └── templates/
+│       └── core/
+│           ├── base.html
+│           ├── login.html
+│           ├── register.html
+│           └── home.html
 ├── nexuslife/               # Configurações do Projeto
 │   ├── __init__.py
 │   ├── asgi.py
@@ -25,6 +32,23 @@ NexusLife/
 ├── db.sqlite3              # Banco de dados
 └── README.md
 ```
+
+## Funcionalidades
+
+- **Login**: Sistema de autenticação de usuários
+- **Cadastro**: Registro de novos usuários
+- **Home**: Página inicial do sistema (protegida)
+- **Logout**: Encerrar sessão
+
+## Rotas
+
+| URL | Descrição |
+|-----|------------|
+| `/` | Login |
+| `/register/` | Cadastro de novo usuário |
+| `/home/` | Página inicial (requer login) |
+| `/logout/` | Encerrar sessão |
+| `/admin/` | Painel administrativo |
 
 ## Comandos Úteis
 

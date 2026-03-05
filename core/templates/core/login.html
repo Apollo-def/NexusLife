@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Login - NexusLife{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">NexusLife</h2>
+                    <p class="text-muted">Bem-vindo de volta!</p>
+                </div>
+
+                <form method="POST">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="id_username" class="form-label">Email e ou seu CPF</label>
+                        {{ form.username }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="id_password" class="form-label">Senha</label>
+                        {{ form.password }}
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Entrar</button>
+                    </div>
+                </form>
+
+                <div class="links">
+                    <p class="mb-0">Não tem uma conta? <a href="{% url 'register' %}">Cadastre-se</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
