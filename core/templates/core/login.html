@@ -1,41 +1,30 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Login - NexusLife{% endblock %}
-
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-5">
-        <div class="card">
-            <div class="card-body p-5">
-                <div class="text-center mb-4">
-                    <h2 class="fw-bold">NexusLife</h2>
-                    <p class="text-muted">Bem-vindo de volta!</p>
+<div class="form-container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title text-center">Login</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.username.label_tag }}
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                        <div class="text-danger small">{{ form.username.errors }}</div>
+                    {% endif %}
                 </div>
-
-                <form method="POST">
-                    {% csrf_token %}
-                    
-                    <div class="mb-3">
-                        <label for="id_username" class="form-label">Email e ou seu CPF</label>
-                        {{ form.username }}
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="id_password" class="form-label">Senha</label>
-                        {{ form.password }}
-                    </div>
-
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg">Entrar</button>
-                    </div>
-                </form>
-
-                <div class="links">
-                    <p class="mb-0">Não tem uma conta? <a href="{% url 'register' %}">Cadastre-se</a></p>
+                <div class="mb-3">
+                    {{ form.password.label_tag }}
+                    {{ form.password }}
+                    {% if form.password.errors %}
+                        <div class="text-danger small">{{ form.password.errors }}</div>
+                    {% endif %}
                 </div>
-            </div>
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+            <p class="mt-3 text-center">Não tem uma conta? <a href="{% url 'register' %}">Crie uma aqui</a>.</p>
         </div>
     </div>
 </div>
 {% endblock %}
-
