@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Define o diretório base do projeto (a pasta que contém manage.py).
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -20,16 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# Chave secreta para funções criptográficas do Django. Deve ser mantida em segredo em produção.
 SECRET_KEY = 'django-insecure-z257q%knykf8y4h!0jy_7fov-6ig*)tmy!$85yh6flu#gt&c&v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# Ativa/desativa o modo de depuração. Em produção, deve ser False.
 DEBUG = True
 
+# Lista de hosts/domínios que podem servir este site Django.
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Lista de todos os aplicativos que o Django irá carregar.
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,9 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
+    'core', # Nosso aplicativo principal.
 ]
 
+# Camadas de processamento de requisição/resposta. A ordem é importante.
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,8 +55,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# O arquivo URLconf raiz do projeto.
 ROOT_URLCONF = 'nexuslife.urls'
 
+# Configurações dos templates.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -68,12 +75,13 @@ TEMPLATES = [
     },
 ]
 
+# Ponto de entrada para servidores compatíveis com WSGI.
 WSGI_APPLICATION = 'nexuslife.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+# Configuração do banco de dados. Por padrão, usa SQLite.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -84,7 +92,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
+# Validadores para fortalecer as senhas dos usuários.
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -103,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
-
+# Configurações de idioma e fuso horário.
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -115,12 +123,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
+# URL para servir arquivos estáticos.
 STATIC_URL = 'static/'
+# Diretórios adicionais onde o Django procurará por arquivos estáticos.
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
+# Configurações de Login e Redirecionamento
+LOGIN_URL = 'login' # Define a rota para onde usuários não autenticados são enviados
+LOGIN_REDIRECT_URL = 'home' # Define para onde ir após o login com sucesso
+LOGOUT_REDIRECT_URL = 'login' # Define para onde ir após o logout
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
+# Tipo de campo de chave primária padrão para os modelos.
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -4,7 +4,8 @@
 <div class="form-container">
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title text-center">Criar Conta</h2>
+            <h2 class="card-title text-center">Editar Perfil</h2>
+            <p class="text-center text-muted">Olá, {{ user.username }}. Aqui você pode atualizar seus dados.</p>
             <form method="post">
                 {% csrf_token %}
                 
@@ -22,9 +23,8 @@
                     </div>
                 {% endfor %}
 
-                <button type="submit" class="btn btn-success w-100 mt-3">Registrar</button>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Salvar Alterações</button>
             </form>
-            <p class="mt-3 text-center">Já tem uma conta? <a href="{% url 'login' %}">Faça login</a>.</p>
         </div>
     </div>
 </div>
