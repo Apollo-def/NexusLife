@@ -2,12 +2,14 @@ import os # Módulo para interagir com o sistema operacional, usado para constru
 import firebase_admin # SDK do Firebase para Python (operações de back-end).
 from firebase_admin import credentials # Para manusear as credenciais de serviço do Firebase.
 from firebase_admin import auth as firebase_admin_auth # Módulo de autenticação do Firebase Admin.
-from django.core.exceptions import ImproperlyConfigured
 import pyrebase # Biblioteca cliente para interagir com serviços Firebase (como autenticação no lado do cliente).
 
 # Caminho para o arquivo de credenciais do Firebase
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # Pega o diretório raiz do projeto (NexusLife/).
 FIREBASE_CREDENTIALS_PATH = os.path.join(BASE_DIR, 'firebase-credentials.json') # Constrói o caminho completo para o arquivo de credenciais.
+
+# Flag para verificar se Firebase Admin foi inicializado
+firebase_admin_initialized = False
 
 # Configuração do Firebase Admin (para operações no servidor)
 def initialize_firebase_admin():
@@ -15,20 +17,31 @@ def initialize_firebase_admin():
     Inicializa o Firebase Admin SDK.
     Esta função garante que o SDK seja inicializado apenas uma vez.
     """
+    global firebase_admin_initialized
+    
     if not firebase_admin._apps: # Verifica se o app do Firebase já foi inicializado para evitar erros.
         try:
             cred = credentials.Certificate(FIREBASE_CREDENTIALS_PATH)
             firebase_admin.initialize_app(cred)
+            firebase_admin_initialized = True
             print("Firebase Admin SDK inicializado com sucesso!")
         except FileNotFoundError:
-            raise ImproperlyConfigured(
-                f"ERRO: Arquivo de credenciais do Firebase não encontrado em: {FIREBASE_CREDENTIALS_PATH}\n"
-                "Por favor, siga as instruções no README.md para baixar o arquivo 'firebase-credentials.json' "
-                "e colocá-lo na raiz do projeto."
+            print(
+                f"AVISO: Arquivo de credenciais do Firebase não encontrado em: {FIREBASE_CREDENTIALS_PATH}\n"
+                "Firebase Admin será desabilitado. Para habilitar, siga as instruções no README.md.\n"
+                "O servidor continuará funcionando com Pyrebase para autenticação básica."
             )
+            firebase_admin_initialized = False
         except Exception as e:
-            raise ImproperlyConfigured(f"ERRO ao inicializar Firebase Admin: {e}")
-    return True # Retorna True se já estiver inicializado ou se a inicialização for bem-sucedida.
+            print(
+                f"AVISO: Firebase Admin não pôde ser inicializado: {e}\n"
+                "Firebase Admin será desabilitado. O servidor continuará funcionando."
+            )
+            firebase_admin_initialized = False
+    else:
+        firebase_admin_initialized = True
+    
+    return firebase_admin_initialized # Retorna True se foi inicializado, False caso contrário.
 
 # Configuração do Pyrebase (para autenticação no cliente)
 # Você precisa obter estas configurações no console do Firebase
@@ -54,6 +67,10 @@ def verify_firebase_token(id_token):
     Verifica um token JWT do Firebase e retorna os dados do usuário.
     Usa o Firebase Admin SDK, que deve ser executado no servidor.
     """
+    if not firebase_admin_initialized:
+        print("Firebase Admin não está inicializado. Não é possível verificar tokens.")
+        return None
+    
     try:
         # Usa o SDK Admin para verificar a validade e a assinatura do token.
         decoded_token = firebase_admin_auth.verify_id_token(id_token)
@@ -65,3 +82,4 @@ def verify_firebase_token(id_token):
     except Exception as e:
         print(f"Erro ao verificar token: {e}")
         return None # Outros erros.
+
