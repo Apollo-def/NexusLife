@@ -2,7 +2,7 @@ import os # Módulo para interagir com o sistema operacional, usado para constru
 import firebase_admin # SDK do Firebase para Python (operações de back-end).
 from firebase_admin import credentials # Para manusear as credenciais de serviço do Firebase.
 from firebase_admin import auth as firebase_admin_auth # Módulo de autenticação do Firebase Admin.
-from django.core.exceptions import ImproperlyConfigured
+# from django.core.exceptions import ImproperlyConfigured
 import pyrebase # Biblioteca cliente para interagir com serviços Firebase (como autenticação no lado do cliente).
 
 # Caminho para o arquivo de credenciais do Firebase
