@@ -1,26 +1,30 @@
 # NexusLife
 
-> Projeto Django com autenticação e integração Firebase.
-
-##  Descrição
-
-NexusLife é uma aplicação web desenvolvida com Django que conta com sistema completo de autenticação de usuários, integrado com Firebase para fornecer login e cadastro de forma segura.
-
-##  Tecnologias
-
-| Tecnologia | Descrição |
-|------------|------------|
-| **Django 4.2** | Framework web Python de alto nível |
-| **Python 3.x** | Linguagem de programação |
-| **PostgreSQL** | Banco de dados relacional utilizado para persistência |
-| **Firebase** | Backend como serviço (Auth, Database) |
-| **HTML/CSS** | Interface do usuário |
+Projeto Django com autenticação e integração Firebase.
 
 ---
 
-# 🗄️ Banco de Dados
+## Descrição
 
-O projeto utiliza **PostgreSQL** como banco de dados e a **ORM nativa do Django** para manipulação dos dados.
+NexusLife é uma aplicação web desenvolvida com Django que conta com sistema completo de autenticação de usuários, integrado com Firebase para fornecer login e cadastro de forma segura.
+
+---
+
+## Tecnologias
+
+| Tecnologia | Descrição |
+|------------|-----------|
+| Django 4.2 | Framework web Python de alto nível |
+| Python 3.x | Linguagem de programação |
+| PostgreSQL | Banco de dados relacional utilizado para persistência |
+| Firebase | Backend como serviço (Auth, Database) |
+| HTML/CSS | Interface do usuário |
+
+---
+
+## Banco de Dados
+
+O projeto utiliza PostgreSQL como banco de dados e a ORM nativa do Django para manipulação dos dados.
 
 A configuração do banco está definida no arquivo:
 
@@ -31,7 +35,8 @@ nexuslife/settings.py
 ```python
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql','NAME': 'nexuslife',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nexuslife',
         'USER': 'postgres',
         'PASSWORD': '1212',
         'HOST': 'localhost',
@@ -39,21 +44,24 @@ DATABASES = {
     }
 }
 
+
+
 O modelo User foi criado no app core e gerou automaticamente a tabela:
 
 core_user
 
-no banco PostgreSQL após a execução das migrações.📁 Estrutura do Projeto
+no banco PostgreSQL após a execução das migrações.
+
+Estrutura do Projeto
 NexusLife/
 ├── core/                        # App Django principal
-│   ├── __init__.py
-│   ├── admin.py                 # Configuração do admin Django
-│   ├── apps.py                  # Configurações do app
-│   ├── forms.py                 # Formulários de autenticação
-│   ├── models.py                # Modelos do banco de dados
-│   ├── tests.py                 # Testes unitários
-│   ├── views.py                 # Views de login/cadastro
-│   ├── firebase_config.py       # Configuração do Firebase
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   ├── firebase_config.py
 │   ├── migrations/
 │   └── templates/
 │       └── core/
@@ -62,7 +70,6 @@ NexusLife/
 │           ├── register.html
 │           └── home.html
 ├── nexuslife/                   # Configurações do Projeto
-│   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
@@ -72,61 +79,71 @@ NexusLife/
 ├── manage.py
 ├── requirements.txt
 └── README.md
- Funcionalidades
 
+
+
+Funcionalidades
 Autenticação
 
- Login de usuários
+Login de usuários
 
- Cadastro de novos usuários
+Cadastro de novos usuários
 
- Logout
+Logout
 
- Proteção de rotas
+Proteção de rotas autenticadas
 
 Integração Firebase
 
- Firebase Authentication
+Firebase Authentication
 
- Suporte a múltiplos provedores
+Suporte a múltiplos provedores
 
- Verificação de tokens JWT
+Verificação de tokens JWT
 
 Usuário
 
- Página inicial
+Página inicial
 
- Gerenciamento de conta
+Gerenciamento de conta
 
- Como Rodar o Projeto
+Como Rodar o Projeto
 Pré-requisitos
 
-Python 3.8+
+Python 3.8 ou superior
 
-PostgreSQL instalado
+PostgreSQL instalado e em execução
 
 pip
 
 Instalação
-# Clonar o repositório
-git clone <url-do-repositorio>
 
+Clonar o repositório:
+
+git clone <url-do-repositorio>
 cd NexusLife
 
-# Criar ambiente virtual
+Criar ambiente virtual:
 python -m venv .venv
 
-# Ativar ambiente virtual
+Ativar ambiente virtual:
+
+Windows:
+
 .\.venv\Scripts\activate
 
-# Instalar dependências
+Linux / Mac:
+
+source .venv/bin/activate
+
+Instalar dependências:
+
 pip install -r requirements.txt
 Criar banco PostgreSQL
 
 Você pode criar o banco usando pgAdmin ou terminal.
 
 Exemplo via terminal:
-
 createdb nexuslife
 
 Ou criar manualmente no pgAdmin com o nome:
@@ -138,20 +155,17 @@ python manage.py migrate
 
 Isso criará automaticamente as tabelas no banco PostgreSQL.
 
-Criar super usuário (opcional)
+Criar superusuário (opcional)
 python manage.py createsuperuser
-Rodar o servidor
+Executar servidor
 python manage.py runserver
 
 A aplicação estará disponível em:
 
 http://127.0.0.1:8000/
+Teste de Inserção via ORM
 
-
-
- Teste de Inserção via ORM
-
-Exemplo usando o Django ORM:
+Exemplo usando Django ORM:
 
 from core.models import User
 
@@ -163,27 +177,25 @@ User.objects.create(
 
 User.objects.all()
 
-Isso insere um usuário na tabela:
+Isso insere registros na tabela:
 
 core_user
-
- Rotas Disponíveis
+Rotas Disponíveis
 URL	Descrição	Acesso
 /	Login	Público
 /register/	Cadastro	Público
 /home/	Página inicial	Autenticado
 /logout/	Logout	Autenticado
-/admin/	Admin Django	Admin
-
- Comandos Úteis
+/admin/	Administração Django	Admin
+Comandos Úteis
 Comando	Descrição
 python manage.py runserver	Iniciar servidor
 python manage.py makemigrations	Criar migrações
 python manage.py migrate	Aplicar migrações
-python manage.py createsuperuser	Criar admin
-python manage.py startapp nome	Criar novo app
+python manage.py createsuperuser	Criar usuário administrador
+python manage.py startapp nome_app	Criar novo app
 python manage.py test	Executar testes
-🔧 Configurações do Projeto
+Configurações do Projeto
 
 Principais configurações no arquivo:
 
@@ -195,3 +207,15 @@ SECRET_KEY = '...'
 Licença
 
 Este projeto está sob licença MIT.
+
+
+---
+
+## Depois de substituir
+
+Suba para o Git:
+
+```bash
+git add README.md
+git commit -m "docs: atualização do README com instruções de execução"
+git push origin main
