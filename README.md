@@ -190,9 +190,9 @@ URL	Descrição	Acesso
 /admin/	Administração Django	Admin
 Comandos Úteis
 Comando               Descrição
-python manage.py      runserver	           Iniciar servidor
+python manage.py      runserver	          Iniciar servidor
 python manage.py      makemigrations	   Criar migrações
-python manage.py      migrate	             Aplicar migrações
+python manage.py      migrate	              Aplicar migrações
 python manage.py      createsuperuser	   Criar usuário administrador
 python manage.py      startapp nome_app	   Criar novo app
 python manage.py      test	               Executar testes
