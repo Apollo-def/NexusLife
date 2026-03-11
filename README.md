@@ -2,23 +2,48 @@
 
 > Projeto Django com autenticação e integração Firebase.
 
-## 📋 Descrição
+##  Descrição
 
-NexusLife é uma aplicação web desenvolvida com Django que conta com sistema completo de autenticação de usuários, integrado com Firebase para提供了安全可靠的登录和注册功能。
+NexusLife é uma aplicação web desenvolvida com Django que conta com sistema completo de autenticação de usuários, integrado com Firebase para fornecer login e cadastro de forma segura.
 
-## 🛠️ Tecnologias
+##  Tecnologias
 
 | Tecnologia | Descrição |
 |------------|------------|
 | **Django 4.2** | Framework web Python de alto nível |
 | **Python 3.x** | Linguagem de programação |
+| **PostgreSQL** | Banco de dados relacional utilizado para persistência |
 | **Firebase** | Backend como serviço (Auth, Database) |
-| **SQLite** | Banco de dados leve para desenvolvimento |
 | **HTML/CSS** | Interface do usuário |
 
-## 📁 Estrutura do Projeto
+---
 
-```
+# 🗄️ Banco de Dados
+
+O projeto utiliza **PostgreSQL** como banco de dados e a **ORM nativa do Django** para manipulação dos dados.
+
+A configuração do banco está definida no arquivo:
+
+
+nexuslife/settings.py
+
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql','NAME': 'nexuslife',
+        'USER': 'postgres',
+        'PASSWORD': '1212',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+O modelo User foi criado no app core e gerou automaticamente a tabela:
+
+core_user
+
+no banco PostgreSQL após a execução das migrações.📁 Estrutura do Projeto
 NexusLife/
 ├── core/                        # App Django principal
 │   ├── __init__.py
@@ -32,142 +57,141 @@ NexusLife/
 │   ├── migrations/
 │   └── templates/
 │       └── core/
-│           ├── base.html        # Template base
-│           ├── login.html       # Página de login
-│           ├── register.html   # Página de cadastro
-│           └── home.html       # Página inicial
+│           ├── base.html
+│           ├── login.html
+│           ├── register.html
+│           └── home.html
 ├── nexuslife/                   # Configurações do Projeto
 │   ├── __init__.py
-│   ├── asgi.py                  # Configuração ASGI
-│   ├── settings.py              # Configurações do Django
-│   ├── urls.py                  # Rotas principais
-│   └── wsgi.py                  # Configuração WSGI
-├── static/                      # Arquivos estáticos
-│   └── styles.css               # Estilos CSS
-├── manage.py                    # Script de gerenciamento Django
-├── requirements.txt            # Dependências do projeto
-├── db.sqlite3                   # Banco de dados SQLite
-└── README.md                    # Este arquivo
-```
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── static/
+│   └── styles.css
+├── manage.py
+├── requirements.txt
+└── README.md
+ Funcionalidades
 
-## ✨ Funcionalidades
+Autenticação
 
-### Autenticação
-- ✅ **Login** - Sistema de autenticação de usuários
-- ✅ **Cadastro** - Registro de novos usuários
-- ✅ **Logout** - Encerrar sessão
-- ✅ **Proteção de rotas** - Páginas restritas a usuários autenticados
+ Login de usuários
 
-### Integração Firebase
-- 🔥 **Firebase Authentication** - Autenticação via Firebase
-- 🔥 **Suporte a múltiplos provedores** - Email/Senha, Google, etc.
-- 🔥 **Verificação de tokens JWT** - Segurança reforçada
+ Cadastro de novos usuários
 
-### Usuário
-- 🏠 **Home** - Página inicial personalizada
-- 👤 **Perfil** - Gerenciamento de conta
+ Logout
 
-## 🚀 Como Rodar
+ Proteção de rotas
 
-### Pré-requisitos
+Integração Firebase
 
-- Python 3.8 ou superior
-- pip (gerenciador de pacotes Python)
+ Firebase Authentication
 
-### Instalação
+ Suporte a múltiplos provedores
 
-```bash
-# 1. Clonar o repositório
+ Verificação de tokens JWT
+
+Usuário
+
+ Página inicial
+
+ Gerenciamento de conta
+
+ Como Rodar o Projeto
+Pré-requisitos
+
+Python 3.8+
+
+PostgreSQL instalado
+
+pip
+
+Instalação
+# Clonar o repositório
 git clone <url-do-repositorio>
+
 cd NexusLife
 
-# 2. Criar ambiente virtual (opcional mas recomendado)
-python -m venv venv
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux/Mac
+# Criar ambiente virtual
+python -m venv .venv
 
-# 3. Instalar dependências
+# Ativar ambiente virtual
+.\.venv\Scripts\activate
+
+# Instalar dependências
 pip install -r requirements.txt
+Criar banco PostgreSQL
 
-# 4. Executar migrações
+Você pode criar o banco usando pgAdmin ou terminal.
+
+Exemplo via terminal:
+
+createdb nexuslife
+
+Ou criar manualmente no pgAdmin com o nome:
+
+nexuslife
+Executar migrações
+python manage.py makemigrations
 python manage.py migrate
 
-# 5. Criar super usuário (opcional)
+Isso criará automaticamente as tabelas no banco PostgreSQL.
+
+Criar super usuário (opcional)
 python manage.py createsuperuser
-
-# 6. Rodar o servidor
+Rodar o servidor
 python manage.py runserver
-```
 
-### Configuração do Firebase
+A aplicação estará disponível em:
 
-1. Acesse o [Console do Firebase](https://console.firebase.google.com/)
-2. Selecione o projeto **NexusLife**
-3. Vá para **Configurações do projeto** (ícone de engrenagem)
-4. Selecione **Contas de serviço**
-5. Clique em **Gerar nova chave privada**
-6. Salve o arquivo JSON na raiz do projeto como `firebase-credentials.json`
+http://127.0.0.1:8000/
 
-> ⚠️ **Importante**: Adicione `firebase-credentials.json` ao `.gitignore` para evitar exposing suas credenciais!
 
-### Configuração do Firebase no Código
 
-Edite o arquivo `core/firebase_config.py` e atualize as configurações:
+ Teste de Inserção via ORM
 
-```python
-firebase_config = {
-    "apiKey": "SUA_API_KEY",
-    "authDomain": "nexuslife.firebaseapp.com",
-    "projectId": "nexuslife",
-    "storageBucket": "nexuslife.appspot.com",
-    "messagingSenderId": "SEU_SENDER_ID",
-    "appId": "SEU_APP_ID",
-    "databaseURL": ""
-}
-```
+Exemplo usando o Django ORM:
 
-## 📌 Rotas Disponíveis
+from core.models import User
 
-| URL | Descrição | Acesso |
-|-----|------------|--------|
-| `/` | Login | Público |
-| `/register/` | Cadastro de novo usuário | Público |
-| `/home/` | Página inicial | Autenticado |
-| `/logout/` | Encerrar sessão | Autenticado |
-| `/admin/` | Painel administrativo | Admin |
+User.objects.create(
+    name="Teste",
+    email="teste@email.com",
+    password="123456"
+)
 
-## 📝 Comandos Úteis
+User.objects.all()
 
-| Comando | Descrição |
-|---------|------------|
-| `python manage.py runserver` | Iniciar servidor de desenvolvimento |
-| `python manage.py makemigrations` | Criar migrações |
-| `python manage.py migrate` | Aplicar migrações ao banco |
-| `python manage.py createsuperuser` | Criar super usuário |
-| `python manage.py startapp nome_app` | Criar novo app |
-| `python manage.py test` | Executar testes |
-| `python manage.py check` | Verificar erros no projeto |
+Isso insere um usuário na tabela:
 
-## 🔧 Configurações do Projeto
+core_user
 
-As configurações principais estão em `nexuslife/settings.py`:
+ Rotas Disponíveis
+URL	Descrição	Acesso
+/	Login	Público
+/register/	Cadastro	Público
+/home/	Página inicial	Autenticado
+/logout/	Logout	Autenticado
+/admin/	Admin Django	Admin
 
-```python
-DEBUG = True              # Desativar em produção
-ALLOWED_HOSTS = []        # Adicionar domínios em produção
-DATABASES = { ... }       # Configuração do banco de dados
-SECRET_KEY = '...'        # Chave secreta (manter em segredo!)
-```
+ Comandos Úteis
+Comando	Descrição
+python manage.py runserver	Iniciar servidor
+python manage.py makemigrations	Criar migrações
+python manage.py migrate	Aplicar migrações
+python manage.py createsuperuser	Criar admin
+python manage.py startapp nome	Criar novo app
+python manage.py test	Executar testes
+🔧 Configurações do Projeto
 
-## 📱 Acesso
+Principais configurações no arquivo:
 
-O servidor estará disponível em: **http://127.0.0.1:8000/**
+nexuslife/settings.py
+DEBUG = True
+ALLOWED_HOSTS = []
+DATABASES = {...}
+SECRET_KEY = '...'
+Licença
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
----
-
-Desenvolvido com ❤️ usando Django e Firebase
-
+Este projeto está sob licença MIT.
