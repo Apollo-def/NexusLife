@@ -1,10 +1,14 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="form-container">
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title text-center">Login</h2>
+            <div class="text-center mb-4">
+                <img src="{% static 'images/user3.png' %}" alt="NexusLife Logo" class="logo mb-3" height="80" width="80">
+                <h2 class="card-title">Login</h2>
+            </div>
             <form method="post">
                 {% csrf_token %}
                 <div class="mb-3">
@@ -20,10 +24,12 @@
                     {% if form.password.errors %}
                         <div class="text-danger small">{{ form.password.errors }}</div>
                     {% endif %}
+                    <p class="obrigatorio">Este campo é obrigatório.</p>
+
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
             </form>
-            <p class="mt-3 text-center">Não tem uma conta? <a href="{% url 'register' %}">Crie uma aqui</a>.</p>
+            <p class="mt-3 text-center">Ainda não criou sua conta na NexusLife? <a href="{% url 'register' %}">Cadastre-se</a>.</p>
             <p class="text-center"><a href="{% url 'password_reset' %}">Esqueceu sua senha?</a></p>
         </div>
     </div>
