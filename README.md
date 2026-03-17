@@ -107,7 +107,8 @@ NexusLife é uma aplicação web full-stack que oferece um sistema completo de a
 | Python | 3.8+ | Linguagem principal |
 | Django | 4.2.x | Framework web, ORM, autenticação, admin |
 | PostgreSQL | 13+ | Banco de dados relacional |
-| psycopg2-binary | — | Driver Python para PostgreSQL |
+| psycopg2-binary | 2.9.x | Driver Python para PostgreSQL |
+| python-decouple | 3.8 | Gerenciamento de variáveis de ambiente via `.env` |
 | firebase-admin | 6.2.0 | SDK servidor: Firestore, verificação de tokens JWT |
 | pyrebase4 | 4.9.0 | SDK cliente: criar usuário, login, reset de senha |
 
@@ -146,8 +147,8 @@ NexusLife é uma aplicação web full-stack que oferece um sistema completo de a
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/nexuslife.git
-cd nexuslife
+git clone https://github.com/Apollo-def/NexusLife.git
+cd NexusLife
 ```
 
 ### 2. Configurar o backend (Django)
@@ -175,7 +176,31 @@ Crie o banco via `psql` ou pgAdmin com o nome `nexuslife`:
 CREATE DATABASE nexuslife;
 ```
 
-### 4. Configurar o Firebase
+### 4. Configurar variáveis de ambiente
+
+Copie o arquivo de exemplo e preencha com suas credenciais:
+
+```bash
+cp .env.example .env
+```
+
+Edite o `.env` com seus valores:
+
+```env
+SECRET_KEY=sua_chave_secreta_aqui
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1,localhost
+
+DB_NAME=nexuslife
+DB_USER=postgres
+DB_PASSWORD=sua_senha
+DB_HOST=localhost
+DB_PORT=5432
+```
+
+> O arquivo `.env` já está no `.gitignore` — nunca será enviado ao repositório.
+
+### 5. Configurar o Firebase
 
 1. Acesse o [Firebase Console](https://console.firebase.google.com)
 2. Crie um projeto (ou use um existente)
@@ -186,7 +211,7 @@ CREATE DATABASE nexuslife;
 
 > ⚠️ Nunca versione o `firebase-credentials.json`. Ele já está no `.gitignore`.
 
-### 4. Configurar variáveis do Pyrebase
+### 6. Configurar variáveis do Pyrebase
 
 Edite `core/firebase_config.py` e substitua os valores de `firebase_config` com os dados do seu projeto:
 
@@ -204,7 +229,7 @@ firebase_config = {
 
 Você encontra esses valores em: **Firebase Console** > **Configurações do projeto** > **Geral** > **Seus apps** > ícone `</>`
 
-### 5. Executar migrações e iniciar o servidor
+### 7. Executar migrações e iniciar o servidor
 
 ```bash
 python manage.py makemigrations
@@ -219,7 +244,7 @@ python manage.py runserver
 
 A aplicação estará disponível em: `http://127.0.0.1:8000/`
 
-### 6. Configurar o frontend (opcional)
+### 8. Configurar o frontend (opcional)
 
 ```bash
 cd frontend

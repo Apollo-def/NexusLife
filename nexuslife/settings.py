@@ -141,3 +141,4 @@ LOGOUT_REDIRECT_URL = 'login' # Define para onde ir após o logout
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 # Tipo de campo de chave primária padrão para os modelos.
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
