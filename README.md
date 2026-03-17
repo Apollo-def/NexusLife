@@ -106,9 +106,10 @@ NexusLife é uma aplicação web full-stack que oferece um sistema completo de a
 |------------|--------|-----|
 | Python | 3.8+ | Linguagem principal |
 | Django | 4.2.x | Framework web, ORM, autenticação, admin |
+| PostgreSQL | 13+ | Banco de dados relacional |
+| psycopg2-binary | — | Driver Python para PostgreSQL |
 | firebase-admin | 6.2.0 | SDK servidor: Firestore, verificação de tokens JWT |
 | pyrebase4 | 4.9.0 | SDK cliente: criar usuário, login, reset de senha |
-| SQLite | — | Banco de dados padrão (dev) |
 
 ### Frontend
 | Tecnologia | Versão | Uso |
@@ -137,6 +138,7 @@ NexusLife é uma aplicação web full-stack que oferece um sistema completo de a
 ### Pré-requisitos
 
 - Python 3.8 ou superior
+- PostgreSQL 13+ instalado e em execução
 - Node.js 18+ e npm (ou bun)
 - Conta no [Firebase](https://console.firebase.google.com) com um projeto criado
 - Git
@@ -154,8 +156,9 @@ cd nexuslife
 # Criar e ativar ambiente virtual
 python -m venv .venv
 
-# Windows
-.\.venv\Scripts\activate
+# Windows (PowerShell) — se necessário, habilite scripts primeiro:
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\.venv\Scripts\Activate.ps1
 
 # Linux / macOS
 source .venv/bin/activate
@@ -164,7 +167,15 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Configurar o Firebase
+### 3. Criar o banco de dados PostgreSQL
+
+Crie o banco via `psql` ou pgAdmin com o nome `nexuslife`:
+
+```sql
+CREATE DATABASE nexuslife;
+```
+
+### 4. Configurar o Firebase
 
 1. Acesse o [Firebase Console](https://console.firebase.google.com)
 2. Crie um projeto (ou use um existente)
@@ -313,7 +324,8 @@ nexuslife/
 │   └── playwright.config.ts
 │
 ├── nexuslife/                     # Configurações do projeto Django
-│   ├── settings.py                # Configurações gerais, DB, auth redirects
+│   ├── __init__.py
+│   ├── settings.py                # Configurações gerais, DB (PostgreSQL), auth redirects
 │   ├── urls.py                    # URLconf raiz
 │   ├── wsgi.py
 │   └── asgi.py
@@ -323,7 +335,6 @@ nexuslife/
 │   └── styles.css                 # CSS global customizado
 │
 ├── firebase-credentials.json      # ⚠️ NÃO versionar (está no .gitignore)
-├── db.sqlite3                     # Banco SQLite (desenvolvimento)
 ├── manage.py
 └── requirements.txt
 ```
@@ -334,15 +345,32 @@ nexuslife/
 
 ### Variáveis importantes em `nexuslife/settings.py`
 
-| Variável | Padrão | Descrição |
-|----------|--------|-----------|
+| Variável | Valor atual | Descrição |
+|----------|-------------|-----------|
 | `SECRET_KEY` | `django-insecure-...` | Chave criptográfica — **troque em produção** |
 | `DEBUG` | `True` | Desative em produção (`False`) |
 | `ALLOWED_HOSTS` | `[]` | Adicione seu domínio em produção |
-| `DATABASES` | SQLite | Configure PostgreSQL para produção |
+| `DATABASES` | PostgreSQL (`nexuslife`) | Banco de dados ativo |
 | `LOGIN_URL` | `'login'` | Rota para usuários não autenticados |
 | `LOGIN_REDIRECT_URL` | `'home'` | Rota após login bem-sucedido |
 | `LOGOUT_REDIRECT_URL` | `'login'` | Rota após logout |
+
+### Banco de dados (PostgreSQL)
+
+O projeto usa PostgreSQL como banco de dados. A configuração atual em `nexuslife/settings.py`:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nexuslife',
+        'USER': 'postgres',
+        'PASSWORD': 'sua_senha',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
 
 ### Configuração para PostgreSQL (produção)
 
@@ -521,10 +549,21 @@ git checkout -b fix/descricao-do-bug
 ## FAQ
 
 **O servidor inicia mesmo sem o `firebase-credentials.json`?**
-Sim. O Firebase Admin é inicializado com degradação graciosa — se o arquivo não for encontrado, um aviso é exibido no console e o servidor continua funcionando. As funcionalidades que dependem do Firebase Admin (Firestore, verificação de token) ficam desabilitadas, mas login/logout via Django funcionam normalmente.
+Sim. O Firebase Admin é inicializado com degradação graciosa — se o arquivo não for encontrado ou estiver corrompido, um aviso é exibido no console e o servidor continua funcionando. As funcionalidades que dependem do Firebase Admin (Firestore, verificação de token) ficam desabilitadas, mas login/logout via Django funcionam normalmente.
 
-**Posso usar PostgreSQL em vez de SQLite?**
-Sim. Veja a seção [Configuração](#configuração) para os detalhes. Instale `psycopg2-binary` e atualize `DATABASES` no `settings.py`.
+**Preciso do PostgreSQL instalado para rodar o projeto?**
+Sim. O projeto usa PostgreSQL como banco de dados. Certifique-se de ter o PostgreSQL instalado, o banco `nexuslife` criado e o serviço em execução antes de rodar as migrações.
+
+**Posso usar SQLite em vez de PostgreSQL?**
+Sim, para desenvolvimento rápido. Substitua o bloco `DATABASES` no `settings.py`:
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+```
 
 **O frontend React é obrigatório?**
 Não. O backend Django possui seus próprios templates HTML (Bootstrap 5) e funciona de forma completamente independente. O frontend é uma SPA separada para quem quiser evoluir o projeto para uma arquitetura desacoplada.

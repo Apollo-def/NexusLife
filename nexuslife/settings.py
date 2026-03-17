@@ -84,8 +84,12 @@ WSGI_APPLICATION = 'nexuslife.wsgi.application'
 # Configuração do banco de dados. Por padrão, usa SQLite.
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nexuslife',
+        'USER': 'postgres',
+        'PASSWORD': '1212',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
