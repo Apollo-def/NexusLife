@@ -9,6 +9,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
 
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -17,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'core.gmail',
 ]
 
 MIDDLEWARE = [
@@ -67,8 +69,8 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'pt-br'
+TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 USE_TZ = True
 
@@ -80,3 +82,13 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Google OAuth
+GOOGLE_CLIENT_ID = config('GOOGLE_CLIENT_ID', default='562969126249-7h8jhi6r0f8hfas2srfje52bm5o3f0ki.apps.googleusercontent.com')
+GOOGLE_CLIENT_SECRET = config('GOOGLE_CLIENT_SECRET', default='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')
+GMAIL_REDIRECT_URI = config('GOOGLE_REDIRECT_URI', default='http://localhost:8000/api/gmail/callback/')
+
+GMAIL_SCOPES = [
+    'https://www.googleapis.com/auth/gmail.readonly',
+    'https://www.googleapis.com/auth/gmail.modify',
+]

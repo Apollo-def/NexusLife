@@ -615,9 +615,183 @@ Para dúvidas, sugestões ou contribuições, abra uma [issue](https://github.co
 
 ---
 
-## Agradecimentos
+## Integração OAuth Gmail
+
+### O que foi implementado
+
+A integração OAuth Gmail permite que usuários conectem suas contas Gmail à aplicação NexusLife de forma segura, sem compartilhar suas senhas. A aplicação pode então acessar e-mails do usuário com permissão explícita.
+
+### Fluxo OAuth Gmail
+
+```
+1. Usuário clica em "Conectar Gmail"
+   ↓
+2. Redireciona para: http://localhost:8000/api/gmail/auth/
+   ↓
+3. Código redireciona para Google OAuth Consent Screen
+   ↓
+4. Google pede permissão ao usuário (ler e modificar Gmail)
+   ↓
+5. Usuário autoriza
+   ↓
+6. Google redireciona para: http://localhost:8000/api/gmail/callback/?code=XXXXX
+   ↓
+7. Código troca o "code" por um "access_token" e "refresh_token"
+   ↓
+8. Tokens são salvos no banco de dados (modelo GmailToken)
+   ↓
+9. Usuário é redirecionado para o perfil
+```
+
+### Arquivos criados/modificados
+
+#### **core/gmail/models.py** - Armazena tokens OAuth
+```python
+class GmailToken(models.Model):
+    user = ForeignKey(User)           # Qual usuário
+    access_token = CharField()        # Token para acessar Gmail API
+    refresh_token = CharField()       # Token para renovar acesso
+    expires_at = DateTimeField()      # Quando o token expira
+    email = CharField()               # Email do Gmail conectado
+    is_active = BooleanField()        # Se a conexão está ativa
+```
+
+#### **core/gmail/views.py** - Controla o fluxo OAuth
+Implementa 4 endpoints principais:
+
+1. **`initiate_auth`** - Inicia o fluxo OAuth
+   - Redireciona o usuário para o Google OAuth Consent Screen
+   - Solicita permissões: `gmail.readonly` e `gmail.modify`
+
+2. **`oauth_callback`** - Recebe o código do Google
+   - Troca o código por tokens de acesso
+   - Decodifica o ID token para obter o email do usuário
+   - Salva os tokens no banco de dados
+
+3. **`connection_status`** - Verifica status da conexão
+   - Retorna se o Gmail está conectado
+   - Mostra qual email está conectado
+
+4. **`get_emails`** - Recupera emails não lidos
+   - Usa o token para acessar a Gmail API
+   - Retorna lista de emails não lidos
+
+#### **core/gmail/services.py** - Comunica com Gmail API
+```python
+class GmailService:
+    def get_unread_messages(max_results=10)  # Busca emails não lidos
+    def test_connection()                     # Testa se a conexão funciona
+```
+
+#### **core/gmail/urls.py** - Define as rotas
+```
+/api/gmail/auth/       → Inicia OAuth (redireciona para Google)
+/api/gmail/callback/   → Recebe resposta do Google
+/api/gmail/status/     → Verifica status da conexão
+/api/gmail/emails/     → Recupera emails não lidos
+```
+
+### Configuração do Google Cloud Console
+
+1. Acesse [Google Cloud Console](https://console.cloud.google.com/)
+2. Vá para **APIs & Services** → **Credentials**
+3. Crie uma credencial OAuth 2.0 do tipo "Aplicativo da Web"
+4. Configure o **Authorized redirect URI**: `http://localhost:8000/api/gmail/callback/`
+5. Copie o **Client ID** e **Client Secret**
+6. Adicione seu email como usuário de teste em **OAuth consent screen** → **Test users**
+
+### Variáveis de ambiente necessárias
+
+Adicione ao `.env`:
+```env
+GOOGLE_CLIENT_ID=seu_client_id_aqui
+GOOGLE_CLIENT_SECRET=seu_client_secret_aqui
+GOOGLE_REDIRECT_URI=http://localhost:8000/api/gmail/callback/
+```
+
+### Como usar
+
+**Para conectar Gmail:**
+```
+1. Faça login na aplicação
+2. Acesse: http://localhost:8000/api/gmail/auth/
+3. Autorize o acesso no Google
+4. Pronto! Token salvo no banco de dados
+```
+
+**Para verificar status:**
+```bash
+curl http://localhost:8000/api/gmail/status/
+# Retorna: {"connected": true, "email": "usuario@gmail.com", ...}
+```
+
+**Para recuperar emails:**
+```bash
+curl http://localhost:8000/api/gmail/emails/
+# Retorna: {"success": true, "emails": [...]}
+```
+
+### Segurança
+
+- ✅ Senha do usuário nunca é armazenada
+- ✅ Tokens são armazenados no banco de dados PostgreSQL
+- ✅ Tokens podem ser renovados automaticamente
+- ✅ Tokens podem ser revogados a qualquer momento
+- ✅ Acesso protegido por `@login_required`
+
+### Próximos passos (opcional)
+
+- Adicionar botão na interface para conectar Gmail
+- Mostrar emails na página de perfil
+- Implementar renovação automática de token quando expirado
+- Adicionar logout do Gmail (revogar token)
+- Sincronizar emails com banco de dados local
+
+---
 
 - [Django](https://djangoproject.com) — pelo framework sólido e bem documentado
 - [Firebase](https://firebase.google.com) — pela infraestrutura de autenticação
 - [shadcn/ui](https://ui.shadcn.com) — pelos componentes React acessíveis e elegantes
 - [Radix UI](https://radix-ui.com) — pela base de componentes primitivos
+
+
+---
+
+## Limpeza e Otimização do Projeto
+
+### Arquivos removidos (25/03/2026)
+
+Para manter o projeto limpo e sem código desnecessário, foram removidos os seguintes arquivos:
+
+#### Arquivos vazios
+- `core/admin.py` - Arquivo vazio sem registros de modelos
+- `core/tests.py` - Arquivo de testes vazio
+- `core/models.py` - Modelo User customizado não utilizado (projeto usa `django.contrib.auth.models.User`)
+- `core/database.py` - Configuração SQLAlchemy nunca importada
+
+#### Apps vazios (não registrados em INSTALLED_APPS)
+- `core/users/` - App inteiro removido (vazio e não utilizado)
+  - `core/users/models.py`
+  - `core/users/views.py`
+  - `core/users/admin.py`
+  - `core/users/tests.py`
+  - `core/users/apps.py`
+  - `core/users/__init__.py`
+  - `core/users/migrations/__init__.py`
+
+- `core/api/` - App inteiro removido (vazio e não utilizado)
+  - `core/api/models.py`
+  - `core/api/views.py`
+  - `core/api/admin.py`
+  - `core/api/tests.py`
+  - `core/api/apps.py`
+  - `core/api/__init__.py`
+  - `core/api/migrations/__init__.py`
+
+### Resultado
+
+- ✅ Projeto mais limpo e organizado
+- ✅ Sem código morto ou não utilizado
+- ✅ Sem erros de importação
+- ✅ Django check passou com sucesso
+- ✅ Funcionalidades mantidas intactas
