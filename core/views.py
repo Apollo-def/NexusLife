@@ -57,6 +57,8 @@ def register_view(request):
             cpf = form.cleaned_data.get('cpf')
             first_name = form.cleaned_data.get('first_name')
             last_name = form.cleaned_data.get('last_name')
+            phone = form.cleaned_data.get('phone')
+            person_type = form.cleaned_data.get('person_type')
 
             try:
                 user_firebase = auth_firebase.create_user_with_email_and_password(email, password)

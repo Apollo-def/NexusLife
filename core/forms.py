@@ -5,42 +5,52 @@ from django.contrib.auth.forms import UserCreationForm # Formulário base do Dja
 
 # Formulário de registro de usuário, herdando e estendendo o UserCreationForm.
 class UserRegisterForm(UserCreationForm):
-    # Adiciona um campo de email, que é obrigatório.
+    PERSON_TYPE_CHOICES = [
+        ('PF', 'Pessoa Física'),
+        ('PJ', 'Pessoa Jurídica'),
+    ]
+
+    person_type = forms.ChoiceField(
+        choices=PERSON_TYPE_CHOICES,
+        initial='PF',
+        widget=forms.RadioSelect()
+    )
     email = forms.EmailField(
         required=True,
         widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'})
     )
-    # Adiciona um campo para o primeiro nome (opcional).
     first_name = forms.CharField(
         max_length=30,
         required=False,
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome'})
     )
-    # Adiciona um campo para o sobrenome (opcional).
     last_name = forms.CharField(
         max_length=30,
         required=False,
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Sobrenome'})
     )
-    # Adiciona um campo para o CPF (opcional).
     cpf = forms.CharField(
-        max_length=14, # Ex: 123.456.789-10
+        max_length=18,
         required=False,
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'CPF'})
     )
+    phone = forms.CharField(
+        max_length=20,
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '(DDD) Telefone'})
+    )
+
     class Meta:
-        model = User # Especifica que este formulário está associado ao modelo User.
-        # Lista os campos do modelo que devem ser incluídos no formulário.
-        fields = ('username', 'first_name', 'last_name', 'email', 'cpf', 'password1', 'password2')
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
-        # O método __init__ é usado para customizar os campos do formulário.
         super(UserRegisterForm, self).__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs['class'] = 'form-control' # Adiciona classe CSS ao campo username.
-        self.fields['password1'].widget.attrs['class'] = 'form-control' # Adiciona classe CSS ao campo de senha.
-        self.fields['password1'].widget.attrs['placeholder'] = 'Senha' # Adiciona placeholder.
-        self.fields['password2'].widget.attrs['class'] = 'form-control' # Adiciona classe CSS ao campo de confirmação de senha.
-        self.fields['password2'].widget.attrs['placeholder'] = 'Confirmar Senha' # Adiciona placeholder.
+        self.fields['username'].widget.attrs['class'] = 'form-control'
+        self.fields['password1'].widget.attrs['class'] = 'form-control'
+        self.fields['password1'].widget.attrs['placeholder'] = 'Senha'
+        self.fields['password2'].widget.attrs['class'] = 'form-control'
+        self.fields['password2'].widget.attrs['placeholder'] = 'Confirmar Senha'
 
 
 class LoginForm(forms.Form):
