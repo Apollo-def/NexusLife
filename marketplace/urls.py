@@ -3,9 +3,12 @@ from rest_framework.routers import DefaultRouter
 from . import views, api
 
 router = DefaultRouter()
-router.register(r'categories', api.CategoryViewSet)
-router.register(r'services', api.ServiceViewSet)
-router.register(r'orders', api.OrderViewSet)
+router.register(r'categories', api.CategoryViewSet, basename='api-category')
+router.register(r'services', api.ServiceViewSet, basename='api-service')
+router.register(r'orders', api.OrderViewSet, basename='api-order')
+router.register(r'freelancers', api.FreelancerProfileViewSet, basename='api-freelancer')
+router.register(r'reviews', api.ReviewViewSet, basename='api-review')
+router.register(r'favorites', api.FavoriteViewSet, basename='api-favorite')
 
 app_name = 'marketplace'
 

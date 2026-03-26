@@ -1,8 +1,75 @@
-{% extends 'core/base.html' %}
+{% extends 'base.html' %}
+
+{% block title %}Home - NexusLife{% endblock %}
 
 {% block content %}
-    <div class="text-center">
-        <h1>Bem-vindo de volta, {{ user.first_name|default:user.username }}!</h1>
-        <p>Você está na sua página inicial do NexusLife.</p>
+<div class="row">
+    <div class="col-md-8">
+        <h1>Bem-vindo ao NexusLife, {{ user.first_name|default:user.username|default:'Visitante' }}!</h1>
+        <p class="lead">A plataforma para freelancers e clientes conectados.</p>
+        
+        <!-- Quick Actions -->
+        {% if user.is_authenticated %}
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-plus-circle fa-3x text-primary mb-3"></i>
+                        <h5>Criar Serviço</h5>
+                        <a href="{% url 'marketplace:service_create' %}" class="btn btn-primary">Novo Serviço</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-list fa-3x text-success mb-3"></i>
+                        <h5>Meus Pedidos</h5>
+                        <a href="{% url 'marketplace:order_list' %}" class="btn btn-success">Ver Pedidos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-search fa-3x text-info mb-3"></i>
+                        <h5>Explorar</h5>
+                        <a href="{% url 'marketplace:service_list' %}" class="btn btn-info">Encontrar Serviços</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Featured Services -->
+        <h2 class="mt-5">Serviços em Destaque</h2>
+        <div class="row">
+            <!-- Services list aqui via context or include -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Exemplo Serviço</h5>
+                        <p>Desenvolvimento web R$ 500</p>
+                        <a href="/marketplace/" class="btn btn-primary">Ver Todos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5>Rápido Acesso</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="{% url 'marketplace:service_list' %}" class="list-group-item list-group-item-action">Marketplace</a>
+                <a href="{% url 'profile' %}" class="list-group-item list-group-item-action">Meu Perfil</a>
+                <a href="{% url 'marketplace:order_list' %}" class="list-group-item list-group-item-action">Meus Pedidos</a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'marketplace:service_create' %}" class="list-group-item list-group-item-action list-group-item-primary">+ Novo Serviço</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

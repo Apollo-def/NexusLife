@@ -10,12 +10,11 @@ urlpatterns = [
     path('profile/', views.profile_view, name='profile'),
     path('logout/', views.logout_view, name='logout'),
     path('password-reset/', views.password_reset_view, name='password_reset'),
+    path('setup-admin/', views.setup_admin_view, name='setup_admin'),
     
     # Rotas do Gmail
     path('api/gmail/', include('core.gmail.urls')),
     
     # Rotas do Marketplace
-    path('api/marketplace/', include('marketplace.urls')),
     path('marketplace/', include('marketplace.urls')),
-]
 ]

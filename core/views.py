@@ -3,15 +3,21 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+import logging
 from .forms import UserRegisterForm, LoginForm, UserUpdateForm
 from .firebase_config import auth_firebase, initialize_firebase_admin, firebase_admin_initialized
+
+logger = logging.getLogger(__name__)
 
 if firebase_admin_initialized:
     from firebase_admin import firestore
 from requests.exceptions import HTTPError
 import json
 
-try:\n    initialize_firebase_admin()\nexcept Exception as e:\n    logger.warning(f"Firebase Admin não pôde ser inicializado: {e}")
+try:
+    initialize_firebase_admin()
+except Exception as e:
+    logger.warning(f"Firebase Admin não pôde ser inicializado: {e}")
 
 def login_view(request):
     if request.method == 'POST':
@@ -161,4 +167,24 @@ def password_reset_view(request):
             messages.error(request, f'Ocorreu um erro inesperado: {e}')
     
     return render(request, 'core/password_reset.html')
+
+
+def setup_admin_view(request):
+    # Apenas permitir em DEBUG para não expor em produção.
+    from django.conf import settings
+    if not settings.DEBUG:
+        messages.error(request, 'Acesso bloqueado fora do modo de desenvolvimento.')
+        return redirect('login')
+
+    username = request.GET.get('username', 'admin')
+    email = request.GET.get('email', 'admin@nexuslife.com')
+    password = request.GET.get('password', 'Nexus@123')
+
+    if User.objects.filter(username=username).exists():
+        messages.info(request, f'O usuário {username} já existe. Faça login em /admin')
+        return redirect('login')
+
+    User.objects.create_superuser(username=username, email=email, password=password)
+    messages.success(request, f'Superuser criado: {username} / {password}. Acesse /admin')
+    return redirect('login')
 

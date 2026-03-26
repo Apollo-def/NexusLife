@@ -3,11 +3,17 @@ from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = config('SECRET_KEY')
+from django.core.management.utils import get_random_secret_key
 
-DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = config('SECRET_KEY', default=get_random_secret_key())
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+DEBUG = config('DEBUG', default=True, cast=bool)
+
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+
+# Segurança extra no modo dev: permite qualquer host se DEBUG ativo
+if DEBUG:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '::1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -48,7 +54,7 @@ ROOT_URLCONF = 'nexuslife.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -63,25 +69,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'nexuslife.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if config('DB_ENGINE', default='').lower() in ['postgresql', 'postgres', 'psql'] or config('DB_NAME', default=''):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': config('DB_NAME'),
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD'),
+            'HOST': config('DB_HOST', default='localhost'),
+            'PORT': config('DB_PORT', default='5432'),
+            'OPTIONS': {'sslmode': 'require'},
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
-# Uncomment below for PostgreSQL
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': config('DB_NAME'),
-#         'USER': config('DB_USER'),
-#         'PASSWORD': config('DB_PASSWORD'),
-#         'HOST': config('DB_HOST', default='localhost'),
-#         'PORT': config('DB_PORT', default='5432'),
-#         'OPTIONS': {'sslmode': 'require'},
-#     }
-# }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},

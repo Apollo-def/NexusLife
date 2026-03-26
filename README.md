@@ -2,52 +2,418 @@
 
 <img src="static/images/logo.png" alt="NexusLife Logo" width="120"/>
 
-# NexusLife
+# 🚀 NexusLife
 
-**Plataforma web de autenticação e gerenciamento de usuários com integração Firebase**
+**Marketplace de Serviços Digitais - Plataforma Full-Stack com Django + React**
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Django](https://img.shields.io/badge/Django-4.2-092E20?style=flat-square&logo=django&logoColor=white)](https://djangoproject.com)
-[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)](https://firebase.google.com)
+[![DRF](https://img.shields.io/badge/DRF-3.14-A30000?style=flat-square&logo=django&logoColor=white)](https://www.django-rest-framework.org)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-336791?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 </div>
 
 ---
 
-## Descrição
+## 📋 Descrição
 
-NexusLife é uma aplicação web full-stack que oferece um sistema completo de autenticação e gerenciamento de usuários. O backend é construído com Django 4.2 e integrado ao Firebase para autenticação segura, verificação de e-mail e redefinição de senha. O frontend é uma SPA moderna em React + TypeScript com componentes Radix UI e estilização via Tailwind CSS.
+**NexusLife** é uma plataforma profissional de marketplace para serviços digitais, conectando freelancers com clientes. Sistema completo com:
 
-**Problema que resolve:** Projetos que precisam de um ponto de partida sólido para autenticação de usuários, com dupla camada de segurança (Django Auth + Firebase Auth), sem precisar construir do zero.
+✨ **Recursos Principais:**
+- 🔐 Autenticação completa (Django Auth + Firebase opcional)
+- 💼 Perfil de freelancer com histórico e avaliações
+- 🛍️ Catálogo de serviços com filtros avançados
+- ⭐ Sistema de avaliações e ratings
+- 💰 Gestão de pedidos e transações
+- ❤️ Sistema de favoritos/bookmarks
+- 📊 Dashboard para clientes e freelancers
+- 🎨 Interface moderna e responsiva
+- 🚀 REST API completa com DRF
 
-**Público-alvo:** Desenvolvedores que precisam de um boilerplate robusto de autenticação com Django e Firebase, ou equipes que querem uma base para construir aplicações SaaS.
-
-**Diferenciais:**
-- Autenticação dupla: Django Auth (sessão) + Firebase Auth (JWT)
-- Verificação de e-mail automática via Firebase no cadastro
-- Redefinição de senha via Firebase sem configuração de SMTP
-- Dados de perfil sincronizados no Firestore
-- Frontend desacoplado com React + Vite + shadcn/ui
-- Degradação graciosa: o servidor funciona mesmo sem as credenciais do Firebase
+**Público-alvo:** Empreendedores, agências, e startups que querem uma plataforma de serviços pronta para uso ou customização.
 
 ---
 
-## Demonstração
+## 🎯 Quick Start
 
-### Fluxo de autenticação
+### 1️⃣ Clone e Instale
+
+```bash
+# Clone o repositório
+git clone <repository-url> NexusLife
+cd NexusLife
+
+# Crie virtual environment
+python -m venv venv
+
+# Ative (Windows)
+venv\Scripts\activate
+# Ou (macOS/Linux)
+source venv/bin/activate
+
+# Instale dependências
+pip install -r requirements.txt
+```
+
+### 2️⃣ Configure o Banco de Dados
+
+```bash
+# Crie migrações
+python manage.py makemigrations
+
+# Aplique migrações
+python manage.py migrate
+
+# Crie super usuário (admin)
+python manage.py createsuperuser
+# Será solicitado username, email, e senha
+```
+
+### 3️⃣ Inicie o Servidor
+
+```bash
+# Backend (Django)
+python manage.py runserver
+
+# Frontend (outro terminal)
+cd frontend
+npm run dev
+```
+
+### 🌐 Acesse
+
+| Recurso | URL | Status |
+|---------|-----|--------|
+| 🏠 Frontend | `http://localhost:5173` | ✅ Conectado |
+| 🔧 Admin Django | `http://localhost:8000/admin` | ✅ Conectado |
+| 📡 API Rest | `http://localhost:8000/api` | ✅ Conectado |
+
+---
+
+## 🔑 Credenciais de Acesso
+
+### 🛡️ Admin Django
+
+**URL:** `http://localhost:8000/admin`
+
+**Credenciais Padrão (crie a sua):**
+```
+Username: admin
+Senha: <define durante createsuperuser>
+Email: admin@nexuslife.com
+```
+
+> **Primeira vez?** Execute: `python manage.py createsuperuser`
+
+### 📡 API Endpoints
+
+**Base URL:** `http://localhost:8000/marketplace/api/`
+
+#### Categorias
+```
+GET /categories/              - Listar categorias
+```
+
+#### Serviços
+```
+GET    /services/             - Listar serviços com filtros
+POST   /services/             - Criar novo serviço
+GET    /services/{id}/        - Ver detalhes
+PUT    /services/{id}/        - Atualizar
+DELETE /services/{id}/        - Deletar
+GET    /services/my_services/ - Meus serviços
+GET    /services/reviews/     - Ver avaliações
+```
+
+#### Perfil Freelancer
+```
+GET    /freelancer-profiles/        - Listar perfis
+POST   /freelancer-profiles/        - Criar perfil
+GET    /freelancer-profiles/me/     - Meu perfil
+PUT    /freelancer-profiles/me/     - Atualizar
+```
+
+#### Pedidos
+```
+POST   /orders/              - Criar pedido
+GET    /orders/my_orders/    - Meus pedidos (cliente)
+GET    /orders/incoming_orders/ - Pedidos recebidos (freelancer)
+POST   /orders/{id}/update_status/ - Atualizar status
+```
+
+#### Avaliações
+```
+GET    /reviews/              - Listar todas
+GET    /reviews/by_freelancer/ - Por freelancer
+POST   /orders/{id}/review/   - Criar avaliação
+```
+
+#### Favoritos
+```
+GET    /favorites/            - Meus favoritos
+POST   /favorites/add/        - Adicionar
+POST   /favorites/remove/     - Remover
+```
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```
-[Cadastro] → Cria usuário no Django + Firebase Auth + Firestore
-           → Envia e-mail de verificação automaticamente
+NexusLife/
+├── nexuslife/                   # Configuração geral Django
+│   ├── settings.py              # Configurações (BD, apps, etc)
+│   ├── urls.py                  # URLs principais
+│   ├── wsgi.py
+│   └── asgi.py
+│
+├── core/                        # App de usuários e autenticação
+│   ├── models.py                # User model customizado
+│   ├── views.py                 # Autenticação views
+│   ├── forms.py                 # Formulários
+│   ├── urls.py                  # URLs da auth
+│   ├── admin.py
+│   ├── templates/
+│   │   └── core/
+│   │       ├── base.html        # Template base
+│   │       ├── home.html
+│   │       ├── login.html
+│   │       ├── register.html
+│   │       ├── profile.html
+│   │       └── password_reset.html
+│   ├── migrations/
+│   └── __init__.py
+│
+├── marketplace/                 # App do marketplace (novo!)
+│   ├── models.py                # 6 modelos: Service, Order, Review, etc
+│   ├── serializers.py           # Serializers DRF
+│   ├── api.py                   # ViewSets e endpoints
+│   ├── views.py
+│   ├── urls.py
+│   ├── admin.py                 # Admin interface completo
+│   ├── permissions.py
+│   ├── filters.py
+│   ├── migrations/
+│   └── __init__.py
+│
+├── frontend/                    # React + TypeScript
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── FeaturesSection.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Header.tsx
+│   │   │   └── ...
+│   │   ├── pages/
+│   │   │   ├── ServiceList.tsx
+│   │   │   ├── ServiceDetail.tsx
+│   │   │   ├── FreelancerProfile.tsx
+│   │   │   ├── FreelancerDashboard.tsx
+│   │   │   ├── ClientDashboard.tsx
+│   │   │   ├── OrderDetail.tsx
+│   │   │   └── CreateService.tsx
+│   │   ├── App.tsx              # Rotas
+│   │   └── main.tsx
+│   ├── vite.config.ts
+│   ├── tailwind.config.ts
+│   ├── tsconfig.json
+│   └── package.json
+│
+├── static/                      # Arquivos estáticos
+│   ├── styles.css               # CSS global (melhorado)
+│   ├── main.js                  # JavaScript interativo
+│   ├── images/
+│   └── ...
+│
+├── db.sqlite3                   # Banco (desenvolvimento)
+├── requirements.txt             # Dependências Python
+├── manage.py                    # CLI Django
+├── firebase-credentials.json    # Credenciais Firebase (opcional)
+├── .env                         # Variáveis de ambiente
+├── README.md                    # Este arquivo
+└── TODO.md                      # Tarefas pendentes
+```
 
-[Login]    → Autentica via Django (suporta username, e-mail ou CPF)
-           → Redireciona para /home (rota protegida)
+---
 
-[Perfil]   → Atualiza nome, sobrenome e e-mail
-           → Protegido por @login_required
+## 🛠️ Tecnologias Utilizadas
+
+### Backend
+- **Django 4.2** - Web framework
+- **Django REST Framework 3.14** - REST API
+- **PostgreSQL/SQLite** - Banco de dados
+- **Pillow** - Processamento de imagens
+- **django-cors-headers** - CORS
+
+### Frontend
+- **React 18** - Interface
+- **TypeScript 5** - Type safety
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - Componentes
+- **React Router** - Roteamento
+
+### Deploy Ready
+- Docker (opcional)
+- PostgreSQL (produção)
+- Gunicorn WSGI
+- Nginx (reverse proxy)
+
+---
+
+## 📊 Modelos de Dados
+
+### Categoria
+- `name` - Nome da categoria
+- `description` - Descrição
+- `icon` - Ícone
+
+### Service
+- `title` - Título do serviço
+- `description` - Descrição detalhada
+- `price` - Preço em R$
+- `category` - FK para Categoria
+- `freelancer` - FK para User
+- `delivery_days` - Prazo de entrega
+- `revisions` - Número de revisões
+- `is_active` - Ativo/Inativo
+- `average_rating` - Calculado
+- `total_orders` - Contado
+
+### Order
+- `service` - FK para Service
+- `client` - FK para User (cliente)
+- `status` - pending/in_progress/completed/cancelled/disputed
+- `amount` - Valor da transação
+- `completed_at` - Data de conclusão
+- `notes` - Anotações
+
+### Review
+- `order` - OneToOne para Order
+- `service` - FK para Service
+- `reviewer` - FK para User
+- `rating` - 1-5 stars
+- `comment` - Comentário
+
+### Favorite
+- `user` - FK para User
+- `service` - FK para Service
+- `unique_together` - (user, service)
+
+### FreelancerProfile
+- `user` - OneToOne para User
+- `bio` - Biografia
+- `profile_image` - Foto
+- `hourly_rate` - Taxa horária
+- `location` - Localização
+- `phone` - Telefone
+- `website` - Website pessoal
+- `verified` - Verificado?
+- `response_time` - Tempo de resposta
+- `total_earnings` - Ganhos totais
+- `average_rating` - Calculado
+- `completion_rate` - Calculado
+
+---
+
+## 🔧 Autenticação
+
+### 1. Login/Register
+```bash
+# Página de login
+GET http://localhost:8000/
+
+# Página de registro
+GET http://localhost:8000/register/
+
+# API de autenticação
+POST /api/auth/login/
+POST /api/auth/register/
+```
+
+### 2. Permissões
+- `IsAuthenticated` - Apenas usuários logados
+- `IsOwner` - Apenas proprietário do recurso
+- `IsFreelancer` - Apenas freelancers
+- `IsClient` - Apenas clientes
+
+### 3. JWT (Opcional)
+```python
+# Token format
+Authorization: Bearer <token>
+
+# Gerado no login, válido por 24h
+```
+
+---
+
+## 📝 Guias Adicionais
+
+### Criar Service via Admin
+1. Acesse `http://localhost:8000/admin/marketplace/service/add/`
+2. Preencha dados
+3. Clique em "Save"
+
+### Criar Categoria
+1. No admin, acesse `Marketplace > Categories`
+2. Clique em "Add Category"
+3. Preencha nome, descrição, ícone
+
+### Usuários e Permissões
+1. Admin: `http://localhost:8000/admin/auth/user/`
+2. Dê permissões via Django admin
+3. Atribua grupos de usuários
+
+---
+
+## 🚀 Deployment
+
+### Heroku
+```bash
+heroku create nexuslife
+git push heroku main
+heroku run python manage.py migrate
+```
+
+### AWS EC2
+```bash
+# SSH e configure
+ssh -i key.pem ubuntu@instance
+
+# Clone e setup
+git clone <url> NexusLife
+cd NexusLife
+./deploy.sh
+```
+
+### Docker
+```bash
+docker build -t nexuslife .
+docker run -p 8000:8000 nexuslife
+```
+
+---
+
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+---
+
+## 📞 Suporte
+
+**Encontrou um bug?** Abra uma issue no GitHub!
+
+**Precisa de ajuda?** Confira a documentação ou contate-nos:
+- 📧 Email: support@nexuslife.com
+- 💬 Discord: [Comunidade NexusLife]()
+- 📖 Docs: [https://nexuslife.docs.io]()
 
 [Logout]   → Encerra sessão Django e redireciona para /login
 
