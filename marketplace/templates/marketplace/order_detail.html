@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Detalhes do Pedido{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="text-3xl font-bold mb-4">Pedido #{{ order.pk }}</h1>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="font-bold mb-2">Serviço</h3>
+                        <p><strong>{{ order.service.title }}</strong></p>
+                        <p>{{ order.service.description }}</p>
+                        <p class="text-green-600 font-bold">R$ {{ order.service.price }}</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-2">Informações</h3>
+                        <p><strong>Cliente:</strong> {{ order.client.username }}</p>
+                        <p><strong>Freelancer:</strong> {{ order.service.freelancer.username }}</p>
+                        <p><strong>Status:</strong> 
+                            <span class="badge {% if order.status == 'pending' %}badge-warning{% elif order.status == 'in_progress' %}badge-info{% elif order.status == 'completed' %}badge-success{% else %}badge-danger{% endif %}">
+                                {{ order.get_status_display }}
+                            </span>
+                        </p>
+                        <p><strong>Criado em:</strong> {{ order.created_at|date:"d/m/Y H:i" }}</p>
+                    </div>
+                </div>
+
+                {% if order.notes %}
+                <div class="mb-6">
+                    <h3 class="font-bold mb-2">Notas do Cliente</h3>
+                    <p class="bg-gray-50 p-4 rounded">{{ order.notes }}</p>
+                </div>
+                {% endif %}
+
+                {% if user == order.service.freelancer %}
+                    <div class="mb-6">
+                        <h3 class="font-bold mb-2">Ações do Freelancer</h3>
+                        <div class="flex gap-2">
+                            {% if order.status == 'pending' %}
+                                <a href="{% url 'marketplace:order_update_status' order.pk 'in_progress' %}" class="btn btn-info">Iniciar Trabalho</a>
+                            {% elif order.status == 'in_progress' %}
+                                <a href="{% url 'marketplace:order_update_status' order.pk 'completed' %}" class="btn btn-success">Marcar como Concluído</a>
+                            {% endif %}
+                            {% if order.status != 'cancelled' and order.status != 'completed' %}
+                                <a href="{% url 'marketplace:order_update_status' order.pk 'cancelled' %}" class="btn btn-danger">Cancelar Pedido</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="flex gap-4">
+                    <a href="{% url 'marketplace:order_list' %}" class="btn btn-secondary">Voltar aos Pedidos</a>
+                    <a href="{% url 'marketplace:service_detail' order.service.pk %}" class="btn btn-primary">Ver Serviço</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

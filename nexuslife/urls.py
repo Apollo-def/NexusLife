@@ -13,4 +13,9 @@ urlpatterns = [
     
     # Rotas do Gmail
     path('api/gmail/', include('core.gmail.urls')),
+    
+    # Rotas do Marketplace
+    path('api/marketplace/', include('marketplace.urls')),
+    path('marketplace/', include('marketplace.urls')),
+]
 ]

@@ -1,14 +1,2 @@
-# NexusLife Run TODO
-
-## Pending Steps
-- [x] Step 1: Manual - Create PostgreSQL DB 'nexuslife' via pgAdmin/psql (user:postgres/pass:1212)
-- [ ] Step 2: Create and activate Python virtual environment
-- [ ] Step 3: Install Python dependencies (pip install -r requirements.txt)
-- [ ] Step 4: Run Django migrations (makemigrations + migrate)
-- [ ] Step 5: Create superuser (optional)
-- [ ] Step 6: Start Django development server (python manage.py runserver)
-- [ ] Step 7: Verify access at http://127.0.0.1:8000/
-
-## Next Action
-Start with PostgreSQL check/creation.
+# NexusLife Cleanup TODO\n\n## Current Task: Code Cleanup & Structure Optimization (Progress)\n\n**Step 1: [x] Fix errors in core files (debug prints → logging, views.py fixed).**\n**Step 2: [ ] Merge TODOs and delete duplicate TODO_MARKETPLACE.md.**\n**Step 3: [x] Delete explicit duplicates (aspect-ratio copy.tsx, bun.lockb, root package-lock.json).**\n**Step 4: [ ] Remove empty tests.py and frontend test folder.**\n**Step 5: [ ] Remove bloated unused shadcn UI components (chart.tsx etc.).**\n**Step 6: [ ] Commit changes.**\n**Step 7: [ ] Test server (`python manage.py runserver`) and frontend (`cd frontend && bun dev`).**\n\n## Postgres Migration:\n- [ ] Complete steps from original TODO...\n\n## Marketplace Frontend:\n7. [ ] React pages...\n8. [ ] Test/integration.
 

@@ -11,10 +11,7 @@ if firebase_admin_initialized:
 from requests.exceptions import HTTPError
 import json
 
-try:
-    initialize_firebase_admin()
-except Exception as e:
-    print(f"Aviso: Firebase Admin não pôde ser inicializado: {e}")
+try:\n    initialize_firebase_admin()\nexcept Exception as e:\n    logger.warning(f"Firebase Admin não pôde ser inicializado: {e}")
 
 def login_view(request):
     if request.method == 'POST':
