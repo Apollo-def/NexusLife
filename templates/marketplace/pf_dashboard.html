@@ -1,0 +1,147 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Dashboard PF - NexusLife{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4 px-3 px-md-4">
+    <div class="row mb-4">
+        <div class="col">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-user-friends fa-2x text-primary me-3"></i>
+                <div>
+                    <h1 class="h3 mb-1 fw-bold text-primary">Dashboard Pessoa Física</h1>
+                    <p class="mb-0 text-muted">Gerencie seus serviços freelance pessoais</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4 g-4">
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-star fa-2x text-warning mb-3"></i>
+                    <h3 class="h2 fw-bold text-primary">{{ profile.average_rating|floatformat:1|default:"0.0" }}</h3>
+                    <p class="text-muted mb-0">Média de Avaliação</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-tasks fa-2x text-success mb-3"></i>
+                    <h3 class="h2 fw-bold text-success">{{ profile.completion_rate|floatformat:0|default:"0" }}%</h3>
+                    <p class="text-muted mb-0">Taxa de Conclusão</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-dollar-sign fa-2x text-info mb-3"></i>
+                    <h3 class="h2 fw-bold text-info">R$ {{ profile.total_earnings|floatformat:2|default:"0,00" }}</h3>
+                    <p class="text-muted mb-0">Ganhos Totais</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-clock fa-2x text-secondary mb-3"></i>
+                    <h3 class="h2 fw-bold text-secondary">{{ profile.response_time }}h</h3>
+                    <p class="text-muted mb-0">Tempo Médio Resposta</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Services Section -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-transparent border-0 pb-0">
+                    <h5 class="mb-0 fw-bold text-primary">
+                        <i class="fas fa-briefcase me-2"></i>Meus Serviços Ativos ({{ services.count }})
+                    </h5>
+                </div>
+                <div class="card-body p-0">
+                    {% if services %}
+                        <div class="list-group list-group-flush">
+                            {% for service in services %}
+                                <a href="{% url 'marketplace:service_detail' service.pk %}" class="list-group-item list-group-item-action px-4 py-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1 fw-bold">{{ service.title }}</h6>
+                                        <span class="badge bg-primary rounded-pill">R$ {{ service.price }}</span>
+                                    </div>
+                                    <p class="mb-2 text-muted small">{{ service.description|truncatewords:15 }}</p>
+                                    <small class="text-success">Categoria: {{ service.category.name }} | {{ service.delivery_days }} dias</small>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <i class="fas fa-plus-circle fa-3x text-muted mb-3"></i>
+                            <h5 class="text-muted">Nenhum serviço ativo</h5>
+                            <a href="{% url 'marketplace:service_create' %}" class="btn btn-primary mt-2">
+                                <i class="fas fa-plus me-2"></i>Criar Primeiro Serviço
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-transparent border-0 pb-0">
+                    <h5 class="mb-0 fw-bold text-primary">
+                        <i class="fas fa-shopping-cart me-2"></i>Pedidos Recentes ({{ orders.count }})
+                    </h5>
+                </div>
+                <div class="card-body p-0">
+                    {% if orders %}
+                        <div class="list-group list-group-flush">
+                            {% for order in orders %}
+                                <div class="list-group-item px-4 py-3 border-end-0 border-start-0">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <small class="fw-bold">{{ order.service.title|truncatechars:30 }}</small>
+                                        <span class="badge bg-{{ order.status|lower }} text-dark">{{ order.get_status_display }}</span>
+                                    </div>
+                                    <small class="text-muted d-block">{{ order.client.username }}</small>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                            <h5 class="text-muted">Nenhum pedido</h5>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <a href="{% url 'marketplace:service_create' %}" class="btn btn-primary btn-lg px-5">
+                <i class="fas fa-plus-circle me-2"></i>Criar Novo Serviço
+            </a>
+            <a href="{% url 'marketplace:order_list' %}" class="btn btn-outline-primary btn-lg px-5 ms-3">
+                <i class="fas fa-list me-2"></i>Ver Todos Pedidos
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.bg-pending { background-color: #ffc107 !important; }
+.bg-in_progress { background-color: #17a2b8 !important; }
+.bg-completed { background-color: #28a745 !important; }
+.bg-cancelled { background-color: #dc3545 !important; }
+.bg-disputed { background-color: #fd7e14 !important; }
+</style>
+{% endblock %}

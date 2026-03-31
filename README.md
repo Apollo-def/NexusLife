@@ -642,6 +642,16 @@ Após o cadastro, um e-mail de verificação é enviado automaticamente.
 Acesse `http://127.0.0.1:8000/` e faça login com:
 - Username **ou** e-mail **ou** CPF + senha
 
+Existem dois tipos de personas:
+- **Pessoa Física (PF)**: use dados pessoais e CPF.
+- **Pessoa Jurídica (PJ)**: use CNPJ e informações de empresa (business_name) criadas no perfil.
+
+O perfil PF/PJ altera a experiência no dashboard (`home`) e na criação de serviços.
+
+Para administração da plataforma (admin Django):
+- Acesse `http://127.0.0.1:8000/admin/`
+- Login separado de superusuário (criado com `python manage.py createsuperuser`)
+
 ### Redefinição de senha
 
 Acesse `/password-reset/`, informe o e-mail cadastrado e um link de redefinição será enviado via Firebase.
@@ -1156,8 +1166,15 @@ Para manter o projeto limpo e sem código desnecessário, foram removidos os seg
 
 ### Resultado
 
-- ✅ Projeto mais limpo e organizado
-- ✅ Sem código morto ou não utilizado
-- ✅ Sem erros de importação
-- ✅ Django check passou com sucesso
-- ✅ Funcionalidades mantidas intactas
+- ✅Conta de admin (createsuperuser):
+usuário: admin
+email: admin@example.com
+senha: admin1234
+
+- ✅Passo 2: acessar PF
+http://127.0.0.1:8000/
+login usuario / usuario1234
+
+- ✅Passo 2: acessar PJ
+http://127.0.0.1:8000/
+login empresa / empresa1234

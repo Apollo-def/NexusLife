@@ -86,3 +86,43 @@ def order_update_status(request, pk, status):
         order.save()
         messages.success(request, f'Status do pedido atualizado para {order.get_status_display()}!')
     return redirect('marketplace:order_detail', pk=order.pk)
+
+
+from django.db.models import Q
+
+@login_required
+def pf_dashboard(request):
+    """Dashboard Pessoa Física"""
+    profile = getattr(request.user, 'freelancer_profile', None)
+    if not profile or profile.person_type != 'PF':
+        messages.warning(request, 'Dashboard PF - redirecionando...')
+        return redirect('home')
+
+    services = Service.objects.filter(freelancer=request.user, is_active=True)
+    orders = Order.objects.filter(service__freelancer=request.user).select_related('service', 'client').order_by('-created_at')[:5]
+
+    context = {
+        'profile': profile,
+        'services': services,
+        'orders': orders,
+    }
+    return render(request, 'marketplace/pf_dashboard.html', context)
+
+
+@login_required
+def pj_dashboard(request):
+    """Dashboard Pessoa Jurídica"""
+    profile = getattr(request.user, 'freelancer_profile', None)
+    if not profile or profile.person_type != 'PJ':
+        messages.warning(request, 'Dashboard PJ - redirecionando...')
+        return redirect('home')
+
+    services = Service.objects.filter(freelancer=request.user, is_active=True)
+    orders = Order.objects.filter(service__freelancer=request.user).select_related('service', 'client').order_by('-created_at')[:5]
+
+    context = {
+        'profile': profile,
+        'services': services,
+        'orders': orders,
+    }
+    return render(request, 'marketplace/pj_dashboard.html', context)

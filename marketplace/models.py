@@ -119,7 +119,17 @@ class Favorite(models.Model):
 
 class FreelancerProfile(models.Model):
     """Perfil estendido do freelancer"""
+
+    PERSON_TYPE_CHOICES = [
+        ('PF', 'Pessoa Física'),
+        ('PJ', 'Pessoa Jurídica'),
+    ]
+
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='freelancer_profile')
+    person_type = models.CharField(max_length=2, choices=PERSON_TYPE_CHOICES, default='PF')
+    business_name = models.CharField(max_length=150, blank=True, help_text='Para Pessoa Jurídica')
+    cnpj = models.CharField(max_length=18, blank=True, help_text='Para Pessoa Jurídica')
+    state_registration = models.CharField(max_length=20, blank=True, help_text='Inscrição Estadual para PJ')
     bio = models.TextField(blank=True)
     profile_image = models.ImageField(upload_to='profiles/', null=True, blank=True)
     hourly_rate = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)

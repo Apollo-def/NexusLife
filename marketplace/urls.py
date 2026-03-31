@@ -22,6 +22,8 @@ urlpatterns = [
     path('orders/', views.order_list, name='order_list'),
     path('order/<int:pk>/', views.order_detail, name='order_detail'),
     path('order/<int:pk>/status/<str:status>/', views.order_update_status, name='order_update_status'),
+    path('dashboard/pf/', views.pf_dashboard, name='pf_dashboard'),
+    path('dashboard/pj/', views.pj_dashboard, name='pj_dashboard'),
 
     # API views
     path('api/', include(router.urls)),

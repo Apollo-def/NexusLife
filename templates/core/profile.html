@@ -41,57 +41,136 @@
                         {% endfor %}
                     {% endif %}
 
-                    <form method="post" novalidate>
+                    <form method="post" enctype="multipart/form-data" novalidate>
                         {% csrf_token %}
 
+                        <!-- User Form Fields -->
+                        <h6 class="fw-bold text-primary mb-3 pb-2 border-bottom">Dados da Conta</h6>
                         <div class="row mb-4">
                             <div class="col-md-6">
-                                {% with form.first_name as field %}
                                 <div class="form-group">
-                                    <label class="form-label fw-bold" style="color: #022F73; font-size: 14px;">
-                                        <i class="fas fa-user me-2"></i>{{ field.label }}
-                                    </label>
-                                    {{ field }}
-                                    {% if field.errors %}
-                                        <div class="text-danger small mt-2">
-                                            {% for error in field.errors %}<i class="fas fa-exclamation-circle me-1"></i>{{ error }}{% endfor %}
-                                        </div>
+                                    <label class="form-label fw-bold" style="color: #022F73;">Nome</label>
+                                    {{ user_form.first_name }}
+                                    {% if user_form.first_name.errors %}
+                                        <div class="text-danger small mt-1">{{ user_form.first_name.errors.0 }}</div>
                                     {% endif %}
                                 </div>
-                                {% endwith %}
                             </div>
                             <div class="col-md-6">
-                                {% with form.last_name as field %}
                                 <div class="form-group">
-                                    <label class="form-label fw-bold" style="color: #022F73; font-size: 14px;\">
-                                        <i class="fas fa-user me-2"></i>{{ field.label }}
-                                    </label>
-                                    {{ field }}
-                                    {% if field.errors %}
-                                        <div class="text-danger small mt-2">
-                                            {% for error in field.errors %}<i class="fas fa-exclamation-circle me-1"></i>{{ error }}{% endfor %}
-                                        </div>
+                                    <label class="form-label fw-bold" style="color: #022F73;">Sobrenome</label>
+                                    {{ user_form.last_name }}
+                                    {% if user_form.last_name.errors %}
+                                        <div class="text-danger small mt-1">{{ user_form.last_name.errors.0 }}</div>
                                     {% endif %}
                                 </div>
-                                {% endwith %}
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold" style="color: #022F73;">Email</label>
+                                    {{ user_form.email }}
+                                    {% if user_form.email.errors %}
+                                        <div class="text-danger small mt-1">{{ user_form.email.errors.0 }}</div>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
 
-                        {% for field in form %}
-                            {% if field.name not in 'first_name,last_name' %}
-                                <div class="mb-4">
-                                    <label for="{{ field.id_for_label }}" class="form-label fw-bold" style="color: #022F73; font-size: 14px;">
-                                        {{ field.label }}
-                                    </label>
-                                    {{ field }}
-                                    {% if field.errors %}
-                                        <div class="text-danger small mt-2">
-                                            {% for error in field.errors %}<i class="fas fa-exclamation-circle me-1"></i>{{ error }}{% endfor %}
-                                        </div>
+                        <!-- Profile Form Fields -->
+                        <h6 class="fw-bold text-success mt-4 mb-3 pb-2 border-bottom border-top">Perfil Freelancer</h6>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label>Tipo de Pessoa</label>
+                                <p class="fw-bold text-primary mb-1">{{ profile.get_person_type_display }}</p>
+                            </div>
+                            {% if profile.person_type == 'PJ' %}
+                            <div class="col-md-6">
+                                <label>Razão Social</label>
+                                <p class="fw-bold mb-1">{{ profile.business_name }}</p>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold" style="color: #28a745;">CPF/CNPJ</label>
+                                    <p class="form-control-plaintext">{{ profile.cnpj|default:"Não definido" }}</p>
+                                    {{ profile_form.cnpj }}
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold" style="color: #28a745;">Telefone</label>
+                                    {{ profile_form.phone }}
+                                    {% if profile_form.phone.errors %}
+                                        <div class="text-danger small mt-1">{{ profile_form.phone.errors.0 }}</div>
                                     {% endif %}
                                 </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold" style="color: #28a745;">Hora Resposta</label>
+                                    {{ profile_form.response_time }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            {% if profile.person_type == 'PJ' %}
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Inscrição Estadual</label>
+                                    <p class="form-control-plaintext">{{ profile.state_registration|default:"Não informada" }}</p>
+                                    {{ profile_form.state_registration }}
+                                </div>
+                            </div>
                             {% endif %}
-                        {% endfor %}
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold" style="color: #28a745;">Localização</label>
+                                    {{ profile_form.location }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Foto de Perfil</label>
+                                    {% if profile.profile_image %}
+                                        <img src="{{ profile.profile_image.url }}" alt="Foto" class="rounded img-thumbnail mb-2" style="max-width: 100px; max-height: 100px;">
+                                    {% endif %}
+                                    {{ profile_form.profile_image }}
+                                    <small class="form-text text-muted">PNG/JPG até 2MB</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Valor Hora (opcional)</label>
+                                    {{ profile_form.hourly_rate }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold" style="color: #28a745;">Bio / Descrição</label>
+                            {{ profile_form.bio }}
+                            <small class="form-text text-muted">Conte sobre suas habilidades (máx 500 caracteres)</small>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex gap-3 mt-5 pt-4 border-top">
+                            <button type="submit" class="btn btn-success btn-lg px-5 py-2 fw-bold flex-grow-1">
+                                <i class="fas fa-save me-2"></i>Salvar Perfil Completo
+                            </button>
+                            <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-lg px-5 py-2">
+                                <i class="fas fa-arrow-left me-2"></i>Voltar
+                            </a>
+                        </div>
+                    </form>
 
                         <div class="d-flex gap-3 mt-5">
                             <button type="submit" class="btn flex-grow-1 fw-bold py-2" style="background: linear-gradient(135deg, #022F73 0%, #024BA8 100%); color: white; border: none; border-radius: 8px; font-size: 16px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(2, 47, 115, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">

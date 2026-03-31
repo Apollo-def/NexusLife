@@ -13,7 +13,11 @@
             </h1>
             <p class="lead mb-4 text-muted" style="font-size: 18px; line-height: 1.6;">
                 {% if user.is_authenticated %}
-                    Olá, <strong>{{ user.first_name|default:user.username }}</strong>! Você está no melhor marketplace de serviços digitais do Brasil. Encontre talentos ou ofereça seus serviços.
+                    {% if persona == 'PJ' %}
+                        Olá, <strong>{{ user.first_name|default:user.username }}</strong> (Pessoa Jurídica)! Seja bem-vindo ao seu painel empresarial. Gere propostas, gerencie equipe e contrate freelancers qualificados.
+                    {% else %}
+                        Olá, <strong>{{ user.first_name|default:user.username }}</strong> (Pessoa Física)! Explore ofertas, contrate serviços ou ofereça seu talento como freelancer.
+                    {% endif %}
                 {% else %}
                     O marketplace de serviços digitais mais moderno. Conectamos criadores de talento com clientes que buscam qualidade.
                 {% endif %}

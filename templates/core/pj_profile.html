@@ -1,0 +1,228 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Perfil PJ - NexusLife{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Corporate Profile Header -->
+            <div class="card border-0 shadow-lg mb-5 overflow-hidden" style="border-radius: 20px; background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                <div class="row g-0">
+                    <div class="col-md-4 text-white d-flex flex-column justify-content-center align-items-center p-5 position-relative">
+                        {% if profile.profile_image %}
+                            <img src="{{ profile.profile_image.url }}" alt="Logo Empresa" class="rounded mb-3 shadow-lg" style="width: 160px; height: 120px; object-fit: cover; border: 5px solid white;">
+                        {% else %}
+                            <div class="rounded bg-white d-flex align-items-center justify-content-center mb-3 shadow-lg p-4" style="width: 160px; height: 120px;">
+                                <i class="fas fa-building fa-2x text-success"></i>
+                            </div>
+                        {% endif %}
+                        <h2 class="fw-bold mb-2 text-white">{{ profile.business_name|default:user.get_full_name }}</h2>
+                        <p class="mb-1 opacity-90 text-white">{{ profile.cnpj }}</p>
+                        <p class="mb-3 opacity-75 text-white small">{{ profile.state_registration|default:"IE Não informada" }}</p>
+                        <div class="d-flex gap-2 flex-wrap justify-content-center">
+                            <span class="badge bg-light text-dark px-3 py-1 fs-6">
+                                <i class="fas fa-star me-1"></i>{{ profile.average_rating|floatformat:1 }}
+                            </span>
+                            <span class="badge bg-white text-success px-3 py-1 fs-6 fw-bold">{{ profile.completion_rate|floatformat:0 }}%</span>
+                        </div>
+                    </div>
+                    <div class="col-md-8 p-5 bg-white">
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="fw-bold text-muted small mb-1">Responsável</label>
+                                <div>{{ user.get_full_name|default:user.username }}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold text-muted small mb-1">Telefone</label>
+                                <div>{{ profile.phone|default:"Não informado" }}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold text-muted small mb-1">Localização</label>
+                                <div>{{ profile.location|default:"Não informado" }}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold text-muted small mb-1">Site</label>
+                                {% if profile.website %}
+                                    <a href="{{ profile.website }}" class="text-decoration-none text-success fw-medium" target="_blank">{{ profile.website }}</a>
+                                {% else %}
+                                    <span class="text-muted">Não informado</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="fw-bold text-success mb-3">Sobre a Empresa</h6>
+                            <p class="text-muted lh-lg">{{ profile.bio|default:"Sem descrição da empresa."|linebreaks }}</p>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <a href="{% url 'profile' %}" class="btn btn-success px-4 py-2 fw-medium">
+                                <i class="fas fa-edit me-2"></i>Gerenciar Perfil
+                            </a>
+                            <a href="{% url 'marketplace:service_create' %}" class="btn btn-outline-success px-4 py-2 fw-medium">
+                                <i class="fas fa-plus me-2"></i>Novo Serviço
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate Tabs -->
+            <ul class="nav nav-tabs mb-4 border-bottom-0" id="companyTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-semibold px-4 py-3 border-success border-bottom-3 rounded-0" id="metrics-tab" data-bs-toggle="tab" data-bs-target="#metrics" type="button" style="border-bottom-color: #28a745 !important;">📊 Métricas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold px-4 py-3" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button">💼 Serviços ({{ services.count }})</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold px-4 py-3" id="team-tab" data-bs-toggle="tab" data-bs-target="#team" type="button">👥 Equipe</button>
+                </li>
+            </ul>
+
+            <div class="tab-content mb-5" id="companyTabContent">
+                <!-- Metrics Tab -->
+                <div class="tab-pane fade show active p-4 bg-light rounded-3 shadow-sm" id="metrics" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 h-100 text-center p-4 shadow">
+                                <div class="display-6 fw-bold text-success mb-2">R$ {{ profile.total_earnings|floatformat:2 }}</div>
+                                <p class="text-muted mb-0 fs-6">Faturamento Total</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 h-100 text-center p-4 shadow">
+                                <div class="h3 fw-bold text-primary mb-2">{{ services|length }}</div>
+                                <p class="text-muted mb-0 fs-6">Serviços Públicos</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 h-100 text-center p-4 shadow">
+                                <div class="h3 fw-bold text-info mb-2">{{ profile.total_reviews|default:"0" }}</div>
+                                <p class="text-muted mb-0 fs-6">Avaliações Recebidas</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 h-100 text-center p-4 shadow">
+                                <div class="h3 fw-bold text-warning mb-2">{{ orders|length }}</div>
+                                <p class="text-muted mb-0 fs-6">Contratos Pendentes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Tab -->
+                <div class="tab-pane fade p-4" id="services" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Serviço</th>
+                                    <th>Preço</th>
+                                    <th>Categoria</th>
+                                    <th>Status</th>
+                                    <th>Data</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for service in services %}
+                                    <tr>
+                                        <td>{{ service.title|truncatechars:35 }}</td>
+                                        <td><strong>R$ {{ service.price }}</strong></td>
+                                        <td><span class="badge bg-success">{{ service.category }}</span></td>
+                                        <td>{% if service.is_active %}<span class="badge bg-success">Ativo</span>{% else %}<span class="badge bg-secondary">Inativo</span>{% endif %}</td>
+                                        <td>{{ service.created_at|date:"d/m/Y" }}</td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="{% url 'marketplace:service_detail' service.pk %}" class="btn btn-outline-primary">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="{% url 'marketplace:service_update' service.pk %}" class="btn btn-outline-success">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% empty %}
+                                    <tr>
+                                        <td colspan="6" class="text-center py-4 text-muted">
+                                            <i class="fas fa-briefcase fa-3x mb-3"></i><br>
+                                            Nenhum serviço cadastrado
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Team Tab -->
+                <div class="tab-pane fade p-4" id="team" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h6 class="fw-bold text-success mb-3">Membros da Equipe</h6>
+                            <p class="text-muted">Recrute freelancers para trabalhar com sua empresa ou gerencie equipe interna.</p>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <button class="btn btn-outline-success">
+                                <i class="fas fa-user-plus me-2"></i>Adicionar Membro
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-4 g-3">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card border-0 shadow-sm h-100 text-center p-4 hover-lift">
+                                <div class="rounded-circle bg-primary text-white mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    JD
+                                </div>
+                                <h6>João da Silva</h6>
+                                <small class="text-muted">Desenvolvedor Frontend</small>
+                            </div>
+                        </div>
+                        <!-- More team members... -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="text-center mt-5 pt-4 border-top">
+                <a href="{% url 'marketplace:pj_dashboard' %}" class="btn btn-success btn-lg me-3 px-5">
+                    <i class="fas fa-tachometer-alt me-2"></i>Dashboard Empresa
+                </a>
+                <a href="{% url 'marketplace:service_create' %}" class="btn btn-outline-primary btn-lg px-5">
+                    <i class="fas fa-plus-circle me-2"></i>Novo Serviço
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(40,167,69,0.3) !important;
+    transition: all 0.3s ease;
+}
+.nav-tabs {
+    border-bottom: 2px solid #e9ecef;
+}
+.nav-tabs .nav-link.active {
+    background-color: #28a745;
+    color: white !important;
+    border-color: #28a745;
+}
+.nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    margin-right: 2px;
+}
+.nav-tabs .nav-link:hover {
+    color: #28a745;
+    border-bottom: 2px solid #28a745;
+}
+.bg-primary {
+    background-color: #007bff !important;
+}
+</style>
+{% endblock %}
