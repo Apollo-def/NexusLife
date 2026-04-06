@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 import logging
 from .forms import UserRegisterForm, LoginForm, UserUpdateForm
+from .models import UserProfile
 from .firebase_config import auth_firebase, initialize_firebase_admin, firebase_admin_initialized
 
 logger = logging.getLogger(__name__)
@@ -142,14 +143,23 @@ def register_view(request):
                 username = email.split('@')[0]
 
             try:
-                user_firebase = auth_firebase.create_user_with_email_and_password(email, password)
-                uid = user_firebase['localId']
-
+                # Criar usuário no Django primeiro
                 user_django = form.save(commit=False)
                 user_django.username = username.lower()
                 user_django.first_name = first_name
                 user_django.last_name = last_name
                 user_django.save()
+
+                # Cria perfil de usuário com dados adicionais
+                UserProfile.objects.get_or_create(
+                    user=user_django,
+                    defaults={
+                        'person_type': person_type,
+                        'cpf_cnpj': cpf_cnpj,
+                        'phone': phone,
+                        'state_registration': state_registration or ''
+                    }
+                )
 
                 # Cria/atualiza perfil de freelancer com PF/PJ
                 from marketplace.models import FreelancerProfile
@@ -160,26 +170,35 @@ def register_view(request):
                     profile.cnpj = ''
                     profile.state_registration = ''
                 else:
-                    profile.business_name = f"{first_name} {last_name}".strip() or business_name
+                    profile.business_name = f"{first_name} {last_name}".strip()
                     profile.cnpj = cpf_cnpj
                     profile.state_registration = state_registration or ''
                 profile.save()
 
-                if firebase_admin_initialized:
-                    db = firestore.client()
-                    cpf_digits = ''.join(ch for ch in cpf_cnpj if ch.isdigit())
-                    user_data = {
-                        'first_name': first_name,
-                        'last_name': last_name,
-                        'email': email,
-                        'cpf_cnpj': cpf_digits or cpf_cnpj.strip(),
-                        'person_type': person_type
-                    }
-                    db.collection('users').document(uid).set(user_data)
+                # Tentar criar no Firebase
+                firebase_uid = None
+                try:
+                    user_firebase = auth_firebase.create_user_with_email_and_password(email, password)
+                    firebase_uid = user_firebase['localId']
 
-                auth_firebase.send_email_verification(user_firebase['idToken'])
+                    if firebase_admin_initialized:
+                        db = firestore.client()
+                        cpf_digits = ''.join(ch for ch in cpf_cnpj if ch.isdigit())
+                        user_data = {
+                            'first_name': first_name,
+                            'last_name': last_name,
+                            'email': email,
+                            'cpf_cnpj': cpf_digits or cpf_cnpj.strip(),
+                            'person_type': person_type
+                        }
+                        db.collection('users').document(firebase_uid).set(user_data)
 
-                messages.success(request, f'Conta {person_type} criada para {username}! Verifique seu e-mail.')
+                    auth_firebase.send_email_verification(user_firebase['idToken'])
+                    messages.success(request, f'✅ Cadastro realizado com sucesso! Verifique seu e-mail.')
+                except Exception as firebase_error:
+                    logger.warning(f"Firebase error but user created in Django: {firebase_error}")
+                    messages.success(request, f'✅ Cadastro realizado com sucesso! Faça login para continuar.')
+
                 return redirect('login')
 
             except HTTPError as e:
@@ -195,6 +214,7 @@ def register_view(request):
                     messages.error(request, f'Erro no registro: {error_message}')
             
             except Exception as e:
+                logger.error(f"Registration error: {e}")
                 messages.error(request, f'Erro inesperado: {e}')
     else:
         form = UserRegisterForm()

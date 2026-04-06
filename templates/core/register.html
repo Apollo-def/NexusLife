@@ -30,6 +30,7 @@
 .alert-success { background-color: #d1e7dd; color: #0f5132; border-color: #badbcc; }
 .alert-danger { background-color: #f8d7da; color: #842029; border-color: #f5c2c7; }
 .alert-warning { background-color: #fff3cd; color: #664d03; border-color: #ffecb5; }
+.hidden-field { display: none; }
 @media (max-width: 600px) {
   .form-row { grid-template-columns: 1fr; }
   .person-type-selector { flex-direction: column; gap: 15px; }
@@ -87,21 +88,32 @@
 
     <div class="form-row full">
       <div class="form-group">
-        <label for="{{ form.cpf.id_for_label }}" id="cpfLabel">CPF</label>
-        {{ form.cpf }}
-        {% if form.cpf.errors %}
-          <ul class="errorlist">{% for e in form.cpf.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+        <label for="{{ form.cpf_cnpj.id_for_label }}" id="cpfLabel">CPF / CNPJ</label>
+        {{ form.cpf_cnpj }}
+        {% if form.cpf_cnpj.errors %}
+          <ul class="errorlist">{% for e in form.cpf_cnpj.errors %}<li>{{ e }}</li>{% endfor %}</ul>
         {% endif %}
       </div>
     </div>
 
-    <div class="form-row full">
+    <div class="form-row full" id="phoneField">
       <div class="form-group">
         <label for="{{ form.phone.id_for_label }}" id="phoneLabel">Telefone</label>
         {{ form.phone }}
         <small class="helptext" id="phoneHelptext">(DDD) Telefone</small>
         {% if form.phone.errors %}
           <ul class="errorlist">{% for e in form.phone.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="form-row full hidden-field" id="stateRegField">
+      <div class="form-group">
+        <label for="{{ form.state_registration.id_for_label }}" id="stateRegLabel">Inscrição Estadual</label>
+        {{ form.state_registration }}
+        <small class="helptext">(obrigatório para Pessoa Jurídica)</small>
+        {% if form.state_registration.errors %}
+          <ul class="errorlist">{% for e in form.state_registration.errors %}<li>{{ e }}</li>{% endfor %}</ul>
         {% endif %}
       </div>
     </div>
@@ -154,8 +166,9 @@
 <script>
 const firstNameInput = document.getElementById('{{ form.first_name.id_for_label }}');
 const lastNameInput  = document.getElementById('{{ form.last_name.id_for_label }}');
-const cpfInput       = document.getElementById('{{ form.cpf.id_for_label }}');
+const cpfInput       = document.getElementById('{{ form.cpf_cnpj.id_for_label }}');
 const phoneInput     = document.getElementById('{{ form.phone.id_for_label }}');
+const stateRegInput  = document.getElementById('{{ form.state_registration.id_for_label }}');
 const emailInput     = document.getElementById('{{ form.email.id_for_label }}');
 const usernameInput  = document.getElementById('{{ form.username.id_for_label }}');
 const firstNameLabel = document.getElementById('firstNameLabel');
@@ -163,21 +176,34 @@ const lastNameLabel  = document.getElementById('lastNameLabel');
 const cpfLabel       = document.getElementById('cpfLabel');
 const phoneLabel     = document.getElementById('phoneLabel');
 const phoneHelptext  = document.getElementById('phoneHelptext');
+const stateRegLabel  = document.getElementById('stateRegLabel');
+const phoneField     = document.getElementById('phoneField');
+const stateRegField  = document.getElementById('stateRegField');
 const personTypeRadios = document.querySelectorAll('input[name="person_type"]');
 
 function updatePersonType() {
   const selectedType = document.querySelector('input[name="person_type"]:checked').value;
+  
   if (selectedType === 'PJ') {
+    // Mostrar campos de PJ
+    stateRegField.classList.remove('hidden-field');
+    phoneField.classList.add('hidden-field');
+    
+    // Atualizar labels e placeholders
     firstNameLabel.textContent = 'Razão Social';
     lastNameLabel.textContent  = 'Nome Fantasia';
     cpfLabel.textContent       = 'CNPJ';
-    phoneLabel.textContent     = 'Inscrição Estadual';
-    phoneHelptext.textContent  = 'Ex: PE.123456/0001-89';
+    stateRegLabel.textContent  = 'Inscrição Estadual';
     firstNameInput.placeholder = 'Razão Social';
     lastNameInput.placeholder  = 'Nome Fantasia';
     cpfInput.placeholder       = 'CNPJ (14 dígitos)';
-    phoneInput.placeholder     = 'Inscrição Estadual';
+    stateRegInput.placeholder  = 'Ex: PE.123456/0001-89';
   } else {
+    // Mostrar campos de PF
+    phoneField.classList.remove('hidden-field');
+    stateRegField.classList.add('hidden-field');
+    
+    // Atualizar labels e placeholders
     firstNameLabel.textContent = 'Nome';
     lastNameLabel.textContent  = 'Sobrenome';
     cpfLabel.textContent       = 'CPF';
@@ -185,13 +211,16 @@ function updatePersonType() {
     phoneHelptext.textContent  = '(DDD) Telefone';
     firstNameInput.placeholder = 'Nome';
     lastNameInput.placeholder  = 'Sobrenome';
-    cpfInput.placeholder       = 'CPF';
+    cpfInput.placeholder       = 'CPF (11 dígitos)';
     phoneInput.placeholder     = '(DDD) Telefone';
   }
+  
+  // Limpar valores
   firstNameInput.value = '';
   lastNameInput.value  = '';
   cpfInput.value       = '';
   phoneInput.value     = '';
+  stateRegInput.value  = '';
 }
 
 personTypeRadios.forEach(r => r.addEventListener('change', updatePersonType));
@@ -205,38 +234,46 @@ if (emailInput && usernameInput) {
 
 if (phoneInput) {
   phoneInput.addEventListener('input', function (e) {
-    const selectedType = document.querySelector('input[name="person_type"]:checked').value;
     let value = e.target.value.replace(/\D/g, '');
-    if (selectedType === 'PJ') {
-      if (value.length <= 2)       value = value;
-      else if (value.length <= 8)  value = `${value.slice(0,2)}.${value.slice(2)}`;
-      else if (value.length <= 12) value = `${value.slice(0,2)}.${value.slice(2,8)}/${value.slice(8)}`;
-      else                         value = `${value.slice(0,2)}.${value.slice(2,8)}/${value.slice(8,12)}-${value.slice(12,14)}`;
-    } else {
-      if (value.length <= 2)      value = `(${value}`;
-      else if (value.length <= 7) value = `(${value.slice(0,2)}) ${value.slice(2)}`;
-      else                        value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7,11)}`;
-    }
+    if (value.length <= 2)      value = `(${value}`;
+    else if (value.length <= 7) value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+    else                        value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7,11)}`;
+    e.target.value = value;
+  });
+}
+
+if (stateRegInput) {
+  stateRegInput.addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length <= 2)       value = value;
+    else if (value.length <= 8)  value = `${value.slice(0,2)}.${value.slice(2)}`;
+    else if (value.length <= 12) value = `${value.slice(0,2)}.${value.slice(2,8)}/${value.slice(8)}`;
+    else                         value = `${value.slice(0,2)}.${value.slice(2,8)}/${value.slice(8,12)}-${value.slice(12,14)}`;
     e.target.value = value;
   });
 }
 
 if (cpfInput) {
   cpfInput.addEventListener('input', function (e) {
+    const selectedType = document.querySelector('input[name="person_type"]:checked').value;
     let value = e.target.value.replace(/\D/g, '');
-    if (value.length <= 11) {
-      if (value.length <= 3)      value = value;
-      else if (value.length <= 6) value = `${value.slice(0,3)}.${value.slice(3)}`;
-      else if (value.length <= 9) value = `${value.slice(0,3)}.${value.slice(3,6)}.${value.slice(6)}`;
-      else                        value = `${value.slice(0,3)}.${value.slice(3,6)}.${value.slice(6,9)}-${value.slice(9,11)}`;
-    } else {
+    
+    if (selectedType === 'PJ') {
+      // Formatar CNPJ
       if (value.length <= 2)       value = value;
       else if (value.length <= 5)  value = `${value.slice(0,2)}.${value.slice(2)}`;
       else if (value.length <= 8)  value = `${value.slice(0,2)}.${value.slice(2,5)}.${value.slice(5)}`;
       else                         value = `${value.slice(0,2)}.${value.slice(2,5)}.${value.slice(5,8)}/${value.slice(8,12)}-${value.slice(12,14)}`;
+    } else {
+      // Formatar CPF
+      if (value.length <= 3)      value = value;
+      else if (value.length <= 6) value = `${value.slice(0,3)}.${value.slice(3)}`;
+      else if (value.length <= 9) value = `${value.slice(0,3)}.${value.slice(3,6)}.${value.slice(6)}`;
+      else                        value = `${value.slice(0,3)}.${value.slice(3,6)}.${value.slice(6,9)}-${value.slice(9,11)}`;
     }
     e.target.value = value;
   });
 }
+</script>
 </script>
 {% endblock %}

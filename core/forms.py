@@ -1,6 +1,7 @@
 from django import forms # Importa o módulo de formulários do Django.
 from django.contrib.auth.models import User # Importa o modelo de usuário padrão do Django.
 from django.contrib.auth.forms import UserCreationForm # Formulário base do Django para criação de usuários.
+from .models import UserProfile
 
 
 # Formulário de registro de usuário, herdando e estendendo o UserCreationForm.
@@ -49,7 +50,7 @@ class UserRegisterForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', 'person_type', 'cpf_cnpj', 'phone', 'state_registration')
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
         super(UserRegisterForm, self).__init__(*args, **kwargs)
