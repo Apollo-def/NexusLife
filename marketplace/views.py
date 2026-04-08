@@ -103,6 +103,7 @@ def pf_dashboard(request):
 
     services = Service.objects.filter(freelancer=request.user, is_active=True)
     orders = Order.objects.filter(service__freelancer=request.user).select_related('service', 'client').order_by('-created_at')[:5]
+    suggested_jobs = Service.objects.filter(is_active=True).exclude(freelancer=request.user).select_related('category').order_by('-created_at')[:5]
     
     # Notificações
     unread_notifications = Notification.objects.filter(user=request.user, is_read=False).count()
@@ -118,6 +119,7 @@ def pf_dashboard(request):
         'profile': profile,
         'services': services,
         'orders': orders,
+        'suggested_jobs': suggested_jobs,
         'unread_notifications': unread_notifications,
         'recent_notifications': recent_notifications,
         'total_orders': total_orders,

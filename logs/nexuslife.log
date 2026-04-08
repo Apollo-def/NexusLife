@@ -1,0 +1,413 @@
+WARNING 2026-04-08 10:12:41,380 firebase_config 19284 14156 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:12:44,619 firebase_config 22696 9696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:12:44,679 autoreload 22696 9696 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:12:44,719 firebase_config 22696 9696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:12:47,063 openai_integration 22696 9696 OPENAI_API_KEY não configurada
+INFO 2026-04-08 10:13:02,841 basehttp 22696 23888 "GET / HTTP/1.1" 200 10097
+INFO 2026-04-08 10:13:03,007 basehttp 22696 10404 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-08 10:13:03,016 basehttp 22696 23888 "GET /static/styles.css HTTP/1.1" 200 4509
+WARNING 2026-04-08 10:13:05,322 log 22696 23888 Not Found: /favicon.ico
+WARNING 2026-04-08 10:13:05,323 basehttp 22696 23888 "GET /favicon.ico HTTP/1.1" 404 5162
+INFO 2026-04-08 10:13:11,841 basehttp 22696 23888 "GET /register/ HTTP/1.1" 200 17263
+INFO 2026-04-08 10:13:37,004 basehttp 22696 23888 "GET / HTTP/1.1" 200 10097
+ERROR 2026-04-08 10:14:49,564 log 22696 23888 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\NexusLife\core\views.py", line 110, in login_view
+    user = authenticate(request, username=credential, password=password)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\contrib\auth\__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\contrib\auth\backends.py", line 46, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\contrib\auth\base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 635, in get
+    num = len(clone)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: auth_user
+ERROR 2026-04-08 10:14:49,578 basehttp 22696 23888 "POST / HTTP/1.1" 500 165161
+INFO 2026-04-08 10:15:12,821 basehttp 22696 23888 "GET /register/ HTTP/1.1" 200 17263
+ERROR 2026-04-08 10:15:53,988 log 22696 23888 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\NexusLife\core\views.py", line 149, in register_view
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\forms\forms.py", line 433, in full_clean
+    self._clean_fields()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\forms\forms.py", line 448, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\contrib\auth\forms.py", line 165, in clean_username
+    and self._meta.model.objects.filter(username__iexact=username).exists()
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 1243, in exists
+    return self.query.has_results(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\query.py", line 600, in has_results
+    return compiler.has_results()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1530, in has_results
+    return bool(self.execute_sql(SINGLE))
+                ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: auth_user
+ERROR 2026-04-08 10:15:54,000 basehttp 22696 23888 "POST /register/ HTTP/1.1" 500 154864
+WARNING 2026-04-08 10:35:41,462 firebase_config 1456 13448 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:35:43,608 firebase_config 19384 18516 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:35:43,645 autoreload 19384 18516 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:35:43,671 firebase_config 19384 18516 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:35:45,331 openai_integration 19384 18516 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:37:14,117 firebase_config 17936 25080 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:37:14,195 firebase_config 17936 25080 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:37:14,774 openai_integration 17936 25080 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:37:27,454 firebase_config 25500 24644 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:37:29,579 firebase_config 23968 24696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:37:29,615 autoreload 23968 24696 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:37:29,621 firebase_config 23968 24696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:37:30,211 openai_integration 23968 24696 OPENAI_API_KEY não configurada
+INFO 2026-04-08 10:38:49,769 basehttp 22696 24596 "GET / HTTP/1.1" 200 10097
+INFO 2026-04-08 10:38:49,785 basehttp 22696 24596 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:38:49,786 basehttp 22696 6056 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:39:00,758 basehttp 22696 6056 "POST / HTTP/1.1" 200 10435
+WARNING 2026-04-08 10:39:12,121 views 22696 6056 Firebase login fail for tasaka343@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-08 10:39:12,124 basehttp 22696 6056 "POST / HTTP/1.1" 200 10779
+WARNING 2026-04-08 10:39:23,955 views 22696 6056 Firebase login fail for tasaka343@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-08 10:39:23,958 basehttp 22696 6056 "POST / HTTP/1.1" 200 10779
+WARNING 2026-04-08 10:39:34,594 views 22696 6056 Firebase login fail for tasaka343@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-08 10:39:34,596 basehttp 22696 6056 "POST / HTTP/1.1" 200 10779
+INFO 2026-04-08 10:39:40,221 basehttp 22696 6056 "GET /password-reset/ HTTP/1.1" 200 9588
+INFO 2026-04-08 10:39:43,639 basehttp 22696 6056 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:39:43,643 basehttp 22696 6056 "GET / HTTP/1.1" 200 10793
+INFO 2026-04-08 10:40:36,248 basehttp 22696 6056 "GET /register/ HTTP/1.1" 200 17263
+INFO 2026-04-08 10:41:00,704 signals 22696 6056 Email de boas-vindas enviado para tasaka343@gmail.com
+INFO 2026-04-08 10:41:00,704 signals 22696 6056 Notificação e email enviados para tasaka343@gmail.com
+INFO 2026-04-08 10:41:03,095 basehttp 22696 6056 "POST /register/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:41:03,102 basehttp 22696 6056 "GET / HTTP/1.1" 200 10800
+INFO 2026-04-08 10:41:12,745 basehttp 22696 6056 "POST / HTTP/1.1" 302 0
+INFO 2026-04-08 10:41:12,756 basehttp 22696 6056 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:41:12,779 basehttp 22696 6056 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 30603
+INFO 2026-04-08 10:42:13,501 basehttp 22696 23448 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:43:14,201 basehttp 22696 23448 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:44:15,193 basehttp 22696 23448 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:45:15,303 basehttp 22696 23448 - Broken pipe from ('127.0.0.1', 49868)
+INFO 2026-04-08 10:45:16,673 basehttp 22696 2524 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:45:18,388 basehttp 22696 2524 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:45:18,563 basehttp 22696 2524 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:45:18,849 basehttp 22696 2524 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:45:18,968 basehttp 22696 2524 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:45:19,068 basehttp 22696 2524 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:45:31,482 basehttp 22696 2524 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:45:38,490 autoreload 23968 24696 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-08 10:45:39,005 autoreload 22696 9696 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-08 10:45:39,271 autoreload 19384 18516 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+WARNING 2026-04-08 10:45:41,103 firebase_config 13844 13604 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:41,143 autoreload 13844 13604 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:41,151 firebase_config 13844 13604 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:45:41,637 firebase_config 22544 22552 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:41,676 autoreload 22544 22552 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:41,685 firebase_config 22544 22552 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:45:41,786 openai_integration 13844 13604 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:45:41,862 firebase_config 11540 22600 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:41,917 autoreload 11540 22600 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:41,924 firebase_config 11540 22600 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:45:42,424 openai_integration 22544 22552 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:45:42,623 openai_integration 11540 22600 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:45:42,901 base 13844 8620 Session data corrupted
+INFO 2026-04-08 10:45:42,918 basehttp 13844 8620 "GET /marketplace/service/create/ HTTP/1.1" 302 0
+WARNING 2026-04-08 10:45:42,954 base 13844 8620 Session data corrupted
+INFO 2026-04-08 10:45:42,973 basehttp 13844 8620 "GET /?next=/marketplace/service/create/ HTTP/1.1" 200 10097
+INFO 2026-04-08 10:45:47,835 autoreload 11540 22600 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-08 10:45:48,258 autoreload 13844 13604 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-08 10:45:48,791 autoreload 22544 22552 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+WARNING 2026-04-08 10:45:50,322 firebase_config 23548 3988 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:50,360 autoreload 23548 3988 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:50,368 firebase_config 23548 3988 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:45:50,770 firebase_config 7372 15896 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:50,817 autoreload 7372 15896 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:50,826 firebase_config 7372 15896 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:45:51,039 openai_integration 23548 3988 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:45:51,356 firebase_config 23256 25384 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:51,405 autoreload 23256 25384 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:51,411 firebase_config 23256 25384 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:45:51,484 openai_integration 7372 15896 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:45:52,135 openai_integration 23256 25384 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:45:53,233 base 23548 23224 Session data corrupted
+INFO 2026-04-08 10:45:53,241 basehttp 23548 23224 "GET /?next=/marketplace/service/create/ HTTP/1.1" 200 10097
+INFO 2026-04-08 10:45:56,682 autoreload 7372 15896 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-08 10:45:57,167 autoreload 23256 25384 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-08 10:45:57,395 autoreload 23548 3988 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+WARNING 2026-04-08 10:45:59,159 firebase_config 12512 18708 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:59,196 autoreload 12512 18708 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:59,203 firebase_config 12512 18708 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:45:59,625 firebase_config 18356 9584 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:59,661 autoreload 18356 9584 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:59,669 firebase_config 18356 9584 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:45:59,811 openai_integration 12512 18708 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:45:59,853 firebase_config 18964 23044 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:45:59,895 autoreload 18964 23044 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:45:59,903 firebase_config 18964 23044 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:46:00,327 openai_integration 18356 9584 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:46:00,541 openai_integration 18964 23044 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:46:01,925 base 12512 12604 Session data corrupted
+INFO 2026-04-08 10:46:01,978 basehttp 12512 12604 "POST /?next=/marketplace/service/create/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:46:01,993 basehttp 12512 12604 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:46:02,056 basehttp 12512 12604 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 30603
+INFO 2026-04-08 10:46:20,406 basehttp 12512 12604 "GET /profile/ HTTP/1.1" 200 17673
+INFO 2026-04-08 10:46:25,510 autoreload 18356 9584 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-08 10:46:25,627 autoreload 12512 18708 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-08 10:46:25,675 autoreload 18964 23044 C:\Users\aluno\NexusLife\marketplace\views.py changed, reloading.
+WARNING 2026-04-08 10:46:27,962 firebase_config 18652 2448 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:46:27,998 autoreload 18652 2448 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:46:28,004 firebase_config 18652 2448 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:46:28,108 firebase_config 9512 8828 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:46:28,145 autoreload 9512 8828 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:46:28,148 firebase_config 12560 16004 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:46:28,153 firebase_config 9512 8828 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:46:28,187 autoreload 12560 16004 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:46:28,194 firebase_config 12560 16004 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:46:28,736 openai_integration 18652 2448 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:46:28,939 openai_integration 9512 8828 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:46:28,981 openai_integration 12560 16004 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 10:47:01,702 firebase_config 18476 25512 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:47:03,973 firebase_config 15972 23228 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 10:47:04,010 autoreload 15972 23228 Watching for file changes with StatReloader
+WARNING 2026-04-08 10:47:04,016 firebase_config 15972 23228 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 10:47:04,608 openai_integration 15972 23228 OPENAI_API_KEY não configurada
+INFO 2026-04-08 10:47:10,091 basehttp 18652 2028 "GET / HTTP/1.1" 200 10097
+INFO 2026-04-08 10:47:10,318 basehttp 18652 2028 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-08 10:47:10,318 basehttp 18652 4352 "GET /static/main.js HTTP/1.1" 200 9154
+WARNING 2026-04-08 10:47:10,953 log 18652 2028 Not Found: /favicon.ico
+WARNING 2026-04-08 10:47:10,954 basehttp 18652 2028 "GET /favicon.ico HTTP/1.1" 404 5162
+INFO 2026-04-08 10:47:18,684 basehttp 18652 2028 "POST / HTTP/1.1" 302 0
+INFO 2026-04-08 10:47:18,696 basehttp 18652 2028 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:47:18,742 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 30603
+INFO 2026-04-08 10:47:25,097 basehttp 18652 2028 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:47:25,115 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:47:27,106 basehttp 18652 2028 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:47:27,125 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:47:27,296 basehttp 18652 2028 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:47:27,315 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:47:27,591 basehttp 18652 2028 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:47:27,609 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:48:27,681 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:48:30,972 basehttp 18652 2028 "GET /marketplace/orders/ HTTP/1.1" 200 6905
+INFO 2026-04-08 10:49:28,198 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:50:29,185 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29993
+INFO 2026-04-08 10:51:27,714 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27604
+INFO 2026-04-08 10:51:49,039 basehttp 18652 2028 "GET /marketplace/ HTTP/1.1" 200 7479
+INFO 2026-04-08 10:51:51,973 basehttp 18652 2028 "GET /marketplace/service/create/ HTTP/1.1" 200 9445
+INFO 2026-04-08 10:51:53,620 basehttp 18652 2028 "GET /marketplace/?category= HTTP/1.1" 200 7479
+INFO 2026-04-08 10:51:54,105 basehttp 18652 2028 "GET /marketplace/?category= HTTP/1.1" 200 7479
+INFO 2026-04-08 10:51:54,238 basehttp 18652 2028 "GET /marketplace/?category= HTTP/1.1" 200 7479
+INFO 2026-04-08 10:51:54,354 basehttp 18652 2028 "GET /marketplace/?category= HTTP/1.1" 200 7479
+INFO 2026-04-08 10:51:54,487 basehttp 18652 2028 "GET /marketplace/?category= HTTP/1.1" 200 7479
+INFO 2026-04-08 10:51:54,621 basehttp 18652 2028 "GET /marketplace/?category= HTTP/1.1" 200 7479
+INFO 2026-04-08 10:51:55,748 basehttp 18652 2028 "GET /marketplace/service/create/ HTTP/1.1" 200 9445
+INFO 2026-04-08 10:52:05,944 basehttp 18652 2028 "GET /marketplace/?category= HTTP/1.1" 200 7479
+INFO 2026-04-08 10:52:07,160 basehttp 18652 2028 "GET /marketplace/?category= HTTP/1.1" 200 7479
+INFO 2026-04-08 10:52:11,489 basehttp 18652 2028 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:52:11,504 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27604
+INFO 2026-04-08 10:53:37,965 basehttp 18652 2028 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:53:37,981 basehttp 18652 2028 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27604
+INFO 2026-04-08 10:53:39,578 basehttp 18652 2028 "GET /chatbot/ HTTP/1.1" 200 16770
+INFO 2026-04-08 10:53:41,008 basehttp 18652 2028 "GET /profile/ HTTP/1.1" 200 17673
+INFO 2026-04-08 10:53:57,693 basehttp 18652 2028 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:53:57,699 basehttp 18652 2028 "GET / HTTP/1.1" 200 10709
+INFO 2026-04-08 10:55:00,301 basehttp 18652 25540 "POST / HTTP/1.1" 302 0
+INFO 2026-04-08 10:55:00,308 basehttp 18652 25540 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:55:00,328 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 29537
+INFO 2026-04-08 10:56:01,192 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 10:57:02,187 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 10:58:03,206 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 10:58:03,225 basehttp 18652 25540 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:58:03,231 basehttp 18652 25540 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:59:04,190 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 11:00:05,200 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 11:00:46,708 autoreload 12560 16004 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-08 11:00:46,777 autoreload 18652 2448 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-08 11:00:46,804 autoreload 15972 23228 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-08 11:00:46,816 autoreload 9512 8828 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+WARNING 2026-04-08 11:00:49,882 firebase_config 25524 10156 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:00:49,924 autoreload 25524 10156 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:00:49,948 firebase_config 20796 11540 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:49,955 firebase_config 25524 10156 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:49,986 firebase_config 18760 11148 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:49,986 firebase_config 18628 17696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:00:49,990 autoreload 20796 11540 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:00:49,997 firebase_config 20796 11540 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:00:50,030 autoreload 18760 11148 Watching for file changes with StatReloader
+INFO 2026-04-08 11:00:50,031 autoreload 18628 17696 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:00:50,041 firebase_config 18760 11148 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:50,041 firebase_config 18628 17696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:50,666 openai_integration 25524 10156 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:00:50,686 openai_integration 20796 11540 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:00:50,733 openai_integration 18628 17696 OPENAI_API_KEY não configurada
+INFO 2026-04-08 11:01:00,817 autoreload 18760 11148 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-08 11:01:00,875 autoreload 18628 17696 C:\Users\aluno\NexusLife\nexuslife\urls.py changed, reloading.
+INFO 2026-04-08 11:01:01,877 autoreload 25524 10156 C:\Users\aluno\NexusLife\nexuslife\urls.py changed, reloading.
+INFO 2026-04-08 11:01:01,886 autoreload 20796 11540 C:\Users\aluno\NexusLife\nexuslife\urls.py changed, reloading.
+WARNING 2026-04-08 11:01:03,703 firebase_config 17852 20580 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:01:03,744 autoreload 17852 20580 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:01:03,774 firebase_config 17852 20580 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:03,780 firebase_config 13568 24896 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:01:03,818 autoreload 13568 24896 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:01:03,825 firebase_config 13568 24896 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:04,400 openai_integration 17852 20580 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:01:04,444 openai_integration 13568 24896 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:01:04,827 firebase_config 24864 9136 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:04,827 firebase_config 25072 15020 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:01:04,872 autoreload 25072 15020 Watching for file changes with StatReloader
+INFO 2026-04-08 11:01:04,872 autoreload 24864 9136 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:01:04,879 firebase_config 24864 9136 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:04,879 firebase_config 25072 15020 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:05,493 openai_integration 24864 9136 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:01:05,493 openai_integration 25072 15020 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:01:06,191 base 17852 2896 Session data corrupted
+INFO 2026-04-08 11:01:06,207 basehttp 17852 2896 "GET /marketplace/dashboard/pj/ HTTP/1.1" 302 0
+WARNING 2026-04-08 11:01:06,234 base 17852 2896 Session data corrupted
+INFO 2026-04-08 11:01:06,251 basehttp 17852 2896 "GET /login/?next=/marketplace/dashboard/pj/ HTTP/1.1" 200 10103
+WARNING 2026-04-08 11:04:23,645 firebase_config 12456 14124 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:04:25,966 firebase_config 21136 10984 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:04:26,023 autoreload 21136 10984 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:04:26,054 firebase_config 21136 10984 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:04:27,738 openai_integration 21136 10984 OPENAI_API_KEY não configurada

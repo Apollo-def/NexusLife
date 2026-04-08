@@ -270,6 +270,11 @@ def profile_view(request):
     return render(request, 'core/profile.html', context)
 
 
+def landing_view(request):
+    """Landing page de onboarding - aparece antes do login"""
+    return render(request, 'core/landing.html')
+
+
 @login_required
 def home_view(request):
     from django.shortcuts import redirect
