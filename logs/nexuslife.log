@@ -411,3 +411,6 @@ WARNING 2026-04-08 11:04:25,966 firebase_config 21136 10984 Arquivo de credencia
 INFO 2026-04-08 11:04:26,023 autoreload 21136 10984 Watching for file changes with StatReloader
 WARNING 2026-04-08 11:04:26,054 firebase_config 21136 10984 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
 WARNING 2026-04-08 11:04:27,738 openai_integration 21136 10984 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:30:42,205 firebase_config 23540 26768 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:30:42,776 firebase_config 23540 26768 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:30:42,787 openai_integration 23540 26768 OpenAI não instalado. Instale com: pip install openai
