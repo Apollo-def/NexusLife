@@ -357,3 +357,57 @@ INFO 2026-04-08 10:55:00,301 basehttp 18652 25540 "POST / HTTP/1.1" 302 0
 INFO 2026-04-08 10:55:00,308 basehttp 18652 25540 "GET /home/ HTTP/1.1" 302 0
 INFO 2026-04-08 10:55:00,328 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 29537
 INFO 2026-04-08 10:56:01,192 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 10:57:02,187 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 10:58:03,206 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 10:58:03,225 basehttp 18652 25540 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:58:03,231 basehttp 18652 25540 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:59:04,190 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 11:00:05,200 basehttp 18652 25540 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28926
+INFO 2026-04-08 11:00:46,708 autoreload 12560 16004 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-08 11:00:46,777 autoreload 18652 2448 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-08 11:00:46,804 autoreload 15972 23228 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-08 11:00:46,816 autoreload 9512 8828 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+WARNING 2026-04-08 11:00:49,882 firebase_config 25524 10156 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:00:49,924 autoreload 25524 10156 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:00:49,948 firebase_config 20796 11540 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:49,955 firebase_config 25524 10156 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:49,986 firebase_config 18760 11148 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:49,986 firebase_config 18628 17696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:00:49,990 autoreload 20796 11540 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:00:49,997 firebase_config 20796 11540 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:00:50,030 autoreload 18760 11148 Watching for file changes with StatReloader
+INFO 2026-04-08 11:00:50,031 autoreload 18628 17696 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:00:50,041 firebase_config 18760 11148 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:50,041 firebase_config 18628 17696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:00:50,666 openai_integration 25524 10156 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:00:50,686 openai_integration 20796 11540 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:00:50,733 openai_integration 18628 17696 OPENAI_API_KEY não configurada
+INFO 2026-04-08 11:01:00,817 autoreload 18760 11148 C:\Users\aluno\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-08 11:01:00,875 autoreload 18628 17696 C:\Users\aluno\NexusLife\nexuslife\urls.py changed, reloading.
+INFO 2026-04-08 11:01:01,877 autoreload 25524 10156 C:\Users\aluno\NexusLife\nexuslife\urls.py changed, reloading.
+INFO 2026-04-08 11:01:01,886 autoreload 20796 11540 C:\Users\aluno\NexusLife\nexuslife\urls.py changed, reloading.
+WARNING 2026-04-08 11:01:03,703 firebase_config 17852 20580 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:01:03,744 autoreload 17852 20580 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:01:03,774 firebase_config 17852 20580 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:03,780 firebase_config 13568 24896 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:01:03,818 autoreload 13568 24896 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:01:03,825 firebase_config 13568 24896 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:04,400 openai_integration 17852 20580 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:01:04,444 openai_integration 13568 24896 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:01:04,827 firebase_config 24864 9136 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:04,827 firebase_config 25072 15020 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:01:04,872 autoreload 25072 15020 Watching for file changes with StatReloader
+INFO 2026-04-08 11:01:04,872 autoreload 24864 9136 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:01:04,879 firebase_config 24864 9136 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:04,879 firebase_config 25072 15020 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:01:05,493 openai_integration 24864 9136 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:01:05,493 openai_integration 25072 15020 OPENAI_API_KEY não configurada
+WARNING 2026-04-08 11:01:06,191 base 17852 2896 Session data corrupted
+INFO 2026-04-08 11:01:06,207 basehttp 17852 2896 "GET /marketplace/dashboard/pj/ HTTP/1.1" 302 0
+WARNING 2026-04-08 11:01:06,234 base 17852 2896 Session data corrupted
+INFO 2026-04-08 11:01:06,251 basehttp 17852 2896 "GET /login/?next=/marketplace/dashboard/pj/ HTTP/1.1" 200 10103
+WARNING 2026-04-08 11:04:23,645 firebase_config 12456 14124 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:04:25,966 firebase_config 21136 10984 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 11:04:26,023 autoreload 21136 10984 Watching for file changes with StatReloader
+WARNING 2026-04-08 11:04:26,054 firebase_config 21136 10984 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 11:04:27,738 openai_integration 21136 10984 OPENAI_API_KEY não configurada
