@@ -16,6 +16,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            max-width: fit-content;
+            padding: 8px 16px;
+            background: #f8f9fa;
+            color: #022F73;
+            border: 2px solid #022F73;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        .btn-voltar:hover {
+            background: #022F73;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(2, 47, 115, 0.25);
+        }
+    </style>
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -35,6 +58,9 @@
                             <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home"></i> Início</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{% url 'chatbot_page' %}"><i class="fas fa-robot"></i> Chatbot</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}"><i class="fas fa-user-circle"></i> Perfil</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -49,6 +75,9 @@
                         </li>
                     {% else %}
                         <li class="nav-item">
+                            <a class="nav-link" href="{% url 'chatbot_page' %}"><i class="fas fa-robot"></i> Chatbot</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
                         </li>
                         <li class="nav-item">
@@ -61,15 +90,15 @@
     </nav>
 
     <!-- Messages/Alerts -->
-    <div class="container mt-4">
+    <div class="container-fluid mt-2">
         {% if messages %}
             {% for message in messages %}
-                <div class="alert alert-{{ message.tags }} alert-dismissible fade show d-flex align-items-center" role="alert" style="animation: slideDown 0.3s ease-out;">
-                    <i class="fas fa-check-circle me-3"></i>
-                    <div>
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show d-flex align-items-center" role="alert" style="animation: slideDown 0.3s ease-out; padding: 8px 12px; margin-bottom: 10px; font-size: 0.9rem;">
+                    <i class="fas fa-check-circle me-2" style="font-size: 1rem;"></i>
+                    <div style="flex: 1;">
                         {{ message }}
                     </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="padding: 0;"></button>
                 </div>
             {% endfor %}
         {% endif %}
@@ -110,7 +139,7 @@
             <hr class="border-light-50 opacity-25">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="text-light mb-0">© 2026 NexusLife. Todos os direitos reservados. Desenvolvido com <i class="fas fa-heart" style="color: #FF6B6B;"></i> para você.</p>
+                    <p class="text-light mb-0">© 2026 NexusLife. Todos os direitos reservados. Desenvolvido com dedicação para você.</p>
                 </div>
             </div>
         </div>

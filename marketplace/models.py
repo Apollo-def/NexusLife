@@ -17,18 +17,18 @@ class Category(models.Model):
         return self.name
 
 class Service(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='services')
-    freelancer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='services')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    is_active = models.BooleanField(default=True)
+    title = models.CharField(max_length=200, verbose_name='Título')
+    description = models.TextField(verbose_name='Descrição')
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Preço')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='services', verbose_name='Categoria')
+    freelancer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='services', verbose_name='Freelancer')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
+    is_active = models.BooleanField(default=True, verbose_name='Ativo')
     
     # Meta informações
-    delivery_days = models.PositiveIntegerField(default=7, help_text="Prazo de entrega em dias")
-    revisions = models.PositiveIntegerField(default=2, help_text="Número de revisões incluídas")
+    delivery_days = models.PositiveIntegerField(default=7, help_text="Prazo de entrega em dias", verbose_name='Prazo de Entrega')
+    revisions = models.PositiveIntegerField(default=2, help_text="Número de revisões incluídas", verbose_name='Revisões')
     
     class Meta:
         verbose_name = 'Serviço'

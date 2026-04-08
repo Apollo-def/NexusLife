@@ -3,8 +3,6 @@
 {% block content %}
 <style>
 .register-container { max-width: 700px; margin: 0 auto; padding: 40px 20px; }
-.back-button { display: inline-flex; align-items: center; gap: 8px; color: #495057; text-decoration: none; margin-bottom: 30px; font-size: 16px; transition: all 0.3s ease; }
-.back-button:hover { color: #0d6efd; transform: translateX(-3px); }
 .register-header { text-align: center; margin-bottom: 40px; }
 .register-header h1 { font-size: 32px; color: #212529; margin: 0; font-weight: 600; letter-spacing: -0.5px; }
 .register-header::after { content: ''; display: block; width: 60px; height: 3px; background: #022F73; margin: 20px auto 0; border-radius: 2px; }
@@ -39,11 +37,8 @@
 </style>
 
 <div class="register-container">
-  <a href="{% url 'login' %}" class="back-button">
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M15 5L8 12L15 19" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    Voltar
+  <a href="{% url 'login' %}" class="btn-voltar" style="margin-bottom: 20px;">
+    <i class="fas fa-arrow-left me-2"></i> Voltar
   </a>
 
   <div class="register-header">

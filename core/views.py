@@ -3,9 +3,10 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.utils import timezone
 import logging
 from .forms import UserRegisterForm, LoginForm, UserUpdateForm
-from .models import UserProfile
+from .models import UserProfile, Notification
 from .firebase_config import auth_firebase, initialize_firebase_admin, firebase_admin_initialized
 
 logger = logging.getLogger(__name__)
@@ -22,10 +23,20 @@ except Exception as e:
 
 def _find_user_by_cpf(cpf_input):
     cpf_input = cpf_input.strip() if cpf_input else ''
-    if not cpf_input or not firebase_admin_initialized:
+    if not cpf_input:
         return None
 
     cpf_digits = ''.join(ch for ch in cpf_input if ch.isdigit())
+
+    # Busca CPF local no perfil do usuário
+    if cpf_digits:
+        for profile in UserProfile.objects.all():
+            profile_cpf = ''.join(ch for ch in (profile.cpf_cnpj or '') if ch.isdigit())
+            if profile_cpf == cpf_digits:
+                return profile.user
+
+    if not firebase_admin_initialized:
+        return None
 
     try:
         db = firestore.client()
@@ -61,10 +72,17 @@ def _get_user_from_credential(credential):
         if user:
             return user
 
+        # Busca CPF local no perfil do usuário
+        cpf_digits = ''.join(ch for ch in credential if ch.isdigit())
+        if cpf_digits:
+            for profile in UserProfile.objects.all():
+                profile_cpf = ''.join(ch for ch in (profile.cpf_cnpj or '') if ch.isdigit())
+                if profile_cpf == cpf_digits:
+                    return profile.user
+
         # Busca CPF no Firestore, se disponível
         if firebase_admin_initialized:
             db = firestore.client()
-            cpf_digits = ''.join(ch for ch in credential if ch.isdigit())
             for cpf_query in (credential, cpf_digits):
                 if not cpf_query:
                     continue
@@ -194,10 +212,10 @@ def register_view(request):
                         db.collection('users').document(firebase_uid).set(user_data)
 
                     auth_firebase.send_email_verification(user_firebase['idToken'])
-                    messages.success(request, f'✅ Cadastro realizado com sucesso! Verifique seu e-mail.')
+                    messages.success(request, f'<i class="fas fa-check-circle"></i> Cadastro realizado com sucesso! Verifique seu e-mail.')
                 except Exception as firebase_error:
                     logger.warning(f"Firebase error but user created in Django: {firebase_error}")
-                    messages.success(request, f'✅ Cadastro realizado com sucesso! Faça login para continuar.')
+                    messages.success(request, f'<i class="fas fa-check-circle"></i> Cadastro realizado com sucesso! Faça login para continuar.')
 
                 return redirect('login')
 
@@ -321,4 +339,78 @@ def setup_admin_view(request):
     User.objects.create_superuser(username=username, email=email, password=password)
     messages.success(request, f'Superuser criado: {username} / {password}. Acesse /admin')
     return redirect('login')
+
+
+def chatbot_view(request):
+    """View para exibir a interface do chatbot"""
+    return render(request, 'core/chatbot.html')
+
+
+@login_required
+def notifications_view(request):
+    """View para exibir todas as notificações do usuário"""
+    notifications = Notification.objects.filter(user=request.user).order_by('-created_at')
+    unread_count = notifications.filter(is_read=False).count()
+    
+    context = {
+        'notifications': notifications,
+        'unread_count': unread_count,
+    }
+    return render(request, 'core/notifications.html', context)
+
+
+@login_required
+def mark_notification_as_read(request, notification_id):
+    """Marcar uma notificação como lida"""
+    try:
+        notification = Notification.objects.get(id=notification_id, user=request.user)
+        notification.mark_as_read()
+        messages.success(request, 'Notificação marcada como lida.')
+    except Notification.DoesNotExist:
+        messages.error(request, 'Notificação não encontrada.')
+    
+    return redirect('notifications')
+
+
+@login_required
+def mark_all_notifications_as_read(request):
+    """Marcar todas as notificações como lidas"""
+    Notification.objects.filter(user=request.user, is_read=False).update(
+        is_read=True, 
+        read_at=timezone.now()
+    )
+    messages.success(request, 'Todas as notificações foram marcadas como lidas.')
+    return redirect('notifications')
+
+
+@login_required
+def get_unread_count(request):
+    """API endpoint para obter contagem de notificações não lidas (JSON)"""
+    from django.http import JsonResponse
+    from django.utils import timezone
+    
+    unread_count = Notification.objects.filter(
+        user=request.user, 
+        is_read=False
+    ).count()
+    
+    recent_notifications = Notification.objects.filter(
+        user=request.user
+    ).order_by('-created_at')[:5]
+    
+    notifications_list = [
+        {
+            'id': notif.id,
+            'message': notif.message,
+            'notification_type': notif.notification_type,
+            'is_read': notif.is_read,
+            'created_at': notif.created_at.isoformat(),
+        }
+        for notif in recent_notifications
+    ]
+    
+    return JsonResponse({
+        'unread_count': unread_count,
+        'recent_notifications': notifications_list,
+    })
 

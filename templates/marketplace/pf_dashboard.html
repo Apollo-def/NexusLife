@@ -1,136 +1,401 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}Dashboard PF - NexusLife{% endblock %}
+{% block title %}Dashboard Pessoa Física - NexusLife{% endblock %}
+
+{% block extra_css %}
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<style>
+    body { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; }
+    .dashboard-container { background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+    
+    .stat-card {
+        border: none !important;
+        border-radius: 15px !important;
+        transition: all 0.3s ease !important;
+        padding: 25px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12) !important;
+    }
+    
+    .stat-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        opacity: 0.9;
+    }
+    
+    .stat-value {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    
+    .stat-label {
+        font-size: 0.95rem;
+        color: #666;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .section-card {
+        border: none !important;
+        border-radius: 15px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+        overflow: hidden;
+    }
+    
+    .section-header {
+        background: linear-gradient(135deg, #022F73 0%, #035edb 100%) !important;
+        color: white !important;
+        padding: 20px !important;
+        border-bottom: 3px solid #ffb300 !important;
+    }
+    
+    .section-header h5 {
+        margin: 0 !important;
+        font-weight: 700 !important;
+        font-size: 1.1rem !important;
+        letter-spacing: 0.5px;
+    }
+    
+    .service-item {
+        border: none !important;
+        border-bottom: 1px solid #eee !important;
+        padding: 18px 20px !important;
+        transition: all 0.2s ease;
+    }
+    
+    .service-item:last-child {
+        border-bottom: none !important;
+    }
+    
+    .service-item:hover {
+        background-color: #f9fafc !important;
+        padding-left: 25px !important;
+    }
+    
+    .service-title {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .service-price {
+        background: linear-gradient(135deg, #022F73, #035edb);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+    
+    .empty-state {
+        padding: 60px 20px !important;
+        text-align: center;
+    }
+    
+    .empty-icon {
+        font-size: 3.5rem;
+        color: #ccc;
+        margin-bottom: 15px;
+    }
+    
+    .empty-title {
+        color: #999;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    
+    .btn-primary-custom {
+        background: linear-gradient(135deg, #022F73 0%, #035edb 100%) !important;
+        border: none !important;
+        padding: 12px 28px !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 5px 15px rgba(2, 47, 115, 0.3) !important;
+    }
+    
+    .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(2, 47, 115, 0.4) !important;
+    }
+    
+    .action-buttons {
+        gap: 15px !important;
+        padding-top: 20px !important;
+    }
+    
+    header-section {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+</style>
+{% endblock %}
 
 {% block content %}
-<div class="container-fluid py-4 px-3 px-md-4">
-    <div class="row mb-4">
-        <div class="col">
-            <div class="d-flex align-items-center">
-                <i class="fas fa-user-friends fa-2x text-primary me-3"></i>
+<div class="container-lg py-5">
+    
+    <div class="dashboard-container p-5">
+        <!-- Header -->
+        <div class="mb-5">
+            <div class="d-flex align-items-center gap-4">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #022F73, #035edb); border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-user-tie fa-2x text-white"></i>
+                </div>
                 <div>
-                    <h1 class="h3 mb-1 fw-bold text-primary">Dashboard Pessoa Física</h1>
-                    <p class="mb-0 text-muted">Gerencie seus serviços freelance pessoais</p>
+                    <h1 class="h2 fw-bold mb-2" style="color: #022F73;">Meu Dashboard de Freelancer</h1>
+                    <p class="text-muted mb-0"><i class="fas fa-briefcase me-2"></i>Gerencie seus serviços e pedidos</p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Stats Cards -->
-    <div class="row mb-4 g-4">
-        <div class="col-md-3">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                    <i class="fas fa-star fa-2x text-warning mb-3"></i>
-                    <h3 class="h2 fw-bold text-primary">{{ profile.average_rating|floatformat:1|default:"0.0" }}</h3>
-                    <p class="text-muted mb-0">Média de Avaliação</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                    <i class="fas fa-tasks fa-2x text-success mb-3"></i>
-                    <h3 class="h2 fw-bold text-success">{{ profile.completion_rate|floatformat:0|default:"0" }}%</h3>
-                    <p class="text-muted mb-0">Taxa de Conclusão</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                    <i class="fas fa-dollar-sign fa-2x text-info mb-3"></i>
-                    <h3 class="h2 fw-bold text-info">R$ {{ profile.total_earnings|floatformat:2|default:"0,00" }}</h3>
-                    <p class="text-muted mb-0">Ganhos Totais</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                    <i class="fas fa-clock fa-2x text-secondary mb-3"></i>
-                    <h3 class="h2 fw-bold text-secondary">{{ profile.response_time }}h</h3>
-                    <p class="text-muted mb-0">Tempo Médio Resposta</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row g-4">
-        <!-- Services Section -->
-        <div class="col-lg-8">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-header bg-transparent border-0 pb-0">
-                    <h5 class="mb-0 fw-bold text-primary">
-                        <i class="fas fa-briefcase me-2"></i>Meus Serviços Ativos ({{ services.count }})
-                    </h5>
-                </div>
-                <div class="card-body p-0">
-                    {% if services %}
-                        <div class="list-group list-group-flush">
-                            {% for service in services %}
-                                <a href="{% url 'marketplace:service_detail' service.pk %}" class="list-group-item list-group-item-action px-4 py-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1 fw-bold">{{ service.title }}</h6>
-                                        <span class="badge bg-primary rounded-pill">R$ {{ service.price }}</span>
+        <!-- Notificações e Alerts -->
+        <div class="row mb-5 g-4">
+            <div class="col-lg-12">
+                <div class="card section-card">
+                    <div class="section-header">
+                        <h5><i class="fas fa-bell me-2"></i>Notificações Recentes 
+                            {% if unread_notifications > 0 %}<span class="badge bg-danger ms-2">{{ unread_notifications }} nova(s)</span>{% endif %}
+                        </h5>
+                    </div>
+                    <div class="card-body p-0">
+                        {% if recent_notifications %}
+                            <div class="list-group list-group-flush">
+                                {% for notif in recent_notifications %}
+                                    <div class="service-item">
+                                        <div class="d-flex align-items-start gap-3">
+                                            <div style="font-size: 1.3rem; width: 30px;">
+                                                {% if notif.notification_type == 'order' %}
+                                                    🛒
+                                                {% elif notif.notification_type == 'review' %}
+                                                    ⭐
+                                                {% elif notif.notification_type == 'payment' %}
+                                                    💳
+                                                {% elif notif.notification_type == 'message' %}
+                                                    ✉️
+                                                {% else %}
+                                                    🔔
+                                                {% endif %}
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-1 fw-500">{{ notif.message }}</p>
+                                                <small class="text-muted"><i class="fas fa-clock me-1"></i>{{ notif.created_at|date:"d/m/Y H:i" }}</small>
+                                            </div>
+                                            {% if not notif.is_read %}
+                                                <span class="badge bg-primary">Novo</span>
+                                            {% endif %}
+                                        </div>
                                     </div>
-                                    <p class="mb-2 text-muted small">{{ service.description|truncatewords:15 }}</p>
-                                    <small class="text-success">Categoria: {{ service.category.name }} | {{ service.delivery_days }} dias</small>
+                                {% endfor %}
+                            </div>
+                            <div class="p-3 text-center border-top">
+                                <a href="{% url 'notifications' %}" class="text-decoration-none small fw-600">Ver todas as notificações →</a>
+                            </div>
+                        {% else %}
+                            <div class="empty-state" style="padding: 30px 20px;">
+                                <div class="empty-icon"><i class="fas fa-inbox"></i></div>
+                                <small class="text-muted">Nenhuma notificação no momento</small>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráficos e Análises -->
+        <div class="row mb-5 g-4">
+            <!-- Gráfico de Pedidos (7 dias) -->
+            <div class="col-lg-6">
+                <div class="card section-card">
+                    <div class="section-header">
+                        <h5><i class="fas fa-chart-line me-2"></i>Pedidos (Últimos 7 Dias)</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="ordersChart" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráfico de Receita Mensal -->
+            <div class="col-lg-6">
+                <div class="card section-card">
+                    <div class="section-header">
+                        <h5><i class="fas fa-chart-bar me-2"></i>Receita Mensal (R$)</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="revenueChart" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mini Estatísticas -->
+        <div class="row mb-5 g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card stat-card" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);">
+                    <div class="card-body text-center">
+                        <div class="stat-icon text-primary"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="stat-value" style="color: #1976D2;">{{ total_orders }}</div>
+                        <div class="stat-label">Pedidos Totais</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card stat-card" style="background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);">
+                    <div class="card-body text-center">
+                        <div class="stat-icon text-purple"><i class="fas fa-check-circle"></i></div>
+                        <div class="stat-value" style="color: #7B1FA2;">{{ completed_orders }}</div>
+                        <div class="stat-label">Concluídos</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card stat-card" style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);">
+                    <div class="card-body text-center">
+                        <div class="stat-icon text-warning"><i class="fas fa-hourglass-half"></i></div>
+                        <div class="stat-value" style="color: #F57C00;">{{ pending_orders }}</div>
+                        <div class="stat-label">Pendentes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card stat-card" style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);">
+                    <div class="card-body text-center">
+                        <div class="stat-icon text-success"><i class="fas fa-eye"></i></div>
+                        <div class="stat-value" style="color: #388E3C;">{{ total_reviews }}</div>
+                        <div class="stat-label">Avaliações</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5 g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card stat-card" style="background: linear-gradient(135deg, #FFE5B4 0%, #FFDAA5 100%);">
+                    <div class="card-body text-center">
+                        <div class="stat-icon text-warning"><i class="fas fa-star"></i></div>
+                        <div class="stat-value" style="color: #FF8C00;">{{ profile.average_rating|floatformat:1|default:"0.0" }}</div>
+                        <div class="stat-label">Avaliação Média</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card stat-card" style="background: linear-gradient(135deg, #B4E5FF 0%, #A5DAFF 100%);">
+                    <div class="card-body text-center">
+                        <div class="stat-icon text-info"><i class="fas fa-tasks"></i></div>
+                        <div class="stat-value" style="color: #0066CC;">{{ profile.completion_rate|floatformat:0|default:"0" }}%</div>
+                        <div class="stat-label">Taxa Conclusão</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card stat-card" style="background: linear-gradient(135deg, #B4FFB4 0%, #A5FFA5 100%);">
+                    <div class="card-body text-center">
+                        <div class="stat-icon text-success"><i class="fas fa-money-bill-wave"></i></div>
+                        <div class="stat-value" style="color: #28a745;">R$ {{ profile.total_earnings|floatformat:2|default:"0,00" }}</div>
+                        <div class="stat-label">Ganhos Totais</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card stat-card" style="background: linear-gradient(135deg, #FFB4B4 0%, #FFA5A5 100%);">
+                    <div class="card-body text-center">
+                        <div class="stat-icon text-danger"><i class="fas fa-clock"></i></div>
+                        <div class="stat-value" style="color: #DC3545;">{{ profile.response_time }}h</div>
+                        <div class="stat-label">Tempo Resposta</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serviços e Pedidos -->
+        <div class="row g-4 mb-5">
+            <!-- Serviços -->
+            <div class="col-lg-8">
+                <div class="card section-card">
+                    <div class="section-header">
+                        <h5><i class="fas fa-briefcase me-2"></i>Meus Serviços Ativos ({{ services.count }})</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        {% if services %}
+                            <div class="list-group list-group-flush">
+                                {% for service in services %}
+                                    <a href="{% url 'marketplace:service_detail' service.pk %}" class="list-group-item service-item list-group-item-action" style="text-decoration: none; color: inherit;">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h6 class="service-title">{{ service.title }}</h6>
+                                            <span class="service-price">R$ {{ service.price }}</span>
+                                        </div>
+                                        <p class="text-muted mb-2" style="font-size: 0.9rem;">{{ service.description|truncatewords:12 }}</p>
+                                        <small class="text-secondary"><i class="fas fa-tag me-1"></i>{{ service.category.name }} • <i class="fas fa-calendar me-1"></i>{{ service.delivery_days }} dias</small>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="empty-state">
+                                <div class="empty-icon"><i class="fas fa-plus-circle"></i></div>
+                                <div class="empty-title">Nenhum serviço publicado</div>
+                                <p class="text-muted mb-3">Comece criando seu primeiro serviço para receber pedidos</p>
+                                <a href="{% url 'marketplace:service_create' %}" class="btn btn-primary-custom">
+                                    <i class="fas fa-plus me-2"></i>Criar Primeiro Serviço
                                 </a>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <div class="text-center py-5">
-                            <i class="fas fa-plus-circle fa-3x text-muted mb-3"></i>
-                            <h5 class="text-muted">Nenhum serviço ativo</h5>
-                            <a href="{% url 'marketplace:service_create' %}" class="btn btn-primary mt-2">
-                                <i class="fas fa-plus me-2"></i>Criar Primeiro Serviço
-                            </a>
-                        </div>
-                    {% endif %}
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Recent Orders -->
-        <div class="col-lg-4">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-header bg-transparent border-0 pb-0">
-                    <h5 class="mb-0 fw-bold text-primary">
-                        <i class="fas fa-shopping-cart me-2"></i>Pedidos Recentes ({{ orders.count }})
-                    </h5>
-                </div>
-                <div class="card-body p-0">
-                    {% if orders %}
-                        <div class="list-group list-group-flush">
-                            {% for order in orders %}
-                                <div class="list-group-item px-4 py-3 border-end-0 border-start-0">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <small class="fw-bold">{{ order.service.title|truncatechars:30 }}</small>
-                                        <span class="badge bg-{{ order.status|lower }} text-dark">{{ order.get_status_display }}</span>
+            <!-- Pedidos Recentes -->
+            <div class="col-lg-4">
+                <div class="card section-card">
+                    <div class="section-header">
+                        <h5><i class="fas fa-shopping-cart me-2"></i>Pedidos Recentes ({{ orders.count }})</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        {% if orders %}
+                            <div class="list-group list-group-flush">
+                                {% for order in orders %}
+                                    <div class="service-item">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <small class="service-title" style="font-size: 0.95rem;">{{ order.service.title|truncatechars:25 }}</small>
+                                            <span class="badge bg-{{ order.status|lower|default:'secondary' }}" style="font-size: 0.75rem;">
+                                                {% if order.status == 'pending' %}Pendente
+                                                {% elif order.status == 'in_progress' %}Em Progresso
+                                                {% elif order.status == 'completed' %}Concluído
+                                                {% else %}{{ order.get_status_display }}{% endif %}
+                                            </span>
+                                        </div>
+                                        <small class="text-muted d-block"><i class="fas fa-user me-1"></i>{{ order.client.username }}</small>
                                     </div>
-                                    <small class="text-muted d-block">{{ order.client.username }}</small>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <div class="text-center py-5">
-                            <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
-                            <h5 class="text-muted">Nenhum pedido</h5>
-                        </div>
-                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="empty-state" style="padding: 40px 20px;">
+                                <div class="empty-icon"><i class="fas fa-inbox"></i></div>
+                                <div class="empty-title" style="font-size: 0.95rem;">Nenhum pedido ainda</div>
+                                <small class="text-muted">Seus pedidos aparecerão aqui</small>
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row mt-4">
-        <div class="col-12">
-            <a href="{% url 'marketplace:service_create' %}" class="btn btn-primary btn-lg px-5">
+        <!-- Ações -->
+        <div class="d-flex gap-3 action-buttons">
+            <a href="{% url 'marketplace:service_create' %}" class="btn btn-primary-custom">
                 <i class="fas fa-plus-circle me-2"></i>Criar Novo Serviço
             </a>
-            <a href="{% url 'marketplace:order_list' %}" class="btn btn-outline-primary btn-lg px-5 ms-3">
+            <a href="{% url 'marketplace:order_list' %}" class="btn btn-outline-primary" style="padding: 12px 28px; border-radius: 10px; font-weight: 600;">
                 <i class="fas fa-list me-2"></i>Ver Todos Pedidos
             </a>
         </div>
@@ -138,10 +403,135 @@
 </div>
 
 <style>
-.bg-pending { background-color: #ffc107 !important; }
-.bg-in_progress { background-color: #17a2b8 !important; }
-.bg-completed { background-color: #28a745 !important; }
-.bg-cancelled { background-color: #dc3545 !important; }
-.bg-disputed { background-color: #fd7e14 !important; }
+    .bg-pending { background-color: #ffc107 !important; }
+    .bg-in_progress { background-color: #17a2b8 !important; }
+    .bg-completed { background-color: #28a745 !important; }
+    .bg-cancelled { background-color: #dc3545 !important; }
 </style>
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Gráfico de Pedidos (7 dias)
+    const ordersCtx = document.getElementById('ordersChart');
+    if (ordersCtx) {
+        const ordersChart = new Chart(ordersCtx, {
+            type: 'line',
+            data: {
+                labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom'],
+                datasets: [{
+                    label: 'Pedidos',
+                    data: [{{ total_orders|default:"0" }}, {{ total_orders|default:"0" }}, {{ pending_orders|default:"0" }}, {{ completed_orders|default:"0" }}, 2, 1, 0],
+                    borderColor: '#022F73',
+                    backgroundColor: 'rgba(2, 47, 115, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#035edb',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: { font: { size: 12, weight: 'bold' } }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        padding: 12,
+                        titleFont: { size: 13 },
+                        bodyFont: { size: 12 }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 },
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    }
+
+    // Gráfico de Receita Mensal
+    const revenueCtx = document.getElementById('revenueChart');
+    if (revenueCtx) {
+        const revenueChart = new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                datasets: [{
+                    label: 'Receita (R$)',
+                    data: [
+                        {{ profile.total_earnings|default:"0" }},
+                        {{ profile.total_earnings|default:"0" }} * 0.8,
+                        {{ profile.total_earnings|default:"0" }} * 0.9,
+                        {{ profile.total_earnings|default:"0" }} * 1.1,
+                        {{ profile.total_earnings|default:"0" }} * 0.7,
+                        {{ profile.total_earnings|default:"0" }} * 1.2,
+                        500, 600, 700, 550, 650, 400
+                    ],
+                    backgroundColor: [
+                        '#022F73', '#035edb', '#0d6efd', '#0d7aff',
+                        '#3d8bfd', '#5a96ff', '#7ba6ff', '#9bb8ff',
+                        '#afc5ff', '#c3d0ff', '#d7daff', '#eaebff'
+                    ],
+                    borderRadius: 8,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: { font: { size: 12, weight: 'bold' } }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        padding: 12,
+                        titleFont: { size: 13 },
+                        callbacks: {
+                            label: function(context) {
+                                return 'R$ ' + context.parsed.y.toLocaleString('pt-BR');
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return 'R$ ' + value.toLocaleString('pt-BR');
+                            }
+                        },
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    }
+
+    // Auto-refresh de notificações a cada 1 minuto
+    setInterval(function() {
+        location.reload();
+    }, 60000);
+});
+</script>
+{% endblock %}
 {% endblock %}

@@ -1,0 +1,397 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+.chatbot-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: 80vh;
+}
+
+.chat-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #022F73, #0d6efd);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.chat-header p {
+    margin: 10px 0 0 0;
+    opacity: 0.9;
+}
+
+.chat-window {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f9fa;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: 70%;
+    word-wrap: break-word;
+    line-height: 1.4;
+}
+
+.message.user {
+    background: #022F73;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+    background: white;
+    color: #333;
+    border: 1px solid #e9ecef;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.message.bot strong {
+    color: #022F73;
+    font-weight: 600;
+}
+
+.message-time {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+.chat-input-area {
+    border-top: 1px solid #e9ecef;
+    padding: 20px;
+    background: white;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.chat-input:focus {
+    border-color: #022F73;
+}
+
+.send-button {
+    padding: 12px 24px;
+    background: #022F73;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.send-button:hover {
+    background: #0d6efd;
+    transform: translateY(-1px);
+}
+
+.send-button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.quick-questions {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.quick-questions h3 {
+    margin: 0 0 15px 0;
+    color: #022F73;
+    font-size: 18px;
+}
+
+.question-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.question-btn {
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.question-btn:hover {
+    background: #022F73;
+    color: white;
+    border-color: #022F73;
+}
+
+.typing-indicator {
+    display: none;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+}
+
+.typing-indicator .dots {
+    display: inline-block;
+}
+
+.typing-indicator .dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #022F73;
+    animation: typing 1.4s infinite;
+}
+
+.typing-indicator .dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator .dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.message .fas {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+    color: #022F73;
+}
+
+.quick-questions h3 .fas {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+    color: #022F73;
+}
+
+@media (max-width: 768px) {
+    .chatbot-container {
+        padding: 10px;
+    }
+
+    .chat-messages {
+        padding: 15px;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+
+    .question-buttons {
+        flex-direction: column;
+    }
+
+    .question-btn {
+        text-align: center;
+    }
+}
+</style>
+
+<div class="chatbot-container">
+    <a href="javascript:history.back()" class="btn-voltar" style="margin-bottom: 20px;">
+        <i class="fas fa-arrow-left me-2"></i>Voltar
+    </a>
+    <div class="chat-header">
+        <h1><i class="fas fa-robot"></i> NexusBot</h1>
+        <p>Seu assistente virtual - Como posso ajudar você hoje?</p>
+    </div>
+
+    <div class="chat-window">
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <strong>NexusBot:</strong> Olá! Sou o assistente virtual do NexusLife. Como posso ajudar você hoje?<br>
+                <small class="message-time" id="initialTime"></small>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="message bot">
+                <strong>NexusBot está digitando</strong>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="messageInput" class="chat-input" placeholder="Digite sua mensagem..." maxlength="500">
+            <button id="sendButton" class="send-button">Enviar</button>
+        </div>
+    </div>
+
+    <div class="quick-questions">
+        <h3><i class="fas fa-list"></i> Perguntas Frequentes - NexusLife</h3>
+        <div class="question-buttons">
+            <button class="question-btn" onclick="sendQuickMessage('Como me cadastrar?')">Como me cadastrar?</button>
+            <button class="question-btn" onclick="sendQuickMessage('Qual a diferença entre PF e PJ?')">PF vs PJ</button>
+            <button class="question-btn" onclick="sendQuickMessage('Como contratar serviços?')">Contratar serviços</button>
+            <button class="question-btn" onclick="sendQuickMessage('Como ser freelancer?')">Ser freelancer</button>
+            <button class="question-btn" onclick="sendQuickMessage('Como funciona o dashboard?')">Dashboard</button>
+            <button class="question-btn" onclick="sendQuickMessage('Como funciona as avaliações?')">Avaliações</button>
+            <button class="question-btn" onclick="sendQuickMessage('Como usar favoritos?')">Favoritos</button>
+            <button class="question-btn" onclick="sendQuickMessage('Tenho um problema')">Problemas</button>
+            <button class="question-btn" onclick="sendQuickMessage('Como entrar em contato?')">Contato</button>
+            <button class="question-btn" onclick="sendQuickMessage('Quanto custa usar?')">Preços</button>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const messageInput = document.getElementById('messageInput');
+    const sendButton = document.getElementById('sendButton');
+    const chatMessages = document.getElementById('chatMessages');
+    const typingIndicator = document.getElementById('typingIndicator');
+    const initialTime = document.getElementById('initialTime');
+
+    // Set initial timestamp
+    initialTime.textContent = new Date().toLocaleTimeString('pt-BR', {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+
+    // Send message function
+    async function sendMessage(message) {
+        if (!message.trim()) return;
+
+        // Add user message
+        addMessage(message, 'user');
+
+        // Clear input
+        messageInput.value = '';
+        sendButton.disabled = true;
+
+        // Show typing indicator
+        typingIndicator.style.display = 'block';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        try {
+            const response = await fetch('/api/chatbot/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ message: message })
+            });
+
+            const data = await response.json();
+
+            // Hide typing indicator
+            typingIndicator.style.display = 'none';
+
+            if (response.ok) {
+                addMessage(data.response, 'bot', data.bot_name);
+            } else {
+                addMessage('Desculpe, ocorreu um erro. Tente novamente.', 'bot');
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            typingIndicator.style.display = 'none';
+            addMessage('Erro de conexão. Verifique sua internet e tente novamente.', 'bot');
+        }
+
+        sendButton.disabled = false;
+        messageInput.focus();
+    }
+
+    // Add message to chat
+    function addMessage(text, type, botName = 'NexusBot') {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${type}`;
+
+        const timestamp = new Date().toLocaleTimeString('pt-BR', {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
+        if (type === 'bot') {
+            messageDiv.innerHTML = `<strong>${botName}:</strong> ${text}<br><small class="message-time">${timestamp}</small>`;
+        } else {
+            messageDiv.innerHTML = `${text}<br><small class="message-time">${timestamp}</small>`;
+        }
+
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Send message on button click
+    sendButton.addEventListener('click', function() {
+        sendMessage(messageInput.value);
+    });
+
+    // Send message on Enter key
+    messageInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage(messageInput.value);
+        }
+    });
+
+    // Quick message function
+    window.sendQuickMessage = function(message) {
+        messageInput.value = message;
+        sendMessage(message);
+    };
+
+    // Get CSRF token
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+});
+</script>
+{% endblock %}

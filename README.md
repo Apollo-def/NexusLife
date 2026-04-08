@@ -2,7 +2,7 @@
 
 <img src="static/images/logo.png" alt="NexusLife Logo" width="120"/>
 
-# 🚀 NexusLife
+# <i class="fas fa-rocket"></i> NexusLife
 
 **Marketplace de Serviços Digitais - Plataforma Full-Stack com Django + React**
 
@@ -18,28 +18,28 @@
 
 ---
 
-## 📋 Descrição
+## <i class="fas fa-clipboard-list"></i> Descrição
 
 **NexusLife** é uma plataforma profissional de marketplace para serviços digitais, conectando freelancers com clientes. Sistema completo com:
 
-✨ **Recursos Principais:**
-- 🔐 Autenticação completa (Django Auth + Firebase opcional)
-- 💼 Perfil de freelancer com histórico e avaliações
-- 🛍️ Catálogo de serviços com filtros avançados
-- ⭐ Sistema de avaliações e ratings
-- 💰 Gestão de pedidos e transações
-- ❤️ Sistema de favoritos/bookmarks
-- 📊 Dashboard para clientes e freelancers
-- 🎨 Interface moderna e responsiva
-- 🚀 REST API completa com DRF
+<i class="fas fa-star"></i> **Recursos Principais:**
+- <i class="fas fa-lock"></i> Autenticação completa (Django Auth + Firebase opcional)
+- <i class="fas fa-briefcase"></i> Perfil de freelancer com histórico e avaliações
+- <i class="fas fa-shopping-cart"></i> Catálogo de serviços com filtros avançados
+- <i class="fas fa-star-half-alt"></i> Sistema de avaliações e ratings
+- <i class="fas fa-money-bill-wave"></i> Gestão de pedidos e transações
+- <i class="fas fa-heart"></i> Sistema de favoritos/bookmarks
+- <i class="fas fa-chart-bar"></i> Dashboard para clientes e freelancers
+- <i class="fas fa-palette"></i> Interface moderna e responsiva
+- <i class="fas fa-rocket"></i> REST API completa com DRF
 
 **Público-alvo:** Empreendedores, agências, e startups que querem uma plataforma de serviços pronta para uso ou customização.
 
 ---
 
-## 🎯 Quick Start
+## <i class="fas fa-bolt"></i> Quick Start
 
-### 1️⃣ Clone e Instale
+### <i class="fas fa-code-branch"></i> Clone e Instale
 
 ```bash
 # Clone o repositório
@@ -58,7 +58,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Configure o Banco de Dados
+### <i class="fas fa-database"></i> Configure o Banco de Dados
 
 ```bash
 # Crie migrações
@@ -72,7 +72,7 @@ python manage.py createsuperuser
 # Será solicitado username, email, e senha
 ```
 
-### 3️⃣ Inicie o Servidor
+### <i class="fas fa-play"></i> Inicie o Servidor
 
 ```bash
 # Backend (Django)
@@ -83,19 +83,19 @@ cd frontend
 npm run dev
 ```
 
-### 🌐 Acesse
+### <i class="fas fa-globe"></i> Acesse
 
 | Recurso | URL | Status |
 |---------|-----|--------|
-| 🏠 Frontend | `http://localhost:5173` | ✅ Conectado |
-| 🔧 Admin Django | `http://localhost:8000/admin` | ✅ Conectado |
-| 📡 API Rest | `http://localhost:8000/api` | ✅ Conectado |
+| <i class="fas fa-home"></i> Frontend | `http://localhost:5173` | <i class="fas fa-check-circle text-success"></i> Conectado |
+| <i class="fas fa-tools"></i> Admin Django | `http://localhost:8000/admin` | <i class="fas fa-check-circle text-success"></i> Conectado |
+| <i class="fas fa-broadcast-tower"></i> API Rest | `http://localhost:8000/api` | <i class="fas fa-check-circle text-success"></i> Conectado |
 
 ---
 
-## 🔑 Credenciais de Acesso
+## <i class="fas fa-key"></i> Credenciais de Acesso
 
-### 🛡️ Admin Django
+### <i class="fas fa-shield-alt"></i> Admin Django
 
 **URL:** `http://localhost:8000/admin`
 
@@ -160,7 +160,7 @@ POST   /favorites/remove/     - Remover
 
 ---
 
-## 📁 Estrutura do Projeto
+## <i class="fas fa-folder-open"></i> Estrutura do Projeto
 
 ```
 NexusLife/
@@ -238,7 +238,7 @@ NexusLife/
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## <i class="fas fa-wrench"></i> Tecnologias Utilizadas
 
 ### Backend
 - **Django 4.2** - Web framework
@@ -263,7 +263,7 @@ NexusLife/
 
 ---
 
-## 📊 Modelos de Dados
+## <i class="fas fa-database"></i> Modelos de Dados
 
 ### Categoria
 - `name` - Nome da categoria
@@ -368,7 +368,7 @@ Authorization: Bearer <token>
 
 ---
 
-## 🚀 Deployment
+## <i class="fas fa-rocket"></i> Deployment
 
 ### Heroku
 ```bash
@@ -886,12 +886,12 @@ npm run build
 
 | Plataforma | Backend | Frontend |
 |------------|---------|----------|
-| Railway | ✅ | — |
-| Render | ✅ | ✅ |
-| Heroku | ✅ | — |
-| Vercel | — | ✅ |
-| Netlify | — | ✅ |
-| VPS (Ubuntu + Nginx) | ✅ | ✅ |
+| Railway | <i class="fas fa-check-circle text-success"></i> | — |
+| Render | <i class="fas fa-check-circle text-success"></i> | <i class="fas fa-check-circle text-success"></i> |
+| Heroku | <i class="fas fa-check-circle text-success"></i> | — |
+| Vercel | — | <i class="fas fa-check-circle text-success"></i> |
+| Netlify | — | <i class="fas fa-check-circle text-success"></i> |
+| VPS (Ubuntu + Nginx) | <i class="fas fa-check-circle text-success"></i> | <i class="fas fa-check-circle text-success"></i> |
 
 ---
 
@@ -1109,11 +1109,11 @@ curl http://localhost:8000/api/gmail/emails/
 
 ### Segurança
 
-- ✅ Senha do usuário nunca é armazenada
-- ✅ Tokens são armazenados no banco de dados PostgreSQL
-- ✅ Tokens podem ser renovados automaticamente
-- ✅ Tokens podem ser revogados a qualquer momento
-- ✅ Acesso protegido por `@login_required`
+- <i class="fas fa-check-circle text-success"></i> Senha do usuário nunca é armazenada
+- <i class="fas fa-check-circle text-success"></i> Tokens são armazenados no banco de dados PostgreSQL
+- <i class="fas fa-check-circle text-success"></i> Tokens podem ser renovados automaticamente
+- <i class="fas fa-check-circle text-success"></i> Tokens podem ser revogados a qualquer momento
+- <i class="fas fa-check-circle text-success"></i> Acesso protegido por `@login_required`
 
 ### Próximos passos (opcional)
 

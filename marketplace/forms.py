@@ -15,10 +15,18 @@ class ServiceForm(forms.ModelForm):
     class Meta:
         model = Service
         fields = ['title', 'description', 'price', 'category', 'delivery_days', 'revisions']
+        labels = {
+            'title': 'Título',
+            'description': 'Descrição',
+            'price': 'Preço (R$)',
+            'category': 'Categoria',
+            'delivery_days': 'Prazo de Entrega (dias)',
+            'revisions': 'Número de Revisões',
+        }
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 5}),
-            'price': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ex: Desenvolvimento de Website em Django'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'placeholder': 'Descreva seu serviço em detalhes...'}),
+            'price': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01', 'placeholder': '100.00'}),
             'category': forms.Select(attrs={'class': 'form-control'}),
             'delivery_days': forms.NumberInput(attrs={'class': 'form-control', 'min': 1}),
             'revisions': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),

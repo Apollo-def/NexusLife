@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .email-container { background: white; max-width: 600px; margin: 20px auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #028a00, #35c700); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+        .header h1 { margin: 0; font-size: 24px; }
+        .content { padding: 40px; }
+        .content h2 { color: #028a00; margin-top: 0; }
+        .content p { color: #666; line-height: 1.6; margin-bottom: 15px; }
+        .button { display: inline-block; background: #028a00; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; margin: 20px 0; font-weight: bold; }
+        .button:hover { background: #35c700; }
+        .footer { background: #f9f9f9; padding: 20px; text-align: center; color: #999; font-size: 12px; border-top: 1px solid #eee; border-radius: 0 0 10px 10px; }
+        .order-box { background: #f0f0f0; padding: 20px; border-left: 4px solid #028a00; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Pedido Concluído!</h1>
+        </div>
+        <div class="content">
+            <h2>Parabéns, {{ user_name }}!</h2>
+            <p>Seu pedido foi concluído com sucesso!</p>
+            
+            <div class="order-box">
+                <p><strong>Pedido #{{ order.pk }}</strong></p>
+                <p><strong>Serviço:</strong> {{ service.title }}</p>
+                <p><strong>Freelancer:</strong> {{ order.service.freelancer.username }}</p>
+                <p><strong>Data de Conclusão:</strong> Hoje</p>
+            </div>
+
+            <p>O trabalho foi entregue conforme solicitado. Não deixe de avaliar o trabalho do freelancer para ajudar na comunidade do NexusLife!</p>
+
+            <p>
+                <a href="{{ site_url }}/marketplace/order/{{ order.pk }}/" class="button">Avaliar Serviço</a>
+            </p>
+
+            <p>Obrigado por usar o NexusLife!</p>
+        </div>
+        <div class="footer">
+            <p>© 2024 NexusLife. Todos os direitos reservados.</p>
+            <p>Este é um email automático. Por favor, não responda este email.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -25,3 +25,6 @@ class CoreConfig(AppConfig):
         # Inicializa o Firebase Admin SDK quando o app Django estiver pronto.
         from . import firebase_config
         firebase_config.initialize_firebase_admin()
+        
+        # Registra signals para notificações e emails automáticos
+        from . import signals

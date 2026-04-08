@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block title %}Notificações - NexusLife{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="mb-0">
+                    <i class="fas fa-bell"></i> Notificações
+                </h1>
+                {% if unread_count > 0 %}
+                    <a href="{% url 'mark_all_notifications_as_read' %}" class="btn btn-sm btn-outline-primary">
+                        <i class="fas fa-check-double"></i> Marcar todas como lidas
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- Filtro de notificações -->
+            <div class="mb-4">
+                <div class="btn-group" role="group">
+                    <a href="{% url 'notifications' %}" class="btn btn-sm btn-outline-secondary">
+                        Todas
+                    </a>
+                    <a href="{% url 'notifications' %}?filter=unread" class="btn btn-sm btn-outline-secondary">
+                        Não lidas
+                    </a>
+                    <a href="{% url 'notifications' %}?filter=orders" class="btn btn-sm btn-outline-secondary">
+                        Pedidos
+                    </a>
+                    <a href="{% url 'notifications' %}?filter=reviews" class="btn btn-sm btn-outline-secondary">
+                        Avaliações
+                    </a>
+                </div>
+            </div>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            {% if notifications %}
+                <div class="notification-list">
+                    {% for notification in notifications %}
+                        <div class="card mb-3 {% if not notification.is_read %}border-primary shadow-sm{% endif %}">
+                            <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <div class="d-flex align-items-start gap-3">
+                                            <!-- Ícone da notificação -->
+                                            <div class="notification-icon">
+                                                {% if notification.notification_type == 'order' %}
+                                                    <i class="fas fa-shopping-cart text-primary"></i>
+                                                {% elif notification.notification_type == 'order_updated' %}
+                                                    <i class="fas fa-sync-alt text-info"></i>
+                                                {% elif notification.notification_type == 'review' %}
+                                                    <i class="fas fa-star text-warning"></i>
+                                                {% elif notification.notification_type == 'message' %}
+                                                    <i class="fas fa-envelope text-secondary"></i>
+                                                {% elif notification.notification_type == 'payment' %}
+                                                    <i class="fas fa-credit-card text-success"></i>
+                                                {% elif notification.notification_type == 'account' %}
+                                                    <i class="fas fa-user-circle text-dark"></i>
+                                                {% endif %}
+                                            </div>
+
+                                            <!-- Conteúdo -->
+                                            <div class="flex-grow-1">
+                                                <h6 class="card-title mb-1">
+                                                    {% if notification.notification_type == 'order' %}
+                                                        Novo Pedido
+                                                    {% elif notification.notification_type == 'order_updated' %}
+                                                        Pedido Atualizado
+                                                    {% elif notification.notification_type == 'review' %}
+                                                        Nova Avaliação
+                                                    {% elif notification.notification_type == 'message' %}
+                                                        Nova Mensagem
+                                                    {% elif notification.notification_type == 'payment' %}
+                                                        Pagamento Recebido
+                                                    {% elif notification.notification_type == 'account' %}
+                                                        Conta
+                                                    {% endif %}
+                                                    {% if not notification.is_read %}
+                                                        <span class="badge bg-primary">Novo</span>
+                                                    {% endif %}
+                                                </h6>
+                                                <p class="card-text text-muted mb-2">{{ notification.message }}</p>
+                                                <small class="text-muted">
+                                                    <i class="fas fa-clock"></i>
+                                                    {{ notification.created_at|date:"d/m/Y H:i" }}
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Ações -->
+                                    <div class="col-auto">
+                                        {% if not notification.is_read %}
+                                            <a href="{% url 'mark_notification_as_read' notification.id %}" 
+                                               class="btn btn-sm btn-outline-primary"
+                                               title="Marcar como lida">
+                                                <i class="fas fa-check"></i>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="alert alert-info text-center" role="alert">
+                    <i class="fas fa-inbox"></i>
+                    <p class="mb-0">Você não tem notificações no momento.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+    .notification-icon {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f8f9fa;
+        border-radius: 50%;
+    }
+
+    .notification-list .card {
+        border-left: 4px solid #dee2e6;
+        transition: all 0.3s ease;
+    }
+
+    .notification-list .card:hover {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .notification-list .card.border-primary {
+        background-color: #f0f8ff;
+        border-left-color: #0d6efd;
+    }
+</style>
+{% endblock %}

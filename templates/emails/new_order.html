@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .email-container { background: white; max-width: 600px; margin: 20px auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #022F73, #035edb); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+        .header h1 { margin: 0; font-size: 24px; }
+        .content { padding: 40px; }
+        .content h2 { color: #022F73; margin-top: 0; }
+        .content p { color: #666; line-height: 1.6; margin-bottom: 15px; }
+        .button { display: inline-block; background: #022F73; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; margin: 20px 0; font-weight: bold; }
+        .button:hover { background: #035edb; }
+        .footer { background: #f9f9f9; padding: 20px; text-align: center; color: #999; font-size: 12px; border-top: 1px solid #eee; border-radius: 0 0 10px 10px; }
+        .order-box { background: #f0f0f0; padding: 20px; border-left: 4px solid #022F73; margin: 20px 0; }
+        .order-box p { margin: 8px 0; }
+        .price { font-size: 18px; font-weight: bold; color: #028a00; }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Novo Pedido Recebido!</h1>
+        </div>
+        <div class="content">
+            <h2>Olá, {{ user_name }}!</h2>
+            <p>Você recebeu um novo pedido no NexusLife!</p>
+            
+            <div class="order-box">
+                <p><strong>Pedido #{{ order.pk }}</strong></p>
+                <p><strong>Serviço:</strong> {{ service.title }}</p>
+                <p><strong>Cliente:</strong> {{ order.client.username }}</p>
+                <p><strong>Descrição:</strong> {{ order.description }}</p>
+                <p class="price">Valor: R$ {{ service.price }}</p>
+                <p><strong>Prazo:</strong> {{ service.delivery_days }} dias</p>
+            </div>
+
+            <p>Acesse seu dashboard para aceitar ou rejeitar este pedido.</p>
+
+            <p>
+                <a href="{{ site_url }}/marketplace/order/{{ order.pk }}/" class="button">Ver Detalhes do Pedido</a>
+            </p>
+
+            <p>Obrigado por usar o NexusLife!</p>
+        </div>
+        <div class="footer">
+            <p>© 2024 NexusLife. Todos os direitos reservados.</p>
+            <p>Este é um email automático. Por favor, não responda este email.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Category, Service, Order
+from django.db.models import Q, Count, Avg
+from django.utils import timezone
+from .models import Category, Service, Order, Review
 from .forms import ServiceForm, OrderForm
+from core.models import Notification
 
 def service_list(request):
     services = Service.objects.filter(is_active=True).select_related('category', 'freelancer')
@@ -100,11 +103,27 @@ def pf_dashboard(request):
 
     services = Service.objects.filter(freelancer=request.user, is_active=True)
     orders = Order.objects.filter(service__freelancer=request.user).select_related('service', 'client').order_by('-created_at')[:5]
+    
+    # Notificações
+    unread_notifications = Notification.objects.filter(user=request.user, is_read=False).count()
+    recent_notifications = Notification.objects.filter(user=request.user).order_by('-created_at')[:5]
+    
+    # Estatísticas
+    total_orders = Order.objects.filter(service__freelancer=request.user).count()
+    completed_orders = Order.objects.filter(service__freelancer=request.user, status='completed').count()
+    pending_orders = Order.objects.filter(service__freelancer=request.user, status='pending').count()
+    total_reviews = Review.objects.filter(service__freelancer=request.user).count()
 
     context = {
         'profile': profile,
         'services': services,
         'orders': orders,
+        'unread_notifications': unread_notifications,
+        'recent_notifications': recent_notifications,
+        'total_orders': total_orders,
+        'completed_orders': completed_orders,
+        'pending_orders': pending_orders,
+        'total_reviews': total_reviews,
     }
     return render(request, 'marketplace/pf_dashboard.html', context)
 
@@ -119,10 +138,26 @@ def pj_dashboard(request):
 
     services = Service.objects.filter(freelancer=request.user, is_active=True)
     orders = Order.objects.filter(service__freelancer=request.user).select_related('service', 'client').order_by('-created_at')[:5]
+    
+    # Notificações
+    unread_notifications = Notification.objects.filter(user=request.user, is_read=False).count()
+    recent_notifications = Notification.objects.filter(user=request.user).order_by('-created_at')[:5]
+    
+    # Estatísticas
+    total_orders = Order.objects.filter(service__freelancer=request.user).count()
+    completed_orders = Order.objects.filter(service__freelancer=request.user, status='completed').count()
+    pending_orders = Order.objects.filter(service__freelancer=request.user, status='pending').count()
+    total_reviews = Review.objects.filter(service__freelancer=request.user).count()
 
     context = {
         'profile': profile,
         'services': services,
         'orders': orders,
+        'unread_notifications': unread_notifications,
+        'recent_notifications': recent_notifications,
+        'total_orders': total_orders,
+        'completed_orders': completed_orders,
+        'pending_orders': pending_orders,
+        'total_reviews': total_reviews,
     }
     return render(request, 'marketplace/pj_dashboard.html', context)
