@@ -1,0 +1,191 @@
+WARNING 2026-04-08 09:29:54,048 firebase_config 2348 24256 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 09:29:54,697 firebase_config 2348 24256 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 09:29:54,727 openai_integration 2348 24256 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-08 09:33:55,396 firebase_config 23108 13288 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 09:33:57,422 firebase_config 7744 26832 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 09:33:57,450 autoreload 7744 26832 Watching for file changes with StatReloader
+WARNING 2026-04-08 09:33:57,460 firebase_config 7744 26832 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 09:33:57,472 openai_integration 7744 26832 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-08 09:34:54,836 basehttp 7744 1628 "GET / HTTP/1.1" 200 10097
+INFO 2026-04-08 09:34:55,924 basehttp 7744 4124 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-08 09:34:55,924 basehttp 7744 1628 "GET /static/styles.css HTTP/1.1" 200 4509
+WARNING 2026-04-08 09:34:56,426 log 7744 1628 Not Found: /favicon.ico
+WARNING 2026-04-08 09:34:56,426 basehttp 7744 1628 "GET /favicon.ico HTTP/1.1" 404 5162
+WARNING 2026-04-08 09:48:26,301 firebase_config 3652 376 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 09:48:28,177 firebase_config 776 15168 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-08 09:48:28,208 autoreload 776 15168 Watching for file changes with StatReloader
+WARNING 2026-04-08 09:48:28,225 firebase_config 776 15168 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-08 09:48:30,761 openai_integration 776 15168 OPENAI_API_KEY não configurada
+INFO 2026-04-08 09:49:13,539 basehttp 776 1180 "GET / HTTP/1.1" 200 10097
+INFO 2026-04-08 09:49:14,006 basehttp 776 1180 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 09:49:14,006 basehttp 776 14316 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 09:49:16,493 basehttp 776 1180 "GET /chatbot/ HTTP/1.1" 200 15985
+INFO 2026-04-08 09:49:19,772 basehttp 776 1180 "POST /api/chatbot/ HTTP/1.1" 200 748
+INFO 2026-04-08 09:52:11,451 basehttp 776 1180 "GET /password-reset/ HTTP/1.1" 200 9588
+INFO 2026-04-08 09:52:11,462 basehttp 776 14316 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 09:52:11,462 basehttp 776 1180 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 09:52:17,163 basehttp 776 1180 - Broken pipe from ('127.0.0.1', 63180)
+INFO 2026-04-08 09:52:18,019 basehttp 776 14316 - Broken pipe from ('127.0.0.1', 58545)
+INFO 2026-04-08 09:52:19,297 basehttp 776 1212 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-04-08 09:52:19,313 basehttp 776 1212 "GET / HTTP/1.1" 200 10800
+INFO 2026-04-08 09:53:54,731 basehttp 776 1212 "GET /register/ HTTP/1.1" 200 17263
+INFO 2026-04-08 09:57:41,888 signals 776 1212 Email de boas-vindas enviado para micaelcontasteam@gmail.com
+INFO 2026-04-08 09:57:41,888 signals 776 1212 Notificação e email enviados para micaelcontasteam@gmail.com
+INFO 2026-04-08 09:57:44,490 basehttp 776 1212 "POST /register/ HTTP/1.1" 302 0
+INFO 2026-04-08 09:57:44,498 basehttp 776 1212 "GET / HTTP/1.1" 200 10800
+INFO 2026-04-08 09:57:44,510 basehttp 776 8916 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 09:57:44,510 basehttp 776 1212 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 09:59:15,513 basehttp 776 1212 "POST / HTTP/1.1" 302 0
+INFO 2026-04-08 09:59:15,526 basehttp 776 1212 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 09:59:15,571 basehttp 776 1212 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 30607
+INFO 2026-04-08 10:00:16,245 basehttp 776 1212 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29995
+INFO 2026-04-08 10:01:16,319 basehttp 776 1212 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29995
+INFO 2026-04-08 10:01:16,332 basehttp 776 1212 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:01:16,332 basehttp 776 8916 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:01:18,724 basehttp 776 8916 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:01:18,729 basehttp 776 8916 "GET / HTTP/1.1" 200 10709
+INFO 2026-04-08 10:01:22,695 basehttp 776 8916 "GET /register/ HTTP/1.1" 200 17263
+INFO 2026-04-08 10:04:59,339 basehttp 776 8916 "GET /register/ HTTP/1.1" 200 17263
+INFO 2026-04-08 10:04:59,351 basehttp 776 8916 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:04:59,351 basehttp 776 1212 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:05:01,518 basehttp 776 1212 "GET /register/ HTTP/1.1" 200 17263
+INFO 2026-04-08 10:05:01,671 basehttp 776 1212 "GET /register/ HTTP/1.1" 200 17263
+INFO 2026-04-08 10:07:17,829 basehttp 776 1212 "GET / HTTP/1.1" 200 10097
+WARNING 2026-04-08 10:07:36,823 views 776 1212 Firebase login fail for ve569933@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-08 10:07:36,826 basehttp 776 1212 "POST / HTTP/1.1" 200 10778
+WARNING 2026-04-08 10:07:42,066 views 776 1212 Firebase login fail for ve569933@gmail.com: User matching query does not exist.
+INFO 2026-04-08 10:07:42,073 basehttp 776 1212 "POST / HTTP/1.1" 200 10778
+WARNING 2026-04-08 10:07:53,466 views 776 1212 Firebase login fail for ve569933@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-08 10:07:53,478 basehttp 776 1212 "POST / HTTP/1.1" 200 10778
+WARNING 2026-04-08 10:08:10,120 views 776 1212 Firebase login fail for ve569933@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-08 10:08:10,123 basehttp 776 1212 "POST / HTTP/1.1" 200 10778
+WARNING 2026-04-08 10:09:40,122 views 776 1212 Firebase login fail for miropiroquinhas@gmail.com: User matching query does not exist.
+INFO 2026-04-08 10:09:40,125 basehttp 776 1212 "POST / HTTP/1.1" 200 10785
+INFO 2026-04-08 10:09:40,135 basehttp 776 8916 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:09:40,135 basehttp 776 1212 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:09:40,856 basehttp 776 1212 "POST / HTTP/1.1" 200 10441
+WARNING 2026-04-08 10:10:37,208 views 776 1212 Firebase login fail for paulolisboati777@gmail.com: User matching query does not exist.
+INFO 2026-04-08 10:10:37,210 basehttp 776 1212 "POST / HTTP/1.1" 200 10786
+INFO 2026-04-08 10:11:10,585 basehttp 776 1212 "POST / HTTP/1.1" 302 0
+INFO 2026-04-08 10:11:10,593 basehttp 776 1212 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:11:10,614 basehttp 776 1212 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29340
+INFO 2026-04-08 10:12:10,702 basehttp 776 1212 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 28729
+INFO 2026-04-08 10:13:10,794 basehttp 776 1212 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 28729
+INFO 2026-04-08 10:13:20,803 basehttp 776 1212 "GET /profile/ HTTP/1.1" 200 17642
+INFO 2026-04-08 10:13:28,567 basehttp 776 1212 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:13:28,572 basehttp 776 1212 "GET / HTTP/1.1" 200 10709
+WARNING 2026-04-08 10:13:51,124 views 776 1212 Firebase login fail for empresa: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_EMAIL",
+    "errors": [
+      {
+        "message": "INVALID_EMAIL",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-08 10:13:51,129 basehttp 776 1212 "POST / HTTP/1.1" 200 10758
+WARNING 2026-04-08 10:14:07,146 views 776 1212 Firebase login fail for empresa: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_EMAIL",
+    "errors": [
+      {
+        "message": "INVALID_EMAIL",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-08 10:14:07,149 basehttp 776 1212 "POST / HTTP/1.1" 200 10758
+INFO 2026-04-08 10:14:07,159 basehttp 776 1212 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:14:07,159 basehttp 776 8916 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:36:51,021 basehttp 776 29000 "GET /password-reset/ HTTP/1.1" 200 9588
+INFO 2026-04-08 10:36:51,033 basehttp 776 29000 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:36:51,034 basehttp 776 15076 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:36:52,216 basehttp 776 15076 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:36:52,221 basehttp 776 15076 "GET /?next=/home/ HTTP/1.1" 200 10097
+INFO 2026-04-08 10:38:21,226 basehttp 776 15076 "GET /register/ HTTP/1.1" 200 17263
+INFO 2026-04-08 10:38:55,375 basehttp 776 15076 "GET / HTTP/1.1" 200 10097
+INFO 2026-04-08 10:40:38,434 basehttp 776 15076 "POST / HTTP/1.1" 302 0
+INFO 2026-04-08 10:40:38,443 basehttp 776 15076 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-08 10:40:38,461 basehttp 776 15076 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 29545
+WARNING 2026-04-08 10:41:35,287 log 776 15076 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-08 10:41:35,287 basehttp 776 15076 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5273
+INFO 2026-04-08 10:41:38,553 basehttp 776 15076 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+WARNING 2026-04-08 10:41:38,607 log 776 15076 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-08 10:41:38,608 basehttp 776 15076 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5273
+INFO 2026-04-08 10:42:39,260 basehttp 776 15076 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+WARNING 2026-04-08 10:42:39,299 log 776 15076 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-08 10:42:39,300 basehttp 776 15076 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5273
+INFO 2026-04-08 10:43:40,257 basehttp 776 15076 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+WARNING 2026-04-08 10:43:40,302 log 776 15076 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-08 10:43:40,303 basehttp 776 15076 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5273
+INFO 2026-04-08 10:44:41,253 basehttp 776 15076 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:44:41,276 basehttp 776 15076 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:44:41,276 basehttp 776 30996 "GET /static/main.js HTTP/1.1" 304 0
+WARNING 2026-04-08 10:44:41,297 log 776 30996 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-08 10:44:41,298 basehttp 776 30996 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5273
+INFO 2026-04-08 10:45:41,356 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+WARNING 2026-04-08 10:45:41,408 log 776 30996 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-08 10:45:41,409 basehttp 776 30996 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5273
+INFO 2026-04-08 10:45:44,021 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:45:44,344 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:45:44,495 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:46:44,572 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:47:44,650 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:48:44,726 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:49:44,806 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:50:44,886 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:51:44,951 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:52:45,034 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:52:45,045 basehttp 776 30996 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-08 10:52:45,045 basehttp 776 30088 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-08 10:53:45,123 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:54:45,202 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934
+INFO 2026-04-08 10:55:45,267 basehttp 776 30996 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 28934

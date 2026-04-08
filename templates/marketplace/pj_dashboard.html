@@ -52,10 +52,10 @@
     }
     
     .section-header {
-        background: linear-gradient(135deg, #022F73 0%, #035edb 100%) !important;
+        background: linear-gradient(135deg, #F9A825 0%, #F57F17 100%) !important;
         color: white !important;
         padding: 25px !important;
-        border-bottom: 3px solid #ffb300 !important;
+        border-bottom: 3px solid #022F73 !important;
     }
     
     .section-header h5 {
@@ -78,7 +78,7 @@
     
     .services-table th {
         font-weight: 700;
-        color: #022F73;
+        color: #F57F17;
         text-transform: uppercase;
         font-size: 0.85rem;
         letter-spacing: 0.5px;
@@ -102,7 +102,7 @@
     
     .service-name {
         font-weight: 600;
-        color: #022F73;
+        color: #F57F17;
     }
     
     .badge-status {
@@ -164,19 +164,19 @@
     }
     
     .btn-primary-custom {
-        background: linear-gradient(135deg, #022F73 0%, #035edb 100%) !important;
+        background: linear-gradient(135deg, #F9A825 0%, #F57F17 100%) !important;
         border: none !important;
         padding: 12px 28px !important;
         border-radius: 10px !important;
         font-weight: 600 !important;
         transition: all 0.3s ease !important;
-        box-shadow: 0 5px 15px rgba(2, 47, 115, 0.3) !important;
+        box-shadow: 0 5px 15px rgba(249, 168, 37, 0.4) !important;
         color: white !important;
     }
     
     .btn-primary-custom:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(2, 47, 115, 0.4) !important;
+        box-shadow: 0 8px 20px rgba(249, 168, 37, 0.5) !important;
         color: white !important;
         text-decoration: none;
     }
@@ -195,11 +195,11 @@
         <!-- Header -->
         <div class="mb-5">
             <div class="d-flex align-items-center gap-4">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #022F73, #035edb); border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #F9A825, #F57F17); border-radius: 15px; display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-building fa-2x text-white"></i>
                 </div>
                 <div>
-                    <h1 class="h2 fw-bold mb-2" style="color: #022F73;">Dashboard Empresa</h1>
+                    <h1 class="h2 fw-bold mb-2" style="color: #F57F17;">Dashboard Empresa</h1>
                     <p class="text-muted mb-1"><i class="fas fa-chart-line me-2"></i>Gerencie seus projetos e equipe</p>
                     {% if profile %}
                         <p class="text-muted mb-0"><strong>{{ profile.business_name }}</strong> • CNPJ: {{ profile.cnpj }}</p>
@@ -507,13 +507,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 datasets: [{
                     label: 'Pedidos',
                     data: [{{ total_orders|default:"0" }}, {{ total_orders|default:"0" }}, {{ pending_orders|default:"0" }}, {{ completed_orders|default:"0" }}, 2, 1, 0],
-                    borderColor: '#022F73',
-                    backgroundColor: 'rgba(2, 47, 115, 0.1)',
+                    borderColor: '#F9A825',
+                    backgroundColor: 'rgba(249, 168, 37, 0.1)',
                     borderWidth: 3,
                     fill: true,
                     tension: 0.4,
                     pointRadius: 5,
-                    pointBackgroundColor: '#035edb',
+                    pointBackgroundColor: '#F57F17',
                     pointBorderColor: '#fff',
                     pointBorderWidth: 2,
                     pointHoverRadius: 7
