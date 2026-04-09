@@ -7,16 +7,49 @@ from .models import Category, Service, Order, Review
 from .forms import ServiceForm, OrderForm
 from core.models import Notification
 
-def service_list(request):
-    services = Service.objects.filter(is_active=True).select_related('category', 'freelancer')
+from django.http import JsonResponse
+
+def search_suggestions(request):
+    q = request.GET.get('q', '').strip()
+    if len(q) < 2:
+        return JsonResponse({'results': []})
+    services = Service.objects.filter(
+        is_active=True
+    ).filter(
+        Q(title__icontains=q) |
+        Q(description__icontains=q) |
+        Q(category__name__icontains=q)
+    ).select_related('category')[:8]
+    results = [
+        {
+            'id': s.pk,
+            'title': s.title,
+            'category': s.category.name,
+            'price': str(s.price),
+        }
+        for s in services
+    ]
+    return JsonResponse({'results': results})
+
+def service_list(request):    services = Service.objects.filter(is_active=True).select_related('category', 'freelancer')
     categories = Category.objects.all()
     category_filter = request.GET.get('category')
+    query = request.GET.get('q', '').strip()
     if category_filter:
         services = services.filter(category_id=category_filter)
+    if query:
+        services = services.filter(
+            Q(title__icontains=query) |
+            Q(description__icontains=query) |
+            Q(category__name__icontains=query) |
+            Q(freelancer__username__icontains=query) |
+            Q(freelancer__first_name__icontains=query)
+        )
     return render(request, 'marketplace/service_list.html', {
         'services': services,
         'categories': categories,
         'selected_category': category_filter,
+        'query': query,
     })
 
 def service_detail(request, pk):
@@ -103,7 +136,15 @@ def pf_dashboard(request):
 
     services = Service.objects.filter(freelancer=request.user, is_active=True)
     orders = Order.objects.filter(service__freelancer=request.user).select_related('service', 'client').order_by('-created_at')[:5]
-    suggested_jobs = Service.objects.filter(is_active=True).exclude(freelancer=request.user).select_related('category').order_by('-created_at')[:5]
+    
+    # Projetos publicados por empresas (PJ) disponíveis para candidatura
+    from core.models import UserProfile
+    pj_users = UserProfile.objects.filter(person_type='PJ').values_list('user_id', flat=True)
+    suggested_jobs = Service.objects.filter(
+        is_active=True
+    ).exclude(
+        freelancer=request.user
+    ).select_related('category', 'freelancer').order_by('-created_at')[:12]
     
     # Notificações
     unread_notifications = Notification.objects.filter(user=request.user, is_read=False).count()

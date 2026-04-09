@@ -160,38 +160,50 @@ def register_view(request):
             if not username and email:
                 username = email.split('@')[0]
 
+            # Validação prévia de duplicatas
+            if cpf_cnpj and UserProfile.objects.filter(cpf_cnpj=cpf_cnpj).exists():
+                label = 'CNPJ' if person_type == 'PJ' else 'CPF'
+                messages.error(request, f'Este {label} já está cadastrado.')
+                return render(request, 'core/register.html', {'form': form})
+
+            if User.objects.filter(email=email).exists():
+                messages.error(request, 'Este e-mail já está em uso.')
+                return render(request, 'core/register.html', {'form': form})
+
             try:
-                # Criar usuário no Django primeiro
-                user_django = form.save(commit=False)
-                user_django.username = username.lower()
-                user_django.first_name = first_name
-                user_django.last_name = last_name
-                user_django.save()
+                from django.db import transaction
+                with transaction.atomic():
+                    # Criar usuário no Django
+                    user_django = form.save(commit=False)
+                    user_django.username = username.lower()
+                    user_django.first_name = first_name
+                    user_django.last_name = last_name
+                    user_django.save()
 
-                # Cria perfil de usuário com dados adicionais
-                UserProfile.objects.get_or_create(
-                    user=user_django,
-                    defaults={
-                        'person_type': person_type,
-                        'cpf_cnpj': cpf_cnpj,
-                        'phone': phone,
-                        'state_registration': state_registration or ''
-                    }
-                )
+                    # Cria perfil de usuário com dados adicionais
+                    UserProfile.objects.get_or_create(
+                        user=user_django,
+                        defaults={
+                            'person_type': person_type,
+                            'cpf_cnpj': cpf_cnpj,
+                            'phone': phone,
+                            'state_registration': state_registration or ''
+                        }
+                    )
 
-                # Cria/atualiza perfil de freelancer com PF/PJ
-                from marketplace.models import FreelancerProfile
-                profile, _ = FreelancerProfile.objects.get_or_create(user=user_django)
-                profile.person_type = person_type
-                profile.phone = phone
-                if person_type == 'PF':
-                    profile.cnpj = ''
-                    profile.state_registration = ''
-                else:
-                    profile.business_name = f"{first_name} {last_name}".strip()
-                    profile.cnpj = cpf_cnpj
-                    profile.state_registration = state_registration or ''
-                profile.save()
+                    # Cria/atualiza perfil de freelancer com PF/PJ
+                    from marketplace.models import FreelancerProfile
+                    profile, _ = FreelancerProfile.objects.get_or_create(user=user_django)
+                    profile.person_type = person_type
+                    profile.phone = phone
+                    if person_type == 'PF':
+                        profile.cnpj = ''
+                        profile.state_registration = ''
+                    else:
+                        profile.business_name = f"{first_name} {last_name}".strip()
+                        profile.cnpj = cpf_cnpj
+                        profile.state_registration = state_registration or ''
+                    profile.save()
 
                 # Tentar criar no Firebase
                 firebase_uid = None

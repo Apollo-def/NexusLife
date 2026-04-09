@@ -414,3 +414,592 @@ WARNING 2026-04-08 11:04:27,738 openai_integration 21136 10984 OPENAI_API_KEY nã
 WARNING 2026-04-08 11:30:42,205 firebase_config 23540 26768 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
 WARNING 2026-04-08 11:30:42,776 firebase_config 23540 26768 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
 WARNING 2026-04-08 11:30:42,787 openai_integration 23540 26768 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-09 08:49:30,342 firebase_config 14448 3188 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 08:49:36,206 firebase_config 14936 25748 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 08:49:36,231 autoreload 14936 25748 Watching for file changes with StatReloader
+WARNING 2026-04-09 08:49:36,256 firebase_config 14936 25748 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 08:49:38,811 openai_integration 14936 25748 OPENAI_API_KEY não configurada
+INFO 2026-04-09 08:49:47,512 basehttp 14936 29404 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 08:49:47,714 basehttp 14936 29404 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-09 08:49:47,714 basehttp 14936 30668 "GET /static/main.js HTTP/1.1" 304 0
+WARNING 2026-04-09 08:49:47,982 log 14936 30668 Not Found: /favicon.ico
+WARNING 2026-04-09 08:49:47,983 basehttp 14936 30668 "GET /favicon.ico HTTP/1.1" 404 5284
+WARNING 2026-04-09 08:49:51,811 base 14936 15108 Session data corrupted
+INFO 2026-04-09 08:49:51,850 basehttp 14936 15108 "GET /register/ HTTP/1.1" 200 17308
+WARNING 2026-04-09 08:49:54,575 base 14936 15108 Session data corrupted
+INFO 2026-04-09 08:49:54,577 basehttp 14936 15108 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 08:50:02,711 base 14936 15108 Session data corrupted
+INFO 2026-04-09 08:50:02,757 basehttp 14936 15108 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 08:50:02,772 basehttp 14936 15108 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 08:50:02,817 basehttp 14936 15108 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32821
+INFO 2026-04-09 08:51:03,733 basehttp 14936 18076 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32210
+INFO 2026-04-09 08:52:04,729 basehttp 14936 24324 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32210
+INFO 2026-04-09 08:53:05,739 basehttp 14936 24324 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32210
+INFO 2026-04-09 08:54:06,723 basehttp 14936 9708 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32210
+INFO 2026-04-09 08:55:07,733 basehttp 14936 9708 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32210
+INFO 2026-04-09 08:56:08,731 basehttp 14936 24032 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32210
+INFO 2026-04-09 08:57:09,751 basehttp 14936 24032 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32210
+INFO 2026-04-09 08:58:10,782 basehttp 14936 24032 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32210
+INFO 2026-04-09 08:58:31,883 autoreload 14936 25748 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+WARNING 2026-04-09 08:58:39,159 firebase_config 21072 11296 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 08:58:39,250 autoreload 21072 11296 Watching for file changes with StatReloader
+WARNING 2026-04-09 08:58:39,273 firebase_config 21072 11296 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 08:58:42,352 openai_integration 21072 11296 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 08:59:11,795 base 21072 3512 Session data corrupted
+INFO 2026-04-09 08:59:11,849 basehttp 21072 3512 "GET /marketplace/dashboard/pj/ HTTP/1.1" 302 0
+WARNING 2026-04-09 08:59:11,974 base 21072 3512 Session data corrupted
+INFO 2026-04-09 08:59:12,018 basehttp 21072 3512 "GET /login/?next=/marketplace/dashboard/pj/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 09:01:55,418 firebase_config 27604 11792 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:01:56,141 firebase_config 27604 11792 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:01:56,157 openai_integration 27604 11792 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-09 09:03:14,642 firebase_config 5900 28044 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:03:16,329 firebase_config 28172 14048 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:03:16,355 autoreload 28172 14048 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:03:16,377 firebase_config 28172 14048 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:03:16,393 openai_integration 28172 14048 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-09 09:03:39,516 firebase_config 12544 29660 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:03:41,391 firebase_config 17276 18348 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:03:41,420 autoreload 17276 18348 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:03:41,434 firebase_config 17276 18348 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:03:43,925 openai_integration 17276 18348 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:03:54,036 basehttp 28172 25352 "GET / HTTP/1.1" 200 20656
+WARNING 2026-04-09 09:03:56,556 base 28172 25352 Session data corrupted
+INFO 2026-04-09 09:03:56,595 basehttp 28172 25352 "GET /register/ HTTP/1.1" 200 17308
+WARNING 2026-04-09 09:04:00,334 base 28172 25352 Session data corrupted
+INFO 2026-04-09 09:04:00,336 basehttp 28172 25352 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 09:04:14,461 base 28172 25352 Session data corrupted
+INFO 2026-04-09 09:04:14,505 basehttp 28172 25352 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:04:14,519 basehttp 28172 25352 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:04:14,569 basehttp 28172 25352 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 32821
+INFO 2026-04-09 09:04:17,776 basehttp 28172 25352 "GET /marketplace/service/create/ HTTP/1.1" 200 9854
+INFO 2026-04-09 09:04:59,387 basehttp 28172 25352 "POST /marketplace/service/create/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:04:59,417 basehttp 28172 25352 "GET /marketplace/service/3/ HTTP/1.1" 200 8277
+INFO 2026-04-09 09:05:11,313 basehttp 28172 25352 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 33736
+INFO 2026-04-09 09:05:17,358 basehttp 28172 25352 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:05:17,363 basehttp 28172 25352 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 09:05:24,311 basehttp 28172 25352 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 09:06:07,226 signals 28172 25352 Email de boas-vindas enviado para andreykaike20@gmail.com
+INFO 2026-04-09 09:06:07,226 signals 28172 25352 Notificação e email enviados para andreykaike20@gmail.com
+ERROR 2026-04-09 09:06:07,228 views 28172 25352 Registration error: UNIQUE constraint failed: core_userprofile.cpf_cnpj
+INFO 2026-04-09 09:06:07,230 basehttp 28172 25352 "POST /register/ HTTP/1.1" 200 18225
+INFO 2026-04-09 09:07:03,364 autoreload 17276 18348 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 09:07:04,027 autoreload 28172 14048 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+WARNING 2026-04-09 09:07:05,652 firebase_config 22416 12388 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:07:05,680 autoreload 22416 12388 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:07:05,702 firebase_config 22416 12388 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:07:05,886 firebase_config 6196 26140 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:07:05,915 autoreload 6196 26140 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:07:05,925 firebase_config 6196 26140 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:07:05,930 openai_integration 6196 26140 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-09 09:07:06,813 openai_integration 22416 12388 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:07:12,082 basehttp 6196 18132 "POST /register/ HTTP/1.1" 200 17442
+INFO 2026-04-09 09:07:12,795 autoreload 22416 12388 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 09:07:12,899 autoreload 6196 26140 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+WARNING 2026-04-09 09:07:14,936 firebase_config 28928 16164 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:07:14,967 autoreload 28928 16164 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:07:14,990 firebase_config 28928 16164 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:07:14,995 openai_integration 28928 16164 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-09 09:07:15,306 firebase_config 30708 27616 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:07:15,339 autoreload 30708 27616 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:07:15,346 firebase_config 30708 27616 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:07:16,395 openai_integration 30708 27616 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:07:31,391 autoreload 30708 27616 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 09:07:31,591 autoreload 28928 16164 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+WARNING 2026-04-09 09:07:33,531 firebase_config 11664 15024 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:07:33,560 autoreload 11664 15024 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:07:33,582 firebase_config 11664 15024 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 09:07:33,586 openai_integration 11664 15024 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-09 09:07:33,666 firebase_config 7696 29472 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:07:33,694 autoreload 7696 29472 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:07:33,700 firebase_config 7696 29472 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 09:07:34,033 basehttp 11664 1716 "POST /register/ HTTP/1.1" 200 17442
+WARNING 2026-04-09 09:07:34,773 openai_integration 7696 29472 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:07:42,653 basehttp 11664 1716 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 09:07:46,518 views 11664 1716 Firebase login fail for 000.000.000-000: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_EMAIL",
+    "errors": [
+      {
+        "message": "INVALID_EMAIL",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-09 09:07:46,521 basehttp 11664 1716 "POST /login/ HTTP/1.1" 200 10814
+INFO 2026-04-09 09:07:56,092 basehttp 11664 1716 "GET /password-reset/ HTTP/1.1" 200 9639
+INFO 2026-04-09 09:08:02,193 basehttp 11664 1716 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:08:02,198 basehttp 11664 1716 "GET /login/ HTTP/1.1" 200 10839
+WARNING 2026-04-09 09:08:47,449 views 11664 7432 Firebase login fail for micaelnycollas14@gmail.com: User matching query does not exist.
+INFO 2026-04-09 09:08:47,451 basehttp 11664 7432 "POST /login/ HTTP/1.1" 200 10825
+WARNING 2026-04-09 09:08:54,907 views 11664 7432 Firebase login fail for micaelnycollas14@gmail.com: User matching query does not exist.
+INFO 2026-04-09 09:08:54,908 basehttp 11664 7432 "POST /login/ HTTP/1.1" 200 10825
+WARNING 2026-04-09 09:09:00,927 views 11664 7432 Firebase login fail for micaelnycollas14@gmail.com: User matching query does not exist.
+INFO 2026-04-09 09:09:00,934 basehttp 11664 7432 "POST /login/ HTTP/1.1" 200 10825
+WARNING 2026-04-09 09:09:01,805 views 11664 1716 Firebase login fail for micaelnycollas14@gmail.com: HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=None)
+INFO 2026-04-09 09:09:01,814 basehttp 11664 1716 - Broken pipe from ('127.0.0.1', 51717)
+INFO 2026-04-09 09:15:17,976 firebase_config 29588 9432 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:16:38,372 firebase_config 18784 29360 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:16:40,237 firebase_config 6680 22640 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:16:40,267 autoreload 6680 22640 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:16:40,945 openai_integration 6680 22640 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-09 09:17:04,641 firebase_config 26752 23668 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:17:06,677 firebase_config 23056 16044 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:17:06,709 autoreload 23056 16044 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:17:09,883 openai_integration 23056 16044 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:17:15,602 basehttp 7696 16184 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 09:17:17,815 basehttp 7696 16184 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 09:17:21,506 basehttp 7696 16184 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 09:17:34,042 views 7696 16184 Firebase login fail for micaelnycollas14@gmail.com: User matching query does not exist.
+INFO 2026-04-09 09:17:34,044 basehttp 7696 16184 "POST /login/ HTTP/1.1" 200 10825
+INFO 2026-04-09 09:20:06,877 firebase_config 28600 13080 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:21:16,860 firebase_config 10884 5548 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:21:19,749 signals 10884 5548 Email de boas-vindas enviado para micaelnycollas14@gmail.com
+INFO 2026-04-09 09:21:19,749 signals 10884 5548 Notificação e email enviados para micaelnycollas14@gmail.com
+INFO 2026-04-09 09:21:20,192 signals 10884 5548 Email de boas-vindas enviado para tasaka343@gmail.com
+INFO 2026-04-09 09:21:20,192 signals 10884 5548 Notificação e email enviados para tasaka343@gmail.com
+INFO 2026-04-09 09:21:48,657 basehttp 7696 16184 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-09 09:21:59,769 basehttp 7696 16184 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:21:59,781 basehttp 7696 16184 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:21:59,822 basehttp 7696 16184 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 34347
+INFO 2026-04-09 09:22:08,652 basehttp 7696 16184 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:22:08,657 basehttp 7696 16184 "GET /login/ HTTP/1.1" 200 10748
+WARNING 2026-04-09 09:22:44,038 views 7696 16184 Firebase login fail for tasaka343@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-09 09:22:44,041 basehttp 7696 16184 "POST /login/ HTTP/1.1" 200 10809
+WARNING 2026-04-09 09:23:09,652 views 7696 16184 Firebase login fail for tasaka343@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-09 09:23:09,654 basehttp 7696 16184 "POST /login/ HTTP/1.1" 200 10809
+WARNING 2026-04-09 09:23:48,182 views 7696 16184 Firebase login fail for tasaka343@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-09 09:23:48,185 basehttp 7696 16184 "POST /login/ HTTP/1.1" 200 10809
+INFO 2026-04-09 09:24:10,001 firebase_config 5528 8068 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:24:12,337 signals 5528 8068 Email de boas-vindas enviado para vnpr47@gmail.com
+INFO 2026-04-09 09:24:12,337 signals 5528 8068 Notificação e email enviados para vnpr47@gmail.com
+INFO 2026-04-09 09:24:12,800 signals 5528 8068 Email de boas-vindas enviado para df282744@gmail.com
+INFO 2026-04-09 09:24:12,801 signals 5528 8068 Notificação e email enviados para df282744@gmail.com
+INFO 2026-04-09 09:24:13,257 signals 5528 8068 Email de boas-vindas enviado para miropiroquinhas@gmail.com
+INFO 2026-04-09 09:24:13,257 signals 5528 8068 Notificação e email enviados para miropiroquinhas@gmail.com
+INFO 2026-04-09 09:24:13,712 signals 5528 8068 Email de boas-vindas enviado para df28062001@gmail.com
+INFO 2026-04-09 09:24:13,713 signals 5528 8068 Notificação e email enviados para df28062001@gmail.com
+INFO 2026-04-09 09:24:14,175 signals 5528 8068 Email de boas-vindas enviado para paulolisboati777@gmail.com
+INFO 2026-04-09 09:24:14,175 signals 5528 8068 Notificação e email enviados para paulolisboati777@gmail.com
+INFO 2026-04-09 09:24:14,616 signals 5528 8068 Email de boas-vindas enviado para testeadm@nexuslife.com
+INFO 2026-04-09 09:24:14,616 signals 5528 8068 Notificação e email enviados para testeadm@nexuslife.com
+INFO 2026-04-09 09:24:15,068 signals 5528 8068 Email de boas-vindas enviado para df@gmail.com
+INFO 2026-04-09 09:24:15,068 signals 5528 8068 Notificação e email enviados para df@gmail.com
+INFO 2026-04-09 09:24:15,520 signals 5528 8068 Email de boas-vindas enviado para ve569933@gmail.com
+INFO 2026-04-09 09:24:15,520 signals 5528 8068 Notificação e email enviados para ve569933@gmail.com
+INFO 2026-04-09 09:24:51,616 basehttp 7696 16184 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 09:25:10,416 firebase_config 25380 29820 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:25:12,357 firebase_config 26372 3716 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:25:12,386 autoreload 26372 3716 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:25:15,195 openai_integration 26372 3716 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:25:19,976 basehttp 7696 16184 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 09:25:22,190 basehttp 7696 16184 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 09:25:23,765 basehttp 7696 16184 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-09 09:25:34,186 basehttp 7696 16184 "GET /password-reset/ HTTP/1.1" 200 9639
+INFO 2026-04-09 09:25:37,410 basehttp 7696 16184 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:25:37,414 basehttp 7696 16184 "GET /login/?next=/home/ HTTP/1.1" 200 10136
+INFO 2026-04-09 09:25:47,809 basehttp 7696 16184 "POST /login/?next=/home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:25:47,817 basehttp 7696 16184 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:25:47,843 basehttp 7696 16184 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 35204
+INFO 2026-04-09 09:26:04,623 basehttp 7696 16184 "GET /marketplace/service/3/order/ HTTP/1.1" 200 8203
+INFO 2026-04-09 09:26:49,146 basehttp 7696 16184 "GET /marketplace/service/3/order/ HTTP/1.1" 200 8203
+INFO 2026-04-09 09:27:03,230 basehttp 7696 16184 "POST /marketplace/service/3/order/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:27:03,254 basehttp 7696 16184 "GET /marketplace/order/1/ HTTP/1.1" 200 9095
+ERROR 2026-04-09 09:27:08,245 log 7696 16184 Internal Server Error: /marketplace/service/3/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Documents\NexusLife\marketplace\views.py", line 24, in service_detail
+    return render(request, 'marketplace/service_detail.html', {'service': service})
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'order_create' with arguments '('',)' not found. 1 pattern(s) tried: ['marketplace/service/(?P<service_pk>[0-9]+)/order/\\Z']
+ERROR 2026-04-09 09:27:08,254 basehttp 7696 16184 "GET /marketplace/service/3/ HTTP/1.1" 500 189420
+INFO 2026-04-09 09:27:21,807 basehttp 7696 16184 "GET /marketplace/orders/ HTTP/1.1" 200 7838
+INFO 2026-04-09 09:27:36,270 basehttp 7696 16184 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:27:36,288 basehttp 7696 16184 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 33948
+ERROR 2026-04-09 09:27:45,668 log 7696 16184 Internal Server Error: /marketplace/service/2/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Documents\NexusLife\marketplace\views.py", line 24, in service_detail
+    return render(request, 'marketplace/service_detail.html', {'service': service})
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'order_create' with arguments '('',)' not found. 1 pattern(s) tried: ['marketplace/service/(?P<service_pk>[0-9]+)/order/\\Z']
+ERROR 2026-04-09 09:27:45,672 basehttp 7696 16184 "GET /marketplace/service/2/ HTTP/1.1" 500 189139
+INFO 2026-04-09 09:28:17,973 basehttp 7696 16184 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:28:17,978 basehttp 7696 16184 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 09:28:29,229 basehttp 7696 16184 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:28:29,235 basehttp 7696 16184 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:28:29,252 basehttp 7696 16184 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 36085
+INFO 2026-04-09 09:29:14,050 basehttp 7696 16184 "GET /marketplace/order/1/ HTTP/1.1" 200 9071
+INFO 2026-04-09 09:29:23,017 basehttp 7696 16184 "GET /marketplace/order/1/status/in_progress/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:29:23,026 basehttp 7696 16184 "GET /marketplace/order/1/ HTTP/1.1" 200 9717
+INFO 2026-04-09 09:29:37,307 basehttp 7696 16184 "GET /marketplace/order/1/status/completed/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:29:37,316 basehttp 7696 16184 "GET /marketplace/order/1/ HTTP/1.1" 200 9402
+INFO 2026-04-09 09:29:40,928 basehttp 7696 16184 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-09 09:29:43,736 basehttp 7696 16184 "GET /marketplace/order/1/ HTTP/1.1" 200 8766
+INFO 2026-04-09 09:29:47,354 basehttp 7696 16184 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 35481
+INFO 2026-04-09 09:29:49,464 basehttp 7696 16184 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 35481
+INFO 2026-04-09 09:30:04,915 basehttp 7696 16184 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:30:04,920 basehttp 7696 16184 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 09:30:33,042 basehttp 7696 16184 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:30:33,048 basehttp 7696 16184 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:30:33,065 basehttp 7696 16184 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 36092
+INFO 2026-04-09 09:30:36,341 basehttp 7696 16184 "GET /marketplace/service/create/ HTTP/1.1" 200 9854
+INFO 2026-04-09 09:31:21,264 basehttp 7696 16184 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-09 09:31:27,042 basehttp 7696 16184 "GET /marketplace/order/1/ HTTP/1.1" 200 8766
+INFO 2026-04-09 09:31:38,515 basehttp 7696 16184 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 35481
+INFO 2026-04-09 09:31:46,242 basehttp 7696 16184 "GET /profile/ HTTP/1.1" 200 18489
+INFO 2026-04-09 09:32:07,497 basehttp 7696 16184 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:32:07,502 basehttp 7696 16184 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 09:32:27,485 basehttp 7696 16184 - Broken pipe from ('127.0.0.1', 64030)
+INFO 2026-04-09 09:32:28,876 basehttp 7696 30864 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:32:28,885 basehttp 7696 30864 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:32:28,909 basehttp 7696 30864 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 35204
+ERROR 2026-04-09 09:32:31,686 log 7696 30864 Internal Server Error: /marketplace/service/3/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Documents\NexusLife\marketplace\views.py", line 24, in service_detail
+    return render(request, 'marketplace/service_detail.html', {'service': service})
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'order_create' with arguments '('',)' not found. 1 pattern(s) tried: ['marketplace/service/(?P<service_pk>[0-9]+)/order/\\Z']
+ERROR 2026-04-09 09:32:31,690 basehttp 7696 30864 "GET /marketplace/service/3/ HTTP/1.1" 500 189425
+INFO 2026-04-09 09:33:56,604 basehttp 7696 30864 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 33948
+INFO 2026-04-09 09:33:56,770 basehttp 7696 30864 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 33948
+INFO 2026-04-09 09:33:56,929 basehttp 7696 30864 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 33948
+INFO 2026-04-09 09:33:58,212 basehttp 7696 30864 "GET /marketplace/service/3/ HTTP/1.1" 200 7672
+INFO 2026-04-09 09:34:03,199 basehttp 7696 30864 "GET /marketplace/service/2/ HTTP/1.1" 200 7640
+INFO 2026-04-09 09:34:07,426 basehttp 7696 30864 "GET /marketplace/service/3/ HTTP/1.1" 200 7672
+INFO 2026-04-09 09:34:09,602 basehttp 7696 30864 "GET /marketplace/service/3/order/ HTTP/1.1" 200 8203
+INFO 2026-04-09 09:34:12,074 basehttp 7696 30864 "POST /marketplace/service/3/order/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:34:12,083 basehttp 7696 30864 "GET /marketplace/order/2/ HTTP/1.1" 200 8864
+INFO 2026-04-09 09:34:18,248 basehttp 7696 30864 "GET /marketplace/service/3/ HTTP/1.1" 200 7672
+INFO 2026-04-09 09:34:21,850 basehttp 7696 30864 "GET /marketplace/orders/ HTTP/1.1" 200 8821
+INFO 2026-04-09 09:35:28,859 basehttp 7696 30864 "GET /marketplace/orders/ HTTP/1.1" 200 8821
+INFO 2026-04-09 09:36:30,339 basehttp 7696 30864 "GET /marketplace/order/2/ HTTP/1.1" 200 8224
+INFO 2026-04-09 09:36:30,492 basehttp 7696 30864 "GET /marketplace/order/2/ HTTP/1.1" 200 8224
+INFO 2026-04-09 09:36:30,642 basehttp 7696 30864 "GET /marketplace/order/2/ HTTP/1.1" 200 8224
+INFO 2026-04-09 09:36:30,800 basehttp 7696 30864 "GET /marketplace/order/2/ HTTP/1.1" 200 8224
+INFO 2026-04-09 09:36:31,023 basehttp 7696 30864 "GET /marketplace/order/2/ HTTP/1.1" 200 8224
+INFO 2026-04-09 09:36:31,168 basehttp 7696 30864 "GET /marketplace/order/2/ HTTP/1.1" 200 8224
+INFO 2026-04-09 09:36:31,857 basehttp 7696 30864 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:36:31,884 basehttp 7696 30864 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 33948
+INFO 2026-04-09 09:36:33,694 basehttp 7696 30864 "GET /marketplace/service/3/ HTTP/1.1" 200 7672
+INFO 2026-04-09 09:36:36,581 basehttp 7696 30864 "GET /marketplace/service/3/order/ HTTP/1.1" 200 8203
+INFO 2026-04-09 09:36:38,848 basehttp 7696 30864 "GET /marketplace/service/3/ HTTP/1.1" 200 7672
+INFO 2026-04-09 09:36:40,201 basehttp 7696 30864 "GET /marketplace/service/3/order/ HTTP/1.1" 200 8203
+INFO 2026-04-09 09:36:43,023 basehttp 7696 30864 "POST /marketplace/service/3/order/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:36:43,033 basehttp 7696 30864 "GET /marketplace/order/3/ HTTP/1.1" 200 8845
+INFO 2026-04-09 09:36:44,344 basehttp 7696 30864 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:36:44,362 basehttp 7696 30864 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 33948
+INFO 2026-04-09 09:36:47,514 basehttp 7696 30864 "GET /marketplace/service/3/ HTTP/1.1" 200 7672
+INFO 2026-04-09 09:36:49,370 basehttp 7696 30864 "GET /marketplace/service/3/order/ HTTP/1.1" 200 8203
+INFO 2026-04-09 09:36:51,256 basehttp 7696 30864 "POST /marketplace/service/3/order/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:36:51,265 basehttp 7696 30864 "GET /marketplace/order/4/ HTTP/1.1" 200 8845
+INFO 2026-04-09 09:36:53,352 basehttp 7696 30864 "GET /marketplace/orders/ HTTP/1.1" 200 10783
+INFO 2026-04-09 09:36:55,737 basehttp 7696 30864 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:36:55,755 basehttp 7696 30864 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 33948
+INFO 2026-04-09 09:36:58,511 basehttp 7696 30864 "GET /marketplace/service/create/ HTTP/1.1" 200 9863
+INFO 2026-04-09 09:37:00,754 basehttp 7696 30864 "GET /marketplace/ HTTP/1.1" 200 10311
+INFO 2026-04-09 09:39:57,974 autoreload 7696 29472 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:39:58,101 autoreload 26372 3716 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:39:58,310 autoreload 23056 16044 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:40:04,883 firebase_config 22064 27428 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:40:04,883 firebase_config 6848 3708 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:40:05,051 autoreload 6848 3708 Watching for file changes with StatReloader
+
+INFO 2026-04-09 09:40:05,055 autoreload 22064 27428 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:40:08,683 openai_integration 22064 27428 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:40:08,683 openai_integration 6848 3708 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:40:08,683 openai_integration 29676 25608 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:40:25,719 autoreload 22064 27428 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:40:25,852 autoreload 29676 25608 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:40:25,878 autoreload 6848 3708 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:40:28,579 firebase_config 25164 14788 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:40:28,607 autoreload 25164 14788 Watching for file changes with StatReloader
+INFO 2026-04-09 09:40:28,686 firebase_config 13608 24248 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:40:28,714 autoreload 13608 24248 Watching for file changes with StatReloader
+INFO 2026-04-09 09:40:28,727 firebase_config 21320 9620 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:40:28,759 autoreload 21320 9620 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:40:29,892 openai_integration 25164 14788 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:40:29,978 openai_integration 13608 24248 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:40:30,026 openai_integration 21320 9620 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:40:36,062 base 25164 11472 Session data corrupted
+INFO 2026-04-09 09:40:36,075 basehttp 25164 11472 "GET /marketplace/dashboard/pf/ HTTP/1.1" 302 0
+WARNING 2026-04-09 09:40:36,106 base 25164 11472 Session data corrupted
+INFO 2026-04-09 09:40:36,121 basehttp 25164 11472 "GET /login/?next=/marketplace/dashboard/pf/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 09:40:36,215 base 25164 11472 Session data corrupted
+INFO 2026-04-09 09:40:36,217 basehttp 25164 11472 "GET /login/?next=/marketplace/dashboard/pf/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 09:40:36,359 base 25164 11472 Session data corrupted
+INFO 2026-04-09 09:40:36,361 basehttp 25164 11472 "GET /login/?next=/marketplace/dashboard/pf/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 09:41:00,991 base 25164 11472 Session data corrupted
+INFO 2026-04-09 09:41:01,032 basehttp 25164 11472 "POST /login/?next=/marketplace/dashboard/pf/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:41:01,046 basehttp 25164 11472 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 09:41:01,084 basehttp 25164 11472 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 35612
+INFO 2026-04-09 09:41:11,277 basehttp 25164 11472 "GET /marketplace/?q=desen HTTP/1.1" 200 10311
+INFO 2026-04-09 09:41:15,155 basehttp 25164 11472 "GET /marketplace/?q=desen HTTP/1.1" 200 10311
+INFO 2026-04-09 09:41:29,485 basehttp 25164 11472 "GET /marketplace/?q=desenvo HTTP/1.1" 200 10311
+INFO 2026-04-09 09:44:02,807 autoreload 21320 9620 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:44:03,949 autoreload 13608 24248 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:44:03,953 autoreload 25164 14788 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:44:05,895 firebase_config 10884 28832 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:44:05,925 autoreload 10884 28832 Watching for file changes with StatReloader
+INFO 2026-04-09 09:44:06,867 firebase_config 3516 25568 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:44:06,885 firebase_config 24220 14372 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:44:06,895 autoreload 3516 25568 Watching for file changes with StatReloader
+INFO 2026-04-09 09:44:06,918 autoreload 24220 14372 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:44:07,343 openai_integration 10884 28832 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:44:08,271 openai_integration 3516 25568 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:44:08,274 openai_integration 24220 14372 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:44:11,991 autoreload 24220 14372 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:44:12,020 autoreload 3516 25568 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:44:12,149 autoreload 10884 28832 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 09:44:15,204 firebase_config 13980 20976 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:44:15,204 firebase_config 31200 29344 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:44:15,236 autoreload 13980 20976 Watching for file changes with StatReloader
+INFO 2026-04-09 09:44:15,367 firebase_config 13740 5164 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:44:15,401 autoreload 13740 5164 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:44:16,603 openai_integration 13980 20976 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:44:16,603 openai_integration 31200 29344 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 09:44:16,719 openai_integration 13740 5164 OPENAI_API_KEY não configurada
