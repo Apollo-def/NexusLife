@@ -13,8 +13,8 @@ const firebaseConfig = {
   projectId: "nexuslife-1409b",
   storageBucket: "nexuslife-1409b.firebasestorage.app",
   messagingSenderId: "162871176799",
-  appId: "1:162871176799:web:5ddc2cc315a5c2f98075ea",
-  measurementId: "G-D54PLMVJH7"
+  appId: "1:162871176799:web:4eac3ea69282d4838075ea",
+  measurementId: "G-PZSRLEY1W6"
 };
 
 // Initialize Firebase

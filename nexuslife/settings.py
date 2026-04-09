@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'nexuslife.wsgi.application'
 db_from_env = config('DATABASE_URL', default=None)
 if db_from_env:
     DATABASES = {
-        'default': dj_database_url.parse(db_from_env, conn_max_age=600, ssl_require=True)
+        'default': dj_database_url.parse(db_from_env, conn_max_age=600)
     }
 elif config('DB_ENGINE', default='').lower() in ['postgresql', 'postgres', 'psql'] or config('DB_NAME', default=''):
     DATABASES = {
@@ -90,7 +90,6 @@ elif config('DB_ENGINE', default='').lower() in ['postgresql', 'postgres', 'psql
             'PASSWORD': config('DB_PASSWORD'),
             'HOST': config('DB_HOST', default='localhost'),
             'PORT': config('DB_PORT', default='5432'),
-            'OPTIONS': {'sslmode': 'require'},
             'CONN_MAX_AGE': 600,
         }
     }
@@ -196,6 +195,22 @@ LOGGING = {
 
 # OpenAI Configuration
 OPENAI_API_KEY = config('OPENAI_API_KEY', default=None)
+
+# Google Gemini AI Configuration
+GEMINI_API_KEY = config('GEMINI_API_KEY', default=None)
+
+# Firebase Web Configuration (for frontend)
+FIREBASE_CONFIG = {
+    'apiKey': config('FIREBASE_API_KEY', default='AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4'),
+    'authDomain': config('FIREBASE_AUTH_DOMAIN', default='nexuslife-1409b.firebaseapp.com'),
+    'projectId': config('FIREBASE_PROJECT_ID', default='nexuslife-1409b'),
+    'storageBucket': config('FIREBASE_STORAGE_BUCKET', default='nexuslife-1409b.firebasestorage.app'),
+    'messagingSenderId': config('FIREBASE_MESSAGING_SENDER_ID', default='162871176799'),
+    'appId': config('FIREBASE_APP_ID', default='1:162871176799:web:4eac3ea69282d4838075ea'),
+    'measurementId': config('FIREBASE_MEASUREMENT_ID', default='G-PZSRLEY1W6'),
+}
+
+# Chatbot Configuration
 CHATBOT_USE_AI = config('CHATBOT_USE_AI', default=True, cast=bool)
 CHATBOT_MODEL = config('CHATBOT_MODEL', default='gpt-3.5-turbo')
 CHATBOT_MAX_TOKENS = config('CHATBOT_MAX_TOKENS', default=500, cast=int)

@@ -414,3 +414,311 @@ WARNING 2026-04-08 11:04:27,738 openai_integration 21136 10984 OPENAI_API_KEY nã
 WARNING 2026-04-08 11:30:42,205 firebase_config 23540 26768 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
 WARNING 2026-04-08 11:30:42,776 firebase_config 23540 26768 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Documents\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
 WARNING 2026-04-08 11:30:42,787 openai_integration 23540 26768 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-09 11:02:34,673 firebase_config 28576 28352 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+ERROR 2026-04-09 11:02:37,515 gemini_integration 28576 28352 Erro ao processar com Gemini: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+WARNING 2026-04-09 11:10:32,987 firebase_config 30296 30300 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+ERROR 2026-04-09 11:10:35,195 gemini_integration 30296 30300 Erro ao processar com Gemini: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+WARNING 2026-04-09 11:14:06,961 firebase_config 12448 8576 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+ERROR 2026-04-09 11:14:08,811 gemini_integration 12448 8576 Erro ao processar com Gemini: 404 models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+WARNING 2026-04-09 11:14:22,584 firebase_config 27212 6860 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+ERROR 2026-04-09 11:14:23,794 gemini_integration 27212 6860 Erro ao processar com Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+WARNING 2026-04-09 11:14:36,533 firebase_config 29344 23736 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+ERROR 2026-04-09 11:14:37,868 gemini_integration 29344 23736 Erro ao processar com Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+WARNING 2026-04-09 11:14:54,108 firebase_config 14116 15616 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:15:17,915 firebase_config 16016 2300 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+ERROR 2026-04-09 11:15:44,552 gemini_integration 16016 2300 Erro ao processar com Gemini: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 27.506979792s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 27
+}
+]
+ERROR 2026-04-09 11:15:45,132 gemini_integration 16016 2300 Erro ao processar com Gemini: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 26.862643483s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 26
+}
+]
+ERROR 2026-04-09 11:15:45,504 gemini_integration 16016 2300 Erro ao processar com Gemini: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 26.523028907s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 26
+}
+]
+WARNING 2026-04-09 11:16:49,233 firebase_config 10036 18296 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:16:51,172 firebase_config 27484 25852 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:16:51,226 autoreload 27484 25852 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:16:51,279 firebase_config 27484 25852 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:17:25,558 autoreload 27484 25852 C:\Users\aluno\Downloads\NexusLife\nexuslife\settings.py changed, reloading.
+WARNING 2026-04-09 11:17:27,576 firebase_config 15772 28920 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:17:27,675 autoreload 15772 28920 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:17:27,691 firebase_config 15772 28920 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:17:52,070 firebase_config 3152 20076 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:17:53,779 firebase_config 27072 21656 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:17:53,830 autoreload 27072 21656 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:17:53,836 firebase_config 27072 21656 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:18:29,421 firebase_config 29464 12164 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:18:29,463 firebase_config 29464 12164 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:18:43,074 firebase_config 19332 29860 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:18:44,786 firebase_config 16160 7392 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:18:44,839 autoreload 16160 7392 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:18:44,846 firebase_config 16160 7392 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:19:18,873 basehttp 16160 8324 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 11:19:19,043 basehttp 16160 8324 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-09 11:19:19,045 basehttp 16160 3188 "GET /static/main.js HTTP/1.1" 200 9154
+WARNING 2026-04-09 11:19:20,810 log 16160 3188 Not Found: /favicon.ico
+WARNING 2026-04-09 11:19:20,810 basehttp 16160 3188 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-09 11:19:22,309 basehttp 16160 3188 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 11:19:23,470 basehttp 16160 3188 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-09 11:19:30,533 basehttp 16160 3188 "POST /api/chatbot/ HTTP/1.1" 200 1028
+INFO 2026-04-09 11:19:45,651 basehttp 16160 3188 "POST /api/chatbot/ HTTP/1.1" 200 816
+INFO 2026-04-09 11:20:22,165 basehttp 16160 3188 "POST /api/chatbot/ HTTP/1.1" 200 1876
+INFO 2026-04-09 11:20:43,817 basehttp 16160 3188 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-09 11:20:48,175 basehttp 16160 3188 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-09 11:20:48,360 basehttp 16160 3188 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-09 11:20:48,536 basehttp 16160 3188 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-09 11:20:50,128 basehttp 16160 3188 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 11:20:56,154 views 16160 3188 Firebase login fail for paulolisboaa7@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-09 11:20:56,157 basehttp 16160 3188 "POST /login/ HTTP/1.1" 200 10822
+INFO 2026-04-09 11:21:00,283 basehttp 16160 3188 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 11:21:01,905 basehttp 16160 3188 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 11:21:09,657 views 16160 3188 Firebase login fail for miropiroquinhas@gmail.com: User matching query does not exist.
+INFO 2026-04-09 11:21:09,658 basehttp 16160 3188 "POST /login/ HTTP/1.1" 200 10824
+WARNING 2026-04-09 11:21:38,096 views 16160 3188 Firebase login fail for tasaka343@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-09 11:21:38,100 basehttp 16160 3188 "POST /login/ HTTP/1.1" 200 10818
+INFO 2026-04-09 11:22:02,476 basehttp 16160 708 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 11:22:02,727 basehttp 16160 708 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-09 11:22:02,733 basehttp 16160 18140 "GET /static/main.js HTTP/1.1" 200 9154
+WARNING 2026-04-09 11:22:03,538 log 16160 18140 Not Found: /favicon.ico
+WARNING 2026-04-09 11:22:03,539 basehttp 16160 18140 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-09 11:23:18,518 basehttp 16160 18140 "GET /register/?type=company HTTP/1.1" 200 17308
+INFO 2026-04-09 11:23:20,542 basehttp 16160 18140 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-09 11:23:22,111 basehttp 16160 18140 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-09 11:29:25,247 autoreload 16160 7392 C:\Users\aluno\Downloads\NexusLife\nexuslife\settings.py changed, reloading.
+WARNING 2026-04-09 11:29:32,350 firebase_config 30308 17244 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:29:32,472 autoreload 30308 17244 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:29:32,490 firebase_config 30308 17244 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:29:44,537 autoreload 30308 17244 C:\Users\aluno\Downloads\NexusLife\core\firebase_config.py changed, reloading.
+WARNING 2026-04-09 11:29:46,568 firebase_config 15020 29788 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:29:46,626 autoreload 15020 29788 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:29:46,634 firebase_config 15020 29788 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:29:54,285 autoreload 15020 29788 C:\Users\aluno\Downloads\NexusLife\core\firebase_config.py changed, reloading.
+INFO 2026-04-09 11:29:56,371 firebase_config 28560 8324 Firebase configurado para projeto: 
+WARNING 2026-04-09 11:29:56,372 firebase_config 28560 8324 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:29:56,430 autoreload 28560 8324 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:29:56,439 firebase_config 28560 8324 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:30:53,343 firebase_config 25592 24228 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:30:53,344 firebase_config 25592 24228 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:30:53,388 firebase_config 25592 24228 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:31:13,244 firebase_config 26144 2584 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:31:13,245 firebase_config 26144 2584 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:31:13,285 firebase_config 26144 2584 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:31:22,781 firebase_config 9940 14188 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:31:22,782 firebase_config 9940 14188 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:31:22,811 firebase_config 9940 14188 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:31:41,545 firebase_config 17316 20748 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:31:41,546 firebase_config 17316 20748 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:31:43,347 firebase_config 28892 20688 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:31:43,348 firebase_config 28892 20688 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:31:43,403 autoreload 28892 20688 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:31:43,409 firebase_config 28892 20688 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:33:01,017 firebase_config 11812 17800 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:33:01,018 firebase_config 11812 17800 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:33:02,749 firebase_config 29528 28016 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:33:02,750 firebase_config 29528 28016 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:33:02,801 autoreload 29528 28016 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:33:02,809 firebase_config 29528 28016 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:33:09,203 basehttp 29528 22928 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 11:33:36,695 firebase_config 30504 20008 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:33:36,696 firebase_config 30504 20008 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+WARNING 2026-04-09 11:33:36,723 firebase_config 30504 20008 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:33:47,788 firebase_config 2088 15832 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:33:47,789 firebase_config 2088 15832 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:33:49,550 firebase_config 29464 21136 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:33:49,551 firebase_config 29464 21136 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:33:49,605 autoreload 29464 21136 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:33:49,612 firebase_config 29464 21136 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:33:52,264 basehttp 29464 25660 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 11:33:52,289 basehttp 29464 25660 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-09 11:33:52,289 basehttp 29464 3688 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-09 11:33:53,935 basehttp 29464 3688 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-09 11:34:16,166 basehttp 29464 24068 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 11:34:17,870 basehttp 29464 3688 "POST /api/chatbot/ HTTP/1.1" 200 1670
+INFO 2026-04-09 11:34:49,715 basehttp 29464 3688 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 11:34:55,408 views 29464 3688 Firebase login fail for miropiroquinhas@gmail.com: User matching query does not exist.
+INFO 2026-04-09 11:34:55,409 basehttp 29464 3688 "POST /login/ HTTP/1.1" 200 10824
+WARNING 2026-04-09 11:35:08,319 views 29464 3688 Firebase login fail for paulolisboaa7@gmail.com: [Errno 400 Client Error: Bad Request for url: https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4] {
+  "error": {
+    "code": 400,
+    "message": "INVALID_LOGIN_CREDENTIALS",
+    "errors": [
+      {
+        "message": "INVALID_LOGIN_CREDENTIALS",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
+
+INFO 2026-04-09 11:35:08,322 basehttp 29464 3688 "POST /login/ HTTP/1.1" 200 10822
+INFO 2026-04-09 11:35:09,805 basehttp 29464 3688 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 11:35:12,387 basehttp 29464 3688 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 11:35:34,553 views 29464 3688 Firebase login fail for paulolisboati777@gmail.com: User matching query does not exist.
+INFO 2026-04-09 11:35:34,555 basehttp 29464 3688 "POST /login/ HTTP/1.1" 200 10825
+INFO 2026-04-09 11:35:48,631 basehttp 29464 3688 "GET /password-reset/ HTTP/1.1" 200 9639
+INFO 2026-04-09 11:35:57,591 basehttp 29464 3688 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:35:57,596 basehttp 29464 3688 "GET /login/ HTTP/1.1" 200 10839
+WARNING 2026-04-09 11:36:40,413 views 29464 3688 Firebase login fail for paulolisboati777@gmail.com: User matching query does not exist.
+INFO 2026-04-09 11:36:40,414 basehttp 29464 3688 "POST /login/ HTTP/1.1" 200 10825
+INFO 2026-04-09 11:36:41,851 basehttp 29464 3688 "POST /login/ HTTP/1.1" 200 10481
+WARNING 2026-04-09 11:36:46,021 views 29464 3688 Firebase login fail for paulolisboati777@gmail.com: User matching query does not exist.
+INFO 2026-04-09 11:36:46,022 basehttp 29464 3688 - Broken pipe from ('127.0.0.1', 49577)
+WARNING 2026-04-09 11:36:46,599 views 29464 25660 Firebase login fail for paulolisboati777@gmail.com: User matching query does not exist.
+INFO 2026-04-09 11:36:46,601 basehttp 29464 25660 "POST /login/ HTTP/1.1" 200 10825
+INFO 2026-04-09 11:37:45,513 autoreload 29464 21136 C:\Users\aluno\Downloads\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 11:37:47,775 firebase_config 27372 22016 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:37:47,777 firebase_config 27372 22016 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:37:47,834 autoreload 27372 22016 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:37:47,853 firebase_config 27372 22016 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:37:53,327 autoreload 27372 22016 C:\Users\aluno\Downloads\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 11:37:55,365 firebase_config 20080 23908 Firebase configurado para projeto: nexuslife-1409b
+WARNING 2026-04-09 11:37:55,366 firebase_config 20080 23908 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:37:55,421 autoreload 20080 23908 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:37:55,440 firebase_config 20080 23908 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Downloads\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md. O servidor continuará funcionando com Pyrebase para autenticação básica.
+INFO 2026-04-09 11:38:06,422 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:06,441 basehttp 20080 22088 "GET /login/?next=/home/ HTTP/1.1" 200 10136
+INFO 2026-04-09 11:38:06,522 signals 20080 15164 Email de boas-vindas enviado para paulolisboati777@gmail.com
+INFO 2026-04-09 11:38:06,522 signals 20080 15164 Notificação e email enviados para paulolisboati777@gmail.com
+INFO 2026-04-09 11:38:06,523 views 20080 15164 Criou usuário Django sincronizado com Firebase: paulolisboati777@gmail.com
+INFO 2026-04-09 11:38:06,556 basehttp 20080 15164 - Broken pipe from ('127.0.0.1', 58618)
+INFO 2026-04-09 11:38:07,179 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:07,184 basehttp 20080 22088 "GET /login/?next=/home/ HTTP/1.1" 200 10136
+INFO 2026-04-09 11:38:07,443 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:07,448 basehttp 20080 22088 "GET /login/?next=/home/ HTTP/1.1" 200 10136
+INFO 2026-04-09 11:38:08,338 basehttp 20080 22088 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-09 11:38:08,849 basehttp 20080 22088 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 11:38:09,770 basehttp 20080 22088 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-09 11:38:14,123 basehttp 20080 22088 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:14,134 basehttp 20080 22088 "GET /home/ HTTP/1.1" 200 12936
+INFO 2026-04-09 11:38:25,551 basehttp 20080 22088 "GET /profile/ HTTP/1.1" 200 17677
+INFO 2026-04-09 11:38:50,257 basehttp 20080 22088 "GET /profile/ HTTP/1.1" 200 17677
+INFO 2026-04-09 11:38:54,055 basehttp 20080 22088 "GET /profile/ HTTP/1.1" 200 17677
+INFO 2026-04-09 11:38:56,282 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:56,304 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649
+INFO 2026-04-09 11:38:56,668 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:56,682 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649
+INFO 2026-04-09 11:38:57,940 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:57,954 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649
+INFO 2026-04-09 11:38:58,141 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:58,154 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649
+INFO 2026-04-09 11:38:58,316 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:58,333 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649
+INFO 2026-04-09 11:38:58,476 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:58,488 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649
+INFO 2026-04-09 11:38:58,629 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:58,641 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649
+INFO 2026-04-09 11:38:59,543 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:59,555 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649
+INFO 2026-04-09 11:39:02,536 basehttp 20080 22088 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:39:02,540 basehttp 20080 22088 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 11:39:07,633 basehttp 20080 22088 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:39:07,638 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:39:07,650 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 28269
+INFO 2026-04-09 11:39:22,806 basehttp 20080 22088 "GET /chatbot/ HTTP/1.1" 200 16813
+INFO 2026-04-09 11:39:27,811 basehttp 20080 22088 "POST /api/chatbot/ HTTP/1.1" 200 986
+INFO 2026-04-09 11:40:08,984 basehttp 20080 22088 "GET /profile/ HTTP/1.1" 200 17677
+INFO 2026-04-09 11:40:10,261 basehttp 20080 22088 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:40:10,273 basehttp 20080 22088 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 27649

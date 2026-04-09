@@ -1,5 +1,6 @@
 import logging
 import os
+from django.conf import settings
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import auth as firebase_admin_auth
@@ -32,16 +33,19 @@ def initialize_firebase_admin():
     
     return firebase_admin_initialized
 
+# Firebase configuration for Pyrebase (Python SDK)
 firebase_config = {
-    "apiKey": "AIzaSyA1EvjdlY3OWUc5KoR70O9r81MkNNCmec4",
-    "authDomain": "nexuslife-1409b.firebaseapp.com",
-    "projectId": "nexuslife-1409b",
-    "storageBucket": "nexuslife-1409b.firebasestorage.app",
-    "messagingSenderId": "162871176799",
-    "appId": "1:162871176799:web:4eac3ea69282d4838075ea",
+    "apiKey": settings.FIREBASE_CONFIG.get('apiKey'),
+    "authDomain": settings.FIREBASE_CONFIG.get('authDomain'),
+    "projectId": settings.FIREBASE_CONFIG.get('projectId'),
+    "storageBucket": settings.FIREBASE_CONFIG.get('storageBucket'),
+    "messagingSenderId": settings.FIREBASE_CONFIG.get('messagingSenderId'),
+    "appId": settings.FIREBASE_CONFIG.get('appId'),
     "databaseURL": "",
-    "measurementId": "G-PZSRLEY1W6"
+    "measurementId": settings.FIREBASE_CONFIG.get('measurementId')
 }
+
+logger.info(f"Firebase configurado para projeto: {firebase_config.get('projectId')}")
 
 firebase = pyrebase.initialize_app(firebase_config)
 auth_firebase = firebase.auth()

@@ -107,31 +107,49 @@ def login_view(request):
             credential = form.cleaned_data['username'].strip()
             password = form.cleaned_data['password']
 
+            # Tentar com Django primeiro
             user = authenticate(request, username=credential, password=password)
             if user is None and credential:
                 user = authenticate(request, username=credential.lower(), password=password)
 
+            # Se não encontrou com Django, buscar por CPF/email e tentar autenticar
             if user is None:
                 possible_user = _get_user_from_credential(credential)
                 if possible_user:
                     user = authenticate(request, username=possible_user.username, password=password)
                     if user is None:
-                        messages.error(request, 'Senha inválida. Por favor verifique e tente novamente.')
+                        # Tenta com Firebase se Django falhar
+                        try:
+                            firebase_user = auth_firebase.sign_in_with_email_and_password(possible_user.email, password)
+                            # Se Firebase funciona, sincroniza a senha no Django
+                            possible_user.set_password(password)
+                            possible_user.save()
+                            user = authenticate(request, username=possible_user.username, password=password)
+                            logger.info(f"Sincronizou senha via Firebase para {possible_user.email}")
+                        except Exception as fb_error:
+                            logger.warning(f"Firebase login fail for {possible_user.email}: {fb_error}")
+                            messages.error(request, 'Senha inválida. Por favor verifique e tente novamente.')
                 else:
-                    messages.error(request, 'Usuário não encontrado. Verifique o e-mail/CPF ou registre-se.')
-                
-                # Firebase fallback for password reset users
-                if user is None:
+                    # Último recurso: tentar direto com Firebase usando email/CPF
                     try:
                         firebase_user = auth_firebase.sign_in_with_email_and_password(credential, password)
                         uid = firebase_user['localId']
-                        django_user = User.objects.get(email=credential)
-                        login(request, django_user)
-                        messages.success(request, f'Bem-vindo via Firebase, {django_user.first_name or django_user.username}!')
-                        return redirect('home')
+                        # Se existe no Firebase, criar/sincronizar no Django
+                        try:
+                            user = User.objects.get(email=credential)
+                            user.set_password(password)
+                            user.save()
+                        except User.DoesNotExist:
+                            # Criar novo usuário Django a partir do Firebase
+                            user = User.objects.create_user(
+                                username=credential.split('@')[0],
+                                email=credential,
+                                password=password
+                            )
+                            logger.info(f"Criou usuário Django sincronizado com Firebase: {credential}")
                     except Exception as fb_error:
                         logger.warning(f"Firebase login fail for {credential}: {fb_error}")
-                        pass
+                        messages.error(request, 'Usuário não encontrado. Verifique o e-mail/CPF ou registre-se.')
 
             if user is not None:
                 login(request, user)
