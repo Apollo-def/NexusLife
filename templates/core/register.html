@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div class="form-row full hidden-field" id="stateRegField">
+    <div class="form-row full" id="stateRegField">
       <div class="form-group">
         <label for="{{ form.state_registration.id_for_label }}" id="stateRegLabel">Inscrição Estadual</label>
         {{ form.state_registration }}
@@ -110,6 +110,36 @@
         {% if form.state_registration.errors %}
           <ul class="errorlist">{% for e in form.state_registration.errors %}<li>{{ e }}</li>{% endfor %}</ul>
         {% endif %}
+      </div>
+    </div>
+
+    <!-- CEP e Endereço -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="id_cep">CEP</label>
+        <div style="display:flex; gap:8px; align-items:center;">
+          {{ form.cep }}
+          <button type="button" id="btnBuscarCep" style="padding:12px 14px; background:#022F73; color:white; border:none; border-radius:6px; cursor:pointer; white-space:nowrap; font-size:14px;">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <small id="cepStatus" style="font-size:12px; margin-top:4px;"></small>
+      </div>
+      <div class="form-group">
+        <label>Estado</label>
+        {{ form.state }}
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label>Endereço</label>
+        {{ form.address }}
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <label>Cidade</label>
+        {{ form.city }}
       </div>
     </div>
 
@@ -267,6 +297,55 @@ if (cpfInput) {
       else                        value = `${value.slice(0,3)}.${value.slice(3,6)}.${value.slice(6,9)}-${value.slice(9,11)}`;
     }
     e.target.value = value;
+  });
+}
+// Busca CEP via apicep.com
+const cepInput = document.getElementById('id_cep');
+const btnBuscarCep = document.getElementById('btnBuscarCep');
+const cepStatus = document.getElementById('cepStatus');
+const addressInput = document.getElementById('{{ form.address.id_for_label }}');
+const cityInput = document.getElementById('{{ form.city.id_for_label }}');
+const stateInput = document.getElementById('{{ form.state.id_for_label }}');
+
+function buscarCep() {
+  const cep = cepInput.value.replace(/\D/g, '');
+  if (cep.length !== 8) {
+    cepStatus.textContent = 'Digite um CEP válido com 8 dígitos.';
+    cepStatus.style.color = '#dc3545';
+    return;
+  }
+  cepStatus.textContent = 'Buscando...';
+  cepStatus.style.color = '#6c757d';
+
+  fetch(`https://ws.apicep.com/cep/${cep}.json`)
+    .then(r => r.json())
+    .then(data => {
+      if (data.ok) {
+        addressInput.value = `${data.address || ''} ${data.district || ''}`.trim();
+        cityInput.value = data.city || '';
+        stateInput.value = data.state || '';
+        cepStatus.textContent = '✓ Endereço encontrado';
+        cepStatus.style.color = '#28a745';
+      } else {
+        cepStatus.textContent = 'CEP não encontrado.';
+        cepStatus.style.color = '#dc3545';
+      }
+    })
+    .catch(() => {
+      cepStatus.textContent = 'Erro ao buscar CEP.';
+      cepStatus.style.color = '#dc3545';
+    });
+}
+
+if (btnBuscarCep) btnBuscarCep.addEventListener('click', buscarCep);
+if (cepInput) {
+  cepInput.addEventListener('input', function(e) {
+    let v = e.target.value.replace(/\D/g, '');
+    if (v.length > 5) v = v.slice(0,5) + '-' + v.slice(5,8);
+    e.target.value = v;
+  });
+  cepInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); buscarCep(); }
   });
 }
 </script>

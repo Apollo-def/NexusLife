@@ -1003,3 +1003,62 @@ INFO 2026-04-09 09:44:15,401 autoreload 13740 5164 Watching for file changes wit
 WARNING 2026-04-09 09:44:16,603 openai_integration 13980 20976 OPENAI_API_KEY não configurada
 WARNING 2026-04-09 09:44:16,603 openai_integration 31200 29344 OPENAI_API_KEY não configurada
 WARNING 2026-04-09 09:44:16,719 openai_integration 13740 5164 OPENAI_API_KEY não configurada
+INFO 2026-04-09 09:59:56,365 firebase_config 17672 3660 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:59:58,237 firebase_config 15936 800 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 09:59:58,264 autoreload 15936 800 Watching for file changes with StatReloader
+WARNING 2026-04-09 09:59:59,400 openai_integration 15936 800 OPENAI_API_KEY não configurada
+INFO 2026-04-09 10:01:25,327 firebase_config 13296 27696 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:01:27,095 firebase_config 31632 28276 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:01:27,127 autoreload 31632 28276 Watching for file changes with StatReloader
+WARNING 2026-04-09 10:01:27,685 openai_integration 31632 28276 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-09 10:02:32,801 autoreload 31200 29344 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 10:02:32,889 autoreload 13980 20976 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 10:02:32,891 autoreload 15936 800 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 10:02:33,051 autoreload 31632 28276 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-09 10:02:35,874 firebase_config 2572 6064 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:02:35,907 autoreload 2572 6064 Watching for file changes with StatReloader
+WARNING 2026-04-09 10:02:36,127 openai_integration 2572 6064 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-09 10:02:36,216 firebase_config 8672 27800 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:02:36,232 firebase_config 12064 4912 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:02:36,247 autoreload 8672 27800 Watching for file changes with StatReloader
+INFO 2026-04-09 10:02:36,263 firebase_config 26448 21072 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:02:36,264 autoreload 12064 4912 Watching for file changes with StatReloader
+INFO 2026-04-09 10:02:36,297 autoreload 26448 21072 Watching for file changes with StatReloader
+WARNING 2026-04-09 10:02:37,616 openai_integration 8672 27800 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 10:02:37,627 openai_integration 12064 4912 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 10:02:37,652 openai_integration 26448 21072 OPENAI_API_KEY não configurada
+INFO 2026-04-09 10:02:46,270 basehttp 2572 10076 "GET / HTTP/1.1" 200 20656
+WARNING 2026-04-09 10:02:48,488 base 2572 10076 Session data corrupted
+INFO 2026-04-09 10:02:48,522 basehttp 2572 10076 "GET /register/ HTTP/1.1" 200 17308
+INFO 2026-04-09 10:05:42,376 autoreload 2572 6064 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-09 10:05:42,505 autoreload 12064 4912 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-09 10:05:42,515 autoreload 8672 27800 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-09 10:05:42,543 autoreload 26448 21072 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-09 10:05:45,345 firebase_config 14400 22404 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:05:45,381 autoreload 14400 22404 Watching for file changes with StatReloader
+WARNING 2026-04-09 10:05:45,616 openai_integration 14400 22404 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-09 10:05:45,904 firebase_config 22960 28036 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:05:45,904 firebase_config 9840 7096 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:05:45,935 firebase_config 31548 20944 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:05:45,938 autoreload 9840 7096 Watching for file changes with StatReloader
+INFO 2026-04-09 10:05:45,938 autoreload 22960 28036 Watching for file changes with StatReloader
+INFO 2026-04-09 10:05:45,971 autoreload 31548 20944 Watching for file changes with StatReloader
+WARNING 2026-04-09 10:05:47,313 openai_integration 9840 7096 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 10:05:47,314 openai_integration 31548 20944 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 10:05:47,314 openai_integration 22960 28036 OPENAI_API_KEY não configurada
+INFO 2026-04-09 10:05:53,502 autoreload 14400 22404 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-09 10:05:53,595 autoreload 22960 28036 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-09 10:05:53,630 autoreload 9840 7096 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-09 10:05:53,631 autoreload 31548 20944 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-09 10:05:56,508 firebase_config 24536 5872 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:05:56,542 autoreload 24536 5872 Watching for file changes with StatReloader
+WARNING 2026-04-09 10:05:56,788 openai_integration 24536 5872 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-09 10:05:57,033 firebase_config 28424 5224 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:05:57,035 firebase_config 26076 12012 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:05:57,064 firebase_config 14836 2160 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 10:05:57,071 autoreload 28424 5224 Watching for file changes with StatReloader
+INFO 2026-04-09 10:05:57,071 autoreload 26076 12012 Watching for file changes with StatReloader
+INFO 2026-04-09 10:05:57,104 autoreload 14836 2160 Watching for file changes with StatReloader
+WARNING 2026-04-09 10:05:58,553 openai_integration 26076 12012 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 10:05:58,553 openai_integration 28424 5224 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 10:05:58,556 openai_integration 14836 2160 OPENAI_API_KEY não configurada

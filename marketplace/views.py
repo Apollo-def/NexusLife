@@ -31,7 +31,8 @@ def search_suggestions(request):
     ]
     return JsonResponse({'results': results})
 
-def service_list(request):    services = Service.objects.filter(is_active=True).select_related('category', 'freelancer')
+def service_list(request):
+    services = Service.objects.filter(is_active=True).select_related('category', 'freelancer')
     categories = Category.objects.all()
     category_filter = request.GET.get('category')
     query = request.GET.get('q', '').strip()

@@ -47,6 +47,30 @@ class UserRegisterForm(UserCreationForm):
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Inscrição Estadual (para PJ)'}),
         label='Inscrição Estadual'
     )
+    cep = forms.CharField(
+        max_length=9,
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '00000-000', 'id': 'id_cep'}),
+        label='CEP'
+    )
+    address = forms.CharField(
+        max_length=255,
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Endereço', 'readonly': 'readonly'}),
+        label='Endereço'
+    )
+    city = forms.CharField(
+        max_length=100,
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Cidade', 'readonly': 'readonly'}),
+        label='Cidade'
+    )
+    state = forms.CharField(
+        max_length=2,
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'UF', 'readonly': 'readonly'}),
+        label='Estado'
+    )
 
     class Meta:
         model = User
@@ -67,12 +91,12 @@ class UserRegisterForm(UserCreationForm):
         person_type = cleaned_data.get('person_type')
         cpf_cnpj = cleaned_data.get('cpf_cnpj', '')
 
-        if person_type == 'PF':
+        if person_type == 'PF' and cpf_cnpj:
             if not self.validate_cpf(cpf_cnpj):
-                raise forms.ValidationError('CPF inválido.')
-        elif person_type == 'PJ':
+                self.add_error('cpf_cnpj', 'CPF inválido.')
+        elif person_type == 'PJ' and cpf_cnpj:
             if not self.validate_cnpj(cpf_cnpj):
-                raise forms.ValidationError('CNPJ inválido.')
+                self.add_error('cpf_cnpj', 'CNPJ inválido.')
 
         return cleaned_data
 
