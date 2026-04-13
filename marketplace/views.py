@@ -186,10 +186,11 @@ def pf_dashboard(request):
     orders = Order.objects.filter(service__freelancer=request.user).select_related('service', 'client').order_by('-created_at')[:5]
     
     # Projetos publicados por empresas (PJ) disponíveis para candidatura
-    from core.models import UserProfile
-    pj_users = UserProfile.objects.filter(person_type='PJ').values_list('user_id', flat=True)
     suggested_jobs = Service.objects.filter(
         is_active=True
+    ).filter(
+        Q(freelancer__freelancer_profile__person_type='PJ') |
+        Q(freelancer__profile__person_type='PJ')
     ).exclude(
         freelancer=request.user
     ).select_related('category', 'freelancer').order_by('-created_at')[:12]

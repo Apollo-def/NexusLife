@@ -6,38 +6,37 @@ from django.db.models import Count
 from .models import UserProfile, Notification, ChatbotConversation, ChatbotMessage
 
 
-# Classe customizada para o Admin Site
-class NexusLifeAdminSite(admin.AdminSite):
-    site_header = "🚀 NexusLife - Painel Administrativo"
-    site_title = "Admin NexusLife"
-    index_title = "Bem-vindo ao Painel de Administração"
-    
-    def index(self, request, extra_context=None):
-        """Adiciona estatísticas ao index do admin"""
-        from marketplace.models import Service, Order, Review
-        
-        extra_context = extra_context or {}
-        extra_context.update({
-            'total_users': User.objects.count(),
-            'total_services': Service.objects.filter(is_active=True).count(),
-            'total_orders': Order.objects.count(),
-            'total_reviews': Review.objects.count(),
-            'active_users': User.objects.filter(is_active=True).count(),
-            'staff_users': User.objects.filter(is_staff=True).count(),
-            'pending_orders': Order.objects.filter(status='pending').count(),
-            'completed_orders': Order.objects.filter(status='completed').count(),
-        })
-        return super().index(request, extra_context)
-
-
-# Usar o AdminSite customizado
-admin.site = NexusLifeAdminSite()
-
-
-# Customizar Admin Site
+# Customizar o Admin Site padrão (sem substituir a instância global)
 admin.site.site_header = "🚀 NexusLife - Painel Administrativo"
 admin.site.site_title = "Admin NexusLife"
 admin.site.index_title = "Bem-vindo ao Painel de Administração"
+
+# Customizar o método index do admin
+original_index = admin.site.index
+
+def custom_index(request, extra_context=None):
+    """Adiciona estatísticas ao index do admin"""
+    from marketplace.models import Service, Order, Review
+    
+    extra_context = extra_context or {}
+    extra_context.update({
+        'total_users': User.objects.count(),
+        'total_services': Service.objects.filter(is_active=True).count(),
+        'total_orders': Order.objects.count(),
+        'total_reviews': Review.objects.count(),
+        'active_users': User.objects.filter(is_active=True).count(),
+        'staff_users': User.objects.filter(is_staff=True).count(),
+        'pending_orders': Order.objects.filter(status='pending').count(),
+        'completed_orders': Order.objects.filter(status='completed').count(),
+        'total_notifications': Notification.objects.count(),
+        'unread_notifications': Notification.objects.filter(is_read=False).count(),
+        'total_conversations': ChatbotConversation.objects.count(),
+        'active_conversations': ChatbotConversation.objects.filter(is_active=True).count(),
+        'total_chatbot_messages': ChatbotMessage.objects.count(),
+    })
+    return original_index(request, extra_context)
+
+admin.site.index = custom_index
 
 
 class UserProfileInline(admin.TabularInline):
@@ -49,89 +48,19 @@ class UserProfileInline(admin.TabularInline):
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = (
-        'user_link', 
-        'colored_person_type', 
-        'cpf_cnpj', 
-        'phone', 
-        'status_badge',
-        'created_at'
-    )
-    list_filter = (
-        'person_type', 
-        'created_at',
-        ('updated_at', admin.RelatedOnlyFieldListFilter),
-    )
+    list_display = ('user', 'person_type', 'cpf_cnpj', 'phone', 'created_at')
+    list_filter = ('person_type', 'created_at')
     search_fields = ('user__username', 'user__email', 'user__first_name', 'user__last_name', 'cpf_cnpj', 'phone')
-    readonly_fields = ('created_at', 'updated_at', 'user_info_display')
+    readonly_fields = ('created_at', 'updated_at')
     date_hierarchy = 'created_at'
-    
-    fieldsets = (
-        ('👤 Usuário Vinculado', {
-            'fields': ('user', 'user_info_display')
-        }),
-        ('📋 Tipo de Cadastro', {
-            'fields': ('person_type',),
-        }),
-        ('📱 Informações de Contato', {
-            'fields': ('cpf_cnpj', 'phone', 'state_registration'),
-        }),
-        ('🗓️ Dados Administrativos', {
-            'fields': ('created_at', 'updated_at'),
-            'classes': ('collapse',)
-        }),
-    )
-    
     ordering = ('-created_at',)
     list_per_page = 25
-    
-    def user_link(self, obj):
-        url = reverse('admin:auth_user_change', args=[obj.user.id])
-        return format_html(
-            '<a href="{}" style="color: #0066cc; font-weight: bold;">{}</a>',
-            url,
-            obj.user.get_full_name() or obj.user.username
-        )
-    user_link.short_description = '👤 Usuário'
-    
-    def colored_person_type(self, obj):
-        color = '#28a745' if obj.person_type == 'PF' else '#007bff'
-        emoji = '👤' if obj.person_type == 'PF' else '🏢'
-        label = 'Freelancer (PF)' if obj.person_type == 'PF' else 'Empresa (PJ)'
-        return format_html(
-            '<span style="background-color: {}; color: white; padding: 5px 10px; border-radius: 5px; font-weight: bold;">{} {}</span>',
-            color,
-            emoji,
-            label
-        )
-    colored_person_type.short_description = '📊 Tipo'
-    
-    def status_badge(self, obj):
-        if obj.user.is_active:
-            return format_html(
-                '<span style="background-color: #28a745; color: white; padding: 3px 8px; border-radius: 3px; font-weight: bold;">✓ Ativo</span>'
-            )
-        else:
-            return format_html(
-                '<span style="background-color: #dc3545; color: white; padding: 3px 8px; border-radius: 3px; font-weight: bold;">✗ Inativo</span>'
-            )
-    status_badge.short_description = '🔴 Status'
-    
-    def user_info_display(self, obj):
-        user = obj.user
-        return format_html(
-            '<div style="background-color: #f5f5f5; padding: 10px; border-radius: 5px;"><strong>Email:</strong> {}<br><strong>Desde:</strong> {}<br><strong>Último acesso:</strong> {}</div>',
-            user.email,
-            user.date_joined.strftime('%d/%m/%Y'),
-            user.last_login.strftime('%d/%m/%Y %H:%M') if user.last_login else 'Nunca'
-        )
-    user_info_display.short_description = 'ℹ️ Informações do Usuário'
 
 
 @admin.register(Notification)
 class NotificationAdmin(admin.ModelAdmin):
     list_display = (
-        'user_link',
+        'user',
         'notification_badge',
         'title_truncated',
         'read_status',
@@ -161,15 +90,6 @@ class NotificationAdmin(admin.ModelAdmin):
     
     ordering = ('-created_at',)
     list_per_page = 25
-    
-    def user_link(self, obj):
-        url = reverse('admin:auth_user_change', args=[obj.user.id])
-        return format_html(
-            '<a href="{}" style="color: #0066cc; font-weight: bold;">{}</a>',
-            url,
-            obj.user.get_full_name() or obj.user.username
-        )
-    user_link.short_description = '👤 Usuário'
     
     def notification_badge(self, obj):
         icons = {
@@ -222,7 +142,7 @@ class ChatbotMessageInline(admin.TabularInline):
 class ChatbotConversationAdmin(admin.ModelAdmin):
     list_display = (
         'title',
-        'user_link',
+        'user',
         'conversation_status',
         'message_count',
         'created_at'
@@ -236,15 +156,6 @@ class ChatbotConversationAdmin(admin.ModelAdmin):
     inlines = [ChatbotMessageInline]
     ordering = ('-created_at',)
     list_per_page = 25
-    
-    def user_link(self, obj):
-        url = reverse('admin:auth_user_change', args=[obj.user.id])
-        return format_html(
-            '<a href="{}" style="color: #0066cc; font-weight: bold;">{}</a>',
-            url,
-            obj.user.get_full_name() or obj.user.username
-        )
-    user_link.short_description = '👤 Usuário'
     
     def conversation_status(self, obj):
         if obj.is_active:
@@ -415,7 +326,14 @@ class CustomUserAdmin(admin.ModelAdmin):
             perms = ['Usuário Regular']
         
         return format_html(
-            '<div style="background-color: #f0f7ff; padding: 10px; border-radius: 5px;"><strong>Permissões:</strong><br>{}</div>',
+            '<div style="background-color: #f0f7ff; padding: 10px; border-radius: 5px; border-left: 4px solid #007bff;"><strong>Permissões:</strong><br>{}</div>',
             '<br>'.join(['✓ ' + p for p in perms])
         )
     permissions_display.short_description = '🔐 Permissões'
+
+try:
+    admin.site.unregister(User)
+except admin.sites.NotRegistered:
+    pass
+
+admin.site.register(User, CustomUserAdmin)

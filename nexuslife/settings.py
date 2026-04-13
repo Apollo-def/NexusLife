@@ -55,6 +55,21 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
 ]
 
+# CSRF Configuration - Allow localhost and 127.0.0.1
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    'http://0.0.0.0:8000',
+    'http://localhost',
+    'http://127.0.0.1',
+]
+
+CSRF_COOKIE_SECURE = False  # Allow over HTTP for development
+CSRF_COOKIE_HTTPONLY = False  # Allow JavaScript to read CSRF token if needed
+CSRF_COOKIE_SAMESITE = 'Lax'  # More permissive for development
+SESSION_COOKIE_SECURE = False  # Allow over HTTP for development
+SESSION_COOKIE_SAMESITE = 'Lax'  # More permissive for development
+
 ROOT_URLCONF = 'nexuslife.urls'
 
 TEMPLATES = [

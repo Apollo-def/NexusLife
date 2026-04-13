@@ -125,6 +125,11 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, f'Bem-vindo, {user.first_name or user.username}!')
+                
+                # Redireciona admin/staff para painel administrativo
+                if user.is_staff or user.is_superuser:
+                    return redirect('admin:index')
+                
                 return redirect('home')
     else:
         form = LoginForm()

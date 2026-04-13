@@ -2399,3 +2399,907 @@ INFO 2026-04-13 09:29:25,320 basehttp 9012 21180 "GET /marketplace/orders/?statu
 INFO 2026-04-13 09:29:52,611 basehttp 9012 21180 "GET /chatbot/ HTTP/1.1" 200 16804
 INFO 2026-04-13 09:30:01,724 chatbot_enhanced 9012 21180 Resposta gerada com Gemini AI para: ola
 INFO 2026-04-13 09:30:01,754 basehttp 9012 21180 "POST /api/chatbot/ HTTP/1.1" 200 1701
+WARNING 2026-04-13 09:51:07,883 firebase_config 21828 6860 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 09:51:08,014 firebase_config 21828 6860 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 09:51:10,430 openai_integration 21828 6860 OPENAI_API_KEY não configurada
+WARNING 2026-04-13 09:51:12,466 gemini_integration 21828 6860 GEMINI_API_KEY não configurada
+WARNING 2026-04-13 09:51:26,409 firebase_config 10972 22476 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 09:51:27,981 firebase_config 14016 23812 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 09:51:28,040 autoreload 14016 23812 Watching for file changes with StatReloader
+WARNING 2026-04-13 09:51:28,048 firebase_config 14016 23812 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 09:51:28,973 openai_integration 14016 23812 OPENAI_API_KEY não configurada
+WARNING 2026-04-13 09:51:29,621 gemini_integration 14016 23812 GEMINI_API_KEY não configurada
+INFO 2026-04-13 09:52:41,833 basehttp 14016 3180 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:52:42,020 basehttp 14016 3180 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 200 46334
+INFO 2026-04-13 09:52:42,021 basehttp 14016 11104 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-13 09:52:42,022 basehttp 14016 1432 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 200 176217
+INFO 2026-04-13 09:52:42,033 basehttp 14016 10372 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 200 165739
+INFO 2026-04-13 09:52:42,040 basehttp 14016 11104 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 200 189570
+INFO 2026-04-13 09:52:42,042 basehttp 14016 3180 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-13 09:52:42,046 basehttp 14016 16568 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 200 273774
+INFO 2026-04-13 09:52:42,061 basehttp 14016 18740 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 200 111597
+INFO 2026-04-13 09:52:52,202 basehttp 14016 24568 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:52:52,238 basehttp 14016 24568 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-13 09:52:52,241 basehttp 14016 13548 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 200 46334
+INFO 2026-04-13 09:52:52,245 basehttp 14016 24568 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-13 09:52:52,245 basehttp 14016 9544 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 200 176217
+INFO 2026-04-13 09:52:52,246 basehttp 14016 11464 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 200 165739
+INFO 2026-04-13 09:52:52,246 basehttp 14016 324 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 200 111597
+INFO 2026-04-13 09:52:52,247 basehttp 14016 11684 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 200 273774
+INFO 2026-04-13 09:52:52,254 basehttp 14016 13548 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 200 189570
+WARNING 2026-04-13 09:52:53,254 log 14016 13548 Not Found: /favicon.ico
+WARNING 2026-04-13 09:52:53,255 basehttp 14016 13548 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-13 09:53:49,445 basehttp 14016 13548 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:53:50,316 basehttp 14016 13548 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:53:50,973 basehttp 14016 13548 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:53:51,372 basehttp 14016 13548 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:53:51,811 basehttp 14016 13548 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:53:52,443 basehttp 14016 13548 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:53:53,781 basehttp 14016 13548 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:53:53,810 basehttp 14016 13548 "GET /static/styles.css HTTP/1.1" 200 4542
+INFO 2026-04-13 09:53:53,811 basehttp 14016 11684 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 200 46334
+INFO 2026-04-13 09:53:53,812 basehttp 14016 9544 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 200 111597
+INFO 2026-04-13 09:53:53,813 basehttp 14016 24568 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 200 176217
+INFO 2026-04-13 09:53:53,814 basehttp 14016 324 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 200 165739
+INFO 2026-04-13 09:53:53,814 basehttp 14016 13548 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-13 09:53:53,815 basehttp 14016 11464 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 200 273774
+INFO 2026-04-13 09:53:53,821 basehttp 14016 11684 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 200 189570
+WARNING 2026-04-13 09:53:54,379 log 14016 11684 Not Found: /favicon.ico
+WARNING 2026-04-13 09:53:54,380 basehttp 14016 11684 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-13 09:54:03,437 basehttp 14016 1432 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:54:04,226 basehttp 14016 1432 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:09,967 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:09,978 basehttp 14016 20936 "GET /static/styles.css HTTP/1.1" 200 4636
+INFO 2026-04-13 10:41:09,979 basehttp 14016 23436 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:09,979 basehttp 14016 12904 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:09,985 basehttp 14016 12904 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:09,985 basehttp 14016 23436 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:09,988 basehttp 14016 12904 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:09,989 basehttp 14016 20936 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:09,989 basehttp 14016 23436 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:10,628 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:10,637 basehttp 14016 20936 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:10,957 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:13,168 basehttp 14016 21784 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:13,192 basehttp 14016 9544 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:13,192 basehttp 14016 21784 "GET /static/styles.css HTTP/1.1" 200 4636
+INFO 2026-04-13 10:41:13,192 basehttp 14016 11120 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:13,196 basehttp 14016 9544 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:13,196 basehttp 14016 12932 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:13,196 basehttp 14016 11120 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:13,209 basehttp 14016 11120 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:13,209 basehttp 14016 12932 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:13,509 basehttp 14016 12932 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:13,686 basehttp 14016 12932 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:13,845 basehttp 14016 12932 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:14,005 basehttp 14016 12932 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:43,425 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:43,435 basehttp 14016 20936 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:41:43,957 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:44,165 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:44,331 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:44,500 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:44,651 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:44,812 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:44,972 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:45,140 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:45,309 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:45,469 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:45,636 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:45,803 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:45,979 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:46,140 basehttp 14016 20936 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:41:59,771 basehttp 14016 12932 "GET /register/?type=company HTTP/1.1" 200 20657
+INFO 2026-04-13 10:41:59,787 basehttp 14016 12932 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:42:00,928 basehttp 14016 12932 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-13 10:42:06,417 basehttp 14016 12932 "GET /register/?type=freelancer HTTP/1.1" 200 20657
+INFO 2026-04-13 10:42:06,429 basehttp 14016 12932 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:42:12,786 basehttp 14016 12932 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-13 10:42:15,122 basehttp 14016 12932 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-13 10:42:15,134 basehttp 14016 12932 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:43:14,928 basehttp 14016 12932 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 10:43:14,950 basehttp 14016 12932 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:43:40,086 basehttp 14016 12932 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-13 10:43:40,105 basehttp 14016 12932 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:43:41,784 basehttp 14016 12932 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-13 10:43:51,698 basehttp 14016 12932 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-13 10:44:06,086 basehttp 14016 12932 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-13 10:44:06,103 basehttp 14016 12932 "GET /static/styles.css HTTP/1.1" 304 0
+WARNING 2026-04-13 10:44:08,544 chatbot_enhanced 14016 12932 Gemini AI retornou erro: Gemini AI não está disponível. Configure GEMINI_API_KEY nas variáveis de ambiente.
+INFO 2026-04-13 10:44:08,544 chatbot_enhanced 14016 12932 Usando resposta do dicionário para: oi
+INFO 2026-04-13 10:44:08,561 basehttp 14016 12932 "POST /api/chatbot/ HTTP/1.1" 200 389
+INFO 2026-04-13 10:45:25,928 basehttp 14016 12932 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-13 10:45:25,944 basehttp 14016 12932 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:45:26,478 basehttp 14016 12932 "GET /chatbot/ HTTP/1.1" 200 16024
+WARNING 2026-04-13 10:45:28,419 chatbot_enhanced 14016 12932 Gemini AI retornou erro: Gemini AI não está disponível. Configure GEMINI_API_KEY nas variáveis de ambiente.
+INFO 2026-04-13 10:45:28,420 chatbot_enhanced 14016 12932 Usando resposta do dicionário para: oi
+INFO 2026-04-13 10:45:28,437 basehttp 14016 12932 "POST /api/chatbot/ HTTP/1.1" 200 389
+INFO 2026-04-13 10:45:30,735 basehttp 14016 12932 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-13 10:45:31,127 basehttp 14016 12932 "GET /chatbot/ HTTP/1.1" 200 16024
+WARNING 2026-04-13 10:45:32,670 chatbot_enhanced 14016 12932 Gemini AI retornou erro: Gemini AI não está disponível. Configure GEMINI_API_KEY nas variáveis de ambiente.
+INFO 2026-04-13 10:45:32,670 chatbot_enhanced 14016 12932 Usando resposta do dicionário para: Como me cadastrar?
+INFO 2026-04-13 10:45:32,689 basehttp 14016 12932 "POST /api/chatbot/ HTTP/1.1" 200 773
+WARNING 2026-04-13 10:45:36,756 chatbot_enhanced 14016 12932 Gemini AI retornou erro: Gemini AI não está disponível. Configure GEMINI_API_KEY nas variáveis de ambiente.
+INFO 2026-04-13 10:45:36,757 chatbot_enhanced 14016 12932 Usando resposta do dicionário para: quem é voce
+INFO 2026-04-13 10:45:36,773 basehttp 14016 12932 "POST /api/chatbot/ HTTP/1.1" 200 863
+INFO 2026-04-13 10:46:45,010 autoreload 14016 23812 C:\Users\aluno\Pictures\NexusLife\core\apps.py changed, reloading.
+WARNING 2026-04-13 10:46:50,693 firebase_config 9588 5824 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:46:56,148 autoreload 9588 5824 Watching for file changes with StatReloader
+WARNING 2026-04-13 10:46:56,166 firebase_config 9588 5824 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 10:47:15,505 firebase_config 23416 23220 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 10:47:17,164 firebase_config 23416 23220 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:47:24,742 basehttp 9588 18104 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-13 10:47:24,759 basehttp 9588 18104 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:47:25,325 basehttp 9588 18104 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-13 10:47:29,231 chatbot_enhanced 9588 18104 Resposta gerada com Gemini AI para: OI
+INFO 2026-04-13 10:47:29,253 basehttp 9588 18104 "POST /api/chatbot/ HTTP/1.1" 200 953
+INFO 2026-04-13 10:47:33,455 basehttp 9588 18104 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-13 10:47:45,162 basehttp 9588 18104 "POST /login/ HTTP/1.1" 200 10804
+INFO 2026-04-13 10:47:53,470 basehttp 9588 18104 "POST /login/ HTTP/1.1" 200 10804
+INFO 2026-04-13 10:47:56,748 autoreload 9588 5824 C:\Users\aluno\Pictures\NexusLife\core\apps.py changed, reloading.
+WARNING 2026-04-13 10:48:01,576 firebase_config 23756 24516 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:48:03,214 apps 23756 24516 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 10:48:03,272 autoreload 23756 24516 Watching for file changes with StatReloader
+WARNING 2026-04-13 10:48:03,279 firebase_config 23756 24516 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 10:48:25,185 firebase_config 24136 3964 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:48:26,873 apps 24136 3964 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 10:48:26,904 firebase_config 24136 3964 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 10:48:44,679 firebase_config 8572 22824 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:48:46,426 apps 8572 22824 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 10:48:47,135 signals 8572 22824 Email de boas-vindas enviado para admin@nexuslife.com
+INFO 2026-04-13 10:48:47,135 signals 8572 22824 Notificação e email enviados para admin@nexuslife.com
+INFO 2026-04-13 10:48:59,078 basehttp 23756 24860 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:48:59,106 basehttp 23756 24860 "GET /home/ HTTP/1.1" 200 12903
+INFO 2026-04-13 10:48:59,129 basehttp 23756 24832 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-13 10:48:59,129 basehttp 23756 24860 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:49:54,721 basehttp 23756 18436 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:49:54,798 basehttp 23756 18436 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4275
+INFO 2026-04-13 10:49:54,832 basehttp 23756 18436 "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2026-04-13 10:49:54,839 basehttp 23756 15324 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2026-04-13 10:49:54,843 basehttp 23756 18436 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2026-04-13 10:49:54,849 basehttp 23756 15324 "GET /static/admin_custom.css HTTP/1.1" 200 5190
+INFO 2026-04-13 10:49:54,850 basehttp 23756 18436 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2026-04-13 10:49:54,856 basehttp 23756 18436 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2026-04-13 10:49:54,858 basehttp 23756 15324 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2026-04-13 10:49:54,865 basehttp 23756 18436 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+WARNING 2026-04-13 10:49:54,968 log 23756 18436 Not Found: /favicon.ico
+WARNING 2026-04-13 10:49:54,969 basehttp 23756 18436 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-13 10:49:56,827 basehttp 23756 18436 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4465
+INFO 2026-04-13 10:51:07,593 autoreload 23756 24516 C:\Users\aluno\Pictures\NexusLife\core\views.py changed, reloading.
+WARNING 2026-04-13 10:51:09,682 firebase_config 14016 25220 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:51:11,575 apps 14016 25220 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 10:51:11,631 autoreload 14016 25220 Watching for file changes with StatReloader
+WARNING 2026-04-13 10:51:11,651 firebase_config 14016 25220 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 10:51:16,000 firebase_config 3940 24784 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:51:17,921 apps 3940 24784 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 10:51:25,593 firebase_config 11504 10168 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:51:27,201 apps 11504 10168 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 10:51:34,954 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 12294
+INFO 2026-04-13 10:51:34,979 basehttp 14016 10796 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:53:21,981 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 12306
+INFO 2026-04-13 10:53:22,000 basehttp 14016 10796 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:53:23,160 basehttp 14016 10796 "GET /marketplace/ HTTP/1.1" 200 7371
+INFO 2026-04-13 10:53:24,735 basehttp 14016 10796 "GET /marketplace/?category= HTTP/1.1" 200 7371
+INFO 2026-04-13 10:53:27,388 basehttp 14016 10796 "GET /marketplace/ HTTP/1.1" 200 7371
+INFO 2026-04-13 10:53:29,035 basehttp 14016 10796 "GET /marketplace/ HTTP/1.1" 200 7371
+INFO 2026-04-13 10:53:30,869 basehttp 14016 10796 "GET /marketplace/ HTTP/1.1" 200 7371
+INFO 2026-04-13 10:53:32,565 basehttp 14016 10796 "GET /marketplace/ HTTP/1.1" 200 7371
+INFO 2026-04-13 10:54:09,870 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11642
+INFO 2026-04-13 10:54:16,528 basehttp 14016 10796 "GET /marketplace/ HTTP/1.1" 200 6707
+INFO 2026-04-13 10:54:18,325 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:18,898 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:19,050 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:19,861 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:20,616 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:21,141 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:25,516 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:25,738 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:26,396 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:26,748 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:26,899 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:34,435 basehttp 14016 10796 "GET /home/ HTTP/1.1" 200 11635
+INFO 2026-04-13 10:54:35,022 basehttp 14016 10796 "GET /profile/ HTTP/1.1" 200 16977
+INFO 2026-04-13 10:54:37,082 basehttp 14016 10796 "GET /profile/ HTTP/1.1" 200 16977
+INFO 2026-04-13 10:54:37,103 basehttp 14016 10796 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:54:48,382 basehttp 14016 10796 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:54:48,402 basehttp 14016 10796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29972
+INFO 2026-04-13 10:54:48,423 basehttp 14016 10796 "GET /static/styles.css HTTP/1.1" 200 4636
+INFO 2026-04-13 10:54:48,423 basehttp 14016 12896 "GET /static/main.js HTTP/1.1" 200 9154
+WARNING 2026-04-13 10:54:49,014 log 14016 12896 Not Found: /favicon.ico
+WARNING 2026-04-13 10:54:49,014 basehttp 14016 12896 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-13 10:54:52,091 basehttp 14016 12896 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:54:52,105 basehttp 14016 12896 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29972
+INFO 2026-04-13 10:54:56,365 basehttp 14016 12896 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:54:56,379 basehttp 14016 12896 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29972
+INFO 2026-04-13 10:55:21,073 basehttp 14016 12896 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:55:21,080 basehttp 14016 12896 "GET /login/ HTTP/1.1" 200 10084
+INFO 2026-04-13 10:55:24,624 basehttp 14016 12896 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:55:24,648 basehttp 14016 12896 "GET /admin/ HTTP/1.1" 200 13452
+INFO 2026-04-13 10:55:24,666 basehttp 14016 10796 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2026-04-13 10:55:24,667 basehttp 14016 12896 "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2026-04-13 10:55:24,669 basehttp 14016 10704 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2026-04-13 10:55:24,669 basehttp 14016 25076 "GET /static/admin_custom.css HTTP/1.1" 200 5190
+INFO 2026-04-13 10:55:24,670 basehttp 14016 21656 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2026-04-13 10:55:24,671 basehttp 14016 5736 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2026-04-13 10:55:24,671 basehttp 14016 10796 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-04-13 10:55:24,683 basehttp 14016 10796 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+WARNING 2026-04-13 10:55:35,224 log 14016 10796 Not Found: /admin/auth/user/
+WARNING 2026-04-13 10:55:35,225 basehttp 14016 10796 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 10:56:41,778 firebase_config 24896 24808 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:56:43,505 apps 24896 24808 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 10:56:43,525 firebase_config 24896 24808 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 10:56:52,545 log 14016 10796 Not Found: /admin/auth/user/
+WARNING 2026-04-13 10:56:52,546 basehttp 14016 10796 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 10:56:53,118 log 14016 10796 Not Found: /admin/auth/user/
+WARNING 2026-04-13 10:56:53,119 basehttp 14016 10796 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-13 10:56:53,750 basehttp 14016 10796 "GET /admin/ HTTP/1.1" 200 13329
+WARNING 2026-04-13 10:56:55,191 log 14016 10796 Not Found: /admin/auth/user/
+WARNING 2026-04-13 10:56:55,192 basehttp 14016 10796 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-13 10:56:56,466 basehttp 14016 10796 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:56:58,655 basehttp 14016 10796 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:56:58,673 basehttp 14016 12896 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2026-04-13 10:56:58,673 basehttp 14016 21656 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2026-04-13 10:56:58,673 basehttp 14016 10704 "GET /static/admin_custom.css HTTP/1.1" 200 5190
+INFO 2026-04-13 10:56:58,673 basehttp 14016 5736 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2026-04-13 10:56:58,674 basehttp 14016 25076 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2026-04-13 10:56:58,674 basehttp 14016 10796 "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2026-04-13 10:56:58,677 basehttp 14016 21656 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+WARNING 2026-04-13 10:56:58,696 log 14016 21656 Not Found: /favicon.ico
+WARNING 2026-04-13 10:56:58,697 basehttp 14016 21656 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-13 10:57:00,614 basehttp 14016 21656 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:00,983 basehttp 14016 21656 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:01,149 basehttp 14016 21656 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:01,302 basehttp 14016 21656 "GET /admin/ HTTP/1.1" 200 13329
+WARNING 2026-04-13 10:57:02,457 log 14016 21656 Not Found: /admin/core/userprofile/
+WARNING 2026-04-13 10:57:02,457 basehttp 14016 21656 "GET /admin/core/userprofile/ HTTP/1.1" 404 3824
+INFO 2026-04-13 10:57:03,606 basehttp 14016 21656 "GET /admin/ HTTP/1.1" 200 13329
+WARNING 2026-04-13 10:57:12,744 log 14016 21656 Not Found: /admin/core/notification/
+WARNING 2026-04-13 10:57:12,745 basehttp 14016 21656 "GET /admin/core/notification/ HTTP/1.1" 404 3827
+INFO 2026-04-13 10:57:14,317 basehttp 14016 21656 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:16,200 basehttp 14016 21656 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:16,220 basehttp 14016 10796 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2026-04-13 10:57:16,220 basehttp 14016 12896 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2026-04-13 10:57:16,221 basehttp 14016 5736 "GET /static/admin_custom.css HTTP/1.1" 200 5190
+INFO 2026-04-13 10:57:16,221 basehttp 14016 10704 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2026-04-13 10:57:16,221 basehttp 14016 25076 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2026-04-13 10:57:16,222 basehttp 14016 21656 "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2026-04-13 10:57:16,225 basehttp 14016 5736 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+WARNING 2026-04-13 10:57:16,243 log 14016 5736 Not Found: /favicon.ico
+WARNING 2026-04-13 10:57:16,243 basehttp 14016 5736 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-13 10:57:16,751 basehttp 14016 5736 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:16,918 basehttp 14016 5736 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:17,086 basehttp 14016 5736 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:17,215 basehttp 14016 5736 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:17,553 basehttp 14016 5736 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:17,710 basehttp 14016 5736 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:17,852 basehttp 14016 5736 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:57:19,475 basehttp 14016 5736 "GET /login/ HTTP/1.1" 200 10250
+INFO 2026-04-13 10:57:23,226 basehttp 14016 5736 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:57:23,238 basehttp 14016 5736 "GET /admin/ HTTP/1.1" 200 13452
+WARNING 2026-04-13 10:57:25,297 log 14016 5736 Not Found: /admin/auth/user/
+WARNING 2026-04-13 10:57:25,297 basehttp 14016 5736 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 10:57:54,543 firebase_config 25276 25440 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:57:56,343 apps 25276 25440 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 10:57:58,050 firebase_config 11172 22748 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 10:57:59,797 apps 11172 22748 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 10:57:59,867 autoreload 11172 22748 Watching for file changes with StatReloader
+WARNING 2026-04-13 10:57:59,879 firebase_config 11172 22748 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 10:58:59,703 log 11172 14284 Not Found: /admin/auth/user/
+WARNING 2026-04-13 10:58:59,704 basehttp 11172 14284 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 10:59:00,038 log 11172 14284 Not Found: /admin/auth/user/
+WARNING 2026-04-13 10:59:00,038 basehttp 11172 14284 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 10:59:00,455 log 11172 14284 Not Found: /admin/auth/user/
+WARNING 2026-04-13 10:59:00,456 basehttp 11172 14284 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-13 10:59:01,022 basehttp 11172 14284 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 10:59:01,308 basehttp 11172 14284 "GET /login/ HTTP/1.1" 200 10250
+INFO 2026-04-13 10:59:02,066 basehttp 11172 14284 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29972
+INFO 2026-04-13 10:59:03,187 basehttp 11172 14284 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29972
+INFO 2026-04-13 10:59:03,199 basehttp 11172 14284 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 10:59:03,790 basehttp 11172 14284 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:59:03,804 basehttp 11172 14284 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29972
+INFO 2026-04-13 10:59:07,423 basehttp 11172 14284 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-13 10:59:07,428 basehttp 11172 14284 "GET /login/ HTTP/1.1" 200 10084
+INFO 2026-04-13 11:00:35,795 basehttp 11172 14284 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:00:35,810 basehttp 11172 14284 "GET /admin/ HTTP/1.1" 200 13452
+WARNING 2026-04-13 11:00:38,151 log 11172 14284 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:00:38,151 basehttp 11172 14284 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:29,673 log 11172 14284 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:29,674 basehttp 11172 14284 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:30,255 log 11172 14284 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:30,256 basehttp 11172 14284 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-13 11:05:30,827 basehttp 11172 14284 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 11:05:31,109 basehttp 11172 14284 "GET /login/ HTTP/1.1" 200 10250
+INFO 2026-04-13 11:05:32,389 basehttp 11172 14284 "POST /login/ HTTP/1.1" 200 10574
+INFO 2026-04-13 11:05:32,402 basehttp 11172 14284 "GET /static/styles.css HTTP/1.1" 200 4923
+INFO 2026-04-13 11:05:32,403 basehttp 11172 13356 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:05:34,373 basehttp 11172 8348 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:05:34,385 basehttp 11172 8348 "GET /admin/ HTTP/1.1" 200 13452
+INFO 2026-04-13 11:05:34,399 basehttp 11172 8348 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:05:34,401 basehttp 11172 8348 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:05:34,403 basehttp 11172 22756 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:05:34,404 basehttp 11172 5824 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:05:34,404 basehttp 11172 8348 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:05:34,404 basehttp 11172 24828 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:05:34,408 basehttp 11172 24828 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+WARNING 2026-04-13 11:05:36,490 log 11172 24828 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:36,490 basehttp 11172 24828 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:37,984 log 11172 24828 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:37,985 basehttp 11172 24828 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:38,159 log 11172 24828 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:38,160 basehttp 11172 24828 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:38,319 log 11172 24828 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:38,319 basehttp 11172 24828 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:38,478 log 11172 24828 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:38,479 basehttp 11172 24828 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:38,640 log 11172 24828 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:38,640 basehttp 11172 24828 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:38,784 log 11172 24828 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:38,785 basehttp 11172 24828 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:05:38,943 log 11172 24828 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:05:38,944 basehttp 11172 24828 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:08:06,355 firebase_config 19672 23352 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:08:24,443 apps 19672 23352 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 11:08:27,819 firebase_config 15064 20984 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:08:32,116 apps 15064 20984 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:08:32,210 autoreload 15064 20984 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:08:32,255 firebase_config 15064 20984 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 11:08:42,638 log 15064 19056 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:08:42,638 basehttp 15064 19056 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:09:39,209 log 15064 19056 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:09:39,209 basehttp 15064 19056 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:09:39,840 log 15064 19056 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:09:39,840 basehttp 15064 19056 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:09:40,007 log 15064 19056 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:09:40,008 basehttp 15064 19056 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-13 11:09:40,621 basehttp 15064 19056 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 11:09:42,128 basehttp 15064 19056 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 11:09:42,942 basehttp 15064 19056 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 11:09:42,956 basehttp 15064 19056 "GET /static/admin_custom.css HTTP/1.1" 304 0
+WARNING 2026-04-13 11:09:45,556 log 15064 19056 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-04-13 11:09:45,557 basehttp 15064 19056 "POST /login/ HTTP/1.1" 403 2519
+INFO 2026-04-13 11:10:45,389 autoreload 15064 20984 C:\Users\aluno\Pictures\NexusLife\nexuslife\settings.py changed, reloading.
+WARNING 2026-04-13 11:10:48,014 firebase_config 6084 27324 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:10:49,665 apps 6084 27324 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:10:49,719 autoreload 6084 27324 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:10:49,732 firebase_config 6084 27324 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:11:09,841 autoreload 6084 27324 C:\Users\aluno\Pictures\NexusLife\nexuslife\settings.py changed, reloading.
+WARNING 2026-04-13 11:11:12,058 firebase_config 28328 27424 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:11:14,471 apps 28328 27424 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:11:14,546 autoreload 28328 27424 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:11:14,555 firebase_config 28328 27424 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 11:11:28,372 log 28328 26852 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-04-13 11:11:28,373 basehttp 28328 26852 "POST /login/ HTTP/1.1" 403 2519
+INFO 2026-04-13 11:11:29,493 basehttp 28328 26852 "GET /login/ HTTP/1.1" 200 10250
+INFO 2026-04-13 11:11:29,781 basehttp 28328 26852 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29972
+INFO 2026-04-13 11:11:34,274 basehttp 28328 26852 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:11:34,301 basehttp 28328 26852 "GET /admin/ HTTP/1.1" 200 13452
+WARNING 2026-04-13 11:11:36,926 log 28328 26852 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:11:36,927 basehttp 28328 26852 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-13 11:11:41,015 basehttp 28328 26852 "GET /admin/ HTTP/1.1" 200 13329
+WARNING 2026-04-13 11:11:42,627 log 28328 26852 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:11:42,628 basehttp 28328 26852 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-13 11:12:41,456 autoreload 28328 27424 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-13 11:12:43,830 autoreload 27880 12016 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:12:44,863 firebase_config 27880 12016 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:16:49,813 autoreload 26800 9324 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:16:50,727 firebase_config 26800 9324 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 11:18:41,410 firebase_config 13916 25060 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:19:15,473 apps 13916 25060 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 11:19:22,740 firebase_config 27048 26480 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:19:32,198 apps 27048 26480 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:19:32,412 autoreload 27048 26480 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:19:32,583 firebase_config 27048 26480 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:19:55,410 basehttp 27048 29112 "GET /admin/ HTTP/1.1" 200 13329
+INFO 2026-04-13 11:19:55,433 basehttp 27048 29112 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:19:55,442 basehttp 27048 29112 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:19:55,443 basehttp 27048 27740 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:19:55,444 basehttp 27048 2460 "GET /static/admin_custom.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:19:55,445 basehttp 27048 29400 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:19:55,452 basehttp 27048 29400 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:19:55,452 basehttp 27048 2460 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:19:56,998 basehttp 27048 2460 "GET /login/ HTTP/1.1" 200 10250
+INFO 2026-04-13 11:20:00,094 basehttp 27048 2460 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:20:00,109 basehttp 27048 2460 "GET /admin/ HTTP/1.1" 200 13452
+INFO 2026-04-13 11:20:00,138 basehttp 27048 2460 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+WARNING 2026-04-13 11:20:01,688 log 27048 2460 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:20:01,689 basehttp 27048 2460 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-13 11:20:41,245 log 27048 2460 Not Found: /admin/auth/user/
+WARNING 2026-04-13 11:20:41,245 basehttp 27048 2460 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-13 11:21:18,793 autoreload 27048 26480 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:21:21,519 firebase_config 27192 24916 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:21:24,062 apps 27192 24916 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:21:24,128 autoreload 27192 24916 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:21:24,148 firebase_config 27192 24916 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:22:16,124 basehttp 27192 29176 "GET /admin/auth/user/ HTTP/1.1" 200 15213
+INFO 2026-04-13 11:22:16,157 basehttp 27192 29176 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2026-04-13 11:22:16,160 basehttp 27192 28872 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-04-13 11:22:16,166 basehttp 27192 24516 "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2026-04-13 11:22:16,166 basehttp 27192 1824 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2026-04-13 11:22:16,169 basehttp 27192 29176 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2026-04-13 11:22:16,173 basehttp 27192 28872 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-04-13 11:22:16,178 basehttp 27192 24516 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-04-13 11:22:16,178 basehttp 27192 26356 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-13 11:22:16,178 basehttp 27192 29176 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2026-04-13 11:22:16,182 basehttp 27192 21644 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2026-04-13 11:22:16,185 basehttp 27192 28872 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2026-04-13 11:22:16,199 basehttp 27192 1824 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2026-04-13 11:22:16,214 basehttp 27192 1824 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-04-13 11:22:16,218 basehttp 27192 28872 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2026-04-13 11:22:16,218 basehttp 27192 29176 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2026-04-13 11:22:16,218 basehttp 27192 21644 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-04-13 11:24:23,191 basehttp 27192 21644 "GET /admin/ HTTP/1.1" 200 17787
+INFO 2026-04-13 11:24:24,307 basehttp 27192 21644 "GET /admin/ HTTP/1.1" 200 17787
+ERROR 2026-04-13 11:24:30,695 log 27192 21644 Internal Server Error: /admin/core/userprofile/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 689, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1927, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 837, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 503, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 182, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\filters.py", line 182, in __init__
+    other_model = get_model_from_relation(field)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\utils.py", line 467, in get_model_from_relation
+    raise NotRelationField
+django.contrib.admin.utils.NotRelationField
+ERROR 2026-04-13 11:24:30,708 basehttp 27192 21644 "GET /admin/core/userprofile/ HTTP/1.1" 500 136845
+INFO 2026-04-13 11:24:55,288 basehttp 27192 21644 "GET /admin/ HTTP/1.1" 200 17787
+INFO 2026-04-13 11:25:51,845 autoreload 27192 24916 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:25:57,276 firebase_config 10892 28284 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:26:00,454 apps 10892 28284 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:26:00,551 autoreload 10892 28284 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:26:00,561 firebase_config 10892 28284 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:26:14,341 autoreload 10892 28284 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:26:19,176 firebase_config 28484 29648 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:26:22,903 apps 28484 29648 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:26:23,015 autoreload 28484 29648 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:26:23,029 firebase_config 28484 29648 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:26:33,272 autoreload 28484 29648 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:26:37,973 firebase_config 17016 28148 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:26:41,913 apps 17016 28148 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:26:42,032 autoreload 17016 28148 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:26:42,049 firebase_config 17016 28148 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:26:54,743 autoreload 17016 28148 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:26:59,630 firebase_config 11932 28912 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:27:03,548 apps 11932 28912 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:27:03,676 autoreload 11932 28912 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:27:03,693 firebase_config 11932 28912 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:27:10,359 autoreload 11932 28912 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:27:15,213 firebase_config 29692 28164 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:27:19,042 apps 29692 28164 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:27:19,164 autoreload 29692 28164 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:27:19,181 firebase_config 29692 28164 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:27:41,241 autoreload 29692 28164 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:27:43,957 firebase_config 27356 5632 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:27:46,368 apps 27356 5632 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:27:46,432 autoreload 27356 5632 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:27:46,439 firebase_config 27356 5632 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:28:24,316 basehttp 27356 16676 "GET /admin/ HTTP/1.1" 200 17787
+ERROR 2026-04-13 11:28:25,949 log 27356 16676 Internal Server Error: /admin/core/userprofile/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 689, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1927, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 837, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 503, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 182, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\filters.py", line 182, in __init__
+    other_model = get_model_from_relation(field)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\utils.py", line 467, in get_model_from_relation
+    raise NotRelationField
+django.contrib.admin.utils.NotRelationField
+ERROR 2026-04-13 11:28:25,959 basehttp 27356 16676 "GET /admin/core/userprofile/ HTTP/1.1" 500 136815
+ERROR 2026-04-13 11:28:27,596 log 27356 16676 Internal Server Error: /admin/core/userprofile/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 689, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1927, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 837, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 503, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 182, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\filters.py", line 182, in __init__
+    other_model = get_model_from_relation(field)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\utils.py", line 467, in get_model_from_relation
+    raise NotRelationField
+django.contrib.admin.utils.NotRelationField
+ERROR 2026-04-13 11:28:27,600 basehttp 27356 16676 "GET /admin/core/userprofile/ HTTP/1.1" 500 136952
+ERROR 2026-04-13 11:28:28,125 log 27356 16676 Internal Server Error: /admin/core/userprofile/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 689, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1927, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 837, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 503, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 182, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\filters.py", line 182, in __init__
+    other_model = get_model_from_relation(field)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\utils.py", line 467, in get_model_from_relation
+    raise NotRelationField
+django.contrib.admin.utils.NotRelationField
+ERROR 2026-04-13 11:28:28,129 basehttp 27356 16676 "GET /admin/core/userprofile/ HTTP/1.1" 500 136952
+ERROR 2026-04-13 11:28:28,357 log 27356 16676 Internal Server Error: /admin/core/userprofile/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 689, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1927, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 837, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 503, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 182, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\filters.py", line 182, in __init__
+    other_model = get_model_from_relation(field)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\utils.py", line 467, in get_model_from_relation
+    raise NotRelationField
+django.contrib.admin.utils.NotRelationField
+ERROR 2026-04-13 11:28:28,361 basehttp 27356 16676 "GET /admin/core/userprofile/ HTTP/1.1" 500 136952
+INFO 2026-04-13 11:28:29,048 basehttp 27356 16676 "GET /admin/ HTTP/1.1" 200 17787
+ERROR 2026-04-13 11:28:31,927 log 27356 16676 Internal Server Error: /admin/core/userprofile/
+Traceback (most recent call last):
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 689, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1927, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\options.py", line 837, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 503, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\views\main.py", line 182, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\filters.py", line 182, in __init__
+    other_model = get_model_from_relation(field)
+  File "C:\Users\aluno\Pictures\NexusLife\.venv\Lib\site-packages\django\contrib\admin\utils.py", line 467, in get_model_from_relation
+    raise NotRelationField
+django.contrib.admin.utils.NotRelationField
+ERROR 2026-04-13 11:28:31,931 basehttp 27356 16676 "GET /admin/core/userprofile/ HTTP/1.1" 500 136815
+INFO 2026-04-13 11:29:28,890 autoreload 27356 5632 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:29:31,624 firebase_config 21052 11848 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:29:33,762 apps 21052 11848 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:29:33,828 autoreload 21052 11848 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:29:33,835 firebase_config 21052 11848 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:29:56,404 autoreload 21052 11848 C:\Users\aluno\Pictures\NexusLife\core\admin.py changed, reloading.
+WARNING 2026-04-13 11:29:59,679 firebase_config 27976 26292 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:30:03,848 apps 27976 26292 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:30:03,983 autoreload 27976 26292 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:30:04,001 firebase_config 27976 26292 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:31:09,320 basehttp 27976 26580 "GET /admin/core/userprofile/ HTTP/1.1" 200 12404
+INFO 2026-04-13 11:31:09,349 basehttp 27976 26580 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:31:09,352 basehttp 27976 6964 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:31:09,358 basehttp 27976 26316 "GET /static/admin_custom.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:31:09,358 basehttp 27976 7820 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:31:09,365 basehttp 27976 7820 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:31:09,375 basehttp 27976 28696 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-13 11:31:09,381 basehttp 27976 28696 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:31:09,382 basehttp 27976 7820 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:31:13,441 basehttp 27976 7820 "GET /admin/ HTTP/1.1" 200 17787
+INFO 2026-04-13 11:31:15,083 basehttp 27976 7820 "GET /admin/ HTTP/1.1" 200 17787
+INFO 2026-04-13 11:31:15,995 basehttp 27976 7820 "GET /admin/ HTTP/1.1" 200 17787
+INFO 2026-04-13 11:31:16,509 basehttp 27976 7820 "GET /admin/ HTTP/1.1" 200 17787
+INFO 2026-04-13 11:31:17,590 basehttp 27976 7820 "GET /admin/core/userprofile/ HTTP/1.1" 200 12404
+INFO 2026-04-13 11:31:17,618 basehttp 27976 7820 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-13 11:31:22,191 basehttp 27976 7820 "GET /admin/ HTTP/1.1" 200 17787
+INFO 2026-04-13 11:31:23,426 basehttp 27976 7820 "GET /admin/auth/user/ HTTP/1.1" 200 15213
+INFO 2026-04-13 11:31:23,444 basehttp 27976 28696 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-04-13 11:31:23,448 basehttp 27976 7820 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-13 11:31:35,384 basehttp 27976 7820 "GET /admin/auth/user/1/change/ HTTP/1.1" 200 27371
+INFO 2026-04-13 11:31:35,413 basehttp 27976 7820 "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2026-04-13 11:31:35,414 basehttp 27976 26580 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-13 11:31:35,418 basehttp 27976 6964 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2026-04-13 11:31:35,419 basehttp 27976 28696 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2026-04-13 11:31:35,420 basehttp 27976 29332 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15292
+INFO 2026-04-13 11:31:35,419 basehttp 27976 26316 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2026-04-13 11:31:35,423 basehttp 27976 7820 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-04-13 11:31:35,426 basehttp 27976 26580 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+INFO 2026-04-13 11:31:35,439 basehttp 27976 26580 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-04-13 11:31:35,476 basehttp 27976 26580 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2026-04-13 11:31:35,477 basehttp 27976 29332 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2026-04-13 11:31:35,477 basehttp 27976 7820 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2026-04-13 11:31:37,833 basehttp 27976 29332 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2026-04-13 11:31:37,835 basehttp 27976 7820 "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+WARNING 2026-04-13 11:35:12,958 firebase_config 17364 10532 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:35:15,382 apps 17364 10532 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 11:35:15,417 firebase_config 17364 10532 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 11:36:39,712 firebase_config 15172 28300 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:36:41,619 apps 15172 28300 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 11:36:43,403 firebase_config 25036 25616 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:36:45,161 apps 25036 25616 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:36:45,222 autoreload 25036 25616 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:36:45,232 firebase_config 25036 25616 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:36:56,891 basehttp 25036 27460 "GET /admin/auth/user/1/change/ HTTP/1.1" 200 28050
+INFO 2026-04-13 11:36:56,931 basehttp 25036 28284 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,932 basehttp 25036 14404 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,934 basehttp 25036 7268 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,934 basehttp 25036 27460 "GET /static/admin/js/collapse.js HTTP/1.1" 200 1803
+INFO 2026-04-13 11:36:56,934 basehttp 25036 14024 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,939 basehttp 25036 7268 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,940 basehttp 25036 14404 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,941 basehttp 25036 14024 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,941 basehttp 25036 28284 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,942 basehttp 25036 14404 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-04-13 11:36:56,947 basehttp 25036 20392 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-13 11:36:59,899 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:00,622 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:01,119 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:01,311 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:04,896 basehttp 25036 20392 "GET /admin/marketplace/service/ HTTP/1.1" 200 12333
+INFO 2026-04-13 11:37:04,913 basehttp 25036 20392 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:37:04,923 basehttp 25036 14404 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-04-13 11:37:04,924 basehttp 25036 20392 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-13 11:37:04,928 basehttp 25036 20392 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:37:04,937 basehttp 25036 20392 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-04-13 11:37:07,815 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:08,923 basehttp 25036 20392 "GET /admin/core/notification/ HTTP/1.1" 200 15616
+INFO 2026-04-13 11:37:08,952 basehttp 25036 20392 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-13 11:37:08,966 basehttp 25036 20392 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-04-13 11:37:11,060 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:13,567 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:14,256 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:16,247 basehttp 25036 20392 "GET /admin/auth/user/1/change/ HTTP/1.1" 200 28050
+INFO 2026-04-13 11:37:16,610 basehttp 25036 20392 "GET /admin/auth/user/ HTTP/1.1" 200 17765
+INFO 2026-04-13 11:37:17,029 basehttp 25036 20392 "GET /admin/ HTTP/1.1" 200 18510
+INFO 2026-04-13 11:37:17,602 basehttp 25036 20392 "GET /login/ HTTP/1.1" 200 10250
+INFO 2026-04-13 11:37:29,662 basehttp 25036 20392 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:37:29,679 basehttp 25036 20392 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:37:29,699 basehttp 25036 20392 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 30502
+INFO 2026-04-13 11:37:29,720 basehttp 25036 20392 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:37:29,722 basehttp 25036 20392 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-13 11:37:42,216 basehttp 25036 20392 "GET /marketplace/ HTTP/1.1" 200 6709
+INFO 2026-04-13 11:37:43,370 basehttp 25036 20392 "GET /marketplace/?category= HTTP/1.1" 200 6709
+WARNING 2026-04-13 11:39:23,293 log 25036 20392 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-04-13 11:39:23,294 basehttp 25036 20392 "POST /login/ HTTP/1.1" 403 2519
+INFO 2026-04-13 11:39:24,552 basehttp 25036 20392 "GET /login/ HTTP/1.1" 200 10252
+INFO 2026-04-13 11:39:33,162 basehttp 25036 20392 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:39:33,169 basehttp 25036 20392 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:39:33,185 basehttp 25036 20392 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 30502
+INFO 2026-04-13 11:40:31,897 basehttp 25036 20392 "GET /profile/ HTTP/1.1" 200 17011
+INFO 2026-04-13 11:40:35,912 basehttp 25036 20392 "GET /chatbot/ HTTP/1.1" 200 16140
+INFO 2026-04-13 11:40:41,612 chatbot_enhanced 25036 20392 Resposta gerada com Gemini AI para: oi
+INFO 2026-04-13 11:40:41,637 basehttp 25036 20392 "POST /api/chatbot/ HTTP/1.1" 200 793
+INFO 2026-04-13 11:40:42,469 basehttp 25036 20392 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:40:42,493 basehttp 25036 20392 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:40:42,517 basehttp 25036 20392 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:41:18,950 autoreload 25036 25616 C:\Users\aluno\Pictures\NexusLife\marketplace\views.py changed, reloading.
+WARNING 2026-04-13 11:41:23,620 firebase_config 28948 26944 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:41:26,070 apps 28948 26944 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:41:26,136 autoreload 28948 26944 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:41:26,147 firebase_config 28948 26944 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:41:34,417 autoreload 28948 26944 C:\Users\aluno\Pictures\NexusLife\marketplace\views.py changed, reloading.
+WARNING 2026-04-13 11:41:36,951 firebase_config 29316 24504 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:41:38,809 apps 29316 24504 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:41:38,870 autoreload 29316 24504 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:41:38,879 firebase_config 29316 24504 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-13 11:41:43,313 firebase_config 25348 27848 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:41:45,062 apps 25348 27848 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 11:41:45,082 firebase_config 25348 27848 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:41:52,945 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:53,865 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:54,234 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:54,635 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:54,846 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:55,028 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:55,204 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:55,363 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:55,827 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:56,032 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:41:57,181 basehttp 29316 29424 "GET /marketplace/ HTTP/1.1" 200 6709
+INFO 2026-04-13 11:41:58,151 basehttp 29316 29424 "GET /marketplace/?category= HTTP/1.1" 200 6709
+INFO 2026-04-13 11:42:41,998 basehttp 29316 29424 "GET /profile/ HTTP/1.1" 200 17011
+INFO 2026-04-13 11:42:43,008 basehttp 29316 29424 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:42:43,026 basehttp 29316 29424 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+WARNING 2026-04-13 11:43:14,021 firebase_config 5632 18512 Arquivo de credenciais do Firebase não encontrado em: c:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:43:15,878 apps 5632 18512 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:43:29,413 autoreload 29316 24504 C:\Users\aluno\Pictures\NexusLife\marketplace\views.py changed, reloading.
+WARNING 2026-04-13 11:43:32,398 firebase_config 27776 28868 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:43:34,733 apps 27776 28868 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+INFO 2026-04-13 11:43:34,800 autoreload 27776 28868 Watching for file changes with StatReloader
+WARNING 2026-04-13 11:43:34,814 firebase_config 27776 28868 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:43:46,502 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:43:47,272 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:43:47,646 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:43:47,958 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:43:48,143 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:43:48,293 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+WARNING 2026-04-13 11:44:13,609 firebase_config 19672 20768 Arquivo de credenciais do Firebase não encontrado em: c:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:44:15,679 apps 19672 20768 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-13 11:44:15,974 firebase_config 19672 20768 Arquivo de credenciais do Firebase não encontrado em: c:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:44:26,703 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:44:26,721 basehttp 27776 14796 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-13 11:44:27,304 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:44:27,510 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:44:27,688 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:44:27,864 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:44:28,030 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:44:28,185 basehttp 27776 14796 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29891
+INFO 2026-04-13 11:44:31,893 basehttp 27776 14796 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-13 11:44:31,907 basehttp 27776 14796 "GET /login/ HTTP/1.1" 200 10084
+INFO 2026-04-13 11:44:39,951 basehttp 27776 14796 "POST /login/ HTTP/1.1" 200 10146
+INFO 2026-04-13 11:44:50,265 basehttp 27776 14796 - Broken pipe from ('127.0.0.1', 59394)
+INFO 2026-04-13 11:44:50,978 basehttp 27776 6444 "POST /login/ HTTP/1.1" 200 10146
+INFO 2026-04-13 11:45:00,121 basehttp 27776 6444 "POST /login/ HTTP/1.1" 200 10158
+INFO 2026-04-13 11:45:14,300 basehttp 27776 6444 "POST /login/ HTTP/1.1" 200 10161
+INFO 2026-04-13 11:45:23,783 basehttp 27776 6444 "GET /register/ HTTP/1.1" 200 19993
+INFO 2026-04-13 11:45:26,643 basehttp 27776 6444 "GET /login/ HTTP/1.1" 200 9472
+INFO 2026-04-13 11:45:42,490 basehttp 27776 6444 - Broken pipe from ('127.0.0.1', 63625)
+INFO 2026-04-13 11:45:42,990 basehttp 27776 28996 "POST /login/ HTTP/1.1" 200 10162
+WARNING 2026-04-13 11:47:28,447 firebase_config 25808 25648 Arquivo de credenciais do Firebase não encontrado em: c:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-13 11:47:30,227 apps 25808 25648 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!

@@ -60,6 +60,14 @@
             border-left-color: #ffc107;
         }
         
+        .stat-card.notifications {
+            border-left-color: #17a2b8;
+        }
+        
+        .stat-card.chatbot {
+            border-left-color: #6f42c1;
+        }
+        
         .stat-card.reviews {
             border-left-color: #dc3545;
         }
@@ -187,6 +195,20 @@
             <div class="stat-label">Pedidos Totais</div>
             <div class="stat-value">{{ total_orders }}</div>
             <div class="stat-subtext">{{ completed_orders }} concluídos</div>
+        </div>
+        
+        <div class="stat-card notifications">
+            <div class="stat-icon">📨</div>
+            <div class="stat-label">Notificações</div>
+            <div class="stat-value">{{ total_notifications }}</div>
+            <div class="stat-subtext">{{ unread_notifications }} não lidas</div>
+        </div>
+        
+        <div class="stat-card chatbot">
+            <div class="stat-icon">💬</div>
+            <div class="stat-label">Conversas Chatbot</div>
+            <div class="stat-value">{{ total_conversations }}</div>
+            <div class="stat-subtext">{{ active_conversations }} ativas</div>
         </div>
         
         <div class="stat-card reviews">

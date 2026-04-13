@@ -26,5 +26,38 @@ class CoreConfig(AppConfig):
         from . import firebase_config
         firebase_config.initialize_firebase_admin()
         
+        # Inicializa o Chatbot AI (Gemini) quando o app Django estiver pronto.
+        self.initialize_chatbot_ai()
+        
         # Registra signals para notificações e emails automáticos
         from . import signals
+    
+    def initialize_chatbot_ai(self):
+        """Inicializa o Chatbot AI com Gemini ou OpenAI"""
+        try:
+            from .gemini_integration import GEMINI_AVAILABLE, NexusBotGemini
+            from .openai_integration import OPENAI_AVAILABLE, NexusBotAI
+            import logging
+            
+            logger = logging.getLogger(__name__)
+            
+            if GEMINI_AVAILABLE:
+                try:
+                    gemini_bot = NexusBotGemini()
+                    logger.info("[OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!")
+                except Exception as e:
+                    logger.warning(f"[AVISO] Erro ao inicializar Gemini AI: {str(e)}")
+            elif OPENAI_AVAILABLE:
+                try:
+                    openai_bot = NexusBotAI()
+                    logger.info("[OK] Chatbot AI ativado: OpenAI inicializado com sucesso!")
+                except Exception as e:
+                    logger.warning(f"[AVISO] Erro ao inicializar OpenAI: {str(e)}")
+            else:
+                logger.info("[INFO] Chatbot AI nao disponível. Usando respostas do dicionário.")
+                logger.info("[INFO] Para ativar IA: instale google-generativeai ou openai")
+                logger.info("[INFO] Defina GEMINI_API_KEY ou OPENAI_API_KEY no arquivo .env")
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.warning(f"Erro ao inicializar Chatbot AI: {str(e)}")
