@@ -299,7 +299,7 @@ if (cpfInput) {
     e.target.value = value;
   });
 }
-// Busca CEP via apicep.com
+// Busca CEP via ViaCEP
 const cepInput = document.getElementById('id_cep');
 const btnBuscarCep = document.getElementById('btnBuscarCep');
 const cepStatus = document.getElementById('cepStatus');
@@ -317,22 +317,25 @@ function buscarCep() {
   cepStatus.textContent = 'Buscando...';
   cepStatus.style.color = '#6c757d';
 
-  fetch(`https://ws.apicep.com/cep/${cep}.json`)
+  fetch(`https://viacep.com.br/ws/${cep}/json/`)
     .then(r => r.json())
     .then(data => {
-      if (data.ok) {
-        addressInput.value = `${data.address || ''} ${data.district || ''}`.trim();
-        cityInput.value = data.city || '';
-        stateInput.value = data.state || '';
+      if (data.erro) {
+        cepStatus.textContent = 'CEP não encontrado.';
+        cepStatus.style.color = '#dc3545';
+      } else if (data.logradouro && data.localidade) {
+        addressInput.value = data.logradouro || '';
+        cityInput.value = data.localidade || '';
+        stateInput.value = data.uf || '';
         cepStatus.textContent = '✓ Endereço encontrado';
         cepStatus.style.color = '#28a745';
       } else {
-        cepStatus.textContent = 'CEP não encontrado.';
+        cepStatus.textContent = 'CEP inválido ou não encontrado.';
         cepStatus.style.color = '#dc3545';
       }
     })
-    .catch(() => {
-      cepStatus.textContent = 'Erro ao buscar CEP.';
+    .catch((error) => {
+      cepStatus.textContent = 'Erro ao buscar CEP. Tente novamente.';
       cepStatus.style.color = '#dc3545';
     });
 }
@@ -341,7 +344,10 @@ if (btnBuscarCep) btnBuscarCep.addEventListener('click', buscarCep);
 if (cepInput) {
   cepInput.addEventListener('input', function(e) {
     let v = e.target.value.replace(/\D/g, '');
-    if (v.length > 5) v = v.slice(0,5) + '-' + v.slice(5,8);
+    // Limitar a 8 dígitos (CEP brasileiro tem 8 dígitos)
+    v = v.slice(0, 8);
+    // Formatar como XXXXX-XXX
+    if (v.length > 5) v = v.slice(0,5) + '-' + v.slice(5);
     e.target.value = v;
   });
   cepInput.addEventListener('keydown', function(e) {

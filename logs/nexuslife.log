@@ -1078,3 +1078,1324 @@ WARNING 2026-04-09 10:51:35,131 base 24536 7496 Session data corrupted
 INFO 2026-04-09 10:51:35,133 basehttp 24536 7496 "GET /login/ HTTP/1.1" 200 10136
 WARNING 2026-04-09 10:51:37,639 base 24536 7496 Session data corrupted
 INFO 2026-04-09 10:51:37,643 basehttp 24536 7496 "GET /register/ HTTP/1.1" 200 20396
+INFO 2026-04-09 11:15:36,453 firebase_config 18768 18084 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:15:38,576 firebase_config 21132 21616 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:15:38,606 autoreload 21132 21616 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:15:42,309 openai_integration 21132 21616 OPENAI_API_KEY não configurada
+INFO 2026-04-09 11:18:15,675 autoreload 21132 21616 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\urllib3\util\retry.py changed, reloading.
+INFO 2026-04-09 11:18:17,478 autoreload 17428 13584 Watching for file changes with StatReloader
+INFO 2026-04-09 11:18:24,203 autoreload 17428 13584 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\msgpack\exceptions.py changed, reloading.
+INFO 2026-04-09 11:18:25,500 autoreload 30504 12776 Watching for file changes with StatReloader
+INFO 2026-04-09 11:18:26,928 autoreload 30504 12776 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\idna\idnadata.py changed, reloading.
+INFO 2026-04-09 11:18:28,902 autoreload 12524 5576 Watching for file changes with StatReloader
+INFO 2026-04-09 11:18:35,618 autoreload 12524 5576 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\certifi\__init__.py changed, reloading.
+INFO 2026-04-09 11:18:37,500 autoreload 28848 25756 Watching for file changes with StatReloader
+INFO 2026-04-09 11:18:49,536 autoreload 28848 25756 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\_cffi_backend.cp314-win_amd64.pyd changed, reloading.
+INFO 2026-04-09 11:18:51,103 autoreload 17072 17284 Watching for file changes with StatReloader
+INFO 2026-04-09 11:18:55,664 autoreload 17072 17284 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\cryptography\hazmat\primitives\ciphers\modes.py changed, reloading.
+INFO 2026-04-09 11:18:57,552 autoreload 17752 18496 Watching for file changes with StatReloader
+INFO 2026-04-09 11:19:00,031 autoreload 17752 18496 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\cachecontrol\wrapper.py changed, reloading.
+INFO 2026-04-09 11:19:01,815 autoreload 1460 8188 Watching for file changes with StatReloader
+INFO 2026-04-09 11:19:09,633 autoreload 1460 8188 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\firebase_admin\_token_gen.py changed, reloading.
+INFO 2026-04-09 11:19:11,522 autoreload 25604 25136 Watching for file changes with StatReloader
+INFO 2026-04-09 11:20:40,437 firebase_config 19452 19332 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:20:41,763 firebase_config 26068 7048 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:20:41,800 autoreload 26068 7048 Watching for file changes with StatReloader
+INFO 2026-04-09 11:21:12,349 autoreload 26068 7048 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 11:21:14,485 firebase_config 17808 19516 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:21:14,525 autoreload 17808 19516 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:21:19,277 openai_integration 17808 19516 OPENAI_API_KEY não configurada
+INFO 2026-04-09 11:21:22,939 autoreload 17808 19516 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 11:21:24,707 firebase_config 17924 25412 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:21:24,743 autoreload 17924 25412 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:21:26,776 openai_integration 17924 25412 OPENAI_API_KEY não configurada
+INFO 2026-04-09 11:21:30,781 autoreload 17924 25412 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 11:21:32,702 firebase_config 29860 6372 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:21:32,733 autoreload 29860 6372 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:21:34,591 openai_integration 29860 6372 OPENAI_API_KEY não configurada
+INFO 2026-04-09 11:21:43,057 autoreload 29860 6372 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-09 11:21:45,078 firebase_config 10248 12844 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:21:45,114 autoreload 10248 12844 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:21:46,811 openai_integration 10248 12844 OPENAI_API_KEY não configurada
+INFO 2026-04-09 11:22:07,277 firebase_config 30820 30864 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:22:08,681 firebase_config 13232 9436 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:22:08,715 autoreload 13232 9436 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:22:10,766 openai_integration 13232 9436 OPENAI_API_KEY não configurada
+INFO 2026-04-09 11:22:15,745 basehttp 13232 8904 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-09 11:22:16,765 basehttp 13232 8904 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-09 11:22:16,765 basehttp 13232 21904 "GET /static/styles.css HTTP/1.1" 304 0
+WARNING 2026-04-09 11:22:17,971 base 13232 21904 Session data corrupted
+INFO 2026-04-09 11:22:18,021 basehttp 13232 21904 "GET /register/ HTTP/1.1" 200 20396
+WARNING 2026-04-09 11:24:38,943 base 13232 21904 Session data corrupted
+INFO 2026-04-09 11:24:38,948 basehttp 13232 21904 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:24:46,440 base 13232 21904 Session data corrupted
+INFO 2026-04-09 11:24:46,444 basehttp 13232 21904 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:24:46,657 base 13232 21904 Session data corrupted
+INFO 2026-04-09 11:24:46,662 basehttp 13232 21904 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:24:46,843 base 13232 21904 Session data corrupted
+INFO 2026-04-09 11:24:46,848 basehttp 13232 21904 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:24:47,021 base 13232 21904 Session data corrupted
+INFO 2026-04-09 11:24:47,025 basehttp 13232 21904 "GET /register/ HTTP/1.1" 200 20508
+INFO 2026-04-09 11:27:43,534 firebase_config 24476 27956 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:27:45,041 firebase_config 4228 25616 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:27:45,077 autoreload 4228 25616 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:27:49,240 openai_integration 4228 25616 OPENAI_API_KEY não configurada
+INFO 2026-04-09 11:27:54,449 basehttp 4228 5224 "GET / HTTP/1.1" 200 20656
+WARNING 2026-04-09 11:27:55,828 base 4228 5224 Session data corrupted
+INFO 2026-04-09 11:27:55,852 basehttp 4228 5224 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:27:57,115 base 4228 5224 Session data corrupted
+INFO 2026-04-09 11:27:57,117 basehttp 4228 5224 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 11:28:16,143 base 4228 5224 Session data corrupted
+INFO 2026-04-09 11:28:16,144 basehttp 4228 5224 "POST /login/ HTTP/1.1" 200 10816
+WARNING 2026-04-09 11:28:22,880 base 4228 5224 Session data corrupted
+INFO 2026-04-09 11:28:22,881 basehttp 4228 5224 "POST /login/ HTTP/1.1" 200 10816
+WARNING 2026-04-09 11:28:33,229 base 4228 5224 Session data corrupted
+INFO 2026-04-09 11:28:33,232 basehttp 4228 5224 - Broken pipe from ('127.0.0.1', 60978)
+WARNING 2026-04-09 11:28:33,529 base 4228 12784 Session data corrupted
+INFO 2026-04-09 11:28:33,531 basehttp 4228 12784 "POST /login/ HTTP/1.1" 200 10816
+WARNING 2026-04-09 11:28:34,730 base 4228 12784 Session data corrupted
+INFO 2026-04-09 11:28:34,734 basehttp 4228 12784 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:28:35,596 base 4228 12784 Session data corrupted
+INFO 2026-04-09 11:28:35,599 basehttp 4228 12784 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 11:28:46,964 base 4228 12784 Session data corrupted
+INFO 2026-04-09 11:28:47,014 basehttp 4228 12784 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:28:47,028 basehttp 4228 12784 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:28:47,071 basehttp 4228 12784 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 39995
+INFO 2026-04-09 11:28:55,785 basehttp 4228 12784 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:28:55,790 basehttp 4228 12784 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 11:29:14,494 basehttp 4228 20992 "POST /login/ HTTP/1.1" 200 10816
+INFO 2026-04-09 11:29:19,260 basehttp 4228 20992 "GET /password-reset/ HTTP/1.1" 200 9639
+INFO 2026-04-09 11:29:21,998 basehttp 4228 20992 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:29:22,004 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10839
+INFO 2026-04-09 11:29:54,799 basehttp 4228 20992 "GET /password-reset/ HTTP/1.1" 200 9639
+INFO 2026-04-09 11:30:00,273 basehttp 4228 20992 "POST /password-reset/ HTTP/1.1" 200 10811
+INFO 2026-04-09 11:30:08,121 basehttp 4228 20992 "GET /register/ HTTP/1.1" 200 20508
+INFO 2026-04-09 11:30:59,147 basehttp 4228 20992 "POST /register/ HTTP/1.1" 200 20799
+INFO 2026-04-09 11:31:43,005 signals 4228 20992 Email de boas-vindas enviado para guilhermemoureira8@gmail.com
+INFO 2026-04-09 11:31:43,005 signals 4228 20992 Notificação e email enviados para guilhermemoureira8@gmail.com
+INFO 2026-04-09 11:31:43,018 basehttp 4228 20992 "POST /register/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:31:43,027 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10845
+INFO 2026-04-09 11:31:47,931 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-09 11:32:17,596 basehttp 4228 20992 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:32:17,604 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:32:17,628 basehttp 4228 20992 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 37861
+INFO 2026-04-09 11:33:06,446 basehttp 4228 20992 "GET /marketplace/service/3/ HTTP/1.1" 200 7665
+INFO 2026-04-09 11:33:11,900 basehttp 4228 20992 "GET /marketplace/service/2/ HTTP/1.1" 200 7633
+INFO 2026-04-09 11:33:15,428 basehttp 4228 20992 "GET /marketplace/service/1/ HTTP/1.1" 200 7633
+INFO 2026-04-09 11:33:18,617 basehttp 4228 20992 "GET /marketplace/ HTTP/1.1" 200 10304
+INFO 2026-04-09 11:33:32,106 basehttp 4228 20992 "GET /marketplace/service/create/ HTTP/1.1" 200 9856
+INFO 2026-04-09 11:33:57,934 basehttp 4228 20992 "GET /marketplace/service/create/ HTTP/1.1" 200 9856
+INFO 2026-04-09 11:34:22,834 basehttp 4228 20992 "POST /marketplace/service/create/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:34:22,844 basehttp 4228 20992 "GET /marketplace/service/4/ HTTP/1.1" 200 8236
+INFO 2026-04-09 11:34:28,469 basehttp 4228 20992 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 37248
+INFO 2026-04-09 11:34:44,117 basehttp 4228 20992 "GET /marketplace/ HTTP/1.1" 200 10944
+INFO 2026-04-09 11:35:22,552 basehttp 4228 20992 "GET /marketplace/service/create/ HTTP/1.1" 200 9856
+INFO 2026-04-09 11:35:52,055 basehttp 4228 20992 "GET /marketplace/ HTTP/1.1" 200 10944
+INFO 2026-04-09 11:35:59,438 basehttp 4228 20992 "GET /marketplace/?category= HTTP/1.1" 200 10944
+INFO 2026-04-09 11:36:25,178 basehttp 4228 20992 "GET /marketplace/api/search/?q=DESE HTTP/1.1" 200 421
+INFO 2026-04-09 11:36:25,969 basehttp 4228 20992 "GET /marketplace/api/search/?q=DESEN HTTP/1.1" 200 421
+INFO 2026-04-09 11:36:26,322 basehttp 4228 20992 "GET /marketplace/api/search/?q=DESENV HTTP/1.1" 200 421
+INFO 2026-04-09 11:36:36,205 basehttp 4228 20992 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:36:36,210 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 11:36:51,850 basehttp 4228 20992 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:36:51,859 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:36:51,878 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 39995
+INFO 2026-04-09 11:37:04,141 basehttp 4228 20992 "GET /marketplace/service/create/ HTTP/1.1" 200 9854
+INFO 2026-04-09 11:37:57,194 basehttp 4228 20992 "POST /marketplace/service/create/ HTTP/1.1" 200 10116
+INFO 2026-04-09 11:38:01,785 basehttp 4228 20992 "POST /marketplace/service/create/ HTTP/1.1" 200 10116
+INFO 2026-04-09 11:38:11,596 basehttp 4228 20992 "POST /marketplace/service/create/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:11,604 basehttp 4228 20992 "GET /marketplace/service/5/ HTTP/1.1" 200 8253
+INFO 2026-04-09 11:38:20,527 basehttp 4228 20992 "GET /marketplace/service/create/ HTTP/1.1" 200 9854
+INFO 2026-04-09 11:38:21,459 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40905
+INFO 2026-04-09 11:38:22,862 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40905
+INFO 2026-04-09 11:38:30,967 basehttp 4228 20992 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:30,973 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 11:38:51,685 basehttp 4228 20992 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:51,692 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:38:51,711 basehttp 4228 20992 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40097
+INFO 2026-04-09 11:39:00,548 basehttp 4228 20992 "GET /marketplace/service/5/ HTTP/1.1" 200 7641
+INFO 2026-04-09 11:39:04,858 basehttp 4228 20992 "GET /marketplace/service/5/ HTTP/1.1" 200 7641
+INFO 2026-04-09 11:39:07,083 basehttp 4228 20992 "GET /marketplace/service/5/order/ HTTP/1.1" 200 8195
+INFO 2026-04-09 11:39:25,497 basehttp 4228 20992 "POST /marketplace/service/5/order/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:39:25,509 basehttp 4228 20992 "GET /marketplace/order/5/ HTTP/1.1" 200 9072
+INFO 2026-04-09 11:39:28,842 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:39:28,862 basehttp 4228 20992 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-09 11:39:34,156 basehttp 4228 20992 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:39:34,160 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 11:39:44,737 basehttp 4228 20992 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:39:44,745 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:39:44,766 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 41492
+INFO 2026-04-09 11:39:46,265 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40881
+INFO 2026-04-09 11:40:00,209 basehttp 4228 20992 "GET /marketplace/service/5/ HTTP/1.1" 200 7633
+INFO 2026-04-09 11:40:06,883 basehttp 4228 20992 "GET /marketplace/service/5/update/ HTTP/1.1" 200 9932
+INFO 2026-04-09 11:40:19,251 basehttp 4228 20992 "GET /marketplace/order/5/ HTTP/1.1" 200 9055
+INFO 2026-04-09 11:40:36,954 basehttp 4228 20992 "GET /marketplace/service/5/ HTTP/1.1" 200 7633
+INFO 2026-04-09 11:40:41,421 basehttp 4228 20992 "GET /marketplace/order/5/status/in_progress/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:40:41,431 basehttp 4228 20992 "GET /marketplace/order/5/ HTTP/1.1" 200 9701
+INFO 2026-04-09 11:40:43,874 basehttp 4228 20992 "GET /marketplace/service/5/ HTTP/1.1" 200 7633
+INFO 2026-04-09 11:40:46,729 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40887
+INFO 2026-04-09 11:41:28,297 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:41:28,321 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40887
+INFO 2026-04-09 11:41:40,086 basehttp 4228 20992 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:41:40,091 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 11:41:42,392 basehttp 4228 20992 "GET /register/ HTTP/1.1" 200 20508
+INFO 2026-04-09 11:42:20,246 basehttp 4228 20992 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-09 11:42:21,770 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-09 11:42:24,155 basehttp 4228 20992 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:42:24,161 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:42:24,179 basehttp 4228 20992 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40097
+INFO 2026-04-09 11:42:28,710 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:42:28,718 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:42:28,739 basehttp 4228 20992 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40108
+INFO 2026-04-09 11:43:21,845 basehttp 4228 20992 "GET /marketplace/service/5/order/ HTTP/1.1" 200 8195
+INFO 2026-04-09 11:43:42,561 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:43:42,584 basehttp 4228 20992 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-09 11:44:02,754 basehttp 4228 20992 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:44:02,759 basehttp 4228 20992 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-09 11:44:14,703 basehttp 4228 20992 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:44:14,710 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:44:14,729 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 41498
+INFO 2026-04-09 11:44:33,428 basehttp 4228 20992 "GET /marketplace/service/5/ HTTP/1.1" 200 7633
+INFO 2026-04-09 11:44:38,339 basehttp 4228 20992 "GET /marketplace/order/5/ HTTP/1.1" 200 9063
+INFO 2026-04-09 11:44:40,225 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:44:40,245 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40887
+INFO 2026-04-09 11:44:45,974 basehttp 4228 20992 "GET /marketplace/order/4/ HTTP/1.1" 200 8821
+INFO 2026-04-09 11:44:47,241 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:44:47,261 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40887
+INFO 2026-04-09 11:44:49,834 basehttp 4228 20992 "GET /marketplace/order/4/ HTTP/1.1" 200 8821
+INFO 2026-04-09 11:44:50,828 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:44:50,853 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40887
+INFO 2026-04-09 11:44:53,832 basehttp 4228 20992 "GET /marketplace/order/5/ HTTP/1.1" 200 9063
+INFO 2026-04-09 11:44:55,320 basehttp 4228 20992 "GET /marketplace/order/5/status/completed/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:44:55,328 basehttp 4228 20992 "GET /marketplace/order/5/ HTTP/1.1" 200 9386
+INFO 2026-04-09 11:44:57,880 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:44:57,899 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-09 11:45:03,924 basehttp 4228 20992 "GET /marketplace/order/5/ HTTP/1.1" 200 8750
+INFO 2026-04-09 11:45:05,331 basehttp 4228 20992 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-09 11:45:15,737 basehttp 4228 20992 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-09 11:45:15,756 basehttp 4228 20992 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-09 11:45:19,606 basehttp 4228 20992 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-09 11:45:42,234 basehttp 4228 20992 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-09 11:46:05,067 basehttp 4228 20992 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-09 11:46:06,811 basehttp 4228 20992 "GET /marketplace/service/create/ HTTP/1.1" 200 9854
+INFO 2026-04-09 11:46:11,171 basehttp 4228 20992 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-09 11:47:42,879 autoreload 4228 25616 C:\Users\aluno\Documents\NexusLife\core\firebase_config.py changed, reloading.
+INFO 2026-04-09 11:47:45,268 firebase_config 25016 25380 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-09 11:47:45,311 autoreload 25016 25380 Watching for file changes with StatReloader
+WARNING 2026-04-09 11:47:47,368 openai_integration 25016 25380 OPENAI_API_KEY não configurada
+WARNING 2026-04-09 11:47:49,859 base 25016 28644 Session data corrupted
+INFO 2026-04-09 11:47:49,869 basehttp 25016 28644 "GET /profile/ HTTP/1.1" 302 0
+WARNING 2026-04-09 11:47:49,888 base 25016 28644 Session data corrupted
+INFO 2026-04-09 11:47:49,897 basehttp 25016 28644 "GET /login/?next=/profile/ HTTP/1.1" 200 10136
+WARNING 2026-04-09 11:47:50,183 base 25016 28644 Session data corrupted
+INFO 2026-04-09 11:47:50,196 basehttp 25016 28644 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:47:52,361 base 25016 28644 Session data corrupted
+INFO 2026-04-09 11:47:52,365 basehttp 25016 28644 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:47:52,528 base 25016 28644 Session data corrupted
+INFO 2026-04-09 11:47:52,532 basehttp 25016 28644 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:47:52,768 base 25016 28644 Session data corrupted
+INFO 2026-04-09 11:47:52,772 basehttp 25016 28644 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-09 11:47:52,937 base 25016 28644 Session data corrupted
+INFO 2026-04-09 11:47:52,940 basehttp 25016 28644 "GET /register/ HTTP/1.1" 200 20508
+INFO 2026-04-10 08:22:21,892 firebase_config 25064 14616 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:22:23,384 firebase_config 3172 22644 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:22:23,417 autoreload 3172 22644 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:22:29,085 openai_integration 3172 22644 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:22:38,845 basehttp 3172 30892 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-10 08:22:39,107 basehttp 3172 6176 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-10 08:22:39,107 basehttp 3172 30892 "GET /static/styles.css HTTP/1.1" 304 0
+WARNING 2026-04-10 08:22:39,495 log 3172 30892 Not Found: /favicon.ico
+WARNING 2026-04-10 08:22:39,495 basehttp 3172 30892 "GET /favicon.ico HTTP/1.1" 404 5284
+WARNING 2026-04-10 08:22:41,367 base 3172 30892 Session data corrupted
+INFO 2026-04-10 08:22:41,411 basehttp 3172 30892 "GET /register/ HTTP/1.1" 200 20508
+WARNING 2026-04-10 08:22:43,353 base 3172 30892 Session data corrupted
+INFO 2026-04-10 08:22:43,356 basehttp 3172 30892 "GET /login/ HTTP/1.1" 200 10136
+WARNING 2026-04-10 08:22:48,392 base 3172 30892 Session data corrupted
+INFO 2026-04-10 08:22:48,445 basehttp 3172 30892 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:22:48,464 basehttp 3172 30892 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:22:48,513 basehttp 3172 30892 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 41499
+INFO 2026-04-10 08:22:54,823 basehttp 3172 30892 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-10 08:22:59,724 basehttp 3172 30892 "GET /marketplace/orders/ HTTP/1.1" 200 6939
+INFO 2026-04-10 08:23:47,200 autoreload 3172 22644 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-10 08:23:49,561 firebase_config 1468 13652 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:23:49,615 autoreload 1468 13652 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:23:51,853 openai_integration 1468 13652 OPENAI_API_KEY não configurada
+WARNING 2026-04-10 08:23:52,885 base 1468 3184 Session data corrupted
+INFO 2026-04-10 08:23:52,900 basehttp 1468 3184 "GET /marketplace/dashboard/pj/ HTTP/1.1" 302 0
+WARNING 2026-04-10 08:23:52,924 base 1468 3184 Session data corrupted
+INFO 2026-04-10 08:23:52,933 basehttp 1468 3184 "GET /login/?next=/marketplace/dashboard/pj/ HTTP/1.1" 200 10136
+INFO 2026-04-10 08:23:57,398 autoreload 1468 13652 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-10 08:23:59,400 firebase_config 26708 21912 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:23:59,444 autoreload 26708 21912 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:24:01,734 openai_integration 26708 21912 OPENAI_API_KEY não configurada
+WARNING 2026-04-10 08:24:15,512 base 26708 4696 Session data corrupted
+INFO 2026-04-10 08:24:15,569 basehttp 26708 4696 "POST /login/?next=/marketplace/dashboard/pj/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:24:15,584 basehttp 26708 4696 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:24:15,632 basehttp 26708 4696 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 41499
+INFO 2026-04-10 08:24:17,983 basehttp 26708 4696 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-10 08:24:20,782 basehttp 26708 4696 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-10 08:24:22,661 basehttp 26708 4696 "GET /marketplace/orders/?status=pending HTTP/1.1" 200 10298
+INFO 2026-04-10 08:24:23,201 basehttp 26708 4696 "GET /marketplace/orders/?status=in_progress HTTP/1.1" 200 10302
+INFO 2026-04-10 08:24:23,713 basehttp 26708 4696 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-10 08:24:24,124 basehttp 26708 4696 "GET /marketplace/orders/?status=pending HTTP/1.1" 200 10298
+INFO 2026-04-10 08:24:24,546 basehttp 26708 4696 "GET /marketplace/orders/?status=in_progress HTTP/1.1" 200 10302
+INFO 2026-04-10 08:24:24,932 basehttp 26708 4696 "GET /marketplace/orders/?status=completed HTTP/1.1" 200 10300
+INFO 2026-04-10 08:24:25,324 basehttp 26708 4696 "GET /marketplace/orders/?status=cancelled HTTP/1.1" 200 10300
+INFO 2026-04-10 08:24:26,915 basehttp 26708 4696 "GET /marketplace/orders/?status=in_progress HTTP/1.1" 200 10302
+INFO 2026-04-10 08:24:27,676 basehttp 26708 4696 "GET /marketplace/orders/?status=pending HTTP/1.1" 200 10298
+INFO 2026-04-10 08:24:28,372 basehttp 26708 4696 "GET /marketplace/orders/?status=in_progress HTTP/1.1" 200 10302
+INFO 2026-04-10 08:24:51,515 basehttp 26708 4696 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:24:51,531 basehttp 26708 4696 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 08:24:55,408 basehttp 26708 4696 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:24:55,416 basehttp 26708 4696 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:24:55,440 basehttp 26708 4696 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40097
+INFO 2026-04-10 08:24:58,984 basehttp 26708 4696 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:24:58,992 basehttp 26708 4696 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 08:25:01,599 basehttp 26708 4696 "GET /register/ HTTP/1.1" 200 20508
+INFO 2026-04-10 08:26:24,673 autoreload 26708 21912 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-10 08:26:32,054 firebase_config 2652 16132 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:26:32,210 autoreload 2652 16132 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:26:36,915 openai_integration 2652 16132 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:29:12,679 basehttp 2652 9352 "GET /register/ HTTP/1.1" 200 20618
+INFO 2026-04-10 08:29:13,997 basehttp 2652 9352 "GET /register/ HTTP/1.1" 200 20618
+INFO 2026-04-10 08:30:39,194 basehttp 2652 9352 "GET /register/ HTTP/1.1" 200 20666
+INFO 2026-04-10 08:35:08,699 autoreload 2652 16132 C:\Users\aluno\Documents\NexusLife\core\models.py changed, reloading.
+INFO 2026-04-10 08:35:11,529 firebase_config 19680 29324 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:35:11,570 autoreload 19680 29324 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:35:13,559 openai_integration 19680 29324 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:35:23,173 autoreload 19680 29324 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-10 08:35:25,358 firebase_config 20036 14812 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:35:25,409 autoreload 20036 14812 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:35:27,462 openai_integration 20036 14812 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:35:40,954 firebase_config 7432 17928 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 08:35:44,963 openai_integration 7432 17928 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 08:35:54,663 firebase_config 5152 21416 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 08:35:55,325 openai_integration 5152 21416 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 08:36:10,691 autoreload 20036 14812 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-10 08:36:12,734 firebase_config 3996 25176 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:36:12,790 autoreload 3996 25176 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:36:14,915 openai_integration 3996 25176 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:36:22,180 autoreload 3996 25176 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-10 08:36:24,694 firebase_config 29276 23412 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:36:24,728 autoreload 29276 23412 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:36:26,619 openai_integration 29276 23412 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:37:15,366 basehttp 29276 26468 "GET /register/ HTTP/1.1" 200 20666
+INFO 2026-04-10 08:39:15,514 autoreload 29276 23412 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-10 08:39:21,315 firebase_config 15560 780 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:39:21,438 autoreload 15560 780 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:39:26,732 openai_integration 15560 780 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:39:32,970 firebase_config 15676 18560 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:39:35,963 autoreload 15560 780 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-10 08:39:38,610 firebase_config 22416 11100 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:39:38,649 autoreload 22416 11100 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:39:40,604 openai_integration 22416 11100 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:41:15,146 firebase_config 20068 10960 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:41:51,467 firebase_config 29324 16256 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:41:52,215 signals 29324 16256 Email de boas-vindas enviado para testec233e8e9@example.com
+INFO 2026-04-10 08:41:52,215 signals 29324 16256 Notificação e email enviados para testec233e8e9@example.com
+INFO 2026-04-10 08:42:07,206 autoreload 22416 11100 C:\Users\aluno\Documents\NexusLife\core\forms.py changed, reloading.
+INFO 2026-04-10 08:42:11,530 firebase_config 4228 28312 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:42:11,694 autoreload 4228 28312 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:42:18,715 openai_integration 4228 28312 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:42:22,049 autoreload 4228 28312 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-10 08:42:24,831 firebase_config 20824 25428 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:42:24,861 autoreload 20824 25428 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:42:26,620 openai_integration 20824 25428 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:42:28,219 firebase_config 25724 14984 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:42:29,085 signals 25724 14984 Email de boas-vindas enviado para testec65b1fb3@example.com
+INFO 2026-04-10 08:42:29,086 signals 25724 14984 Notificação e email enviados para testec65b1fb3@example.com
+INFO 2026-04-10 08:42:29,422 autoreload 20824 25428 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-10 08:42:31,266 firebase_config 30696 22524 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:42:31,300 autoreload 30696 22524 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:42:33,333 openai_integration 30696 22524 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:42:50,986 firebase_config 8072 24520 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:42:57,598 firebase_config 3668 8444 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:42:58,333 signals 3668 8444 Email de boas-vindas enviado para teste290ee888@example.com
+INFO 2026-04-10 08:42:58,333 signals 3668 8444 Notificação e email enviados para teste290ee888@example.com
+INFO 2026-04-10 08:43:15,402 basehttp 30696 29352 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-10 08:43:53,435 basehttp 30696 29352 "POST /register/ HTTP/1.1" 200 22434
+INFO 2026-04-10 08:44:04,268 basehttp 30696 29352 "POST /register/ HTTP/1.1" 200 22434
+INFO 2026-04-10 08:44:07,464 basehttp 30696 29352 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 08:44:08,799 basehttp 30696 29352 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-10 08:45:45,179 basehttp 30696 29352 "POST /register/ HTTP/1.1" 200 21648
+INFO 2026-04-10 08:45:53,096 basehttp 30696 29352 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 08:46:17,789 basehttp 30696 29352 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:46:17,803 basehttp 30696 29352 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:46:17,842 basehttp 30696 29352 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40097
+INFO 2026-04-10 08:48:54,017 autoreload 30696 22524 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-10 08:48:58,089 firebase_config 22840 29268 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:48:58,180 autoreload 22840 29268 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:49:03,202 openai_integration 22840 29268 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:49:06,603 autoreload 22840 29268 C:\Users\aluno\Documents\NexusLife\core\views.py changed, reloading.
+INFO 2026-04-10 08:49:08,905 firebase_config 8120 23636 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:49:08,939 autoreload 8120 23636 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:49:10,817 openai_integration 8120 23636 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:49:30,924 autoreload 8120 23636 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-10 08:49:33,022 firebase_config 18680 17456 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:49:33,061 autoreload 18680 17456 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:49:35,503 openai_integration 18680 17456 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:49:46,760 autoreload 18680 17456 C:\Users\aluno\Documents\NexusLife\marketplace\views.py changed, reloading.
+INFO 2026-04-10 08:49:49,188 firebase_config 2596 30768 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:49:49,222 autoreload 2596 30768 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:49:51,143 openai_integration 2596 30768 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:50:10,069 autoreload 2596 30768 C:\Users\aluno\Documents\NexusLife\core\models.py changed, reloading.
+INFO 2026-04-10 08:50:12,536 firebase_config 4648 29812 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:50:12,578 autoreload 4648 29812 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:50:14,714 openai_integration 4648 29812 OPENAI_API_KEY não configurada
+INFO 2026-04-10 08:50:50,647 firebase_config 29972 3584 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 08:50:52,687 openai_integration 29972 3584 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 08:51:14,750 firebase_config 31176 12780 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 08:51:15,362 openai_integration 31176 12780 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 08:51:47,134 autoreload 4648 29812 C:\Users\aluno\Documents\NexusLife\core\models.py changed, reloading.
+INFO 2026-04-10 08:51:49,380 firebase_config 17900 8276 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 08:51:49,429 autoreload 17900 8276 Watching for file changes with StatReloader
+WARNING 2026-04-10 08:51:51,347 openai_integration 17900 8276 OPENAI_API_KEY não configurada
+WARNING 2026-04-10 08:52:35,953 base 17900 16504 Session data corrupted
+INFO 2026-04-10 08:52:35,968 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 302 0
+WARNING 2026-04-10 08:52:35,997 base 17900 16504 Session data corrupted
+INFO 2026-04-10 08:52:36,026 basehttp 17900 16504 "GET /login/?next=/marketplace/dashboard/pf/ HTTP/1.1" 200 10136
+WARNING 2026-04-10 08:52:38,820 base 17900 16504 Session data corrupted
+INFO 2026-04-10 08:52:38,870 basehttp 17900 16504 "POST /login/?next=/marketplace/dashboard/pf/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:52:38,884 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:52:38,926 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40097
+INFO 2026-04-10 08:54:25,461 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 08:54:26,945 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 08:54:34,998 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:54:35,020 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 08:54:46,312 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:54:46,333 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 08:54:47,345 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:54:47,368 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 08:54:49,820 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:54:49,840 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 08:55:10,419 basehttp 17900 16504 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:55:10,425 basehttp 17900 16504 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 08:55:15,706 basehttp 17900 16504 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:55:15,714 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:55:15,736 basehttp 17900 16504 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40097
+INFO 2026-04-10 08:58:10,377 basehttp 17900 16504 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:58:10,385 basehttp 17900 16504 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 08:58:12,355 basehttp 17900 16504 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 08:58:22,574 basehttp 17900 16504 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:58:22,583 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:58:22,615 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 41499
+INFO 2026-04-10 08:58:58,215 basehttp 17900 16504 "GET /marketplace/order/5/ HTTP/1.1" 200 8750
+INFO 2026-04-10 08:59:00,950 basehttp 17900 16504 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-10 08:59:11,801 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 08:59:11,822 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 08:59:15,558 basehttp 17900 16504 "GET /marketplace/service/5/ HTTP/1.1" 200 7633
+INFO 2026-04-10 08:59:18,080 basehttp 17900 16504 "GET /marketplace/service/5/update/ HTTP/1.1" 200 9932
+INFO 2026-04-10 08:59:26,906 basehttp 17900 16504 "GET /marketplace/order/4/ HTTP/1.1" 200 8821
+INFO 2026-04-10 09:03:56,270 basehttp 17900 16504 "GET /marketplace/order/4/ HTTP/1.1" 200 8955
+INFO 2026-04-10 09:03:56,437 basehttp 17900 16504 "GET /marketplace/order/4/ HTTP/1.1" 200 8955
+INFO 2026-04-10 09:03:56,615 basehttp 17900 16504 "GET /marketplace/order/4/ HTTP/1.1" 200 8955
+INFO 2026-04-10 09:03:56,769 basehttp 17900 16504 "GET /marketplace/order/4/ HTTP/1.1" 200 8955
+INFO 2026-04-10 09:04:20,400 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:04:20,430 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:04:24,306 basehttp 17900 16504 "GET /marketplace/order/5/ HTTP/1.1" 200 8864
+INFO 2026-04-10 09:04:26,549 basehttp 17900 16504 "GET /marketplace/service/5/ HTTP/1.1" 200 7633
+INFO 2026-04-10 09:04:28,673 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:04:28,693 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:04:30,666 basehttp 17900 16504 "GET /marketplace/service/5/ HTTP/1.1" 200 7633
+INFO 2026-04-10 09:04:32,080 basehttp 17900 16504 "GET /marketplace/service/5/update/ HTTP/1.1" 200 9932
+INFO 2026-04-10 09:04:34,430 basehttp 17900 16504 "GET /marketplace/ HTTP/1.1" 200 11598
+INFO 2026-04-10 09:04:37,169 basehttp 17900 16504 "GET /marketplace/service/2/ HTTP/1.1" 200 7625
+INFO 2026-04-10 09:04:39,894 basehttp 17900 16504 "GET /marketplace/service/2/update/ HTTP/1.1" 200 9914
+INFO 2026-04-10 09:04:52,718 basehttp 17900 16504 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-10 09:05:02,662 basehttp 17900 16504 "GET /marketplace/order/2/ HTTP/1.1" 200 8955
+INFO 2026-04-10 09:05:05,407 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:05:05,427 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:05:08,055 basehttp 17900 16504 "GET /marketplace/order/4/ HTTP/1.1" 200 8955
+INFO 2026-04-10 09:06:24,735 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:06:24,765 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:06:27,448 basehttp 17900 16504 "GET /marketplace/order/5/ HTTP/1.1" 200 8868
+INFO 2026-04-10 09:06:31,286 basehttp 17900 16504 "GET /marketplace/service/5/ HTTP/1.1" 200 7633
+INFO 2026-04-10 09:06:32,420 basehttp 17900 16504 "GET /marketplace/service/5/update/ HTTP/1.1" 200 9932
+INFO 2026-04-10 09:06:37,890 basehttp 17900 16504 "GET /marketplace/service/5/update/ HTTP/1.1" 200 9932
+INFO 2026-04-10 09:06:42,938 basehttp 17900 16504 "GET /marketplace/service/5/update/ HTTP/1.1" 200 9932
+INFO 2026-04-10 09:06:45,101 basehttp 17900 16504 "GET /marketplace/ HTTP/1.1" 200 11598
+INFO 2026-04-10 09:06:48,056 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:06:48,078 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:06:50,766 basehttp 17900 16504 "GET /marketplace/order/5/ HTTP/1.1" 200 8868
+INFO 2026-04-10 09:06:52,642 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:06:52,670 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:06:55,745 basehttp 17900 16504 "GET /marketplace/order/2/ HTTP/1.1" 200 8959
+INFO 2026-04-10 09:06:58,429 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:06:58,452 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:07:01,235 basehttp 17900 16504 "GET /marketplace/order/2/ HTTP/1.1" 200 8959
+INFO 2026-04-10 09:07:17,705 basehttp 17900 16504 "GET /marketplace/order/2/ HTTP/1.1" 200 8959
+INFO 2026-04-10 09:07:22,679 basehttp 17900 16504 "GET /marketplace/order/2/ HTTP/1.1" 200 8959
+INFO 2026-04-10 09:07:22,870 basehttp 17900 16504 "GET /marketplace/order/2/ HTTP/1.1" 200 8959
+INFO 2026-04-10 09:07:23,838 basehttp 17900 16504 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:07:23,859 basehttp 17900 16504 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:07:26,917 basehttp 17900 16504 "GET /marketplace/order/4/ HTTP/1.1" 200 8959
+INFO 2026-04-10 09:09:01,202 basehttp 17900 16504 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:09:01,262 basehttp 17900 16504 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3753
+INFO 2026-04-10 09:09:01,472 basehttp 17900 23564 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2026-04-10 09:09:01,472 basehttp 17900 31112 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2026-04-10 09:09:01,480 basehttp 17900 31112 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-04-10 09:09:01,491 basehttp 17900 18728 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2026-04-10 09:09:01,494 basehttp 17900 14728 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2026-04-10 09:09:01,500 basehttp 17900 16504 "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2026-04-10 09:09:01,501 basehttp 17900 28240 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2026-04-10 09:09:39,978 basehttp 17900 28240 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3962
+INFO 2026-04-10 09:11:17,809 signals 17900 28240 Email de boas-vindas enviado para admin@nexuslife.com
+INFO 2026-04-10 09:11:17,809 signals 17900 28240 Notificação e email enviados para admin@nexuslife.com
+INFO 2026-04-10 09:11:17,809 basehttp 17900 28240 "GET /setup-admin/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:11:17,818 basehttp 17900 28240 "GET /login/ HTTP/1.1" 200 11558
+INFO 2026-04-10 09:12:04,872 firebase_config 15652 10492 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 09:12:10,182 openai_integration 15652 10492 OPENAI_API_KEY não configurada
+INFO 2026-04-10 09:13:56,260 signals 15652 10492 Email de boas-vindas enviado para admin@nexuslife.com
+INFO 2026-04-10 09:13:56,261 signals 15652 10492 Notificação e email enviados para admin@nexuslife.com
+INFO 2026-04-10 09:14:11,682 firebase_config 14760 28320 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 09:14:13,472 openai_integration 14760 28320 OPENAI_API_KEY não configurada
+INFO 2026-04-10 09:16:32,841 signals 14760 28320 Email de boas-vindas enviado para admin@nexuslife.com
+INFO 2026-04-10 09:16:32,842 signals 14760 28320 Notificação e email enviados para admin@nexuslife.com
+INFO 2026-04-10 09:16:52,457 basehttp 17900 25620 "GET /setup-admin/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:16:52,475 basehttp 17900 25620 "GET /login/ HTTP/1.1" 200 11555
+INFO 2026-04-10 09:17:30,741 basehttp 17900 25620 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:17:30,772 basehttp 17900 25620 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3753
+INFO 2026-04-10 09:18:02,756 basehttp 17900 25620 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3955
+INFO 2026-04-10 09:18:15,288 basehttp 17900 25620 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3955
+INFO 2026-04-10 09:18:28,054 basehttp 17900 25620 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3943
+INFO 2026-04-10 09:18:30,187 basehttp 17900 25620 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3943
+INFO 2026-04-10 09:18:48,841 firebase_config 10544 17628 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 09:19:30,310 basehttp 17900 25620 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:19:30,339 basehttp 17900 25620 "GET /admin/ HTTP/1.1" 200 10706
+INFO 2026-04-10 09:19:30,354 basehttp 17900 25620 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-04-10 09:19:30,361 basehttp 17900 25620 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2026-04-10 09:19:30,361 basehttp 17900 23276 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2026-04-10 09:20:37,826 basehttp 17900 25620 "GET /admin/auth/group/ HTTP/1.1" 200 11027
+INFO 2026-04-10 09:20:37,844 basehttp 17900 25620 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2026-04-10 09:20:37,846 basehttp 17900 9052 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-04-10 09:20:37,849 basehttp 17900 26740 "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2026-04-10 09:20:37,849 basehttp 17900 7616 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2026-04-10 09:20:37,856 basehttp 17900 23276 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 09:20:37,856 basehttp 17900 25620 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2026-04-10 09:20:37,857 basehttp 17900 9052 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-04-10 09:20:37,857 basehttp 17900 7616 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-04-10 09:20:37,863 basehttp 17900 23276 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2026-04-10 09:20:37,866 basehttp 17900 20036 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2026-04-10 09:20:37,876 basehttp 17900 20036 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-04-10 09:20:37,879 basehttp 17900 26740 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2026-04-10 09:20:37,893 basehttp 17900 26740 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-04-10 09:20:39,967 basehttp 17900 26740 "GET /admin/auth/user/ HTTP/1.1" 200 21797
+INFO 2026-04-10 09:20:39,982 basehttp 17900 26740 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 09:20:39,982 basehttp 17900 23276 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2026-04-10 09:20:39,995 basehttp 17900 20036 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2026-04-10 09:20:40,010 basehttp 17900 20036 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2026-04-10 09:20:53,417 basehttp 17900 20036 "GET /admin/core/chatbotconversation/ HTTP/1.1" 200 14320
+INFO 2026-04-10 09:20:53,432 basehttp 17900 20036 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 09:20:59,173 basehttp 17900 20036 "GET /admin/core/chatbotmessage/ HTTP/1.1" 200 14715
+INFO 2026-04-10 09:20:59,186 basehttp 17900 20036 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 09:21:00,801 basehttp 17900 20036 "GET /admin/core/notification/ HTTP/1.1" 200 22827
+INFO 2026-04-10 09:21:00,814 basehttp 17900 20036 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 09:21:19,054 basehttp 17900 20036 "GET /admin/core/userprofile/ HTTP/1.1" 200 18878
+INFO 2026-04-10 09:21:19,067 basehttp 17900 20036 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+WARNING 2026-04-10 09:21:28,183 log 17900 20036 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-04-10 09:21:28,183 basehttp 17900 20036 "POST /login/ HTTP/1.1" 403 2519
+WARNING 2026-04-10 09:21:37,522 log 17900 20036 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-04-10 09:21:37,522 basehttp 17900 20036 "POST /login/ HTTP/1.1" 403 2519
+INFO 2026-04-10 09:22:07,589 firebase_config 30964 26732 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 09:22:09,180 firebase_config 3872 30976 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 09:22:09,222 autoreload 3872 30976 Watching for file changes with StatReloader
+WARNING 2026-04-10 09:22:11,036 openai_integration 3872 30976 OPENAI_API_KEY não configurada
+INFO 2026-04-10 09:22:15,216 basehttp 17900 20036 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-10 09:22:33,561 basehttp 17900 20036 "GET /register/ HTTP/1.1" 200 21436
+INFO 2026-04-10 09:22:42,335 basehttp 17900 20036 "GET /profile/ HTTP/1.1" 200 17643
+INFO 2026-04-10 09:22:48,964 basehttp 17900 20036 "GET /login/ HTTP/1.1" 200 10915
+INFO 2026-04-10 09:22:51,604 basehttp 17900 20036 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:22:51,617 basehttp 17900 20036 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:22:51,657 basehttp 17900 20036 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 42295
+INFO 2026-04-10 09:23:25,632 basehttp 17900 20036 "GET /profile/ HTTP/1.1" 200 17643
+INFO 2026-04-10 09:24:03,619 basehttp 17900 20036 "GET /profile/ HTTP/1.1" 200 17643
+INFO 2026-04-10 09:24:30,987 basehttp 17900 20036 "GET /profile/ HTTP/1.1" 200 17643
+INFO 2026-04-10 09:24:35,082 basehttp 17900 20036 "GET /profile/ HTTP/1.1" 200 17643
+INFO 2026-04-10 09:24:41,357 basehttp 17900 20036 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:24:41,365 basehttp 17900 20036 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 09:24:43,468 basehttp 17900 20036 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 09:24:49,452 basehttp 17900 20036 - Broken pipe from ('127.0.0.1', 56770)
+INFO 2026-04-10 09:24:50,593 basehttp 17900 23276 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:24:50,601 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:24:50,620 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40097
+INFO 2026-04-10 09:25:01,647 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:01,670 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 09:25:02,956 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:02,977 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 09:25:04,254 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:04,274 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39484
+INFO 2026-04-10 09:25:06,125 basehttp 17900 23276 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:06,132 basehttp 17900 23276 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 09:25:09,051 basehttp 17900 23276 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 09:25:14,241 basehttp 17900 23276 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:14,252 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:14,277 basehttp 17900 23276 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 41499
+INFO 2026-04-10 09:25:19,409 basehttp 17900 23276 "GET /marketplace/order/5/ HTTP/1.1" 200 8868
+INFO 2026-04-10 09:25:22,007 basehttp 17900 23276 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-10 09:25:25,591 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:25,611 basehttp 17900 23276 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:25:28,793 basehttp 17900 23276 "GET /marketplace/order/2/ HTTP/1.1" 200 8959
+INFO 2026-04-10 09:25:32,253 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:32,272 basehttp 17900 23276 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:25:38,041 basehttp 17900 23276 "GET /marketplace/order/2/ HTTP/1.1" 200 8959
+INFO 2026-04-10 09:25:46,415 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:46,443 basehttp 17900 23276 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 40888
+INFO 2026-04-10 09:25:52,349 basehttp 17900 23276 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:52,359 basehttp 17900 23276 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 09:25:53,549 basehttp 17900 23276 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 09:25:57,631 basehttp 17900 23276 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:57,639 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:25:57,661 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 40097
+INFO 2026-04-10 09:29:14,617 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39364
+INFO 2026-04-10 09:29:14,779 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39364
+INFO 2026-04-10 09:29:14,928 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39364
+INFO 2026-04-10 09:29:15,084 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39364
+INFO 2026-04-10 09:30:49,506 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39177
+INFO 2026-04-10 09:30:55,831 basehttp 17900 23276 "GET /marketplace/ HTTP/1.1" 200 11600
+INFO 2026-04-10 09:31:17,444 basehttp 17900 23276 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:31:17,453 basehttp 17900 23276 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 09:32:30,875 basehttp 17900 23276 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:32:30,889 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:32:30,914 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39790
+INFO 2026-04-10 09:33:31,517 basehttp 17900 23276 "GET /marketplace/ HTTP/1.1" 200 11600
+INFO 2026-04-10 09:33:38,881 basehttp 17900 23276 "GET /marketplace/service/1/ HTTP/1.1" 200 7633
+INFO 2026-04-10 09:33:49,040 basehttp 17900 23276 "GET /marketplace/service/2/order/ HTTP/1.1" 200 8177
+INFO 2026-04-10 09:33:51,300 basehttp 17900 23276 "POST /marketplace/service/2/order/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:33:51,318 basehttp 17900 23276 "GET /marketplace/order/6/ HTTP/1.1" 200 8883
+INFO 2026-04-10 09:33:54,154 basehttp 17900 23276 "GET /marketplace/service/2/ HTTP/1.1" 200 7633
+INFO 2026-04-10 09:33:56,530 basehttp 17900 23276 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 09:33:56,551 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39177
+INFO 2026-04-10 09:33:58,386 basehttp 17900 23276 "GET /marketplace/ HTTP/1.1" 200 11600
+INFO 2026-04-10 09:34:03,245 basehttp 17900 23276 "GET /marketplace/service/create/ HTTP/1.1" 200 9856
+INFO 2026-04-10 09:34:07,458 basehttp 17900 23276 "GET /marketplace/service/1/ HTTP/1.1" 200 7633
+INFO 2026-04-10 09:34:10,561 basehttp 17900 23276 "GET /marketplace/service/1/order/ HTTP/1.1" 200 8177
+INFO 2026-04-10 09:34:43,053 basehttp 17900 23276 "GET /marketplace/service/create/ HTTP/1.1" 200 9856
+INFO 2026-04-10 09:37:25,634 basehttp 17900 23276 "GET /marketplace/ HTTP/1.1" 200 11460
+INFO 2026-04-10 09:41:28,568 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39189
+INFO 2026-04-10 09:41:29,018 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39189
+INFO 2026-04-10 09:41:29,194 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39189
+INFO 2026-04-10 09:41:29,365 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39189
+INFO 2026-04-10 09:41:29,493 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39189
+INFO 2026-04-10 09:41:29,625 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39189
+INFO 2026-04-10 09:44:09,604 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39187
+INFO 2026-04-10 09:44:09,858 basehttp 17900 23276 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39187
+INFO 2026-04-10 09:45:35,774 basehttp 17900 23276 "GET / HTTP/1.1" 200 20656
+INFO 2026-04-10 09:52:56,468 basehttp 17900 22516 "GET / HTTP/1.1" 200 34528
+INFO 2026-04-10 09:55:06,982 basehttp 17900 22516 "GET / HTTP/1.1" 200 35399
+INFO 2026-04-10 09:55:06,999 basehttp 17900 22516 "GET /static/images/testimonials/testimonial-1.jpeg HTTP/1.1" 200 113219
+INFO 2026-04-10 09:55:07,009 basehttp 17900 28760 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 200 165739
+INFO 2026-04-10 09:55:07,009 basehttp 17900 2712 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 200 176217
+INFO 2026-04-10 09:55:07,013 basehttp 17900 22264 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 200 111597
+INFO 2026-04-10 09:55:07,014 basehttp 17900 20424 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 200 189570
+INFO 2026-04-10 09:55:07,014 basehttp 17900 22516 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 200 273774
+INFO 2026-04-10 09:58:32,362 basehttp 17900 22516 "GET / HTTP/1.1" 200 35391
+INFO 2026-04-10 09:58:32,375 basehttp 17900 22516 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 09:58:32,376 basehttp 17900 20424 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 09:58:32,383 basehttp 17900 22264 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 09:58:32,383 basehttp 17900 22516 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 09:58:32,384 basehttp 17900 20424 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 09:58:32,493 basehttp 17900 20424 "GET / HTTP/1.1" 200 35391
+INFO 2026-04-10 09:58:32,606 basehttp 17900 20424 "GET / HTTP/1.1" 200 35391
+INFO 2026-04-10 10:00:09,307 basehttp 17900 20424 "GET / HTTP/1.1" 200 35384
+INFO 2026-04-10 10:00:09,319 basehttp 17900 22516 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:00:09,320 basehttp 17900 20424 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 200 46334
+INFO 2026-04-10 10:00:09,326 basehttp 17900 20424 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:00:09,327 basehttp 17900 22264 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:00:09,327 basehttp 17900 22516 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:00:09,327 basehttp 17900 6872 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:02:32,083 basehttp 17900 6872 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-10 10:02:32,097 basehttp 17900 22516 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:02:32,097 basehttp 17900 6872 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:02:32,105 basehttp 17900 6872 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:02:32,105 basehttp 17900 20424 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:02:32,105 basehttp 17900 22516 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:02:32,105 basehttp 17900 22264 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:03:28,762 basehttp 17900 22264 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-10 10:03:28,879 basehttp 17900 22264 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-10 10:03:59,571 basehttp 17900 22264 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-10 10:10:19,848 autoreload 17900 8276 C:\Users\aluno\Documents\NexusLife\nexuslife\settings.py changed, reloading.
+INFO 2026-04-10 10:10:21,050 autoreload 3872 30976 C:\Users\aluno\Documents\NexusLife\nexuslife\settings.py changed, reloading.
+INFO 2026-04-10 10:10:25,584 firebase_config 1996 3280 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:10:25,586 firebase_config 5288 29940 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:10:25,721 autoreload 1996 3280 Watching for file changes with StatReloader
+INFO 2026-04-10 10:10:25,733 autoreload 5288 29940 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:10:32,824 openai_integration 1996 3280 OPENAI_API_KEY não configurada
+
+INFO 2026-04-10 10:11:12,140 autoreload 1996 3280 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\google\_upb\_message.pyd changed, reloading.
+INFO 2026-04-10 10:11:12,145 autoreload 5288 29940 C:\Users\aluno\Documents\NexusLife\venv\Lib\site-packages\google\protobuf\internal\message_listener.py changed, reloading.
+INFO 2026-04-10 10:11:15,269 firebase_config 20048 9560 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:11:15,270 firebase_config 29112 21132 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:11:15,314 autoreload 29112 21132 Watching for file changes with StatReloader
+INFO 2026-04-10 10:11:15,314 autoreload 20048 9560 Watching for file changes with StatReloader
+INFO 2026-04-10 10:12:44,564 firebase_config 6460 10456 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:12:44,578 gemini_integration 6460 10456 Google Generative AI não instalado. Instale com: pip install google-generativeai
+ERROR 2026-04-10 10:12:44,578 gemini_integration 6460 10456 Erro ao inicializar Gemini: name 'genai' is not defined
+INFO 2026-04-10 10:13:28,489 firebase_config 15096 16548 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:14:16,233 firebase_config 25448 25676 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:14:17,687 firebase_config 8548 23968 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:14:17,722 autoreload 8548 23968 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:14:18,409 openai_integration 8548 23968 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:14:59,773 firebase_config 4228 12720 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:15:00,981 firebase_config 28760 17312 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:15:01,021 autoreload 28760 17312 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:15:01,350 openai_integration 28760 17312 OpenAI não instalado. Instale com: pip install openai
+WARNING 2026-04-10 10:15:13,905 base 28760 15440 Session data corrupted
+INFO 2026-04-10 10:15:13,944 basehttp 28760 15440 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:15:14,469 basehttp 28760 15440 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:15:16,462 basehttp 28760 15440 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:15:19,868 basehttp 28760 15440 "POST /api/chatbot/ HTTP/1.1" 200 365
+INFO 2026-04-10 10:15:33,239 basehttp 28760 15440 "POST /api/chatbot/ HTTP/1.1" 200 839
+INFO 2026-04-10 10:15:40,156 basehttp 28760 15440 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:15:40,875 basehttp 28760 15440 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:15:46,108 basehttp 28760 11876 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-10 10:15:46,615 basehttp 28760 11876 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-10 10:15:46,625 basehttp 28760 11876 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-10 10:15:46,630 basehttp 28760 11876 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 200 189570
+INFO 2026-04-10 10:15:46,632 basehttp 28760 30220 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 200 111597
+INFO 2026-04-10 10:15:46,633 basehttp 28760 26448 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 200 46334
+INFO 2026-04-10 10:15:46,646 basehttp 28760 17204 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 200 165739
+INFO 2026-04-10 10:15:46,650 basehttp 28760 344 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 200 176217
+INFO 2026-04-10 10:15:46,651 basehttp 28760 31420 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 200 273774
+WARNING 2026-04-10 10:15:48,331 log 28760 31420 Not Found: /favicon.ico
+WARNING 2026-04-10 10:15:48,331 basehttp 28760 31420 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-10 10:16:28,780 autoreload 28760 17312 C:\Users\aluno\Documents\NexusLife\core\chatbot_enhanced.py changed, reloading.
+INFO 2026-04-10 10:16:30,744 firebase_config 18692 22648 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:16:30,789 autoreload 18692 22648 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:16:31,161 openai_integration 18692 22648 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:16:35,114 autoreload 18692 22648 C:\Users\aluno\Documents\NexusLife\core\chatbot_enhanced.py changed, reloading.
+INFO 2026-04-10 10:16:37,133 firebase_config 17728 31188 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:16:37,161 autoreload 17728 31188 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:16:37,581 openai_integration 17728 31188 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:16:40,801 autoreload 17728 31188 C:\Users\aluno\Documents\NexusLife\core\chatbot_enhanced.py changed, reloading.
+INFO 2026-04-10 10:16:43,068 firebase_config 16000 14932 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:16:43,098 autoreload 16000 14932 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:16:43,450 openai_integration 16000 14932 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:16:46,427 autoreload 16000 14932 C:\Users\aluno\Documents\NexusLife\core\chatbot_enhanced.py changed, reloading.
+INFO 2026-04-10 10:16:48,119 firebase_config 31484 14632 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:16:48,147 autoreload 31484 14632 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:16:48,413 openai_integration 31484 14632 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:16:56,079 basehttp 31484 1556 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:16:56,906 basehttp 31484 1556 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:16:57,091 basehttp 31484 1556 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:16:58,190 basehttp 31484 1556 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:16:58,202 basehttp 31484 1556 "GET /login/?next=/home/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:17:01,517 basehttp 31484 1556 "GET /login/?next=/home/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:17:01,537 basehttp 31484 1224 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-10 10:17:01,538 basehttp 31484 1556 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-10 10:17:02,474 basehttp 31484 1556 "GET /login/?next=/home/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:17:02,501 basehttp 31484 1556 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-10 10:17:02,503 basehttp 31484 1224 "GET /static/main.js HTTP/1.1" 200 9154
+WARNING 2026-04-10 10:17:02,951 log 31484 1224 Not Found: /favicon.ico
+WARNING 2026-04-10 10:17:02,952 basehttp 31484 1224 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-10 10:17:04,110 basehttp 31484 1224 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:17:11,394 chatbot_enhanced 31484 1224 Resposta gerada com Gemini AI para: quem é voce
+INFO 2026-04-10 10:17:11,419 basehttp 31484 1224 "POST /api/chatbot/ HTTP/1.1" 200 1487
+INFO 2026-04-10 10:17:30,578 basehttp 31484 1224 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-10 10:19:43,242 signals 31484 13736 Email de boas-vindas enviado para allannamagalhaes6@gmail.com
+INFO 2026-04-10 10:19:43,242 signals 31484 13736 Notificação e email enviados para allannamagalhaes6@gmail.com
+INFO 2026-04-10 10:19:43,256 basehttp 31484 13736 "POST /register/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:19:43,266 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10845
+INFO 2026-04-10 10:21:02,476 basehttp 31484 13736 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:21:02,495 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:21:02,547 basehttp 31484 13736 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 39800
+INFO 2026-04-10 10:21:10,832 basehttp 31484 13736 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:21:10,839 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:21:12,203 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:21:22,921 basehttp 31484 13736 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:21:22,928 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:21:22,960 basehttp 31484 13736 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 41490
+INFO 2026-04-10 10:21:28,022 basehttp 31484 13736 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:21:28,029 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:21:46,372 basehttp 31484 13736 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:21:46,380 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:21:46,405 basehttp 31484 13736 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 42001
+INFO 2026-04-10 10:22:02,015 basehttp 31484 13736 "GET /profile/ HTTP/1.1" 200 17768
+INFO 2026-04-10 10:22:11,578 basehttp 31484 13736 "GET /chatbot/ HTTP/1.1" 200 16802
+INFO 2026-04-10 10:22:16,663 chatbot_enhanced 31484 13736 Resposta gerada com Gemini AI para: oi
+INFO 2026-04-10 10:22:16,684 basehttp 31484 13736 "POST /api/chatbot/ HTTP/1.1" 200 1425
+INFO 2026-04-10 10:22:18,769 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:22:18,795 basehttp 31484 13736 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 41392
+INFO 2026-04-10 10:22:50,441 basehttp 31484 13736 "GET /admin/core/userprofile/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:22:50,488 basehttp 31484 13736 "GET /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 3797
+INFO 2026-04-10 10:22:52,600 basehttp 31484 13736 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 3987
+INFO 2026-04-10 10:23:03,509 basehttp 31484 13736 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:23:03,908 basehttp 31484 13736 "GET /admin/core/userprofile/ HTTP/1.1" 200 19313
+INFO 2026-04-10 10:23:03,932 basehttp 31484 13736 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:23:45,338 basehttp 31484 13736 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:23:45,344 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:23:47,181 basehttp 31484 13736 "GET /password-reset/ HTTP/1.1" 200 9639
+INFO 2026-04-10 10:23:58,878 basehttp 31484 13736 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:23:58,884 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10840
+INFO 2026-04-10 10:24:39,018 basehttp 31484 13736 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:24:39,025 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:24:39,045 basehttp 31484 13736 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 41490
+INFO 2026-04-10 10:24:54,640 basehttp 31484 13736 "GET /marketplace/service/create/ HTTP/1.1" 200 9854
+INFO 2026-04-10 10:25:25,942 basehttp 31484 13736 "POST /marketplace/service/create/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:25:25,956 basehttp 31484 13736 "GET /marketplace/service/6/ HTTP/1.1" 200 8221
+INFO 2026-04-10 10:25:30,889 basehttp 31484 13736 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:25:30,895 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:25:35,103 basehttp 31484 13736 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:25:35,111 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:25:35,132 basehttp 31484 13736 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 42017
+INFO 2026-04-10 10:25:48,510 basehttp 31484 13736 "GET /marketplace/service/6/order/ HTTP/1.1" 200 8168
+INFO 2026-04-10 10:26:00,709 basehttp 31484 13736 "POST /marketplace/service/6/order/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:00,724 basehttp 31484 13736 "GET /marketplace/order/7/ HTTP/1.1" 200 9091
+INFO 2026-04-10 10:26:04,705 basehttp 31484 13736 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:04,711 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:26:08,433 basehttp 31484 13736 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:08,439 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:08,458 basehttp 31484 13736 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 42960
+INFO 2026-04-10 10:26:17,040 basehttp 31484 13736 "GET /marketplace/order/7/ HTTP/1.1" 200 9150
+INFO 2026-04-10 10:26:22,611 basehttp 31484 13736 "GET /marketplace/order/7/status/in_progress/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:22,621 basehttp 31484 13736 "GET /marketplace/order/7/ HTTP/1.1" 200 9796
+INFO 2026-04-10 10:26:26,713 basehttp 31484 13736 "GET /marketplace/order/7/status/completed/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:26,723 basehttp 31484 13736 "GET /marketplace/order/7/ HTTP/1.1" 200 9461
+INFO 2026-04-10 10:26:31,318 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:31,353 basehttp 31484 13736 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 42356
+INFO 2026-04-10 10:26:43,136 basehttp 31484 13736 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:43,141 basehttp 31484 13736 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:26:46,100 basehttp 31484 13736 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:46,108 basehttp 31484 13736 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:26:46,139 basehttp 31484 13736 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 44215
+INFO 2026-04-10 10:28:44,601 autoreload 29112 21132 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:28:44,617 autoreload 20048 9560 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:28:44,989 autoreload 31484 14632 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:28:47,433 firebase_config 12508 27900 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:28:47,473 autoreload 12508 27900 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:28:47,848 openai_integration 12508 27900 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:28:48,783 firebase_config 18716 10400 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:28:48,784 firebase_config 14448 29492 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:28:48,859 autoreload 18716 10400 Watching for file changes with StatReloader
+INFO 2026-04-10 10:29:19,592 autoreload 14448 29492 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:29:19,880 autoreload 12508 27900 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:29:20,676 autoreload 18716 10400 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:29:21,376 autoreload 24056 12260 Watching for file changes with StatReloader
+INFO 2026-04-10 10:29:21,489 autoreload 31076 22980 Watching for file changes with StatReloader
+INFO 2026-04-10 10:29:22,041 firebase_config 24056 12260 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:29:22,063 firebase_config 31076 22980 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:29:22,068 openai_integration 31076 22980 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:29:22,513 autoreload 24172 1236 Watching for file changes with StatReloader
+INFO 2026-04-10 10:29:23,224 firebase_config 24172 1236 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:29:29,371 autoreload 31076 22980 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:29:29,450 autoreload 24172 1236 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:29:29,749 autoreload 24056 12260 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:29:30,753 autoreload 3628 4012 Watching for file changes with StatReloader
+INFO 2026-04-10 10:29:31,102 autoreload 5312 11148 Watching for file changes with StatReloader
+INFO 2026-04-10 10:29:31,382 firebase_config 3628 4012 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:29:31,387 openai_integration 3628 4012 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:29:31,408 autoreload 9712 26332 Watching for file changes with StatReloader
+INFO 2026-04-10 10:29:31,740 firebase_config 5312 11148 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:29:32,074 firebase_config 9712 26332 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:24,032 autoreload 9712 26332 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:30:24,413 autoreload 3628 4012 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:30:24,935 autoreload 5312 11148 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:30:25,872 autoreload 176 10400 Watching for file changes with StatReloader
+INFO 2026-04-10 10:30:26,350 autoreload 26320 29720 Watching for file changes with StatReloader
+INFO 2026-04-10 10:30:26,736 firebase_config 176 10400 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:27,069 firebase_config 26320 29720 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:30:27,074 openai_integration 26320 29720 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:30:27,100 autoreload 9348 13392 Watching for file changes with StatReloader
+INFO 2026-04-10 10:30:27,888 firebase_config 9348 13392 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:34,594 autoreload 9348 13392 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:30:34,713 autoreload 26320 29720 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:30:34,873 autoreload 176 10400 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:30:37,220 firebase_config 22008 23512 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:37,252 autoreload 22008 23512 Watching for file changes with StatReloader
+INFO 2026-04-10 10:30:37,418 firebase_config 10552 9008 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:37,458 autoreload 10552 9008 Watching for file changes with StatReloader
+INFO 2026-04-10 10:30:37,563 firebase_config 17436 8292 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:37,599 autoreload 17436 8292 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:30:37,615 openai_integration 22008 23512 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:30:39,329 firebase_config 28268 1224 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:47,673 autoreload 22008 23512 C:\Users\aluno\Documents\NexusLife\nexuslife\settings.py changed, reloading.
+INFO 2026-04-10 10:30:48,103 autoreload 10552 9008 C:\Users\aluno\Documents\NexusLife\nexuslife\settings.py changed, reloading.
+INFO 2026-04-10 10:30:48,204 autoreload 17436 8292 C:\Users\aluno\Documents\NexusLife\nexuslife\settings.py changed, reloading.
+INFO 2026-04-10 10:30:49,885 firebase_config 16880 22596 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:49,948 autoreload 16880 22596 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:30:50,471 openai_integration 16880 22596 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:30:50,712 firebase_config 6484 20232 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:50,746 autoreload 6484 20232 Watching for file changes with StatReloader
+INFO 2026-04-10 10:30:50,857 firebase_config 15064 15852 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:30:50,891 autoreload 15064 15852 Watching for file changes with StatReloader
+INFO 2026-04-10 10:30:53,023 firebase_config 18668 15320 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:32:21,699 firebase_config 10404 27868 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:32:22,964 firebase_config 16624 24172 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:32:23,000 autoreload 16624 24172 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:32:23,294 openai_integration 16624 24172 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:32:54,733 autoreload 16880 22596 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:32:55,138 autoreload 6484 20232 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:32:55,254 autoreload 15064 15852 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:32:55,309 autoreload 16624 24172 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:32:56,975 firebase_config 17216 21296 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:32:57,017 autoreload 17216 21296 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:32:57,371 openai_integration 17216 21296 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:32:57,721 firebase_config 18528 26840 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:32:57,784 autoreload 18528 26840 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:32:58,396 openai_integration 18528 26840 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:33:00,006 firebase_config 25256 18812 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:33:00,009 firebase_config 21400 25264 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:33:00,104 autoreload 21400 25264 Watching for file changes with StatReloader
+INFO 2026-04-10 10:33:05,256 autoreload 17216 21296 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:33:05,908 autoreload 18528 26840 C:\Users\aluno\Documents\NexusLife\marketplace\admin.py changed, reloading.
+INFO 2026-04-10 10:33:07,216 firebase_config 1580 29556 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:33:07,255 autoreload 1580 29556 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:33:07,635 openai_integration 1580 29556 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:33:25,721 autoreload 21400 25264 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:33:25,820 autoreload 25256 18812 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:33:26,065 autoreload 1580 29556 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:33:27,917 firebase_config 28560 16684 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:33:27,946 firebase_config 29112 5408 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:33:27,952 autoreload 28560 16684 Watching for file changes with StatReloader
+INFO 2026-04-10 10:33:27,985 autoreload 29112 5408 Watching for file changes with StatReloader
+INFO 2026-04-10 10:33:28,007 firebase_config 9072 29352 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:33:28,048 autoreload 9072 29352 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:33:28,370 openai_integration 28560 16684 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:33:33,443 firebase_config 100 17968 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:33:34,932 firebase_config 18812 28524 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:33:34,992 autoreload 18812 28524 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:33:35,366 openai_integration 18812 28524 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:34:02,550 autoreload 28560 16684 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:02,835 autoreload 18812 28524 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:03,130 autoreload 29112 5408 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:03,161 autoreload 9072 29352 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:04,831 firebase_config 5516 13444 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:04,865 autoreload 5516 13444 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:34:05,178 openai_integration 5516 13444 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:34:05,662 firebase_config 26324 16976 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:05,665 firebase_config 24104 16000 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:05,709 autoreload 26324 16976 Watching for file changes with StatReloader
+INFO 2026-04-10 10:34:05,712 autoreload 24104 16000 Watching for file changes with StatReloader
+INFO 2026-04-10 10:34:15,927 basehttp 5516 31040 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-10 10:34:15,998 basehttp 5516 19496 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:34:15,999 basehttp 5516 31040 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:34:16,015 basehttp 5516 19496 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:34:16,018 basehttp 5516 31040 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:34:16,019 basehttp 5516 29112 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:34:16,019 basehttp 5516 9072 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:34:16,805 autoreload 26324 16976 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:16,808 autoreload 24104 16000 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:16,821 autoreload 5516 13444 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:19,353 firebase_config 16848 18560 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:19,386 autoreload 16848 18560 Watching for file changes with StatReloader
+INFO 2026-04-10 10:34:19,587 firebase_config 6936 11568 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:19,588 firebase_config 13076 16376 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:19,631 autoreload 13076 16376 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:34:19,799 openai_integration 16848 18560 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:34:21,233 basehttp 16848 176 "GET /register/ HTTP/1.1" 200 21436
+INFO 2026-04-10 10:34:23,099 basehttp 16848 176 "GET /chatbot/ HTTP/1.1" 200 16803
+INFO 2026-04-10 10:34:29,959 chatbot_enhanced 16848 176 Resposta gerada com Gemini AI para: oi
+INFO 2026-04-10 10:34:29,983 basehttp 16848 176 "POST /api/chatbot/ HTTP/1.1" 200 971
+INFO 2026-04-10 10:34:30,886 basehttp 16848 176 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:34:30,924 basehttp 16848 176 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43605
+INFO 2026-04-10 10:34:32,982 basehttp 16848 176 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43605
+INFO 2026-04-10 10:34:33,911 basehttp 16848 176 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43605
+INFO 2026-04-10 10:34:36,070 basehttp 16848 176 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:34:36,081 basehttp 16848 176 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:34:37,854 basehttp 16848 176 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:34:37,863 basehttp 16848 176 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:34:37,885 basehttp 16848 176 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 44215
+INFO 2026-04-10 10:34:40,772 basehttp 16848 176 "GET /marketplace/ HTTP/1.1" 200 12090
+INFO 2026-04-10 10:34:42,441 basehttp 16848 176 "GET /chatbot/ HTTP/1.1" 200 16803
+INFO 2026-04-10 10:34:42,994 basehttp 16848 176 "GET /profile/ HTTP/1.1" 200 17643
+INFO 2026-04-10 10:34:55,858 autoreload 6936 11568 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:55,951 autoreload 13076 16376 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:56,554 autoreload 16848 18560 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:34:58,104 firebase_config 1208 23200 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:58,110 firebase_config 29944 28312 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:58,143 autoreload 1208 23200 Watching for file changes with StatReloader
+INFO 2026-04-10 10:34:58,148 autoreload 29944 28312 Watching for file changes with StatReloader
+INFO 2026-04-10 10:34:58,379 firebase_config 9340 15436 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:34:58,406 autoreload 9340 15436 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:34:58,686 openai_integration 9340 15436 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:35:52,217 firebase_config 17392 6348 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:35:59,350 firebase_config 30288 31052 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:36:06,075 firebase_config 8376 29608 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:36:06,859 basehttp 9340 31208 "GET /admin/ HTTP/1.1" 200 12013
+INFO 2026-04-10 10:36:06,902 basehttp 9340 31208 "GET /static/admin_custom.css HTTP/1.1" 200 5190
+INFO 2026-04-10 10:36:07,712 firebase_config 9812 17216 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:36:07,754 autoreload 9812 17216 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:36:08,037 openai_integration 9812 17216 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:36:09,525 basehttp 9340 31208 "GET /admin/ HTTP/1.1" 200 12013
+INFO 2026-04-10 10:36:16,799 basehttp 9340 31208 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:36:16,831 basehttp 9340 31208 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43605
+INFO 2026-04-10 10:36:18,898 basehttp 9340 31208 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:36:18,920 basehttp 9340 31208 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:36:22,221 basehttp 9340 31208 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:36:22,230 basehttp 9340 31208 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:36:22,252 basehttp 9340 31208 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 44215
+INFO 2026-04-10 10:36:46,949 basehttp 9340 31208 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:36:46,955 basehttp 9340 31208 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:36:51,283 basehttp 9340 31208 "POST /login/ HTTP/1.1" 200 10809
+INFO 2026-04-10 10:37:09,118 firebase_config 27440 2652 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:37:23,381 basehttp 9340 31208 "POST /login/ HTTP/1.1" 200 10809
+INFO 2026-04-10 10:37:27,879 basehttp 9340 31208 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:37:27,887 basehttp 9340 31208 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:37:27,909 basehttp 9340 31208 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 44215
+INFO 2026-04-10 10:38:27,510 basehttp 9340 31208 "GET /admin/ HTTP/1.1" 200 12013
+INFO 2026-04-10 10:38:27,698 basehttp 9340 31208 "GET /static/admin_custom.css HTTP/1.1" 304 0
+INFO 2026-04-10 10:38:36,436 basehttp 9340 31208 "GET /admin/auth/group/ HTTP/1.1" 200 11088
+INFO 2026-04-10 10:38:36,465 basehttp 9340 31208 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:38:38,468 basehttp 9340 31208 "GET /admin/core/chatbotmessage/ HTTP/1.1" 200 18578
+INFO 2026-04-10 10:38:38,482 basehttp 9340 31208 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:38:42,859 basehttp 9340 20020 "GET /admin/auth/user/ HTTP/1.1" 200 34715
+INFO 2026-04-10 10:38:42,862 basehttp 9340 31208 - Broken pipe from ('127.0.0.1', 59188)
+INFO 2026-04-10 10:38:42,873 basehttp 9340 20020 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:38:44,624 basehttp 9340 20020 "GET /admin/auth/user/ HTTP/1.1" 200 34715
+INFO 2026-04-10 10:38:44,638 basehttp 9340 20020 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:38:45,459 basehttp 9340 20020 "GET /admin/auth/group/ HTTP/1.1" 200 11088
+INFO 2026-04-10 10:38:45,482 basehttp 9340 20020 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:38:48,622 basehttp 9340 20020 "GET /admin/core/chatbotmessage/ HTTP/1.1" 200 18578
+INFO 2026-04-10 10:38:48,637 basehttp 9340 20020 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:38:49,411 basehttp 9340 20020 "GET /admin/core/chatbotmessage/ HTTP/1.1" 200 18578
+INFO 2026-04-10 10:38:49,430 basehttp 9340 20020 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:38:50,282 basehttp 9340 20020 "GET /admin/core/chatbotmessage/ HTTP/1.1" 200 18578
+INFO 2026-04-10 10:38:50,295 basehttp 9340 20020 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+INFO 2026-04-10 10:38:50,648 basehttp 9340 20020 "GET /admin/core/notification/ HTTP/1.1" 200 26967
+INFO 2026-04-10 10:38:50,663 basehttp 9340 20020 "GET /admin/jsi18n/ HTTP/1.1" 200 8876
+ERROR 2026-04-10 10:38:53,260 log 9340 20020 Internal Server Error: /admin/core/userprofile/
+Traceback (most recent call last):
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\options.py", line 836, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\views\main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\views\main.py", line 503, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\views\main.py", line 182, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\filters.py", line 182, in __init__
+    other_model = get_model_from_relation(field)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\admin\utils.py", line 467, in get_model_from_relation
+    raise NotRelationField
+django.contrib.admin.utils.NotRelationField
+ERROR 2026-04-10 10:38:53,273 basehttp 9340 20020 "GET /admin/core/userprofile/ HTTP/1.1" 500 136232
+INFO 2026-04-10 10:39:52,552 autoreload 9340 15436 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:39:52,590 autoreload 9812 17216 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:39:52,625 autoreload 1208 23200 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:39:52,701 autoreload 29944 28312 C:\Users\aluno\Documents\NexusLife\core\admin.py changed, reloading.
+INFO 2026-04-10 10:39:54,594 autoreload 22416 23508 Watching for file changes with StatReloader
+INFO 2026-04-10 10:39:54,604 autoreload 19204 3268 Watching for file changes with StatReloader
+INFO 2026-04-10 10:39:55,338 firebase_config 22416 23508 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:39:55,345 openai_integration 22416 23508 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:39:55,349 firebase_config 19204 3268 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:39:55,358 openai_integration 19204 3268 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:39:56,341 autoreload 18668 25792 Watching for file changes with StatReloader
+INFO 2026-04-10 10:39:56,341 autoreload 13780 28240 Watching for file changes with StatReloader
+INFO 2026-04-10 10:39:57,682 firebase_config 18668 25792 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:42:00,807 autoreload 24876 25140 Watching for file changes with StatReloader
+INFO 2026-04-10 10:42:01,376 firebase_config 24876 25140 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:42:01,384 openai_integration 24876 25140 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:42:59,797 autoreload 17624 7496 Watching for file changes with StatReloader
+INFO 2026-04-10 10:43:00,651 firebase_config 17624 7496 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:43:00,658 openai_integration 17624 7496 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:43:36,934 autoreload 27668 14624 Watching for file changes with StatReloader
+INFO 2026-04-10 10:43:37,418 firebase_config 27668 14624 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:43:37,423 openai_integration 27668 14624 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:44:30,600 autoreload 22276 15440 Watching for file changes with StatReloader
+INFO 2026-04-10 10:44:31,155 firebase_config 22276 15440 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:44:31,160 openai_integration 22276 15440 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:45:34,954 autoreload 6552 29324 Watching for file changes with StatReloader
+INFO 2026-04-10 10:45:35,676 firebase_config 6552 29324 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-10 10:45:35,683 openai_integration 6552 29324 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:46:34,973 firebase_config 32688 32668 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:46:36,625 firebase_config 824 17392 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:46:36,682 autoreload 824 17392 Watching for file changes with StatReloader
+WARNING 2026-04-10 10:46:37,375 openai_integration 824 17392 OpenAI não instalado. Instale com: pip install openai
+INFO 2026-04-10 10:46:46,408 basehttp 824 32052 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:46:46,457 basehttp 824 32052 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:46:53,033 basehttp 824 32052 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:46:53,047 basehttp 824 32052 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:46:53,090 basehttp 824 32052 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 42017
+INFO 2026-04-10 10:46:55,916 basehttp 824 32052 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:46:55,922 basehttp 824 32052 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:46:58,851 basehttp 824 32052 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:46:58,859 basehttp 824 32052 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:46:58,900 basehttp 824 32052 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 42967
+INFO 2026-04-10 10:47:01,416 basehttp 824 32052 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:47:01,423 basehttp 824 32052 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:47:04,959 basehttp 824 32052 "POST /login/ HTTP/1.1" 200 10796
+INFO 2026-04-10 10:47:07,206 basehttp 824 32052 "POST /login/ HTTP/1.1" 200 10796
+INFO 2026-04-10 10:47:08,898 basehttp 824 32052 "GET /admin/core/userprofile/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:47:08,946 basehttp 824 32052 "GET /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 4309
+INFO 2026-04-10 10:47:08,954 basehttp 824 32052 "GET /static/admin_custom.css HTTP/1.1" 304 0
+INFO 2026-04-10 10:47:09,644 basehttp 824 32052 "GET /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 4309
+INFO 2026-04-10 10:47:10,933 basehttp 824 32052 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 4498
+INFO 2026-04-10 10:47:12,315 basehttp 824 32052 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 4498
+INFO 2026-04-10 10:47:15,334 basehttp 824 32052 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 4499
+INFO 2026-04-10 10:47:17,648 basehttp 824 32052 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 4498
+INFO 2026-04-10 10:47:19,214 basehttp 824 32052 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 200 4498
+INFO 2026-04-10 10:47:45,075 basehttp 824 32052 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:47:52,842 chatbot_enhanced 824 32052 Resposta gerada com Gemini AI para: oi
+INFO 2026-04-10 10:47:52,863 basehttp 824 32052 "POST /api/chatbot/ HTTP/1.1" 200 1223
+INFO 2026-04-10 10:48:02,358 basehttp 824 32052 "POST /login/ HTTP/1.1" 200 10795
+INFO 2026-04-10 10:48:09,953 basehttp 824 32052 "POST /login/ HTTP/1.1" 200 10795
+INFO 2026-04-10 10:48:17,635 basehttp 824 32052 "POST /login/ HTTP/1.1" 200 10796
+INFO 2026-04-10 10:49:18,591 basehttp 824 32052 "POST /login/ HTTP/1.1" 200 10795
+INFO 2026-04-10 10:49:22,701 basehttp 824 32052 "POST /login/ HTTP/1.1" 200 10796
+INFO 2026-04-10 10:49:25,117 basehttp 824 32052 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:49:25,750 basehttp 824 32052 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-10 10:49:26,512 basehttp 824 32052 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 10:49:27,359 basehttp 824 32052 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:49:30,656 basehttp 824 32052 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:49:30,668 basehttp 824 32052 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:49:30,690 basehttp 824 32052 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 42017
+INFO 2026-04-10 10:49:40,456 basehttp 824 32052 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:49:40,463 basehttp 824 32052 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:49:42,994 basehttp 824 32052 - Broken pipe from ('127.0.0.1', 58747)
+INFO 2026-04-10 10:49:43,187 basehttp 824 21696 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:49:43,195 basehttp 824 21696 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:49:43,216 basehttp 824 21696 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 42967
+INFO 2026-04-10 10:49:45,508 basehttp 824 21696 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:49:45,514 basehttp 824 21696 "GET /login/ HTTP/1.1" 200 10748
+WARNING 2026-04-10 10:49:50,271 log 824 21696 Forbidden (CSRF token from POST incorrect.): /admin/login/
+WARNING 2026-04-10 10:49:50,272 basehttp 824 21696 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 403 2519
+WARNING 2026-04-10 10:49:53,299 log 824 21696 Forbidden (CSRF token from POST incorrect.): /admin/login/
+WARNING 2026-04-10 10:49:53,300 basehttp 824 21696 "POST /admin/login/?next=/admin/core/userprofile/ HTTP/1.1" 403 2519
+INFO 2026-04-10 10:50:02,130 basehttp 824 21696 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:50:02,139 basehttp 824 21696 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4275
+INFO 2026-04-10 10:50:02,149 basehttp 824 21696 "GET /static/admin_custom.css HTTP/1.1" 304 0
+INFO 2026-04-10 10:50:05,996 basehttp 824 21696 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4464
+INFO 2026-04-10 10:50:12,928 basehttp 824 21696 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4463
+INFO 2026-04-10 10:50:15,963 basehttp 824 21696 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4464
+INFO 2026-04-10 10:50:19,267 basehttp 824 21696 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4463
+INFO 2026-04-10 10:50:49,242 firebase_config 33700 33072 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:50:58,773 firebase_config 32488 31020 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-10 10:51:09,341 basehttp 824 21696 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:51:09,360 basehttp 824 21696 "GET /admin/ HTTP/1.1" 200 13331
+WARNING 2026-04-10 10:51:15,626 log 824 21696 Not Found: /admin/auth/user/
+WARNING 2026-04-10 10:51:15,626 basehttp 824 21696 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+WARNING 2026-04-10 10:51:17,198 log 824 21696 Not Found: /admin/auth/user/
+WARNING 2026-04-10 10:51:17,198 basehttp 824 21696 "GET /admin/auth/user/ HTTP/1.1" 404 3803
+INFO 2026-04-10 10:51:36,406 basehttp 824 21696 "GET /home/ HTTP/1.1" 200 12294
+INFO 2026-04-10 10:51:41,603 basehttp 824 21696 "GET /home/ HTTP/1.1" 200 12294
+INFO 2026-04-10 10:51:43,081 basehttp 824 21696 "GET /home/ HTTP/1.1" 200 12294
+INFO 2026-04-10 10:51:45,227 basehttp 824 21696 "GET /home/ HTTP/1.1" 200 12294
+INFO 2026-04-10 10:52:02,369 basehttp 824 21696 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-10 10:52:02,391 basehttp 824 33380 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:52:02,391 basehttp 824 21696 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:52:02,415 basehttp 824 19228 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:52:02,415 basehttp 824 25784 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:52:02,415 basehttp 824 21696 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:52:02,415 basehttp 824 33380 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-10 10:52:50,813 basehttp 824 33380 "GET /register/ HTTP/1.1" 200 21435
+INFO 2026-04-10 10:52:52,122 basehttp 824 33380 "GET /home/ HTTP/1.1" 200 12294
+INFO 2026-04-10 10:53:02,804 basehttp 824 33380 "GET /register/ HTTP/1.1" 200 21435
+INFO 2026-04-10 10:53:04,065 basehttp 824 33380 "GET /home/ HTTP/1.1" 200 12294
+INFO 2026-04-10 10:53:07,156 basehttp 824 33380 "GET /home/ HTTP/1.1" 200 12294
+INFO 2026-04-10 10:53:08,804 basehttp 824 33380 "GET /profile/ HTTP/1.1" 200 17641
+INFO 2026-04-10 10:53:09,882 basehttp 824 33380 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:53:09,904 basehttp 824 33380 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43603
+INFO 2026-04-10 10:53:12,410 basehttp 824 33380 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:53:12,417 basehttp 824 33380 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:53:16,765 basehttp 824 33380 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:53:16,775 basehttp 824 33380 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:53:16,800 basehttp 824 33380 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 42017
+INFO 2026-04-10 10:53:18,152 basehttp 824 33380 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:53:18,172 basehttp 824 33380 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 41404
+INFO 2026-04-10 10:53:21,480 basehttp 824 33380 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:53:21,486 basehttp 824 33380 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 10:53:22,436 basehttp 824 33380 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:53:22,444 basehttp 824 33380 "GET /login/?next=/home/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:53:27,176 basehttp 824 33380 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-10 10:53:31,977 basehttp 824 33380 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-10 10:53:34,224 basehttp 824 33380 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:59:35,301 basehttp 824 11448 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-10 10:59:37,303 basehttp 824 11448 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:59:43,297 basehttp 824 11448 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-10 10:59:51,343 basehttp 824 11448 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 10:59:55,100 basehttp 824 11448 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:59:55,114 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 10:59:55,146 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 42967
+INFO 2026-04-10 11:00:47,183 basehttp 824 11448 "GET /marketplace/order/6/ HTTP/1.1" 200 8942
+INFO 2026-04-10 11:01:02,137 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:01:02,161 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 42356
+INFO 2026-04-10 11:01:09,084 basehttp 824 11448 "GET /marketplace/service/create/ HTTP/1.1" 200 9854
+INFO 2026-04-10 11:01:44,885 basehttp 824 11448 "POST /marketplace/service/create/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:01:44,905 basehttp 824 11448 "GET /marketplace/service/7/ HTTP/1.1" 200 8267
+INFO 2026-04-10 11:02:02,244 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43870
+INFO 2026-04-10 11:02:08,116 basehttp 824 11448 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:02:08,129 basehttp 824 11448 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 11:02:12,245 basehttp 824 11448 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:02:12,254 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:02:12,281 basehttp 824 11448 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 44249
+INFO 2026-04-10 11:03:00,373 basehttp 824 11448 "GET /marketplace/service/7/order/ HTTP/1.1" 200 8186
+INFO 2026-04-10 11:03:35,639 basehttp 824 11448 "POST /marketplace/service/7/order/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:03:35,653 basehttp 824 11448 "GET /marketplace/order/8/ HTTP/1.1" 200 9145
+INFO 2026-04-10 11:03:52,427 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:03:52,455 basehttp 824 11448 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43636
+INFO 2026-04-10 11:03:58,955 basehttp 824 11448 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:03:58,964 basehttp 824 11448 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 11:04:01,735 basehttp 824 11448 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:04:01,745 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:04:01,768 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 44485
+INFO 2026-04-10 11:04:17,259 basehttp 824 11448 "GET /marketplace/order/8/ HTTP/1.1" 200 9204
+INFO 2026-04-10 11:04:25,208 basehttp 824 11448 "GET /marketplace/order/8/status/in_progress/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:04:25,222 basehttp 824 11448 "GET /marketplace/order/8/ HTTP/1.1" 200 9850
+INFO 2026-04-10 11:04:35,195 basehttp 824 11448 "GET /marketplace/order/8/status/completed/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:04:35,203 basehttp 824 11448 "GET /marketplace/order/8/ HTTP/1.1" 200 9515
+INFO 2026-04-10 11:04:36,843 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:04:36,878 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:04:54,379 basehttp 824 11448 "GET /logout/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:04:54,388 basehttp 824 11448 "GET /login/ HTTP/1.1" 200 10748
+INFO 2026-04-10 11:04:58,651 basehttp 824 11448 "GET /chatbot/ HTTP/1.1" 200 16024
+INFO 2026-04-10 11:06:03,424 chatbot_enhanced 824 11448 Resposta gerada com Gemini AI para: quem e você?
+INFO 2026-04-10 11:06:03,444 basehttp 824 11448 "POST /api/chatbot/ HTTP/1.1" 200 1743
+ERROR 2026-04-10 11:06:48,518 gemini_integration 824 11448 Erro ao processar com Gemini: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 42.232724649s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 42
+}
+]
+WARNING 2026-04-10 11:06:48,519 chatbot_enhanced 824 11448 Gemini AI retornou erro: Erro ao processar sua mensagem: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 42.232724649s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 42
+}
+]
+INFO 2026-04-10 11:06:48,519 chatbot_enhanced 824 11448 Usando resposta do dicionário para: quem e vinicius?
+INFO 2026-04-10 11:06:48,542 basehttp 824 11448 "POST /api/chatbot/ HTTP/1.1" 200 863
+INFO 2026-04-10 11:06:59,310 basehttp 824 11448 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-10 11:07:03,131 basehttp 824 11448 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:07:03,139 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:07:03,161 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 44492
+INFO 2026-04-10 11:08:03,316 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:09:04,311 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:10:05,311 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:11:06,308 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:12:07,304 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:13:08,322 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:14:09,305 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:15:10,302 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:15:28,831 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:15:28,852 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:15:30,730 basehttp 824 11448 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-10 11:15:30,751 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:16:31,313 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-10 11:17:32,327 basehttp 824 11448 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-13 09:22:41,275 firebase_config 396 24380 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-13 09:22:43,570 firebase_config 9012 14940 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-13 09:22:43,617 autoreload 9012 14940 Watching for file changes with StatReloader
+INFO 2026-04-13 09:22:58,907 basehttp 9012 1452 "GET / HTTP/1.1" 200 35374
+INFO 2026-04-13 09:22:58,962 basehttp 9012 1452 "GET /static/styles.css HTTP/1.1" 200 4509
+INFO 2026-04-13 09:22:58,966 basehttp 9012 29052 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 200 46334
+INFO 2026-04-13 09:22:58,971 basehttp 9012 9740 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 200 176217
+INFO 2026-04-13 09:22:58,993 basehttp 9012 9864 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-13 09:22:58,996 basehttp 9012 9740 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 200 165739
+INFO 2026-04-13 09:22:58,999 basehttp 9012 1452 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 200 111597
+INFO 2026-04-13 09:22:59,001 basehttp 9012 21180 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 200 189570
+INFO 2026-04-13 09:22:59,003 basehttp 9012 29052 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 200 273774
+WARNING 2026-04-13 09:23:00,275 log 9012 29052 Not Found: /favicon.ico
+WARNING 2026-04-13 09:23:00,276 basehttp 9012 29052 "GET /favicon.ico HTTP/1.1" 404 5284
+INFO 2026-04-13 09:23:07,316 basehttp 9012 29052 "GET /register/ HTTP/1.1" 200 20657
+INFO 2026-04-13 09:23:14,968 basehttp 9012 29052 - Broken pipe from ('127.0.0.1', 56747)
+INFO 2026-04-13 09:23:14,983 basehttp 9012 21180 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-13 09:23:15,400 basehttp 9012 21180 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-13 09:23:17,408 basehttp 9012 21180 "GET /login/ HTTP/1.1" 200 10136
+INFO 2026-04-13 09:23:28,013 basehttp 9012 21180 "GET /password-reset/ HTTP/1.1" 200 9639
+INFO 2026-04-13 09:23:31,048 basehttp 9012 21180 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:23:31,055 basehttp 9012 21180 "GET /login/ HTTP/1.1" 200 10841
+INFO 2026-04-13 09:24:48,859 basehttp 9012 21180 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:24:48,879 basehttp 9012 21180 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:24:48,960 basehttp 9012 21180 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 44249
+INFO 2026-04-13 09:25:06,352 basehttp 9012 21180 "GET /profile/ HTTP/1.1" 200 17733
+INFO 2026-04-13 09:25:17,502 basehttp 9012 21180 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:25:17,526 basehttp 9012 21180 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43636
+INFO 2026-04-13 09:25:22,282 basehttp 9012 21180 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:25:22,316 basehttp 9012 21180 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43636
+INFO 2026-04-13 09:25:30,685 basehttp 9012 21180 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:25:30,708 basehttp 9012 21180 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 43636
+INFO 2026-04-13 09:25:54,781 basehttp 9012 21180 "GET /password-reset/ HTTP/1.1" 200 10421
+INFO 2026-04-13 09:25:56,333 basehttp 9012 21180 "GET /login/ HTTP/1.1" 200 10918
+INFO 2026-04-13 09:25:59,378 basehttp 9012 21180 "GET /password-reset/ HTTP/1.1" 200 10421
+INFO 2026-04-13 09:26:01,796 basehttp 9012 21180 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:26:01,806 basehttp 9012 21180 "GET /login/ HTTP/1.1" 200 11623
+INFO 2026-04-13 09:26:30,278 basehttp 9012 21180 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:26:30,291 basehttp 9012 21180 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:26:30,313 basehttp 9012 21180 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 44249
+WARNING 2026-04-13 09:27:01,971 log 9012 21180 Forbidden (CSRF token from POST incorrect.): /login/
+WARNING 2026-04-13 09:27:01,972 basehttp 9012 21180 "POST /login/ HTTP/1.1" 403 2519
+INFO 2026-04-13 09:27:06,762 basehttp 9012 21180 "GET /login/ HTTP/1.1" 200 10918
+INFO 2026-04-13 09:27:16,409 basehttp 9012 21180 "POST /login/ HTTP/1.1" 200 11579
+INFO 2026-04-13 09:27:29,374 basehttp 9012 21180 "POST /login/ HTTP/1.1" 200 11579
+INFO 2026-04-13 09:28:19,064 basehttp 9012 21180 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:28:19,072 basehttp 9012 21180 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-13 09:28:19,098 basehttp 9012 21180 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 44492
+INFO 2026-04-13 09:28:45,766 basehttp 9012 21180 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-13 09:28:52,227 basehttp 9012 21180 "GET /marketplace/ HTTP/1.1" 200 12740
+INFO 2026-04-13 09:28:54,361 basehttp 9012 21180 "GET /marketplace/service/7/ HTTP/1.1" 200 7647
+INFO 2026-04-13 09:29:00,609 basehttp 9012 21180 "GET /marketplace/orders/?status=pending HTTP/1.1" 200 10298
+INFO 2026-04-13 09:29:02,456 basehttp 9012 21180 "GET /marketplace/orders/?status=in_progress HTTP/1.1" 200 10302
+INFO 2026-04-13 09:29:03,370 basehttp 9012 21180 "GET /marketplace/orders/?status=completed HTTP/1.1" 200 10300
+INFO 2026-04-13 09:29:04,284 basehttp 9012 21180 "GET /marketplace/orders/?status=cancelled HTTP/1.1" 200 10300
+INFO 2026-04-13 09:29:05,684 basehttp 9012 21180 "GET /marketplace/orders/?status=completed HTTP/1.1" 200 10300
+INFO 2026-04-13 09:29:06,539 basehttp 9012 21180 "GET /marketplace/orders/?status=in_progress HTTP/1.1" 200 10302
+INFO 2026-04-13 09:29:07,387 basehttp 9012 21180 "GET /marketplace/orders/?status=pending HTTP/1.1" 200 10298
+INFO 2026-04-13 09:29:08,210 basehttp 9012 21180 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-13 09:29:17,123 basehttp 9012 21180 "GET /marketplace/dashboard/pj/ HTTP/1.1" 200 43881
+INFO 2026-04-13 09:29:23,947 basehttp 9012 21180 "GET /marketplace/orders/ HTTP/1.1" 200 10317
+INFO 2026-04-13 09:29:25,320 basehttp 9012 21180 "GET /marketplace/orders/?status=completed HTTP/1.1" 200 10300
+INFO 2026-04-13 09:29:52,611 basehttp 9012 21180 "GET /chatbot/ HTTP/1.1" 200 16804
+INFO 2026-04-13 09:30:01,724 chatbot_enhanced 9012 21180 Resposta gerada com Gemini AI para: ola
+INFO 2026-04-13 09:30:01,754 basehttp 9012 21180 "POST /api/chatbot/ HTTP/1.1" 200 1701

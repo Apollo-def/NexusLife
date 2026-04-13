@@ -1,0 +1,280 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}Dashboard - NexusLife Admin{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style>
+        .dashboard-header {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .dashboard-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+            font-weight: 600;
+        }
+        
+        .dashboard-header p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #007bff;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-card.users {
+            border-left-color: #007bff;
+        }
+        
+        .stat-card.services {
+            border-left-color: #28a745;
+        }
+        
+        .stat-card.orders {
+            border-left-color: #ffc107;
+        }
+        
+        .stat-card.reviews {
+            border-left-color: #dc3545;
+        }
+        
+        .stat-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .stat-subtext {
+            color: #999;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .dashboard-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            padding: 20px;
+        }
+        
+        .module-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .module-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .module-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .module-list a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+        
+        .module-list a:hover {
+            color: #0056b3;
+            padding-left: 5px;
+        }
+        
+        .module-arrow {
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-sections {
+                grid-template-columns: 1fr;
+            }
+            
+            .dashboard-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="dashboard-header">
+        <h1>🚀 Bem-vindo ao NexusLife Admin</h1>
+        <p>Gerencie sua plataforma de marketplace com eficiência</p>
+    </div>
+    
+    <!-- Estatísticas -->
+    <div class="dashboard-grid">
+        <div class="stat-card users">
+            <div class="stat-icon">👤</div>
+            <div class="stat-label">Total de Usuários</div>
+            <div class="stat-value">{{ total_users }}</div>
+            <div class="stat-subtext">{{ active_users }} ativos</div>
+        </div>
+        
+        <div class="stat-card services">
+            <div class="stat-icon">📝</div>
+            <div class="stat-label">Serviços Ativos</div>
+            <div class="stat-value">{{ total_services }}</div>
+            <div class="stat-subtext">No marketplace</div>
+        </div>
+        
+        <div class="stat-card orders">
+            <div class="stat-icon">📦</div>
+            <div class="stat-label">Pedidos Totais</div>
+            <div class="stat-value">{{ total_orders }}</div>
+            <div class="stat-subtext">{{ completed_orders }} concluídos</div>
+        </div>
+        
+        <div class="stat-card reviews">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-label">Avaliações</div>
+            <div class="stat-value">{{ total_reviews }}</div>
+            <div class="stat-subtext">Deixadas por usuários</div>
+        </div>
+    </div>
+    
+    <!-- Seções principais -->
+    <div class="dashboard-sections">
+        <!-- Módulos principais -->
+        <div class="section-card">
+            <div class="section-header">📊 Módulos Principais</div>
+            <div class="section-content">
+                <ul class="module-list">
+                    <li>
+                        <a href="/admin/auth/user/">
+                            <span>👤 Gerenciar Usuários</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/core/userprofile/">
+                            <span>📋 Perfis de Usuário</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/marketplace/service/">
+                            <span>📝 Serviços</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/marketplace/order/">
+                            <span>📦 Pedidos</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/marketplace/review/">
+                            <span>⭐ Avaliações</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Módulos secundários -->
+        <div class="section-card">
+            <div class="section-header">🔧 Outros Módulos</div>
+            <div class="section-content">
+                <ul class="module-list">
+                    <li>
+                        <a href="/admin/core/notification/">
+                            <span>📨 Notificações</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/core/chatbotconversation/">
+                            <span>💬 Chatbot (Gemini AI)</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/marketplace/freelancerprofile/">
+                            <span>👨‍💻 Perfis Freelancer</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/marketplace/favorite/">
+                            <span>❤️ Favoritos</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/marketplace/category/">
+                            <span>📂 Categorias</span>
+                            <span class="module-arrow">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

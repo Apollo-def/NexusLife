@@ -43,7 +43,7 @@ body {
 .global-header {
     background: var(--white);
     box-shadow: var(--shadow);
-    padding: 16px 0;
+    padding: 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,7 +51,7 @@ body {
 
 .search-bar {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 12px auto;
 }
 
 .search-input {
@@ -104,7 +104,7 @@ body {
 .dashboard-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 24px;
+    padding: 0 24px 24px 24px;
 }
 
 .dashboard-grid {
@@ -120,9 +120,6 @@ body {
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
     padding: 24px;
-    position: sticky;
-    top: 16px;
-    align-self: start;
 }
 
 .profile-header {
@@ -348,9 +345,6 @@ body {
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
     padding: 24px;
-    position: sticky;
-    top: 16px;
-    align-self: start;
 }
 
 .chart-card {
@@ -681,10 +675,6 @@ body {
             </div>
 
             <div class="action-buttons">
-                <a href="{% url 'marketplace:service_create' %}" class="btn-primary-custom">
-                    <i class="fas fa-plus"></i>
-                    Criar Serviço
-                </a>
                 <a href="{% url 'marketplace:service_list' %}" class="btn-outline-custom">
                     <i class="fas fa-search"></i>
                     Explorar Mais

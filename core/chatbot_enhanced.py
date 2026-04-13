@@ -1,5 +1,5 @@
 """
-Chatbot Melhorado com OpenAI Integration
+Chatbot Melhorado com Gemini AI Integration
 Provides enhanced AI responses with conversation memory and fallback
 """
 
@@ -14,6 +14,7 @@ from django.utils import timezone
 
 from .models import ChatbotConversation, ChatbotMessage, UserProfile
 from .openai_integration import nexus_bot_ai, OPENAI_AVAILABLE
+from .gemini_integration import gemini_bot_ai, GEMINI_AVAILABLE
 from .chatbot import get_chatbot_response
 
 logger = logging.getLogger(__name__)
@@ -95,8 +96,29 @@ def chatbot_api(request):
         bot_response = None
         tokens_used = 0
         
-        # Usar apenas respostas baseadas em dicionário
-        bot_response = get_chatbot_response(message)
+        # Tentar usar Gemini AI primeiro
+        if GEMINI_AVAILABLE and gemini_bot_ai:
+            try:
+                user_profile = get_user_profile_context(user) if user else None
+                gemini_response = gemini_bot_ai.process_message(
+                    message=message,
+                    conversation_history=conversation_history,
+                    user_profile=user_profile
+                )
+                
+                if gemini_response.get('response') and not gemini_response.get('error'):
+                    bot_response = gemini_response['response']
+                    logger.info(f"Resposta gerada com Gemini AI para: {message[:50]}")
+                else:
+                    logger.warning(f"Gemini AI retornou erro: {gemini_response.get('error')}")
+                    
+            except Exception as e:
+                logger.error(f"Erro ao usar Gemini AI: {str(e)}")
+        
+        # Fallback para respostas baseadas em dicionário se Gemini falhar
+        if not bot_response:
+            bot_response = get_chatbot_response(message)
+            logger.info(f"Usando resposta do dicionário para: {message[:50]}")
         
         # Salvar resposta do bot
         bot_message = ChatbotMessage.objects.create(
@@ -121,7 +143,8 @@ def chatbot_api(request):
             'response': bot_response,
             'bot_name': 'NexusBot',
             'tokens_used': tokens_used,
-            'ai_enabled': bool(OPENAI_AVAILABLE and nexus_bot_ai),
+            'ai_enabled': bool(GEMINI_AVAILABLE and gemini_bot_ai),
+            'ai_provider': 'Gemini' if (GEMINI_AVAILABLE and gemini_bot_ai) else 'Dictionary',
             'timestamp': timezone.now().isoformat()
         })
         
@@ -139,7 +162,8 @@ def chatbot_conversations(request):
     
     context = {
         'conversations': conversations,
-        'ai_enabled': bool(OPENAI_AVAILABLE and nexus_bot_ai),
+        'ai_enabled': bool(GEMINI_AVAILABLE and gemini_bot_ai),
+        'ai_provider': 'Gemini' if (GEMINI_AVAILABLE and gemini_bot_ai) else 'Dictionary',
     }
     return render(request, 'core/chatbot_conversations.html', context)
 
@@ -155,7 +179,8 @@ def chatbot_conversation_detail(request, session_id):
             'conversation': conversation,
             'messages': messages,
             'session_id': session_id,
-            'ai_enabled': bool(OPENAI_AVAILABLE and nexus_bot_ai),
+            'ai_enabled': bool(GEMINI_AVAILABLE and gemini_bot_ai),
+            'ai_provider': 'Gemini' if (GEMINI_AVAILABLE and gemini_bot_ai) else 'Dictionary',
         }
         return render(request, 'core/chatbot_conversation_detail.html', context)
         

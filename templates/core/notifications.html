@@ -3,34 +3,88 @@
 {% block title %}Notificações - NexusLife{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-12">
+<div class="container-fluid py-4">
+    <div class="row mb-4">
+        <div class="col-12">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h1 class="mb-0">
-                    <i class="fas fa-bell"></i> Notificações
-                </h1>
-                {% if unread_count > 0 %}
-                    <a href="{% url 'mark_all_notifications_as_read' %}" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-check-double"></i> Marcar todas como lidas
-                    </a>
-                {% endif %}
+                <div>
+                    <h1 class="mb-0">
+                        <i class="fas fa-bell"></i> 
+                        Suas Notificações
+                    </h1>
+                    <p class="text-muted small mt-1">Total de {{ stats.total }} notificação(ões)</p>
+                </div>
             </div>
 
-            <!-- Filtro de notificações -->
+            <!-- Estatísticas de Notificações -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-3">
+                            <i class="fas fa-envelope text-primary fa-2x mb-2"></i>
+                            <h6 class="card-title mb-0">Total</h6>
+                            <p class="card-text text-primary fw-bold fs-5">{{ stats.total }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-3">
+                            <i class="fas fa-circle text-danger fa-2x mb-2"></i>
+                            <h6 class="card-title mb-0">Não Lidas</h6>
+                            <p class="card-text text-danger fw-bold fs-5">{{ unread_count }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-3">
+                            <i class="fas fa-shopping-cart text-info fa-2x mb-2"></i>
+                            <h6 class="card-title mb-0">Pedidos</h6>
+                            <p class="card-text text-info fw-bold fs-5">{{ stats.orders }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-3">
+                            <i class="fas fa-star text-warning fa-2x mb-2"></i>
+                            <h6 class="card-title mb-0">Avaliações</h6>
+                            <p class="card-text text-warning fw-bold fs-5">{{ stats.reviews }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-3">
+                            <i class="fas fa-briefcase text-success fa-2x mb-2"></i>
+                            <h6 class="card-title mb-0">Vagas</h6>
+                            <p class="card-text text-success fw-bold fs-5">{{ stats.services }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros -->
             <div class="mb-4">
-                <div class="btn-group" role="group">
-                    <a href="{% url 'notifications' %}" class="btn btn-sm btn-outline-secondary">
-                        Todas
+                <div class="btn-group flex-wrap" role="group">
+                    <a href="{% url 'notifications' %}" class="btn btn-sm {% if notification_filter == 'all' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        <i class="fas fa-inbox"></i> Todas
                     </a>
-                    <a href="{% url 'notifications' %}?filter=unread" class="btn btn-sm btn-outline-secondary">
-                        Não lidas
+                    <a href="{% url 'notifications' %}?filter=unread" class="btn btn-sm {% if notification_filter == 'unread' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        <i class="fas fa-circle"></i> Não Lidas
                     </a>
-                    <a href="{% url 'notifications' %}?filter=orders" class="btn btn-sm btn-outline-secondary">
-                        Pedidos
+                    <a href="{% url 'notifications' %}?filter=orders" class="btn btn-sm {% if notification_filter == 'orders' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        <i class="fas fa-shopping-cart"></i> Pedidos
                     </a>
-                    <a href="{% url 'notifications' %}?filter=reviews" class="btn btn-sm btn-outline-secondary">
-                        Avaliações
+                    <a href="{% url 'notifications' %}?filter=reviews" class="btn btn-sm {% if notification_filter == 'reviews' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        <i class="fas fa-star"></i> Avaliações
+                    </a>
+                    <a href="{% url 'notifications' %}?filter=services" class="btn btn-sm {% if notification_filter == 'services' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        <i class="fas fa-briefcase"></i> Vagas
+                    </a>
+                    <a href="{% url 'notifications' %}?filter=messages" class="btn btn-sm {% if notification_filter == 'messages' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        <i class="fas fa-comments"></i> Mensagens
                     </a>
                 </div>
             </div>
@@ -44,50 +98,41 @@
                 {% endfor %}
             {% endif %}
 
+            <!-- Lista de Notificações -->
             {% if notifications %}
                 <div class="notification-list">
                     {% for notification in notifications %}
-                        <div class="card mb-3 {% if not notification.is_read %}border-primary shadow-sm{% endif %}">
+                        <div class="card mb-3 notification-card">
                             <div class="card-body">
                                 <div class="row align-items-start">
-                                    <div class="col">
-                                        <div class="d-flex align-items-start gap-3">
-                                            <!-- Ícone da notificação -->
-                                            <div class="notification-icon">
-                                                {% if notification.notification_type == 'order' %}
-                                                    <i class="fas fa-shopping-cart text-primary"></i>
-                                                {% elif notification.notification_type == 'order_updated' %}
-                                                    <i class="fas fa-sync-alt text-info"></i>
-                                                {% elif notification.notification_type == 'review' %}
-                                                    <i class="fas fa-star text-warning"></i>
-                                                {% elif notification.notification_type == 'message' %}
-                                                    <i class="fas fa-envelope text-secondary"></i>
-                                                {% elif notification.notification_type == 'payment' %}
-                                                    <i class="fas fa-credit-card text-success"></i>
-                                                {% elif notification.notification_type == 'account' %}
-                                                    <i class="fas fa-user-circle text-dark"></i>
-                                                {% endif %}
-                                            </div>
+                                    <div class="col-auto">
+                                        <!-- Ícone da notificação -->
+                                        <div class="notification-icon">
+                                            {% if notification.notification_type == 'order' %}
+                                                <i class="fas fa-shopping-cart text-primary"></i>
+                                            {% elif notification.notification_type == 'order_updated' %}
+                                                <i class="fas fa-sync-alt text-info"></i>
+                                            {% elif notification.notification_type == 'review' %}
+                                                <i class="fas fa-star text-warning"></i>
+                                            {% elif notification.notification_type == 'message' %}
+                                                <i class="fas fa-comments text-secondary"></i>
+                                            {% elif notification.notification_type == 'payment' %}
+                                                <i class="fas fa-credit-card text-success"></i>
+                                            {% elif notification.notification_type == 'service' %}
+                                                <i class="fas fa-briefcase text-success"></i>
+                                            {% elif notification.notification_type == 'account' %}
+                                                <i class="fas fa-user-circle text-dark"></i>
+                                            {% else %}
+                                                <i class="fas fa-bell text-muted"></i>
+                                            {% endif %}
+                                        </div>
+                                    </div>
 
-                                            <!-- Conteúdo -->
+                                    <div class="col">
+                                        <div class="d-flex justify-content-between align-items-start">
                                             <div class="flex-grow-1">
                                                 <h6 class="card-title mb-1">
-                                                    {% if notification.notification_type == 'order' %}
-                                                        Novo Pedido
-                                                    {% elif notification.notification_type == 'order_updated' %}
-                                                        Pedido Atualizado
-                                                    {% elif notification.notification_type == 'review' %}
-                                                        Nova Avaliação
-                                                    {% elif notification.notification_type == 'message' %}
-                                                        Nova Mensagem
-                                                    {% elif notification.notification_type == 'payment' %}
-                                                        Pagamento Recebido
-                                                    {% elif notification.notification_type == 'account' %}
-                                                        Conta
-                                                    {% endif %}
-                                                    {% if not notification.is_read %}
-                                                        <span class="badge bg-primary">Novo</span>
-                                                    {% endif %}
+                                                    {{ notification.title }}
                                                 </h6>
                                                 <p class="card-text text-muted mb-2">{{ notification.message }}</p>
                                                 <small class="text-muted">
@@ -95,17 +140,36 @@
                                                     {{ notification.created_at|date:"d/m/Y H:i" }}
                                                 </small>
                                             </div>
-                                        </div>
-                                    </div>
 
-                                    <!-- Ações -->
-                                    <div class="col-auto">
-                                        {% if not notification.is_read %}
-                                            <a href="{% url 'mark_notification_as_read' notification.id %}" 
-                                               class="btn btn-sm btn-outline-primary"
-                                               title="Marcar como lida">
-                                                <i class="fas fa-check"></i>
-                                            </a>
+                                            <!-- Badge de tipo -->
+                                            <div class="ms-3">
+                                                {% if notification.notification_type == 'order' %}
+                                                    <span class="badge bg-primary">Pedido</span>
+                                                {% elif notification.notification_type == 'order_updated' %}
+                                                    <span class="badge bg-info">Atualização</span>
+                                                {% elif notification.notification_type == 'review' %}
+                                                    <span class="badge bg-warning">Avaliação</span>
+                                                {% elif notification.notification_type == 'message' %}
+                                                    <span class="badge bg-secondary">Mensagem</span>
+                                                {% elif notification.notification_type == 'payment' %}
+                                                    <span class="badge bg-success">Pagamento</span>
+                                                {% elif notification.notification_type == 'service' %}
+                                                    <span class="badge bg-success">Nova Vaga</span>
+                                                {% elif notification.notification_type == 'account' %}
+                                                    <span class="badge bg-dark">Conta</span>
+                                                {% else %}
+                                                    <span class="badge bg-secondary">Notificação</span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+
+                                        <!-- Ação: Link se houver -->
+                                        {% if notification.link %}
+                                            <div class="mt-3">
+                                                <a href="{{ notification.link }}" class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-arrow-right"></i> Ver detalhes
+                                                </a>
+                                            </div>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -114,9 +178,15 @@
                     {% endfor %}
                 </div>
             {% else %}
-                <div class="alert alert-info text-center" role="alert">
-                    <i class="fas fa-inbox"></i>
-                    <p class="mb-0">Você não tem notificações no momento.</p>
+                <div class="alert alert-info text-center py-5" role="alert">
+                    <i class="fas fa-inbox fa-3x mb-3 text-muted"></i>
+                    <h5 class="mb-2">Nenhuma notificação</h5>
+                    <p class="text-muted mb-0">Você está em dia! Não possui notificações no momento.</p>
+                    {% if notification_filter != 'all' %}
+                        <a href="{% url 'notifications' %}" class="btn btn-sm btn-primary mt-3">
+                            Ver todas as notificações
+                        </a>
+                    {% endif %}
                 </div>
             {% endif %}
         </div>
@@ -125,28 +195,49 @@
 
 <style>
     .notification-icon {
-        font-size: 1.5rem;
-        width: 40px;
-        height: 40px;
+        font-size: 1.8rem;
+        width: 50px;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         background: #f8f9fa;
         border-radius: 50%;
+        flex-shrink: 0;
     }
 
-    .notification-list .card {
+    .notification-card {
         border-left: 4px solid #dee2e6;
         transition: all 0.3s ease;
+        border-radius: 0.5rem;
     }
 
-    .notification-list .card:hover {
+    .notification-card:hover {
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        transform: translateY(-2px);
     }
 
-    .notification-list .card.border-primary {
+    .notification-card.unread {
         background-color: #f0f8ff;
         border-left-color: #0d6efd;
     }
+
+    .btn-group {
+        gap: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.4rem;
+        }
+
+        .notification-list .card {
+            margin-bottom: 1rem;
+        }
+    }
+</style>
+{% endblock %}
 </style>
 {% endblock %}

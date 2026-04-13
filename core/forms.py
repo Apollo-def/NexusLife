@@ -38,7 +38,7 @@ class UserRegisterForm(UserCreationForm):
     )
     phone = forms.CharField(
         max_length=20,
-        required=True,
+        required=False,
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '(DDD) Telefone'})
     )
     state_registration = forms.CharField(
@@ -89,12 +89,26 @@ class UserRegisterForm(UserCreationForm):
     def clean(self):
         cleaned_data = super().clean()
         person_type = cleaned_data.get('person_type')
-        cpf_cnpj = cleaned_data.get('cpf_cnpj', '')
+        cpf_cnpj = cleaned_data.get('cpf_cnpj', '').strip()
+        state_registration = cleaned_data.get('state_registration', '').strip()
+        phone = cleaned_data.get('phone', '').strip()
 
-        if person_type == 'PF' and cpf_cnpj:
+        # Validação: CPF/CNPJ é obrigatório
+        if not cpf_cnpj:
+            self.add_error('cpf_cnpj', 'CPF/CNPJ é obrigatório.')
+            return cleaned_data
+
+        # Validações por tipo de pessoa
+        if person_type == 'PF':
+            # Para PF: validar CPF e telefone é obrigatório
+            if not phone:
+                self.add_error('phone', 'Telefone é obrigatório para Pessoa Física.')
             if not self.validate_cpf(cpf_cnpj):
                 self.add_error('cpf_cnpj', 'CPF inválido.')
-        elif person_type == 'PJ' and cpf_cnpj:
+        elif person_type == 'PJ':
+            # Para PJ: validar CNPJ e Inscrição Estadual é obrigatória
+            if not state_registration:
+                self.add_error('state_registration', 'Inscrição Estadual é obrigatória para Pessoa Jurídica.')
             if not self.validate_cnpj(cpf_cnpj):
                 self.add_error('cpf_cnpj', 'CNPJ inválido.')
 

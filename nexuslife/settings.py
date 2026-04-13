@@ -115,6 +115,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 LOGIN_URL = 'login'
@@ -198,5 +199,8 @@ LOGGING = {
 OPENAI_API_KEY = config('OPENAI_API_KEY', default=None)
 CHATBOT_USE_AI = config('CHATBOT_USE_AI', default=True, cast=bool)
 CHATBOT_MODEL = config('CHATBOT_MODEL', default='gpt-3.5-turbo')
+
+# Gemini AI Configuration
+GEMINI_API_KEY = config('GEMINI_API_KEY', default=None)
 CHATBOT_MAX_TOKENS = config('CHATBOT_MAX_TOKENS', default=500, cast=int)
 CHATBOT_TEMPERATURE = config('CHATBOT_TEMPERATURE', default=0.7, cast=float)

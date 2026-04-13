@@ -65,6 +65,26 @@ def service_create(request):
             service = form.save(commit=False)
             service.freelancer = request.user
             service.save()
+            
+            # Criar notificação para outros usuários sobre o novo serviço
+            from core.models import Notification
+            from django.contrib.auth.models import User
+            
+            # Notificar freelancers afins (que trabalham com a mesma categoria)
+            freelancers_in_category = User.objects.filter(
+                services__category=service.category,
+                services__is_active=True
+            ).exclude(id=request.user.id).distinct()[:10]  # Limite a 10 usuários
+            
+            for freelancer in freelancers_in_category:
+                Notification.objects.create(
+                    user=freelancer,
+                    notification_type='service',
+                    title=f'Nova vaga em {service.category.name}',
+                    message=f'Uma nova vaga foi publicada: "{service.title}" por R$ {service.price}',
+                    link=f'/marketplace/services/{service.id}/'
+                )
+            
             messages.success(request, 'Serviço criado com sucesso!')
             return redirect('marketplace:service_detail', pk=service.pk)
     else:
@@ -106,7 +126,34 @@ def order_list(request):
         orders = Order.objects.all().select_related('service', 'client', 'service__freelancer')
     else:
         orders = Order.objects.filter(client=request.user).select_related('service', 'service__freelancer')
-    return render(request, 'marketplace/order_list.html', {'orders': orders})
+    
+    # Filtrar por status se fornecido
+    status_filter = request.GET.get('status', '')
+    if status_filter and status_filter in [choice[0] for choice in Order.STATUS_CHOICES]:
+        orders = orders.filter(status=status_filter)
+    
+    # Ordenar por data de criação (mais recentes primeiro)
+    orders = orders.order_by('-created_at')
+    
+    # Estatísticas de pedidos
+    if request.user.is_staff:
+        all_orders = Order.objects.all()
+    else:
+        all_orders = Order.objects.filter(client=request.user)
+    
+    stats = {
+        'total': all_orders.count(),
+        'pending': all_orders.filter(status='pending').count(),
+        'in_progress': all_orders.filter(status='in_progress').count(),
+        'completed': all_orders.filter(status='completed').count(),
+        'cancelled': all_orders.filter(status='cancelled').count(),
+    }
+    
+    return render(request, 'marketplace/order_list.html', {
+        'orders': orders,
+        'stats': stats,
+        'status_filter': status_filter,
+    })
 
 @login_required
 def order_detail(request, pk):

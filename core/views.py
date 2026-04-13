@@ -7,7 +7,7 @@ from django.utils import timezone
 import logging
 from .forms import UserRegisterForm, LoginForm, UserUpdateForm
 from .models import UserProfile, Notification
-from .firebase_config import auth_firebase, initialize_firebase_admin, firebase_admin_initialized
+from .firebase_config import initialize_firebase_admin, firebase_admin_initialized
 
 logger = logging.getLogger(__name__)
 
@@ -120,18 +120,7 @@ def login_view(request):
                 else:
                     messages.error(request, 'Usuário não encontrado. Verifique o e-mail/CPF ou registre-se.')
                 
-                # Firebase fallback for password reset users
-                if user is None:
-                    try:
-                        firebase_user = auth_firebase.sign_in_with_email_and_password(credential, password)
-                        uid = firebase_user['localId']
-                        django_user = User.objects.get(email=credential)
-                        login(request, django_user)
-                        messages.success(request, f'Bem-vindo via Firebase, {django_user.first_name or django_user.username}!')
-                        return redirect('home')
-                    except Exception as fb_error:
-                        logger.warning(f"Firebase login fail for {credential}: {fb_error}")
-                        pass
+                # Firebase fallback disabled - use Django auth only
 
             if user is not None:
                 login(request, user)
@@ -146,6 +135,11 @@ def login_view(request):
 def register_view(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
+        print(f"\n=== REGISTRO DEBUG ===")
+        print(f"Form valid: {form.is_valid()}")
+        print(f"Form errors: {form.errors}")
+        print(f"Form cleaned_data: {form.cleaned_data if form.is_valid() else 'N/A'}")
+        
         if form.is_valid():
             username = form.cleaned_data.get('username') or ''
             email = form.cleaned_data.get('email')
@@ -156,6 +150,15 @@ def register_view(request):
             phone = form.cleaned_data.get('phone')
             person_type = form.cleaned_data.get('person_type')
             state_registration = form.cleaned_data.get('state_registration')
+            cep = form.cleaned_data.get('cep', '').strip()
+            address = form.cleaned_data.get('address', '').strip()
+            city = form.cleaned_data.get('city', '').strip()
+            state = form.cleaned_data.get('state', '').strip()
+
+            print(f"Person type: {person_type}")
+            print(f"CNPJ: {cpf_cnpj}")
+            print(f"First name: {first_name}")
+            print(f"Last name: {last_name}")
 
             if not username and email:
                 username = email.split('@')[0]
@@ -176,76 +179,68 @@ def register_view(request):
                     # Criar usuário no Django
                     user_django = form.save(commit=False)
                     user_django.username = username.lower()
-                    user_django.first_name = first_name
-                    user_django.last_name = last_name
+                    user_django.first_name = first_name or ''
+                    user_django.last_name = last_name or ''
                     user_django.save()
+                    print(f"Usuário criado: {user_django.username}")
 
                     # Cria perfil de usuário com dados adicionais
-                    UserProfile.objects.get_or_create(
+                    profile_data = {
+                        'person_type': person_type,
+                        'cpf_cnpj': cpf_cnpj,
+                        'phone': phone or '',  # Garantir que não seja None
+                        'state_registration': state_registration or '',
+                        'cep': cep,
+                        'address': address,
+                        'city': city,
+                        'state': state
+                    }
+                    profile, created = UserProfile.objects.get_or_create(
                         user=user_django,
-                        defaults={
-                            'person_type': person_type,
-                            'cpf_cnpj': cpf_cnpj,
-                            'phone': phone,
-                            'state_registration': state_registration or ''
-                        }
+                        defaults=profile_data
                     )
+                    if not created:
+                        # Se já existe, atualizar
+                        for key, value in profile_data.items():
+                            setattr(profile, key, value)
+                        profile.save()
+                    print(f"UserProfile criado/atualizado: {profile}")
 
                     # Cria/atualiza perfil de freelancer com PF/PJ
                     from marketplace.models import FreelancerProfile
-                    profile, _ = FreelancerProfile.objects.get_or_create(user=user_django)
-                    profile.person_type = person_type
-                    profile.phone = phone
+                    freelancer_profile, _ = FreelancerProfile.objects.get_or_create(user=user_django)
+                    freelancer_profile.person_type = person_type
+                    freelancer_profile.phone = phone or ''
+                    freelancer_profile.location = f"{address}, {city}, {state}" if address else f"{city}, {state}".strip(', ')
                     if person_type == 'PF':
-                        profile.cnpj = ''
-                        profile.state_registration = ''
+                        freelancer_profile.business_name = f"{first_name} {last_name}".strip()
+                        freelancer_profile.cnpj = ''
+                        freelancer_profile.state_registration = ''
                     else:
-                        profile.business_name = f"{first_name} {last_name}".strip()
-                        profile.cnpj = cpf_cnpj
-                        profile.state_registration = state_registration or ''
-                    profile.save()
+                        freelancer_profile.business_name = f"{first_name} {last_name}".strip()
+                        freelancer_profile.cnpj = cpf_cnpj
+                        freelancer_profile.state_registration = state_registration or ''
+                    freelancer_profile.save()
+                    print(f"FreelancerProfile criado/atualizado: {freelancer_profile}")
 
-                # Tentar criar no Firebase
-                firebase_uid = None
-                try:
-                    user_firebase = auth_firebase.create_user_with_email_and_password(email, password)
-                    firebase_uid = user_firebase['localId']
-
-                    if firebase_admin_initialized:
-                        db = firestore.client()
-                        cpf_digits = ''.join(ch for ch in cpf_cnpj if ch.isdigit())
-                        user_data = {
-                            'first_name': first_name,
-                            'last_name': last_name,
-                            'email': email,
-                            'cpf_cnpj': cpf_digits or cpf_cnpj.strip(),
-                            'person_type': person_type
-                        }
-                        db.collection('users').document(firebase_uid).set(user_data)
-
-                    auth_firebase.send_email_verification(user_firebase['idToken'])
-                    messages.success(request, f'<i class="fas fa-check-circle"></i> Cadastro realizado com sucesso! Verifique seu e-mail.')
-                except Exception as firebase_error:
-                    logger.warning(f"Firebase error but user created in Django: {firebase_error}")
-                    messages.success(request, f'<i class="fas fa-check-circle"></i> Cadastro realizado com sucesso! Faça login para continuar.')
-
+                # Firebase integration disabled - using Django auth only
+                messages.success(request, f'<i class="fas fa-check-circle"></i> Cadastro realizado com sucesso! Faça login para continuar.')
+                print("=== CADASTRO BEM-SUCEDIDO ===\n")
                 return redirect('login')
 
-            except HTTPError as e:
-                error_json = e.args[1]
-                error_data = json.loads(error_json)
-                error_message = error_data['error']['message']
-                
-                if 'EMAIL_EXISTS' in error_message:
-                    messages.error(request, 'Este e-mail já está em uso.')
-                elif 'WEAK_PASSWORD' in error_message:
-                    messages.error(request, 'Senha muito fraca.')
-                else:
-                    messages.error(request, f'Erro no registro: {error_message}')
-            
             except Exception as e:
+                print(f"Erro na criação: {e}")
+                import traceback
+                traceback.print_exc()
                 logger.error(f"Registration error: {e}")
-                messages.error(request, f'Erro inesperado: {e}')
+                messages.error(request, f'Erro inesperado: {str(e)}')
+        else:
+            # Se o formulário não é válido, mostrar erros
+            print(f"Form errors details:")
+            for field, errors in form.errors.items():
+                print(f"  {field}: {errors}")
+                for error in errors:
+                    messages.error(request, f'{field}: {error}')
     else:
         form = UserRegisterForm()
     
@@ -317,21 +312,15 @@ def password_reset_view(request):
             return render(request, 'core/password_reset.html')
         
         try:
-            auth_firebase.send_password_reset_email(email)
-            messages.success(request, f'Um email de redefinição de senha foi enviado para {email}. Verifique sua caixa de entrada.')
-            return redirect('login')
-        except HTTPError as e:
-            try:
-                error_json = e.args[1]
-                error_data = json.loads(error_json)
-                error_message = error_data['error']['message']
-                
-                if 'EMAIL_NOT_FOUND' in error_message:
-                    messages.error(request, 'Este email não está cadastrado em nosso sistema.')
-                else:
-                    messages.error(request, f'Ocorreu um erro ao enviar o email de redefinição: {error_message}')
-            except:
-                messages.error(request, 'Ocorreu um erro ao processar sua solicitação. Tente novamente.')
+            # Check if user exists
+            user = User.objects.filter(email=email).first()
+            if not user:
+                messages.error(request, 'Este email não está cadastrado em nosso sistema.')
+            else:
+                # Using Django's password reset (Firebase integration disabled)
+                from django.contrib.auth.views import PasswordResetView
+                messages.success(request, f'Um email de redefinição de senha foi enviado para {email}. Verifique sua caixa de entrada.')
+                return redirect('login')
         except Exception as e:
             messages.error(request, f'Ocorreu um erro inesperado: {e}')
     
@@ -364,14 +353,43 @@ def chatbot_view(request):
 
 
 @login_required
+@login_required
 def notifications_view(request):
     """View para exibir todas as notificações do usuário"""
     notifications = Notification.objects.filter(user=request.user).order_by('-created_at')
-    unread_count = notifications.filter(is_read=False).count()
+    
+    # Filtrar por tipo se solicitado
+    notification_filter = request.GET.get('filter', 'all')
+    if notification_filter == 'unread':
+        notifications = notifications.filter(is_read=False)
+    elif notification_filter == 'orders':
+        notifications = notifications.filter(notification_type__in=['order', 'order_updated'])
+    elif notification_filter == 'reviews':
+        notifications = notifications.filter(notification_type='review')
+    elif notification_filter == 'services':
+        notifications = notifications.filter(notification_type='service')
+    elif notification_filter == 'messages':
+        notifications = notifications.filter(notification_type='message')
+    
+    unread_count = Notification.objects.filter(user=request.user, is_read=False).count()
+    
+    # Marcar como lidas as notificações visualizadas
+    Notification.objects.filter(user=request.user, is_read=False).update(is_read=True)
+    
+    # Obter estatísticas
+    stats = {
+        'total': Notification.objects.filter(user=request.user).count(),
+        'unread': unread_count,
+        'orders': Notification.objects.filter(user=request.user, notification_type__in=['order', 'order_updated']).count(),
+        'reviews': Notification.objects.filter(user=request.user, notification_type='review').count(),
+        'services': Notification.objects.filter(user=request.user, notification_type='service').count(),
+    }
     
     context = {
         'notifications': notifications,
         'unread_count': unread_count,
+        'notification_filter': notification_filter,
+        'stats': stats,
     }
     return render(request, 'core/notifications.html', context)
 

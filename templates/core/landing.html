@@ -428,6 +428,230 @@
 .fade-in-up:nth-child(4) { animation-delay: 0.4s; }
 .fade-in-up:nth-child(5) { animation-delay: 0.5s; }
 .fade-in-up:nth-child(6) { animation-delay: 0.6s; }
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(34, 193, 67, 0.05) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(22, 193, 67, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.testimonials-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -15%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.testimonials-container {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.testimonials-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--success-color), #00D4FF);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 212, 255, 0.2);
+}
+
+.testimonial-card:hover::before {
+    opacity: 1;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.testimonial-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(2, 47, 115, 0.1), rgba(0, 212, 255, 0.1));
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.testimonial-category i {
+    font-size: 0.9rem;
+}
+
+.testimonial-content {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-text {
+    color: #333;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.star {
+    color: #FFC107;
+    font-size: 1.1rem;
+}
+
+.rating-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimonial-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 0.25rem 0;
+}
+
+.testimonial-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.testimonial-date {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Testimonials */
+@media (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-title {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+}
 </style>
 {% endblock %}
 
@@ -564,6 +788,216 @@
                     <h4>Gestão de Contratos</h4>
                     <p>Sistema completo de gestão de contratos, pagamentos e
                     acompanhamento de projetos em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container testimonials-container">
+        <h2 class="testimonials-title">O que Dizem Sobre Nós</h2>
+        <p class="testimonials-subtitle">
+            Veja como profissionais e empresas estão transformando seus negócios com a NexusLife
+        </p>
+
+        <div class="testimonials-grid">
+            <!-- Testimonial 1 - AI Services -->
+            <div class="testimonial-card fade-in-up">
+                <div class="testimonial-header">
+                    <div class="testimonial-category">
+                        <i class="fas fa-robot"></i>
+                        AI Services
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        "Rick é um fantástico Engineer de IA/ML com especialização em LLMs, entregando soluções end-to-end. Tivemos poucos conceitos quando começamos; ele entregou uma solução funcional. Ansioso para trabalhar com ele novamente."
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                </div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">
+                        <img src="{% static 'images/testimonials/daniel.jpeg' %}" alt="Daniel">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Daniel</h4>
+                        <p>LLM/RAG Agent System Development</p>
+                        <p class="testimonial-date">Mar 28, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 - Dev & IT -->
+            <div class="testimonial-card fade-in-up">
+                <div class="testimonial-header">
+                    <div class="testimonial-category">
+                        <i class="fas fa-code"></i>
+                        Dev & IT
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        "Haris providenciou e nos ajudou a transferir conhecimento do desenvolvedor sainte. Seu conhecimento e experiência são excepcionais. Altamente recomendo!"
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                </div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">
+                        <img src="{% static 'images/testimonials/testimonial-2.jpeg' %}" alt="Nycollas">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Nycollas</h4>
+                        <p>Full Stack Developer</p>
+                        <p class="testimonial-date">Apr 7, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 - Design & Creative -->
+            <div class="testimonial-card fade-in-up">
+                <div class="testimonial-header">
+                    <div class="testimonial-category">
+                        <i class="fas fa-palette"></i>
+                        Design & Creative
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        "Ezzan fez um trabalho incrível editando meus vídeos — rápido, ótima atenção ao detalhe, e muito fácil trabalhar com ele. Segue as direções bem e entrega trabalho de alta qualidade consistentemente."
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                </div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">
+                        <img src="{% static 'images/testimonials/testimonial-3.jpeg' %}" alt="Guilherme">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Guilherme</h4>
+                        <p>Video Editor</p>
+                        <p class="testimonial-date">Mar 14, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 - Sales & Marketing -->
+            <div class="testimonial-card fade-in-up">
+                <div class="testimonial-header">
+                    <div class="testimonial-category">
+                        <i class="fas fa-chart-line"></i>
+                        Sales & Marketing
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        "Adorei trabalhar com Jibran e sua equipe. Muito profissionais e sabem bem o que fazem. Muito responsivos e realmente entendem o projeto e como abordá-lo metodicamente."
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                </div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">
+                        <img src="{% static 'images/testimonials/testimonial-4.jpeg' %}" alt="Paulo Lisboa">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Paulo Lisboa</h4>
+                        <p>Social Media Marketing</p>
+                        <p class="testimonial-date">Mar 10, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 - Writing & Translation -->
+            <div class="testimonial-card fade-in-up">
+                <div class="testimonial-header">
+                    <div class="testimonial-category">
+                        <i class="fas fa-pen-fancy"></i>
+                        Writing & Translation
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        "Michael é muito qualificado e altamente profissional. Entendeu o trabalho, seguiu instruções, e também foi criativo. Um dos poucos redatores que eu conheci que saiu da caixa, mas ainda mantém a marca."
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                </div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">
+                        <img src="{% static 'images/testimonials/testimonial-5.jpeg' %}" alt="Vinicius">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Vinicius</h4>
+                        <p>Email Marketing Copywriter</p>
+                        <p class="testimonial-date">Jan 31, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 - Admin & Support -->
+            <div class="testimonial-card fade-in-up">
+                <div class="testimonial-header">
+                    <div class="testimonial-category">
+                        <i class="fas fa-headset"></i>
+                        Admin & Support
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        "Ahmed foi um grande ativo para nossa equipe. Trouxe um olho aguçado para ineficiências, aplicou rigor de processo e configurou estruturadamente o ClickUp para garantir uso sustentável."
+                    </p>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                </div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">
+                        <img src="{% static 'images/testimonials/testimonial-6.jpeg' %}" alt="Vitor">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Vitor</h4>
+                        <p>Project Manager Técnico</p>
+                        <p class="testimonial-date">Feb 5, 2025</p>
+                    </div>
                 </div>
             </div>
         </div>

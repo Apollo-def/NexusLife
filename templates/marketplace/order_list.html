@@ -4,40 +4,149 @@
 
 {% block content %}
 <div class="container mx-auto px-4 py-8">
-    <div class="mb-4">
-        <a href="javascript:history.back()" class="btn-voltar">
+    <div class="mb-6">
+        <a href="javascript:history.back()" class="btn btn-secondary btn-sm">
             <i class="fas fa-arrow-left me-2"></i>Voltar
         </a>
     </div>
-    <h1 class="text-3xl font-bold mb-8">Meus Pedidos</h1>
+    
+    <div class="mb-8">
+        <h1 class="text-4xl font-bold mb-6">Meus Pedidos</h1>
+        
+        <!-- Estatísticas -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <p class="text-gray-600 text-sm font-medium">Total</p>
+                <p class="text-2xl font-bold text-blue-600">{{ stats.total }}</p>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <p class="text-gray-600 text-sm font-medium">Pendentes</p>
+                <p class="text-2xl font-bold text-yellow-600">{{ stats.pending }}</p>
+            </div>
+            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                <p class="text-gray-600 text-sm font-medium">Em Andamento</p>
+                <p class="text-2xl font-bold text-purple-600">{{ stats.in_progress }}</p>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                <p class="text-gray-600 text-sm font-medium">Concluídos</p>
+                <p class="text-2xl font-bold text-green-600">{{ stats.completed }}</p>
+            </div>
+            <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                <p class="text-gray-600 text-sm font-medium">Cancelados</p>
+                <p class="text-2xl font-bold text-red-600">{{ stats.cancelled }}</p>
+            </div>
+        </div>
 
+        <!-- Filtros -->
+        <div class="mb-6 flex gap-2 flex-wrap">
+            <a href="{% url 'marketplace:order_list' %}" 
+               class="btn btn-sm {% if not status_filter %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                Todos
+            </a>
+            <a href="?status=pending" 
+               class="btn btn-sm {% if status_filter == 'pending' %}btn-warning{% else %}btn-outline-warning{% endif %}">
+                Pendentes
+            </a>
+            <a href="?status=in_progress" 
+               class="btn btn-sm {% if status_filter == 'in_progress' %}btn-info{% else %}btn-outline-info{% endif %}">
+                Em Andamento
+            </a>
+            <a href="?status=completed" 
+               class="btn btn-sm {% if status_filter == 'completed' %}btn-success{% else %}btn-outline-success{% endif %}">
+                Concluídos
+            </a>
+            <a href="?status=cancelled" 
+               class="btn btn-sm {% if status_filter == 'cancelled' %}btn-danger{% else %}btn-outline-danger{% endif %}">
+                Cancelados
+            </a>
+        </div>
+    </div>
+
+    <!-- Lista de Pedidos -->
+    {% if orders %}
     <div class="space-y-4">
         {% for order in orders %}
-        <div class="card">
-            <div class="card-body">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h5 class="card-title">{{ order.service.title }}</h5>
-                        <p class="text-sm text-gray-600">Freelancer: {{ order.service.freelancer.username }}</p>
-                        <p class="text-sm">Status: 
-                            <span class="badge {% if order.status == 'pending' %}badge-warning{% elif order.status == 'in_progress' %}badge-info{% elif order.status == 'completed' %}badge-success{% else %}badge-danger{% endif %}">
-                                {{ order.get_status_display }}
-                            </span>
+        <div class="card hover:shadow-lg transition-shadow">
+            <div class="card-body p-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
+                    <!-- Serviço e Informações -->
+                    <div class="md:col-span-2">
+                        <h5 class="card-title text-lg font-bold mb-2">{{ order.service.title }}</h5>
+                        <p class="text-sm text-gray-600 mb-1">
+                            <strong>Freelancer:</strong> {{ order.service.freelancer.get_full_name|default:order.service.freelancer.username }}
                         </p>
-                        <p class="text-sm text-gray-500">Criado em {{ order.created_at|date:"d/m/Y H:i" }}</p>
+                        <p class="text-sm text-gray-600 mb-2">
+                            <strong>Categoria:</strong> {{ order.service.category.name }}
+                        </p>
+                        <p class="text-xs text-gray-500">
+                            <i class="fas fa-calendar-alt"></i> Criado em {{ order.created_at|date:"d/m/Y \à\s H:i" }}
+                        </p>
                     </div>
-                    <div class="text-right">
-                        <p class="text-lg font-bold text-green-600">R$ {{ order.service.price }}</p>
-                        <a href="{% url 'marketplace:order_detail' order.pk %}" class="btn btn-primary btn-sm">Ver Detalhes</a>
+                    
+                    <!-- Status e Preço -->
+                    <div class="md:col-span-1">
+                        <p class="text-sm text-gray-600 mb-2"><strong>Status</strong></p>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold text-white
+                            {% if order.status == 'pending' %}bg-yellow-500
+                            {% elif order.status == 'in_progress' %}bg-blue-500
+                            {% elif order.status == 'completed' %}bg-green-500
+                            {% elif order.status == 'cancelled' %}bg-red-500
+                            {% else %}bg-gray-500
+                            {% endif %}">
+                            {{ order.get_status_display }}
+                        </span>
+                        
+                        {% if order.completed_at %}
+                        <p class="text-xs text-gray-500 mt-2">
+                            <i class="fas fa-check-circle"></i> Concluído em {{ order.completed_at|date:"d/m/Y" }}
+                        </p>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Preço e Ações -->
+                    <div class="md:col-span-1 text-right">
+                        <p class="text-3xl font-bold text-green-600 mb-3">R$ {{ order.service.price }}</p>
+                        <a href="{% url 'marketplace:order_detail' order.pk %}" class="btn btn-primary btn-sm block">
+                            <i class="fas fa-eye me-1"></i> Ver Detalhes
+                        </a>
+                        {% if order.notes %}
+                        <p class="text-xs text-gray-600 mt-2 italic">Notas: {{ order.notes|truncatewords:10 }}</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
-
-    {% if not orders %}
-    <p class="text-center text-gray-500 mt-8">Você ainda não fez nenhum pedido.</p>
+    {% else %}
+    <!-- Mensagem quando não há pedidos -->
+    <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-12 text-center">
+        <i class="fas fa-inbox text-5xl text-blue-400 mb-4"></i>
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Nenhum pedido encontrado</h3>
+        <p class="text-gray-600 mb-6">
+            {% if status_filter %}
+                Nenhum pedido com o status "<strong>{{ status_filter }}</strong>" foi encontrado.
+            {% else %}
+                Você ainda não fez nenhum pedido. Explore nossos serviços e crie seu primeiro pedido!
+            {% endif %}
+        </p>
+        <a href="{% url 'marketplace:service_list' %}" class="btn btn-primary">
+            <i class="fas fa-search me-2"></i>Explorar Serviços
+        </a>
+    </div>
     {% endif %}
 </div>
+
+<style>
+    .btn-outline-primary { border-color: #007bff; color: #007bff; }
+    .btn-outline-primary:hover { background-color: #007bff; color: white; }
+    .btn-outline-warning { border-color: #ffc107; color: #ffc107; }
+    .btn-outline-warning:hover { background-color: #ffc107; color: white; }
+    .btn-outline-info { border-color: #17a2b8; color: #17a2b8; }
+    .btn-outline-info:hover { background-color: #17a2b8; color: white; }
+    .btn-outline-success { border-color: #28a745; color: #28a745; }
+    .btn-outline-success:hover { background-color: #28a745; color: white; }
+    .btn-outline-danger { border-color: #dc3545; color: #dc3545; }
+    .btn-outline-danger:hover { background-color: #dc3545; color: white; }
+</style>
 {% endblock %}

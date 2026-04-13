@@ -45,11 +45,5 @@
     {% if not services %}
     <p class="text-center text-gray-500 mt-8">Nenhum serviço encontrado.</p>
     {% endif %}
-
-    {% if user.is_authenticated %}
-    <div class="mt-8">
-        <a href="{% url 'marketplace:service_create' %}" class="btn btn-success">Criar Novo Serviço</a>
-    </div>
-    {% endif %}
 </div>
 {% endblock %}

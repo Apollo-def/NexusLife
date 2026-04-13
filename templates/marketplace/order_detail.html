@@ -42,24 +42,24 @@
                 {% endif %}
 
                 {% if user == order.service.freelancer %}
-                    <div class="mb-6">
-                        <h3 class="font-bold mb-2">Ações do Freelancer</h3>
-                        <div class="flex gap-2">
+                    <div class="mb-6 pb-4 border-bottom">
+                        <h3 class="font-bold mb-3">Ações do Freelancer</h3>
+                        <div class="d-flex flex-nowrap gap-3 justify-content-evenly">
                             {% if order.status == 'pending' %}
-                                <a href="{% url 'marketplace:order_update_status' order.pk 'in_progress' %}" class="btn btn-info">Iniciar Trabalho</a>
+                                <a href="{% url 'marketplace:order_update_status' order.pk 'in_progress' %}" class="btn btn-info px-3 py-2">Iniciar Trabalho</a>
                             {% elif order.status == 'in_progress' %}
-                                <a href="{% url 'marketplace:order_update_status' order.pk 'completed' %}" class="btn btn-success">Marcar como Concluído</a>
+                                <a href="{% url 'marketplace:order_update_status' order.pk 'completed' %}" class="btn btn-success px-3 py-2">Marcar como Concluído</a>
                             {% endif %}
                             {% if order.status != 'cancelled' and order.status != 'completed' %}
-                                <a href="{% url 'marketplace:order_update_status' order.pk 'cancelled' %}" class="btn btn-danger">Cancelar Pedido</a>
+                                <a href="{% url 'marketplace:order_update_status' order.pk 'cancelled' %}" class="btn btn-danger px-3 py-2">Cancelar Pedido</a>
                             {% endif %}
                         </div>
                     </div>
                 {% endif %}
 
-                <div class="flex gap-4">
-                    <a href="{% url 'marketplace:order_list' %}" class="btn btn-secondary">Voltar aos Pedidos</a>
-                    <a href="{% url 'marketplace:service_detail' order.service.pk %}" class="btn btn-primary">Ver Serviço</a>
+                <div class="d-flex flex-nowrap gap-3 justify-content-evenly mt-6">
+                    <a href="{% url 'marketplace:order_list' %}" class="btn btn-secondary px-3 py-2">Voltar aos Pedidos</a>
+                    <a href="{% url 'marketplace:service_detail' order.service.pk %}" class="btn btn-primary px-3 py-2">Ver Serviço</a>
                 </div>
             </div>
         </div>

@@ -11,6 +11,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    
+    <style>
+        /* Estilo do botão de notificações */
+        .nav-link.btn-link {
+            border: none;
+            padding: 0.5rem;
+            margin: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link.btn-link:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Estilo do dropdown de notificações */
+        .dropdown-menu-end {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .dropdown-menu li a.dropdown-item {
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s ease;
+        }
+        
+        .dropdown-menu li a.dropdown-item:last-of-type {
+            border-bottom: none;
+        }
+        
+        .dropdown-menu li a.dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .dropdown-menu li a.dropdown-item.fw-bold {
+            background-color: #e7f1ff;
+        }
+        
+        #notifications-container {
+            padding: 0;
+        }
+    </style>
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -32,18 +73,20 @@
                         
                         <!-- Notificações -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle position-relative" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="nav-link dropdown-toggle position-relative btn btn-link" type="button" id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: inherit;">
                                 <i class="fas fa-bell"></i>
                                 <span id="notification-badge" class="position-absolute top-0 start-100 translate-middle badge bg-danger rounded-pill" style="display:none;">0</span>
-                            </a>
+                            </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown" style="width: 320px;">
-                                <li><h6 class="dropdown-header">Notificações</h6></li>
+                                <li><h6 class="dropdown-header">Notificações Recentes</h6></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <div id="notifications-container" style="max-height: 400px; overflow-y: auto;">
                                     <li><span class="dropdown-item-text text-muted small">Carregando...</span></li>
                                 </div>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-center" href="{% url 'notifications' %}">Ver todas as notificações</a></li>
+                                <li><a class="dropdown-item text-center fw-bold" href="{% url 'notifications' %}">
+                                    <i class="fas fa-bell"></i> Ver todas as notificações
+                                </a></li>
                             </ul>
                         </li>
                         
@@ -89,40 +132,70 @@
         // Carregar notificações quando a página carrega
         document.addEventListener('DOMContentLoaded', function() {
             loadNotifications();
-            // Atualizar a cada 30 segundos
-            setInterval(loadNotifications, 30000);
+            // Atualizar a cada 20 segundos
+            setInterval(loadNotifications, 20000);
+            
+            // Carregar quando o dropdown é aberto
+            const notificationDropdown = document.getElementById('notificationDropdown');
+            if (notificationDropdown) {
+                notificationDropdown.addEventListener('show.bs.dropdown', function() {
+                    loadNotifications();
+                });
+            }
         });
 
         function loadNotifications() {
-            fetch('{% url "get_unread_count" %}')
-                .then(response => response.json())
+            console.log('Carregando notificações...');
+            const url = '{% url "get_unread_count" %}';
+            
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro HTTP: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
+                    console.log('Dados recebidos:', data);
+                    
                     // Atualizar badge de contagem
                     const badge = document.getElementById('notification-badge');
-                    if (data.unread_count > 0) {
-                        badge.textContent = data.unread_count;
-                        badge.style.display = 'inline-block';
-                    } else {
-                        badge.style.display = 'none';
+                    if (badge) {
+                        if (data.unread_count > 0) {
+                            badge.textContent = data.unread_count;
+                            badge.style.display = 'inline-block';
+                        } else {
+                            badge.style.display = 'none';
+                        }
                     }
 
                     // Atualizar lista de notificações
                     const container = document.getElementById('notifications-container');
-                    if (data.recent_notifications.length > 0) {
+                    if (container && data.recent_notifications.length > 0) {
                         container.innerHTML = data.recent_notifications.map(notif => `
                             <li>
-                                <a class="dropdown-item ${!notif.is_read ? 'fw-bold' : ''}" href="{% url 'notifications' %}">
-                                    <small class="text-muted">${getNotificationIcon(notif.notification_type)} ${getNotificationLabel(notif.notification_type)}</small>
-                                    <div class="text-truncate">${notif.message}</div>
-                                    <small class="text-muted">${formatTime(notif.created_at)}</small>
+                                <a class="dropdown-item ${!notif.is_read ? 'fw-bold' : ''}" href="{% url 'notifications' %}" style="padding: 10px 15px;">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1" style="min-width: 0;">
+                                            <small class="text-muted d-block">${getNotificationIcon(notif.notification_type)} ${getNotificationLabel(notif.notification_type)}</small>
+                                            <div class="text-truncate small">${notif.message}</div>
+                                            <small class="text-muted d-block">${formatTime(notif.created_at)}</small>
+                                        </div>
+                                    </div>
                                 </a>
                             </li>
                         `).join('');
-                    } else {
-                        container.innerHTML = '<li><span class="dropdown-item-text text-muted small">Nenhuma notificação</span></li>';
+                    } else if (container) {
+                        container.innerHTML = '<li><span class="dropdown-item-text text-muted small" style="display: block; padding: 10px 15px;">Nenhuma notificação</span></li>';
                     }
                 })
-                .catch(error => console.error('Erro ao carregar notificações:', error));
+                .catch(error => {
+                    console.error('Erro ao carregar notificações:', error);
+                    const container = document.getElementById('notifications-container');
+                    if (container) {
+                        container.innerHTML = '<li><span class="dropdown-item-text text-danger small" style="display: block; padding: 10px 15px;">Erro ao carregar notificações</span></li>';
+                    }
+                });
         }
 
         function getNotificationIcon(type) {
@@ -132,6 +205,7 @@
                 'review': '⭐',
                 'message': '✉️',
                 'payment': '💳',
+                'service': '💼',
                 'account': '👤'
             };
             return icons[type] || '🔔';
@@ -144,25 +218,30 @@
                 'review': 'Nova Avaliação',
                 'message': 'Nova Mensagem',
                 'payment': 'Pagamento',
+                'service': 'Nova Vaga',
                 'account': 'Conta'
             };
             return labels[type] || 'Notificação';
         }
 
         function formatTime(dateString) {
-            const date = new Date(dateString);
-            const now = new Date();
-            const diff = now - date;
-            const minutes = Math.floor(diff / 60000);
-            const hours = Math.floor(diff / 3600000);
-            const days = Math.floor(diff / 86400000);
+            try {
+                const date = new Date(dateString);
+                const now = new Date();
+                const diff = now - date;
+                const minutes = Math.floor(diff / 60000);
+                const hours = Math.floor(diff / 3600000);
+                const days = Math.floor(diff / 86400000);
 
-            if (minutes < 1) return 'Agora mesmo';
-            if (minutes < 60) return `${minutes}m atrás`;
-            if (hours < 24) return `${hours}h atrás`;
-            if (days < 7) return `${days}d atrás`;
-            
-            return date.toLocaleDateString('pt-BR');
+                if (minutes < 1) return 'Agora mesmo';
+                if (minutes < 60) return `${minutes}m atrás`;
+                if (hours < 24) return `${hours}h atrás`;
+                if (days < 7) return `${days}d atrás`;
+                
+                return date.toLocaleDateString('pt-BR');
+            } catch (e) {
+                return 'Recentemente';
+            }
         }
         {% endif %}
     </script>

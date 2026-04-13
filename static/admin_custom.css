@@ -1,0 +1,275 @@
+/* Customização do Admin Django - NexusLife */
+
+/* Cor principal do tema */
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+}
+
+/* Header */
+#header {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 20px;
+}
+
+#header a:link,
+#header a:visited {
+    color: white;
+}
+
+#header a:hover {
+    color: #e9ecef;
+}
+
+/* Title */
+h1, h2 {
+    color: #0056b3;
+    font-weight: 600;
+}
+
+/* Sidebar */
+#sidebar {
+    background-color: #f8f9fa;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.button,
+input[type="submit"],
+input[type="button"],
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button.default {
+    background-color: #007bff;
+}
+
+.button.deletelink {
+    background-color: #dc3545;
+}
+
+.button.deletelink:hover {
+    background-color: #c82333;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+tbody tr:hover {
+    background-color: #f0f7ff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fafbfc;
+}
+
+/* Field sets */
+fieldset {
+    border: 1px solid #der9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #fafbfc;
+}
+
+fieldset h2 {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    color: #0056b3;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Messages */
+.errornote,
+.messagelist li,
+ul.errorlist li {
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.errornote {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.changelist .results {
+    border: none;
+}
+
+/* Admin homepage styles */
+#content h1 {
+    color: #0056b3;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard */
+.module {
+    background-color: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.module h2 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    margin: -20px -20px 15px -20px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Collapsed sections */
+fieldset.collapsed {
+    background-color: #f8f9fa;
+}
+
+fieldset.collapsed h2 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="%23007bff" d="M10 15a1 1 0 01-.707-.293l-6-6a1 1 0 111.414-1.414L10 12.586l5.293-5.293a1 1 0 111.414 1.414l-6 6A1 1 0 0110 15z"/></svg>');
+}
+
+/* Badges and Tags */
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+    
+    thead th,
+    tbody td {
+        padding: 8px;
+    }
+    
+    #header {
+        padding: 15px;
+    }
+}
+
+/* Custom for admin list display */
+.field-colored_person_type,
+.field-status_badge,
+.field-conversation_status,
+.field-read_status,
+.field-notification_badge,
+.field-price_display,
+.field-rating_display,
+.field-status_badge,
+.field-amount_display,
+.field-rating_stars,
+.field-verified_badge,
+.field-earnings_display,
+.field-completion_rate_bar,
+.field-total_reviews_badge {
+    font-weight: 600;
+}
+
+/* Admin icon improvements */
+.module h2:before {
+    content: "📋 ";
+    margin-right: 5px;
+}
+
+/* Remove default admin icons and replace with emojis */
+#header h1:before {
+    content: "🚀 ";
+    margin-right: 10px;
+}

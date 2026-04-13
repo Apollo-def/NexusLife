@@ -12,6 +12,13 @@ class UserProfile(models.Model):
     cpf_cnpj = models.CharField(max_length=18, unique=True)
     phone = models.CharField(max_length=20)
     state_registration = models.CharField(max_length=20, blank=True, null=True)
+    
+    # Endereço
+    cep = models.CharField(max_length=9, blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    city = models.CharField(max_length=100, blank=True, null=True)
+    state = models.CharField(max_length=2, blank=True, null=True)
+    
     average_rating = models.FloatField(default=0.0)
     completion_rate = models.FloatField(default=0.0)
     total_earnings = models.FloatField(default=0.0)
@@ -37,6 +44,7 @@ class Notification(models.Model):
         ('review', 'Nova Avaliação'),
         ('message', 'Nova Mensagem'),
         ('payment', 'Pagamento'),
+        ('service', 'Nova Vaga'),
         ('account', 'Conta'),
     ]
     
