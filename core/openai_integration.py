@@ -9,12 +9,8 @@ from django.conf import settings
 
 logger = logging.getLogger(__name__)
 
-try:
-    import openai
-    OPENAI_AVAILABLE = True
-except ImportError:
-    OPENAI_AVAILABLE = False
-    logger.warning("OpenAI não instalado. Instale com: pip install openai")
+openai = None
+OPENAI_AVAILABLE = False
 
 
 class NexusBotAI:
@@ -23,16 +19,25 @@ class NexusBotAI:
     def __init__(self):
         """Inicializa o cliente OpenAI"""
         self.api_key = os.getenv('OPENAI_API_KEY') or getattr(settings, 'OPENAI_API_KEY', None)
-        
-        if not self.api_key:
-            logger.warning("OPENAI_API_KEY não configurada")
-            OPENAI_AVAILABLE = False
-        else:
-            openai.api_key = self.api_key
-        
+        self.openai = None
         self.model = "gpt-3.5-turbo"
         self.temperature = 0.7
         self.max_tokens = 500
+
+        if not self.api_key:
+            logger.warning("OPENAI_API_KEY não configurada")
+            return
+
+        try:
+            import openai as openai_module
+            self.openai = openai_module
+            self.openai.api_key = self.api_key
+            global OPENAI_AVAILABLE
+            OPENAI_AVAILABLE = True
+        except ImportError:
+            logger.warning("OpenAI não instalado. Instale com: pip install openai")
+        except Exception as e:
+            logger.warning(f"Falha ao importar OpenAI: {e}")
         
     def get_system_prompt(self, user_profile=None):
         """Cria o prompt do sistema com contexto do usuário"""
@@ -86,7 +91,7 @@ class NexusBotAI:
             }
         """
         
-        if not OPENAI_AVAILABLE or not self.api_key:
+        if not self.openai or not self.api_key:
             return {
                 'response': None,
                 'tokens_used': 0,
@@ -111,7 +116,7 @@ class NexusBotAI:
             messages.append({"role": "user", "content": message})
             
             # Chamar API OpenAI
-            response = openai.ChatCompletion.create(
+            response = self.openai.ChatCompletion.create(
                 model=self.model,
                 messages=messages,
                 temperature=self.temperature,
@@ -133,17 +138,17 @@ class NexusBotAI:
                 'error': None
             }
             
-        except openai.error.AuthenticationError as e:
+        except self.openai.error.AuthenticationError as e:
             error_msg = "Erro de autenticação com OpenAI"
             logger.error(f"{error_msg}: {str(e)}")
             return {'response': None, 'tokens_used': 0, 'error': error_msg}
             
-        except openai.error.RateLimitError as e:
+        except self.openai.error.RateLimitError as e:
             error_msg = "Limite de requisições OpenAI excedido. Tente novamente em alguns minutos."
             logger.error(f"{error_msg}: {str(e)}")
             return {'response': None, 'tokens_used': 0, 'error': error_msg}
             
-        except openai.error.APIError as e:
+        except self.openai.error.APIError as e:
             error_msg = f"Erro da API OpenAI: {str(e)}"
             logger.error(error_msg)
             return {'response': None, 'tokens_used': 0, 'error': error_msg}
@@ -156,11 +161,11 @@ class NexusBotAI:
     def generate_conversation_title(self, first_message):
         """Gera um título para a conversa baseado na primeira mensagem"""
         
-        if not OPENAI_AVAILABLE or not self.api_key:
+        if not self.openai or not self.api_key:
             return first_message[:50]
         
         try:
-            response = openai.ChatCompletion.create(
+            response = self.openai.ChatCompletion.create(
                 model=self.model,
                 messages=[
                     {

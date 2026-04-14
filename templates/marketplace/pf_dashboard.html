@@ -6,8 +6,6 @@
 {% block extra_css %}
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -43,61 +41,179 @@ body {
 .global-header {
     background: var(--white);
     box-shadow: var(--shadow);
-    padding: 0;
+    padding: 16px 0 24px;
+    margin-top: 24px;
+    margin-bottom: 32px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.search-bar {
-    max-width: 600px;
-    margin: 12px auto;
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    padding: 16px 0;
+    flex-wrap: wrap;
 }
 
-.search-input {
-    border: 2px solid var(--gray-medium);
-    border-radius: 50px;
-    padding: 12px 20px;
-    font-size: 16px;
-    transition: all 0.3s ease;
+.search-card {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     background: var(--white);
+    border-radius: 999px;
+    padding: 10px 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(2, 47, 115, 0.08);
+    min-width: 0;
 }
 
-.search-input:focus {
+    .dashboard-logo {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+        border-radius: 18px;
+        color: white;
+        font-size: 1.35rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow);
+        flex-shrink: 0;
+    }
+
+    .dashboard-logo i {
+        transform: translateY(1px);
+    }
     outline: none;
-    border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px rgba(2, 47, 115, 0.1);
+    box-shadow: none;
+}
+
+.search-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(2, 47, 115, 0.15);
+}
+
+.search-suggestions {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    overflow: hidden;
+    z-index: 9999;
+    border: 1px solid rgba(2, 47, 115, 0.08);
+}
+
+.search-suggestions a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #212529;
+    border-bottom: 1px solid rgba(2, 47, 115, 0.08);
+    transition: background 0.2s ease;
+}
+
+.search-suggestions a:hover {
+    background: #f8f9fa;
 }
 
 .notifications-btn {
     position: relative;
-    background: none;
+    background: rgba(2, 47, 115, 0.08);
     border: none;
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
     font-size: 20px;
-    color: var(--gray-dark);
-    padding: 8px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    color: var(--primary-blue);
+    transition: all 0.25s ease;
 }
 
 .notifications-btn:hover {
-    background: var(--gray-light);
-    color: var(--primary-blue);
+    transform: translateY(-2px);
+    background: rgba(2, 47, 115, 0.16);
 }
 
 .notifications-badge {
     position: absolute;
-    top: 4px;
-    right: 4px;
+    top: 10px;
+    right: 10px;
     background: var(--danger-red);
     color: white;
     border-radius: 50%;
-    width: 18px;
-    height: 18px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
     font-size: 11px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-weight: 700;
+}
+
+.job-actions {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-apply,
+.btn-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-apply {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    color: white;
+}
+
+.btn-apply:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(2, 47, 115, 0.16);
+}
+
+.btn-details {
+    border: 1.5px solid var(--primary-blue);
+    color: var(--primary-blue);
+    background: transparent;
+}
+
+.btn-details:hover {
+    background: rgba(2, 47, 115, 0.08);
 }
 
 /* Layout Principal */
@@ -227,10 +343,13 @@ body {
 
 /* Área Central - Feed */
 .main-feed {
+    display: flex;
+    flex-direction: column;
     background: var(--white);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
     overflow: hidden;
+    min-height: 560px;
 }
 
 .feed-header {
@@ -240,9 +359,29 @@ body {
     color: white;
 }
 
+.feed-content {
+    padding: 0;
+    flex: 1;
+    max-height: calc(100vh - 420px);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.feed-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.feed-content::-webkit-scrollbar-thumb {
+    background: rgba(2, 47, 115, 0.18);
+    border-radius: 999px;
+}
+
+.feed-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 .feed-title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 26px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -261,14 +400,17 @@ body {
 
 .job-card {
     padding: 24px;
-    border-bottom: 1px solid var(--gray-medium);
-    transition: all 0.3s ease;
+    border-radius: 24px;
+    background: var(--white);
+    margin: 0 24px 24px 24px;
+    box-shadow: 0 12px 34px rgba(2, 47, 115, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
 }
 
 .job-card:hover {
-    background: var(--gray-light);
-    padding-left: 32px;
+    transform: translateY(-3px);
+    box-shadow: 0 20px 45px rgba(2, 47, 115, 0.12);
 }
 
 .job-card:last-child {
@@ -277,14 +419,15 @@ body {
 
 .job-header {
     display: flex;
-    justify-content: between;
-    align-items: start;
-    margin-bottom: 12px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
 }
 
 .job-title {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-blue);
     margin: 0;
     flex: 1;
@@ -374,9 +517,49 @@ body {
     font-size: 18px;
 }
 
-.chart-container {
-    position: relative;
-    height: 200px;
+.chart-content {
+    display: grid;
+    gap: 16px;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: var(--gray-light);
+    border-radius: 16px;
+    border: 1px solid rgba(2, 47, 115, 0.08);
+}
+
+.metric-label {
+    font-size: 14px;
+    color: var(--gray-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.metric-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.tip-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.tip-list li {
+    background: var(--gray-light);
+    padding: 14px 16px;
+    border-radius: 16px;
+    color: #343a40;
+    line-height: 1.5;
 }
 
 /* Botões de Ação */
@@ -548,26 +731,31 @@ body {
 <header class="global-header">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-md-10 col-lg-10">
-                <div class="search-bar d-flex align-items-center gap-2" style="position: relative; max-width: 480px;">
-                    <input type="text" id="searchInput" class="form-control search-input" 
-                           placeholder="Buscar serviços, freelancers..."
-                           autocomplete="off">
-                    <button type="button" style="background: #022F73; border: none; border-radius: 50px; padding: 10px 18px; color: white; cursor: pointer; white-space: nowrap;">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <!-- Dropdown de sugestões -->
-                    <div id="searchSuggestions" style="display:none; position:absolute; top:100%; left:0; right:50px; background:white; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.15); z-index:9999; max-height:360px; overflow-y:auto; margin-top:6px;">
+            <div class="col-12">
+                <div class="header-top">
+                    <div class="dashboard-logo d-flex align-items-center justify-content-center me-3">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="search-card position-relative flex-grow-1">
+                        <i class="fas fa-search text-primary"></i>
+                        <input type="text" id="searchInput" class="form-control search-input" 
+                               placeholder="Buscar serviços, freelancers..."
+                               autocomplete="off">
+                        <button type="button" class="search-button" aria-label="Buscar">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div id="searchSuggestions" class="search-suggestions" style="display:none;"></div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="{% url 'notifications' %}" class="notifications-btn" title="Ver notificações">
+                            <i class="fas fa-bell"></i>
+                            {% if unread_notifications > 0 %}
+                                <span class="notifications-badge">{{ unread_notifications }}</span>
+                            {% endif %}
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-2 col-lg-2 text-end">
-                <button class="notifications-btn">
-                    <i class="fas fa-bell"></i>
-                    {% if unread_notifications > 0 %}
-                        <span class="notifications-badge">{{ unread_notifications }}</span>
-                    {% endif %}
-                </button>
             </div>
         </div>
     </div>
@@ -649,16 +837,12 @@ body {
                                 <span class="job-tag">{{ job.category.name }}</span>
                             </div>
 
-                            <div style="margin-top: 12px;">
-                                <a href="{% url 'marketplace:order_create' job.pk %}" 
-                                   style="display:inline-block; padding: 8px 20px; background: linear-gradient(135deg, #022F73, #035edb); color: white; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;"
-                                   onmouseover="this.style.transform='translateY(-2px)'"
-                                   onmouseout="this.style.transform='translateY(0)'">
-                                    <i class="fas fa-paper-plane me-1"></i> Candidatar-se
+                            <div class="job-actions">
+                                <a href="{% url 'marketplace:order_create' job.pk %}" class="btn-apply">
+                                    <i class="fas fa-paper-plane"></i> Candidatar-se
                                 </a>
-                                <a href="{% url 'marketplace:service_detail' job.pk %}"
-                                   style="display:inline-block; padding: 8px 16px; border: 1.5px solid #022F73; color: #022F73; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; margin-left: 8px;">
-                                    <i class="fas fa-eye me-1"></i> Ver Detalhes
+                                <a href="{% url 'marketplace:service_detail' job.pk %}" class="btn-details">
+                                    <i class="fas fa-eye"></i> Ver Detalhes
                                 </a>
                             </div>
                         </div>
@@ -682,107 +866,56 @@ body {
             </div>
         </main>
 
-        <!-- Sidebar Direita - Gráficos -->
+        <!-- Sidebar Direita - Informações Relevantes -->
         <aside class="charts-sidebar">
             <div class="chart-card">
                 <div class="chart-header">
-                    <i class="fas fa-chart-line chart-icon"></i>
-                    <h4 class="chart-title">Ganhos Mensais</h4>
+                    <i class="fas fa-bullseye chart-icon"></i>
+                    <h4 class="chart-title">Resumo do seu Mercado</h4>
                 </div>
-                <div class="chart-container">
-                    <canvas id="earningsChart"></canvas>
+                <div class="chart-content">
+                    <div class="metric-row">
+                        <span class="metric-label"><i class="fas fa-briefcase me-2"></i>Vagas Sugeridas</span>
+                        <span class="metric-value">{{ suggested_jobs|length }}</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label"><i class="fas fa-file-alt me-2"></i>Pedidos pendentes</span>
+                        <span class="metric-value">{{ pending_orders }}</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label"><i class="fas fa-check-circle me-2"></i>Pedidos concluídos</span>
+                        <span class="metric-value">{{ completed_orders }}</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label"><i class="fas fa-star me-2"></i>Avaliações totais</span>
+                        <span class="metric-value">{{ total_reviews }}</span>
+                    </div>
                 </div>
             </div>
 
             <div class="chart-card">
                 <div class="chart-header">
-                    <i class="fas fa-star chart-icon"></i>
-                    <h4 class="chart-title">Avaliações</h4>
+                    <i class="fas fa-lightbulb chart-icon"></i>
+                    <h4 class="chart-title">Dicas para crescer</h4>
                 </div>
-                <div class="chart-container">
-                    <canvas id="ratingsChart"></canvas>
+                <div class="chart-content">
+                    <ul class="tip-list">
+                        <li>Complete seu perfil com mais detalhes e portfólio.</li>
+                        <li>Clique em "Explorar Mais" para ver serviços da concorrência.</li>
+                        <li>Responda rápido às mensagens e pedidos de orçamento.</li>
+                        <li>Atualize seu preço conforme a demanda do mercado.</li>
+                    </ul>
                 </div>
             </div>
         </aside>
     </div>
 </div>
 
+{% endblock %}
+
 {% block extra_js %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Gráfico de Ganhos
-    const earningsCtx = document.getElementById('earningsChart');
-    if (earningsCtx) {
-        const earningsChart = new Chart(earningsCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
-                datasets: [{
-                    label: 'Ganhos (R$)',
-                    data: [1200, 1900, 1500, 2500, 2200, 3000],
-                    borderColor: '#022F73',
-                    backgroundColor: 'rgba(2, 47, 115, 0.1)',
-                    borderWidth: 3,
-                    fill: true,
-                    tension: 0.4,
-                    pointRadius: 4,
-                    pointBackgroundColor: '#035edb'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            callback: function(value) {
-                                return 'R$ ' + value.toLocaleString('pt-BR');
-                            }
-                        }
-                    },
-                    x: { grid: { display: false } }
-                }
-            }
-        });
-    }
-
-    // Gráfico de Avaliações
-    const ratingsCtx = document.getElementById('ratingsChart');
-    if (ratingsCtx) {
-        const ratingsChart = new Chart(ratingsCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['5★', '4★', '3★', '2★', '1★'],
-                datasets: [{
-                    data: [12, 8, 3, 1, 0],
-                    backgroundColor: [
-                        '#28a745',
-                        '#20c997',
-                        '#ffc107',
-                        '#fd7e14',
-                        '#dc3545'
-                    ],
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: { padding: 20, usePointStyle: true }
-                    }
-                }
-            }
-        });
-    }
-
-    // Animação dos cards
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -803,50 +936,52 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'all 0.5s ease';
         observer.observe(card);
     });
-});
-</script>
-{% endblock %}
 
-<script>
-const searchInput = document.getElementById('searchInput');
-const suggestions = document.getElementById('searchSuggestions');
-let debounceTimer;
+    const searchInput = document.getElementById('searchInput');
+    const suggestions = document.getElementById('searchSuggestions');
+    let debounceTimer;
 
-searchInput.addEventListener('input', function() {
-    clearTimeout(debounceTimer);
-    const q = this.value.trim();
-    if (q.length < 2) { suggestions.style.display = 'none'; return; }
+    if (searchInput && suggestions) {
+        searchInput.addEventListener('input', function() {
+            clearTimeout(debounceTimer);
+            const q = this.value.trim();
+            if (q.length < 2) {
+                suggestions.style.display = 'none';
+                return;
+            }
 
-    debounceTimer = setTimeout(() => {
-        fetch(`/marketplace/api/search/?q=${encodeURIComponent(q)}`)
-            .then(r => r.json())
-            .then(data => {
-                if (!data.results || data.results.length === 0) {
-                    suggestions.innerHTML = '<div style="padding:16px; color:#999; text-align:center; font-size:14px;"><i class="fas fa-search me-2"></i>Nenhum resultado encontrado</div>';
-                } else {
-                    suggestions.innerHTML = data.results.map(item => `
-                        <a href="/marketplace/service/${item.id}/" style="display:flex; align-items:center; gap:12px; padding:12px 16px; text-decoration:none; color:#212529; border-bottom:1px solid #f0f0f0; transition:background 0.2s;"
-                           onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='white'">
-                            <div style="width:40px; height:40px; background:linear-gradient(135deg,#022F73,#035edb); border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                <i class="fas fa-briefcase" style="color:white; font-size:14px;"></i>
-                            </div>
-                            <div style="flex:1; min-width:0;">
-                                <div style="font-weight:600; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.title}</div>
-                                <div style="font-size:12px; color:#6c757d;">${item.category} • R$ ${item.price}</div>
-                            </div>
-                            <span style="font-size:12px; color:#022F73; font-weight:600; flex-shrink:0;">Ver →</span>
-                        </a>
-                    `).join('');
-                }
-                suggestions.style.display = 'block';
-            })
-            .catch(() => { suggestions.style.display = 'none'; });
-    }, 300);
-});
+            debounceTimer = setTimeout(() => {
+                fetch(`/marketplace/api/search/?q=${encodeURIComponent(q)}`)
+                    .then(r => r.json())
+                    .then(data => {
+                        if (!data.results || data.results.length === 0) {
+                            suggestions.innerHTML = '<div style="padding:16px; color:#999; text-align:center; font-size:14px;"><i class="fas fa-search me-2"></i>Nenhum resultado encontrado</div>';
+                        } else {
+                            suggestions.innerHTML = data.results.map(item => `
+                                <a href="/marketplace/service/${item.id}/" style="display:flex; align-items:center; gap:12px; padding:12px 16px; text-decoration:none; color:#212529; border-bottom:1px solid #f0f0f0; transition:background 0.2s;"
+                                   onmouseover="this.style.background='#f8f9fa'" onmouseout="this.style.background='white'">
+                                    <div style="width:40px; height:40px; background:linear-gradient(135deg,#022F73,#035edb); border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <i class="fas fa-briefcase" style="color:white; font-size:14px;"></i>
+                                    </div>
+                                    <div style="flex:1; min-width:0;">
+                                        <div style="font-weight:600; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.title}</div>
+                                        <div style="font-size:12px; color:#6c757d;">${item.category} • R$ ${item.price}</div>
+                                    </div>
+                                    <span style="font-size:12px; color:#022F73; font-weight:600; flex-shrink:0;">Ver →</span>
+                                </a>
+                            `).join('');
+                        }
+                        suggestions.style.display = 'block';
+                    })
+                    .catch(() => { suggestions.style.display = 'none'; });
+            }, 300);
+        });
 
-document.addEventListener('click', function(e) {
-    if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
-        suggestions.style.display = 'none';
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
+                suggestions.style.display = 'none';
+            }
+        });
     }
 });
 </script>

@@ -8,6 +8,7 @@ import logging
 from .forms import UserRegisterForm, LoginForm, UserUpdateForm
 from .models import UserProfile, Notification
 from .firebase_config import initialize_firebase_admin, firebase_admin_initialized
+from firebase_admin import auth as firebase_admin_auth
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +19,8 @@ import json
 
 try:
     initialize_firebase_admin()
+    if firebase_admin_initialized:
+        from firebase_admin import firestore
 except Exception as e:
     logger.warning(f"Firebase Admin não pôde ser inicializado: {e}")
 
@@ -228,8 +231,25 @@ def register_view(request):
                     freelancer_profile.save()
                     print(f"FreelancerProfile criado/atualizado: {freelancer_profile}")
 
-                # Firebase integration disabled - using Django auth only
-                messages.success(request, f'<i class="fas fa-check-circle"></i> Cadastro realizado com sucesso! Faça login para continuar.')
+                    if firebase_admin_initialized:
+                        try:
+                            firebase_admin_auth.create_user(
+                                email=email,
+                                email_verified=False,
+                                password=password,
+                                display_name=f"{first_name or ''} {last_name or ''}".strip(),
+                                disabled=False
+                            )
+                            print("Firebase Auth user criado com sucesso.")
+                        except firebase_admin_auth.EmailAlreadyExistsError:
+                            print("Firebase Auth user já existe para esse email.")
+                        except Exception as e:
+                            print(f"Erro criando usuário Firebase Auth: {e}")
+                            logger.warning(f"Erro criando usuário Firebase Auth: {e}")
+                    else:
+                        print("Firebase Admin não inicializado. Usuário não criado no Firebase Auth.")
+
+                messages.success(request, 'Cadastro realizado com sucesso! Faça login para continuar.')
                 print("=== CADASTRO BEM-SUCEDIDO ===\n")
                 return redirect('login')
 

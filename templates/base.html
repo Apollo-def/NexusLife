@@ -22,9 +22,53 @@
         html, body {
             margin: 0 !important;
             padding: 0 !important;
+            background: #f5f7fb;
         }
         
-        /* Estilo do botão de notificações */
+        .navbar {
+            background: linear-gradient(135deg, #042d73 0%, #063f9e 100%);
+            box-shadow: 0 16px 50px rgba(2, 47, 115, 0.22);
+            padding: 0.85rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #ffffff !important;
+            letter-spacing: 0.04em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            line-height: 1;
+        }
+
+        .navbar-brand i {
+            font-size: 1.4rem;
+            color: #00d4ff;
+            transform: translateY(1px);
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.92) !important;
+            font-weight: 600;
+            padding: 0.75rem 0.9rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #ffffff !important;
+            transform: translateY(-1px);
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(100%);
+        }
+
         .nav-link.btn-link {
             border: none;
             padding: 0.5rem;
@@ -37,9 +81,8 @@
             transform: scale(1.1);
         }
         
-        /* Estilo do dropdown de notificações */
         .dropdown-menu-end {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
         }
         
         .dropdown-menu li a.dropdown-item {
@@ -66,14 +109,14 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">NexusLife</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="{% url 'home' %}"><i class="fas fa-rocket"></i>NexusLife</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}">Perfil</a>
@@ -91,9 +134,7 @@
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown" style="width: 320px;">
                                 <li><h6 class="dropdown-header">Notificações Recentes</h6></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <div id="notifications-container" style="max-height: 400px; overflow-y: auto;">
-                                    <li><span class="dropdown-item-text text-muted small">Carregando...</span></li>
-                                </div>
+                                <li id="notifications-container" style="max-height: 400px; overflow-y: auto;"></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item text-center fw-bold" href="{% url 'notifications' %}">
                                     <i class="fas fa-bell"></i> Ver todas as notificações
@@ -149,7 +190,7 @@
             // Carregar quando o dropdown é aberto
             const notificationDropdown = document.getElementById('notificationDropdown');
             if (notificationDropdown) {
-                notificationDropdown.addEventListener('show.bs.dropdown', function() {
+                notificationDropdown.addEventListener('shown.bs.dropdown', function() {
                     loadNotifications();
                 });
             }

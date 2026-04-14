@@ -1,3 +1,4 @@
+import sys
 from django.apps import AppConfig
 
 # Esta classe de configuração permite ao Django saber sobre o aplicativo 'core' e suas configurações.
@@ -25,10 +26,11 @@ class CoreConfig(AppConfig):
         # Inicializa o Firebase Admin SDK quando o app Django estiver pronto.
         from . import firebase_config
         firebase_config.initialize_firebase_admin()
-        
-        # Inicializa o Chatbot AI (Gemini) quando o app Django estiver pronto.
-        self.initialize_chatbot_ai()
-        
+
+        # Inicializa o Chatbot AI apenas em tempo de execução do servidor, não durante migrate/test/shell.
+        if len(sys.argv) > 1 and sys.argv[1] in ('runserver', 'runserver_plus', 'uwsgi', 'gunicorn', 'daphne'):
+            self.initialize_chatbot_ai()
+
         # Registra signals para notificações e emails automáticos
         from . import signals
     
@@ -36,7 +38,7 @@ class CoreConfig(AppConfig):
         """Inicializa o Chatbot AI com Gemini ou OpenAI"""
         try:
             from .gemini_integration import GEMINI_AVAILABLE, NexusBotGemini
-            from .openai_integration import OPENAI_AVAILABLE, NexusBotAI
+            from .openai_integration import NexusBotAI
             import logging
             
             logger = logging.getLogger(__name__)
@@ -47,16 +49,17 @@ class CoreConfig(AppConfig):
                     logger.info("[OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!")
                 except Exception as e:
                     logger.warning(f"[AVISO] Erro ao inicializar Gemini AI: {str(e)}")
-            elif OPENAI_AVAILABLE:
+            else:
                 try:
                     openai_bot = NexusBotAI()
-                    logger.info("[OK] Chatbot AI ativado: OpenAI inicializado com sucesso!")
+                    if getattr(openai_bot, 'openai', None):
+                        logger.info("[OK] Chatbot AI ativado: OpenAI inicializado com sucesso!")
+                    else:
+                        logger.info("[INFO] OpenAI não disponível no momento. Usando respostas do dicionário.")
                 except Exception as e:
                     logger.warning(f"[AVISO] Erro ao inicializar OpenAI: {str(e)}")
-            else:
-                logger.info("[INFO] Chatbot AI nao disponível. Usando respostas do dicionário.")
-                logger.info("[INFO] Para ativar IA: instale google-generativeai ou openai")
-                logger.info("[INFO] Defina GEMINI_API_KEY ou OPENAI_API_KEY no arquivo .env")
+                    logger.info("[INFO] Para ativar IA: instale google-generativeai ou openai")
+                    logger.info("[INFO] Defina GEMINI_API_KEY ou OPENAI_API_KEY no arquivo .env")
         except Exception as e:
             import logging
             logger = logging.getLogger(__name__)
