@@ -3503,3 +3503,112 @@ WARNING 2026-04-16 11:03:43,910 gemini_integration 19300 21368 GEMINI_API_KEY nã
 INFO 2026-04-16 11:04:00,208 firebase_config 15564 27516 Firebase Admin SDK inicializado com sucesso!
 WARNING 2026-04-16 11:04:01,142 gemini_integration 15564 27516 Google Generative AI não instalado. Instale com: pip install google-generativeai
 WARNING 2026-04-16 11:04:01,142 gemini_integration 15564 27516 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:07:40,356 firebase_config 32672 14404 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:07:41,306 gemini_integration 32672 14404 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:07:41,306 gemini_integration 32672 14404 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:10:33,803 firebase_config 32644 3592 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:10:34,645 gemini_integration 32644 3592 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:10:34,645 gemini_integration 32644 3592 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:11:24,216 firebase_config 6584 31164 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:11:25,188 gemini_integration 6584 31164 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:11:25,188 gemini_integration 6584 31164 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:12:14,361 firebase_config 32292 16772 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-16 11:12:23,356 firebase_config 12200 14516 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-16 11:12:35,704 firebase_config 5860 12624 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-16 11:12:43,811 firebase_config 7376 20680 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:12:43,813 gemini_integration 7376 20680 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:12:43,813 gemini_integration 7376 20680 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:12:43,813 apps 7376 20680 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 11:12:45,140 firebase_config 23844 21368 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:12:45,142 gemini_integration 23844 21368 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:12:45,143 gemini_integration 23844 21368 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:12:45,143 apps 23844 21368 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 11:12:45,176 autoreload 23844 21368 Watching for file changes with StatReloader
+INFO 2026-04-16 11:13:07,461 firebase_config 10756 2964 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:13:08,428 gemini_integration 10756 2964 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:13:08,428 gemini_integration 10756 2964 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:14:02,707 firebase_config 30872 23488 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:14:02,709 gemini_integration 30872 23488 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:14:02,709 gemini_integration 30872 23488 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:14:02,710 apps 30872 23488 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 11:14:04,038 firebase_config 31720 12148 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:14:04,039 gemini_integration 31720 12148 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:14:04,039 gemini_integration 31720 12148 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:14:04,040 apps 31720 12148 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 11:14:04,081 autoreload 31720 12148 Watching for file changes with StatReloader
+INFO 2026-04-16 11:15:17,820 basehttp 13520 2968 "GET / HTTP/1.1" 200 34710
+INFO 2026-04-16 11:15:18,270 basehttp 13520 2968 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-16 11:15:18,271 basehttp 13520 4464 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:15:18,271 basehttp 13520 6160 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:15:18,279 basehttp 13520 6160 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:15:18,282 basehttp 13520 4464 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:15:18,282 basehttp 13520 22536 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-16 11:15:18,283 basehttp 13520 2968 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:15:18,283 basehttp 13520 26392 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:15:19,393 basehttp 13520 26392 "GET /register/ HTTP/1.1" 200 19977
+INFO 2026-04-16 11:15:23,198 basehttp 13520 26392 "GET /login/ HTTP/1.1" 200 9472
+INFO 2026-04-16 11:15:27,323 basehttp 13520 26392 "POST /login/ HTTP/1.1" 200 10131
+INFO 2026-04-16 11:15:32,956 basehttp 13520 26392 "POST /login/ HTTP/1.1" 302 0
+ERROR 2026-04-16 11:15:34,140 log 13520 26392 Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column marketplace_freelancerprofile.business_name does not exist
+LINE 1: ...", "marketplace_freelancerprofile"."person_type", "marketpla...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\aluno\Desktop\NexusLife\core\views.py", line 313, in home_view
+    profile = FreelancerProfile.objects.filter(user=request.user).first()
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\query.py", line 1057, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aluno\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column marketplace_freelancerprofile.business_name does not exist
+LINE 1: ...", "marketplace_freelancerprofile"."person_type", "marketpla...
+                                                             ^
+
+ERROR 2026-04-16 11:15:34,149 basehttp 13520 26392 "GET /home/ HTTP/1.1" 500 144754
+INFO 2026-04-16 11:16:01,813 firebase_config 25836 14992 Firebase Admin SDK inicializado com sucesso!
