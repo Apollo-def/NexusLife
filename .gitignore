@@ -6,3 +6,17 @@ db.sqlite3
 firebase-credentials.json
 
 logs/
+*.log
+staticfiles/
+.DS_Store
+*.swp
+*.swo
+.vscode/settings.json
+
+# IDE
+.idea/
+*.code-workspace
+
+# OS
+Thumbs.db
+ehthumbs.db

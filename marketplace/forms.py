@@ -1,5 +1,4 @@
 from django import forms
-from django import forms
 from .models import Category, Service, Order, FreelancerProfile
 
 class CategoryForm(forms.ModelForm):

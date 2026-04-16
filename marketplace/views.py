@@ -172,8 +172,6 @@ def order_update_status(request, pk, status):
     return redirect('marketplace:order_detail', pk=order.pk)
 
 
-from django.db.models import Q
-
 @login_required
 def pf_dashboard(request):
     """Dashboard Pessoa Física"""

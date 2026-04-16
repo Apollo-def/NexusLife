@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
+from django.views.decorators.http import require_http_methods
+from django.core.validators import validate_email
 import logging
 from .forms import UserRegisterForm, LoginForm, UserUpdateForm
 from .models import UserProfile, Notification
@@ -12,8 +14,6 @@ from firebase_admin import auth as firebase_admin_auth
 
 logger = logging.getLogger(__name__)
 
-if firebase_admin_initialized:
-    from firebase_admin import firestore
 from requests.exceptions import HTTPError
 import json
 
@@ -143,10 +143,10 @@ def login_view(request):
 def register_view(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
-        print(f"\n=== REGISTRO DEBUG ===")
-        print(f"Form valid: {form.is_valid()}")
-        print(f"Form errors: {form.errors}")
-        print(f"Form cleaned_data: {form.cleaned_data if form.is_valid() else 'N/A'}")
+        logger.debug(f"\n=== REGISTRO DEBUG ===")
+        logger.debug(f"Form valid: {form.is_valid()}")
+        logger.debug(f"Form errors: {form.errors}")
+        logger.debug(f"Form cleaned_data: {form.cleaned_data if form.is_valid() else 'N/A'}")
         
         if form.is_valid():
             username = form.cleaned_data.get('username') or ''
@@ -163,10 +163,10 @@ def register_view(request):
             city = form.cleaned_data.get('city', '').strip()
             state = form.cleaned_data.get('state', '').strip()
 
-            print(f"Person type: {person_type}")
-            print(f"CNPJ: {cpf_cnpj}")
-            print(f"First name: {first_name}")
-            print(f"Last name: {last_name}")
+            logger.debug(f"Person type: {person_type}")
+            logger.debug(f"CNPJ: {cpf_cnpj}")
+            logger.debug(f"First name: {first_name}")
+            logger.debug(f"Last name: {last_name}")
 
             if not username and email:
                 username = email.split('@')[0]
@@ -190,7 +190,7 @@ def register_view(request):
                     user_django.first_name = first_name or ''
                     user_django.last_name = last_name or ''
                     user_django.save()
-                    print(f"Usuário criado: {user_django.username}")
+                    logger.debug(f"Usuário criado: {user_django.username}")
 
                     # Cria perfil de usuário com dados adicionais
                     profile_data = {
@@ -212,7 +212,7 @@ def register_view(request):
                         for key, value in profile_data.items():
                             setattr(profile, key, value)
                         profile.save()
-                    print(f"UserProfile criado/atualizado: {profile}")
+                    logger.debug(f"UserProfile criado/atualizado: {profile}")
 
                     # Cria/atualiza perfil de freelancer com PF/PJ
                     from marketplace.models import FreelancerProfile
@@ -229,7 +229,7 @@ def register_view(request):
                         freelancer_profile.cnpj = cpf_cnpj
                         freelancer_profile.state_registration = state_registration or ''
                     freelancer_profile.save()
-                    print(f"FreelancerProfile criado/atualizado: {freelancer_profile}")
+                    logger.debug(f"FreelancerProfile criado/atualizado: {freelancer_profile}")
 
                     if firebase_admin_initialized:
                         try:
@@ -240,30 +240,28 @@ def register_view(request):
                                 display_name=f"{first_name or ''} {last_name or ''}".strip(),
                                 disabled=False
                             )
-                            print("Firebase Auth user criado com sucesso.")
+                            logger.debug("Firebase Auth user criado com sucesso.")
                         except firebase_admin_auth.EmailAlreadyExistsError:
-                            print("Firebase Auth user já existe para esse email.")
+                            logger.debug("Firebase Auth user já existe para esse email.")
                         except Exception as e:
-                            print(f"Erro criando usuário Firebase Auth: {e}")
                             logger.warning(f"Erro criando usuário Firebase Auth: {e}")
                     else:
-                        print("Firebase Admin não inicializado. Usuário não criado no Firebase Auth.")
+                        logger.warning("Firebase Admin não inicializado. Usuário não criado no Firebase Auth.")
 
                 messages.success(request, 'Cadastro realizado com sucesso! Faça login para continuar.')
-                print("=== CADASTRO BEM-SUCEDIDO ===\n")
+                logger.debug("=== CADASTRO BEM-SUCEDIDO ===\n")
                 return redirect('login')
 
             except Exception as e:
-                print(f"Erro na criação: {e}")
+                logger.error(f"Erro na criação: {e}")
                 import traceback
                 traceback.print_exc()
-                logger.error(f"Registration error: {e}")
                 messages.error(request, f'Erro inesperado: {str(e)}')
         else:
             # Se o formulário não é válido, mostrar erros
-            print(f"Form errors details:")
+            logger.debug(f"Form errors details:")
             for field, errors in form.errors.items():
-                print(f"  {field}: {errors}")
+                logger.debug(f"  {field}: {errors}")
                 for error in errors:
                     messages.error(request, f'{field}: {error}')
     else:
@@ -352,6 +350,7 @@ def password_reset_view(request):
     return render(request, 'core/password_reset.html')
 
 
+@require_http_methods(["POST"])
 def setup_admin_view(request):
     # Apenas permitir em DEBUG para não expor em produção.
     from django.conf import settings
@@ -359,16 +358,34 @@ def setup_admin_view(request):
         messages.error(request, 'Acesso bloqueado fora do modo de desenvolvimento.')
         return redirect('login')
 
-    username = request.GET.get('username', 'admin')
-    email = request.GET.get('email', 'admin@nexuslife.com')
-    password = request.GET.get('password', 'Nexus@123')
+    username = request.POST.get('username', '').strip()
+    email = request.POST.get('email', '').strip()
+    password = request.POST.get('password', '').strip()
+
+    # Validar inputs obrigatórios
+    if not all([username, email, password]):
+        messages.error(request, 'Todos os campos são obrigatórios: username, email, password.')
+        return redirect('login')
+
+    # Validar formato do email
+    from django.core.validators import validate_email
+    try:
+        validate_email(email)
+    except:
+        messages.error(request, 'Email inválido.')
+        return redirect('login')
+
+    # Validar força da senha (mínimo 8 caracteres)
+    if len(password) < 8:
+        messages.error(request, 'A senha deve ter pelo menos 8 caracteres.')
+        return redirect('login')
 
     if User.objects.filter(username=username).exists():
         messages.info(request, f'O usuário {username} já existe. Faça login em /admin')
         return redirect('login')
 
     User.objects.create_superuser(username=username, email=email, password=password)
-    messages.success(request, f'Superuser criado: {username} / {password}. Acesse /admin')
+    messages.success(request, f'Superuser criado: {username}. Acesse /admin')
     return redirect('login')
 
 

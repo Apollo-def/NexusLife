@@ -38,7 +38,7 @@ class CoreConfig(AppConfig):
         """Inicializa o Chatbot AI com Gemini ou OpenAI"""
         try:
             from .gemini_integration import GEMINI_AVAILABLE, NexusBotGemini
-            from .openai_integration import NexusBotAI
+            # Removed unused OpenAI import
             import logging
             
             logger = logging.getLogger(__name__)
@@ -50,16 +50,7 @@ class CoreConfig(AppConfig):
                 except Exception as e:
                     logger.warning(f"[AVISO] Erro ao inicializar Gemini AI: {str(e)}")
             else:
-                try:
-                    openai_bot = NexusBotAI()
-                    if getattr(openai_bot, 'openai', None):
-                        logger.info("[OK] Chatbot AI ativado: OpenAI inicializado com sucesso!")
-                    else:
-                        logger.info("[INFO] OpenAI não disponível no momento. Usando respostas do dicionário.")
-                except Exception as e:
-                    logger.warning(f"[AVISO] Erro ao inicializar OpenAI: {str(e)}")
-                    logger.info("[INFO] Para ativar IA: instale google-generativeai ou openai")
-                    logger.info("[INFO] Defina GEMINI_API_KEY ou OPENAI_API_KEY no arquivo .env")
+                    logger.info("[INFO] Gemini não disponível. Usando respostas básicas do chatbot.")
         except Exception as e:
             import logging
             logger = logging.getLogger(__name__)

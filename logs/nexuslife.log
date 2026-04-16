@@ -3303,3 +3303,203 @@ INFO 2026-04-13 11:45:42,490 basehttp 27776 6444 - Broken pipe from ('127.0.0.1'
 INFO 2026-04-13 11:45:42,990 basehttp 27776 28996 "POST /login/ HTTP/1.1" 200 10162
 WARNING 2026-04-13 11:47:28,447 firebase_config 25808 25648 Arquivo de credenciais do Firebase não encontrado em: c:\Users\aluno\Pictures\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
 INFO 2026-04-13 11:47:30,227 apps 25808 25648 [OK] Chatbot AI ativado: Gemini AI inicializado com sucesso!
+WARNING 2026-04-16 09:30:35,673 firebase_config 744 13376 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:30:37,668 firebase_config 744 13376 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:30:37,737 gemini_integration 744 13376 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:30:37,737 gemini_integration 744 13376 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:34:21,337 firebase_config 19396 31684 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:34:21,647 firebase_config 19396 31684 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:34:21,666 gemini_integration 19396 31684 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:34:21,667 gemini_integration 19396 31684 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:36:10,001 firebase_config 27544 24836 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:36:10,264 firebase_config 27544 24836 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:36:10,277 gemini_integration 27544 24836 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:36:10,277 gemini_integration 27544 24836 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:37:37,260 firebase_config 17356 14892 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:37:37,271 gemini_integration 17356 14892 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:37:37,271 gemini_integration 17356 14892 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:37:37,272 apps 17356 14892 [AVISO] Erro ao inicializar OpenAI: name 'NexusBotAI' is not defined
+INFO 2026-04-16 09:37:37,272 apps 17356 14892 [INFO] Para ativar IA: instale google-generativeai ou openai
+INFO 2026-04-16 09:37:37,272 apps 17356 14892 [INFO] Defina GEMINI_API_KEY ou OPENAI_API_KEY no arquivo .env
+WARNING 2026-04-16 09:37:38,808 firebase_config 27132 3648 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:37:38,816 gemini_integration 27132 3648 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:37:38,816 gemini_integration 27132 3648 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:37:38,816 apps 27132 3648 [AVISO] Erro ao inicializar OpenAI: name 'NexusBotAI' is not defined
+INFO 2026-04-16 09:37:38,816 apps 27132 3648 [INFO] Para ativar IA: instale google-generativeai ou openai
+INFO 2026-04-16 09:37:38,816 apps 27132 3648 [INFO] Defina GEMINI_API_KEY ou OPENAI_API_KEY no arquivo .env
+INFO 2026-04-16 09:37:38,865 autoreload 27132 3648 Watching for file changes with StatReloader
+WARNING 2026-04-16 09:37:38,920 firebase_config 27132 3648 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:43:40,144 firebase_config 18100 11224 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:43:40,964 firebase_config 18100 11224 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:43:40,972 gemini_integration 18100 11224 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:43:40,972 gemini_integration 18100 11224 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:43:57,757 firebase_config 29324 27220 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:43:57,758 gemini_integration 29324 27220 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:43:57,758 gemini_integration 29324 27220 GEMINI_API_KEY não configurada
+INFO 2026-04-16 09:43:57,758 apps 29324 27220 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+WARNING 2026-04-16 09:43:59,152 firebase_config 26740 14096 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:43:59,154 gemini_integration 26740 14096 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:43:59,154 gemini_integration 26740 14096 GEMINI_API_KEY não configurada
+INFO 2026-04-16 09:43:59,154 apps 26740 14096 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 09:43:59,191 autoreload 26740 14096 Watching for file changes with StatReloader
+WARNING 2026-04-16 09:43:59,216 firebase_config 26740 14096 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-16 09:44:16,387 basehttp 26740 28840 "GET / HTTP/1.1" 200 34710
+INFO 2026-04-16 09:44:17,183 basehttp 26740 28840 "GET /static/styles.css HTTP/1.1" 200 4923
+INFO 2026-04-16 09:44:17,187 basehttp 26740 10260 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 200 46334
+INFO 2026-04-16 09:44:17,190 basehttp 26740 11596 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 200 176217
+INFO 2026-04-16 09:44:17,197 basehttp 26740 28840 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 200 165739
+INFO 2026-04-16 09:44:17,211 basehttp 26740 10260 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 200 273774
+INFO 2026-04-16 09:44:17,213 basehttp 26740 11596 "GET /static/main.js HTTP/1.1" 200 9154
+INFO 2026-04-16 09:44:17,214 basehttp 26740 28840 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 200 111597
+INFO 2026-04-16 09:44:17,221 basehttp 26740 10260 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 200 189570
+WARNING 2026-04-16 09:44:18,450 log 26740 10260 Not Found: /favicon.ico
+WARNING 2026-04-16 09:44:18,451 basehttp 26740 10260 "GET /favicon.ico HTTP/1.1" 404 5038
+INFO 2026-04-16 09:44:42,256 basehttp 26740 10260 "GET /register/ HTTP/1.1" 200 19977
+WARNING 2026-04-16 09:45:18,286 firebase_config 10600 24912 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:45:18,530 firebase_config 10600 24912 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:45:18,532 gemini_integration 10600 24912 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:45:18,532 gemini_integration 10600 24912 GEMINI_API_KEY não configurada
+INFO 2026-04-16 09:52:02,142 basehttp 26740 19720 "GET /register/ HTTP/1.1" 200 19977
+INFO 2026-04-16 09:52:02,154 basehttp 26740 19720 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-16 09:52:02,154 basehttp 26740 13596 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-16 09:54:46,775 basehttp 26740 13596 "POST /register/ HTTP/1.1" 200 22602
+INFO 2026-04-16 09:55:33,452 signals 26740 13596 Email de boas-vindas enviado para joao.silva@emailteste.com
+INFO 2026-04-16 09:55:33,452 signals 26740 13596 Notificação e email enviados para joao.silva@emailteste.com
+ERROR 2026-04-16 09:55:33,796 views 26740 13596 Erro na criação: column core_userprofile.cep does not exist
+LINE 1: ..."phone", "core_userprofile"."state_registration", "core_user...
+                                                             ^
+
+INFO 2026-04-16 09:55:34,350 basehttp 26740 13596 "POST /register/ HTTP/1.1" 200 21295
+WARNING 2026-04-16 09:56:14,421 firebase_config 14516 25896 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:56:14,790 firebase_config 14516 25896 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:56:14,795 gemini_integration 14516 25896 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:56:14,795 gemini_integration 14516 25896 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:56:43,914 firebase_config 26056 12184 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:56:44,197 firebase_config 26056 12184 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:56:44,201 gemini_integration 26056 12184 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:56:44,201 gemini_integration 26056 12184 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:56:57,764 firebase_config 22836 16276 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:56:58,072 firebase_config 22836 16276 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:56:58,077 gemini_integration 22836 16276 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:56:58,077 gemini_integration 22836 16276 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:57:00,209 firebase_config 6640 7360 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:57:00,477 firebase_config 6640 7360 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:57:00,480 gemini_integration 6640 7360 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:57:00,480 gemini_integration 6640 7360 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:57:19,808 firebase_config 22988 12044 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:57:19,810 gemini_integration 22988 12044 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:57:19,810 gemini_integration 22988 12044 GEMINI_API_KEY não configurada
+INFO 2026-04-16 09:57:19,810 apps 22988 12044 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+WARNING 2026-04-16 09:57:21,689 firebase_config 19716 31816 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:57:21,690 gemini_integration 19716 31816 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:57:21,691 gemini_integration 19716 31816 GEMINI_API_KEY não configurada
+INFO 2026-04-16 09:57:21,691 apps 19716 31816 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 09:57:21,726 autoreload 19716 31816 Watching for file changes with StatReloader
+WARNING 2026-04-16 09:57:21,753 firebase_config 19716 31816 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:57:39,917 firebase_config 22348 8696 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:57:55,933 firebase_config 12296 1868 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:03,008 firebase_config 25276 27792 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:03,339 firebase_config 25276 27792 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:03,345 gemini_integration 25276 27792 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:58:03,346 gemini_integration 25276 27792 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:58:12,971 firebase_config 10664 28376 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:13,378 firebase_config 10664 28376 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:13,388 gemini_integration 10664 28376 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:58:13,389 gemini_integration 10664 28376 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:58:24,869 firebase_config 20992 10568 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:25,275 firebase_config 20992 10568 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:25,280 gemini_integration 20992 10568 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:58:25,280 gemini_integration 20992 10568 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:58:36,267 firebase_config 24264 16528 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:36,569 firebase_config 24264 16528 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:36,572 gemini_integration 24264 16528 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:58:36,572 gemini_integration 24264 16528 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:58:51,890 firebase_config 32368 32624 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 09:58:52,879 firebase_config 32368 32624 Firebase Admin não pôde ser inicializado: Failed to initialize a certificate credential. Caused by: "Unable to load PEM file. See https://cryptography.io/en/latest/faq/#why-can-t-i-import-my-pem-file for more details. InvalidData(InvalidPadding)". Firebase Admin desabilitado. O servidor continuará funcionando.
+WARNING 2026-04-16 09:58:52,891 gemini_integration 32368 32624 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:58:52,891 gemini_integration 32368 32624 GEMINI_API_KEY não configurada
+WARNING 2026-04-16 09:59:00,403 firebase_config 19080 24604 Firebase Admin não pôde ser inicializado: Failed to initialize a certificate credential. Caused by: "Unable to load PEM file. See https://cryptography.io/en/latest/faq/#why-can-t-i-import-my-pem-file for more details. InvalidData(InvalidPadding)". Firebase Admin desabilitado. O servidor continuará funcionando.
+WARNING 2026-04-16 09:59:00,691 firebase_config 19080 24604 Firebase Admin não pôde ser inicializado: Failed to initialize a certificate credential. Caused by: "Unable to load PEM file. See https://cryptography.io/en/latest/faq/#why-can-t-i-import-my-pem-file for more details. InvalidData(InvalidPadding)". Firebase Admin desabilitado. O servidor continuará funcionando.
+WARNING 2026-04-16 09:59:00,693 gemini_integration 19080 24604 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 09:59:00,693 gemini_integration 19080 24604 GEMINI_API_KEY não configurada
+INFO 2026-04-16 10:23:02,602 autoreload 19716 31816 C:\Users\aluno\Desktop\NexusLife\core\firebase_config.py changed, reloading.
+INFO 2026-04-16 10:23:05,349 autoreload 17084 14440 Watching for file changes with StatReloader
+INFO 2026-04-16 10:23:10,938 autoreload 17084 14440 C:\Users\aluno\Desktop\NexusLife\core\firebase_config.py changed, reloading.
+WARNING 2026-04-16 10:23:12,870 firebase_config 13520 21184 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 10:23:12,872 gemini_integration 13520 21184 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 10:23:12,872 gemini_integration 13520 21184 GEMINI_API_KEY não configurada
+INFO 2026-04-16 10:23:12,873 apps 13520 21184 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 10:23:12,928 autoreload 13520 21184 Watching for file changes with StatReloader
+WARNING 2026-04-16 10:23:12,952 firebase_config 13520 21184 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 10:23:25,997 firebase_config 21796 21464 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 10:45:08,769 firebase_config 9888 8060 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 10:45:19,816 firebase_config 26104 32380 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 10:45:19,817 gemini_integration 26104 32380 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 10:45:19,817 gemini_integration 26104 32380 GEMINI_API_KEY não configurada
+INFO 2026-04-16 10:45:19,817 apps 26104 32380 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+WARNING 2026-04-16 10:45:21,210 firebase_config 15356 19460 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+WARNING 2026-04-16 10:45:21,211 gemini_integration 15356 19460 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 10:45:21,211 gemini_integration 15356 19460 GEMINI_API_KEY não configurada
+INFO 2026-04-16 10:45:21,211 apps 15356 19460 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 10:45:21,246 autoreload 15356 19460 Watching for file changes with StatReloader
+WARNING 2026-04-16 10:45:21,272 firebase_config 15356 19460 Arquivo de credenciais do Firebase não encontrado em: C:\Users\aluno\Desktop\NexusLife\firebase-credentials.json. Firebase Admin desabilitado. Para habilitar, siga as instruções no README.md.
+INFO 2026-04-16 11:01:02,424 firebase_config 30752 19716 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:01:02,430 gemini_integration 30752 19716 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:01:02,430 gemini_integration 30752 19716 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:01:02,430 apps 30752 19716 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 11:01:04,136 firebase_config 2612 9708 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:01:04,138 gemini_integration 2612 9708 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:01:04,138 gemini_integration 2612 9708 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:01:04,138 apps 2612 9708 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 11:01:04,181 autoreload 2612 9708 Watching for file changes with StatReloader
+INFO 2026-04-16 11:01:04,695 firebase_config 20428 11840 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:01:04,700 gemini_integration 20428 11840 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:01:04,701 gemini_integration 20428 11840 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:01:04,701 apps 20428 11840 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 11:01:06,029 firebase_config 7716 4468 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:01:06,031 gemini_integration 7716 4468 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:01:06,031 gemini_integration 7716 4468 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:01:06,031 apps 7716 4468 [INFO] Gemini não disponível. Usando respostas básicas do chatbot.
+INFO 2026-04-16 11:01:06,067 autoreload 7716 4468 Watching for file changes with StatReloader
+INFO 2026-04-16 11:01:21,427 basehttp 13520 8212 "GET / HTTP/1.1" 200 34710
+INFO 2026-04-16 11:01:21,790 basehttp 13520 8212 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:21,791 basehttp 13520 13996 "GET /static/images/testimonials/testimonial-2.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:21,792 basehttp 13520 3296 "GET /static/images/testimonials/daniel.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:21,800 basehttp 13520 3296 "GET /static/images/testimonials/testimonial-3.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:21,805 basehttp 13520 8212 "GET /static/images/testimonials/testimonial-5.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:21,805 basehttp 13520 13996 "GET /static/images/testimonials/testimonial-4.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:21,808 basehttp 13520 3296 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:21,812 basehttp 13520 8212 "GET /static/images/testimonials/testimonial-6.jpeg HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:28,254 signals 13520 8212 Email de boas-vindas enviado para joao.silva@emailteste.com
+INFO 2026-04-16 11:01:28,255 signals 13520 8212 Notificação e email enviados para joao.silva@emailteste.com
+ERROR 2026-04-16 11:01:28,965 views 13520 8212 Erro na criação: column marketplace_freelancerprofile.person_type does not exist
+LINE 1: ...."id", "marketplace_freelancerprofile"."user_id", "marketpla...
+                                                             ^
+
+INFO 2026-04-16 11:01:29,010 basehttp 13520 8212 "POST /register/ HTTP/1.1" 200 21337
+INFO 2026-04-16 11:01:29,022 basehttp 13520 8212 "GET /static/styles.css HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:29,022 basehttp 13520 3296 "GET /static/main.js HTTP/1.1" 304 0
+INFO 2026-04-16 11:01:53,509 signals 13520 3296 Email de boas-vindas enviado para joao.silva@emailteste.com
+INFO 2026-04-16 11:01:53,509 signals 13520 3296 Notificação e email enviados para joao.silva@emailteste.com
+ERROR 2026-04-16 11:01:54,198 views 13520 3296 Erro na criação: column marketplace_freelancerprofile.person_type does not exist
+LINE 1: ...."id", "marketplace_freelancerprofile"."user_id", "marketpla...
+                                                             ^
+
+INFO 2026-04-16 11:01:54,206 basehttp 13520 3296 "POST /register/ HTTP/1.1" 200 21337
+INFO 2026-04-16 11:02:03,142 basehttp 13520 3296 "GET / HTTP/1.1" 200 34710
+INFO 2026-04-16 11:02:04,782 basehttp 13520 3296 "GET /register/ HTTP/1.1" 200 19977
+INFO 2026-04-16 11:02:15,421 basehttp 13520 3296 "GET / HTTP/1.1" 200 34710
+INFO 2026-04-16 11:02:16,504 basehttp 13520 3296 "GET /register/ HTTP/1.1" 200 19977
+INFO 2026-04-16 11:02:45,269 signals 13520 3296 Email de boas-vindas enviado para joao.silva@emailteste.com
+INFO 2026-04-16 11:02:45,269 signals 13520 3296 Notificação e email enviados para joao.silva@emailteste.com
+ERROR 2026-04-16 11:02:45,952 views 13520 3296 Erro na criação: column marketplace_freelancerprofile.person_type does not exist
+LINE 1: ...."id", "marketplace_freelancerprofile"."user_id", "marketpla...
+                                                             ^
+
+INFO 2026-04-16 11:02:45,979 basehttp 13520 3296 "POST /register/ HTTP/1.1" 200 21337
+INFO 2026-04-16 11:03:43,037 firebase_config 19300 21368 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:03:43,910 gemini_integration 19300 21368 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:03:43,910 gemini_integration 19300 21368 GEMINI_API_KEY não configurada
+INFO 2026-04-16 11:04:00,208 firebase_config 15564 27516 Firebase Admin SDK inicializado com sucesso!
+WARNING 2026-04-16 11:04:01,142 gemini_integration 15564 27516 Google Generative AI não instalado. Instale com: pip install google-generativeai
+WARNING 2026-04-16 11:04:01,142 gemini_integration 15564 27516 GEMINI_API_KEY não configurada
