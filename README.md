@@ -37,6 +37,49 @@
 
 ---
 
+## <i class="fas fa-cogs"></i> Funcionalidades Implementadas
+
+### <i class="fas fa-user"></i> Sistema de Usuários
+- ✅ Cadastro e login de usuários (PF e PJ)
+- ✅ Perfil de freelancer com dados pessoais/empresariais
+- ✅ Autenticação via Django + Firebase
+- ✅ Redefinição de senha via Firebase
+- ✅ Dashboard personalizado por tipo de usuário
+
+### <i class="fas fa-store"></i> Marketplace
+- ✅ Criação e gerenciamento de serviços
+- ✅ Sistema de categorias
+- ✅ Busca e filtros de serviços
+- ✅ Sistema de favoritos
+- ✅ Avaliações e ratings de serviços
+- ✅ Gestão de pedidos (cliente/freelancer)
+- ✅ Status de pedidos: Pendente → Em Andamento → Concluído/Cancelado
+
+### <i class="fas fa-database"></i> Banco de Dados
+- ✅ PostgreSQL via Neon (nuvem)
+- ✅ Migrações automatizadas
+- ✅ Relacionamentos complexos (OneToOne, ForeignKey)
+- ✅ Índices de performance
+
+### <i class="fas fa-shield-alt"></i> Segurança
+- ✅ Autenticação robusta
+- ✅ Proteção CSRF
+- ✅ Validação de formulários
+- ✅ Sanitização de dados
+
+### <i class="fas fa-mobile-alt"></i> Interface
+- ✅ Templates responsivos com Bootstrap 5
+- ✅ Design moderno e intuitivo
+- ✅ Mensagens de feedback
+- ✅ Navegação fluida
+
+### <i class="fas fa-fire"></i> Integrações
+- ✅ Firebase Authentication
+- ✅ Firestore (opcional para dados extras)
+- ✅ Gmail OAuth (integração opcional)
+
+---
+
 ## <i class="fas fa-bolt"></i> Quick Start
 
 ### <i class="fas fa-code-branch"></i> Clone e Instale
@@ -241,19 +284,12 @@ NexusLife/
 ## <i class="fas fa-wrench"></i> Tecnologias Utilizadas
 
 ### Backend
-- **Django 4.2** - Web framework
-- **Django REST Framework 3.14** - REST API
-- **PostgreSQL/SQLite** - Banco de dados
+- **Django 4.2** - Framework web completo
+- **Django REST Framework** - API REST
+- **PostgreSQL (Neon)** - Banco de dados na nuvem
+- **Firebase Admin SDK** - Autenticação e Firestore
+- **Bootstrap 5** - Interface responsiva
 - **Pillow** - Processamento de imagens
-- **django-cors-headers** - CORS
-
-### Frontend
-- **React 18** - Interface
-- **TypeScript 5** - Type safety
-- **Vite** - Build tool
-- **Tailwind CSS** - Styling
-- **shadcn/ui** - Componentes
-- **React Router** - Roteamento
 
 ### Deploy Ready
 - Docker (opcional)
@@ -505,8 +541,8 @@ docker run -p 8000:8000 nexuslife
 ### Pré-requisitos
 
 - Python 3.8 ou superior
-- PostgreSQL 13+ instalado e em execução
-- Node.js 18+ e npm (ou bun)
+- Conta no [Neon](https://neon.tech) para banco de dados PostgreSQL (gratuito)
+- Node.js 18+ e npm (opcional, para frontend)
 - Conta no [Firebase](https://console.firebase.google.com) com um projeto criado
 - Git
 
@@ -534,35 +570,36 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Criar o banco de dados PostgreSQL
+### 3. Criar o banco de dados no Neon
 
-Crie o banco via `psql` ou pgAdmin com o nome `nexuslife`:
-
-```sql
-CREATE DATABASE nexuslife;
-```
+1. Acesse [Neon Console](https://console.neon.tech)
+2. Crie um novo projeto
+3. Copie a connection string (formato: `postgresql://user:password@host/db?sslmode=require`)
+4. Use essa string na variável `DATABASE_URL` do `.env`
 
 ### 4. Configurar variáveis de ambiente
 
-Copie o arquivo de exemplo e preencha com suas credenciais:
+Copie o arquivo de exemplo e configure suas credenciais:
 
 ```bash
 cp .env.example .env
 ```
 
-Edite o `.env` com seus valores:
+Edite o `.env` com seus valores reais (especialmente DATABASE_URL do Neon e credenciais Firebase).
 
-```env
-SECRET_KEY=sua_chave_secreta_aqui
-DEBUG=True
-ALLOWED_HOSTS=127.0.0.1,localhost
+#### Variáveis do `.env` explicadas:
 
-DB_NAME=nexuslife
-DB_USER=postgres
-DB_PASSWORD=sua_senha
-DB_HOST=localhost
-DB_PORT=5432
-```
+| Variável | Obrigatório | Descrição |
+|----------|-------------|-----------|
+| `SECRET_KEY` | ✅ | Chave secreta do Django (troque em produção) |
+| `DEBUG` | ✅ | `True` para desenvolvimento, `False` para produção |
+| `ALLOWED_HOSTS` | ✅ | Hosts permitidos (ex: `127.0.0.1,localhost`) |
+| `DATABASE_URL` | ✅ | URL completa do banco Neon PostgreSQL |
+| `FIREBASE_*` | ✅ | Credenciais do projeto Firebase |
+| `GOOGLE_CLIENT_*` | ❌ | Para integração Gmail OAuth |
+| `OPENAI_API_KEY` | ❌ | Para chatbot com OpenAI |
+| `GEMINI_API_KEY` | ❌ | Para chatbot com Google Gemini |
+| `EMAIL_*` | ❌ | Para envio de emails de notificação |
 
 > O arquivo `.env` já está no `.gitignore` — nunca será enviado ao repositório.
 
@@ -610,13 +647,15 @@ python manage.py runserver
 
 A aplicação estará disponível em: `http://127.0.0.1:8000/`
 
-### 8. Configurar o frontend (opcional)
+### 8. Configurar o frontend (opcional - projeto separado)
+
+O frontend React é um projeto separado. Para desenvolvê-lo:
 
 ```bash
+# Em outro terminal/diretório
+git clone <frontend-repo-url> frontend
 cd frontend
 npm install
-
-# Iniciar dev server do frontend
 npm run dev
 ```
 
@@ -703,41 +742,32 @@ nexuslife/
 │   ├── views.py                   # login, register, profile, home, logout, password_reset
 │   └── tests.py                   # Testes automatizados
 │
-├── frontend/                      # SPA React + TypeScript (desacoplada)
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ui/                # Componentes shadcn/ui (50+ componentes Radix)
-│   │   │   ├── Header.tsx
-│   │   │   ├── Footer.tsx
-│   │   │   ├── HeroSection.tsx
-│   │   │   ├── FeaturesSection.tsx
-│   │   │   └── HowItWorksSection.tsx
-│   │   ├── pages/
-│   │   │   ├── Index.tsx          # Landing page
-│   │   │   └── NotFound.tsx       # Página 404
-│   │   ├── hooks/                 # Hooks customizados (use-mobile, use-toast)
-│   │   ├── lib/utils.ts           # Utilitários (cn helper para Tailwind)
-│   │   ├── App.tsx                # Roteamento principal
-│   │   └── main.tsx               # Entry point React
-│   ├── package.json
-│   ├── tailwind.config.ts
-│   ├── vite.config.ts
-│   └── playwright.config.ts
+├── marketplace/                   # App do marketplace
+│   ├── models.py                  # Modelos: Service, Order, Review, FreelancerProfile
+│   ├── views.py                   # Views para serviços, pedidos e perfis
+│   ├── forms.py                   # Formulários de criação e edição
+│   ├── admin.py                   # Interface administrativa
+│   ├── migrations/                # Migrações do banco de dados
+│   └── templates/marketplace/     # Templates HTML para o marketplace
 │
 ├── nexuslife/                     # Configurações do projeto Django
 │   ├── __init__.py
-│   ├── settings.py                # Configurações gerais, DB (PostgreSQL), auth redirects
-│   ├── urls.py                    # URLconf raiz
+│   ├── settings.py                # Configurações (DB Neon, auth, etc.)
+│   ├── urls.py                    # URLs principais
 │   ├── wsgi.py
 │   └── asgi.py
 │
-├── static/
-│   ├── images/                    # Assets estáticos (logo, avatares)
-│   └── styles.css                 # CSS global customizado
+├── static/                        # Arquivos estáticos
+│   ├── styles.css                 # CSS global
+│   ├── main.js                    # JavaScript interativo
+│   ├── firebase-config.js         # Configuração Firebase client
+│   └── images/                    # Imagens e assets
 │
-├── firebase-credentials.json      # ⚠️ NÃO versionar (está no .gitignore)
-├── manage.py
-└── requirements.txt
+├── firebase-credentials.json      # Credenciais Firebase (não versionar)
+├── manage.py                      # CLI Django
+├── requirements.txt               # Dependências Python
+├── .env                           # Variáveis de ambiente
+└── README.md                      # Esta documentação
 ```
 
 ---
@@ -756,53 +786,31 @@ nexuslife/
 | `LOGIN_REDIRECT_URL` | `'home'` | Rota após login bem-sucedido |
 | `LOGOUT_REDIRECT_URL` | `'login'` | Rota após logout |
 
-### Banco de dados (PostgreSQL)
+### Banco de dados (Neon PostgreSQL)
 
-O projeto usa PostgreSQL como banco de dados. A configuração atual em `nexuslife/settings.py`:
-
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nexuslife',
-        'USER': 'postgres',
-        'PASSWORD': 'sua_senha',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-```
-
-### Configuração para PostgreSQL (produção)
+O projeto usa Neon PostgreSQL como banco de dados. A configuração atual em `nexuslife/settings.py` usa `dj_database_url` para parsear a `DATABASE_URL`:
 
 ```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nexuslife',
-        'USER': 'seu_usuario',
-        'PASSWORD': 'sua_senha',
-        'HOST': 'localhost',
-        'PORT': '5432',
+import dj_database_url
+
+db_from_env = config('DATABASE_URL', default=None)
+if db_from_env:
+    DATABASES = {
+        'default': dj_database_url.parse(db_from_env, conn_max_age=600, ssl_require=True)
     }
-}
 ```
 
-Instale o driver: `pip install psycopg2-binary`
+Instale o driver: `pip install psycopg2-binary dj-database-url`
 
 ### Variáveis de ambiente recomendadas (produção)
 
-Crie um arquivo `.env` na raiz e use `python-decouple` ou `django-environ`:
+Crie um arquivo `.env` na raiz e use `python-decouple`:
 
 ```env
 SECRET_KEY=sua_chave_secreta_aqui
 DEBUG=False
 ALLOWED_HOSTS=seudominio.com,www.seudominio.com
-DB_NAME=nexuslife
-DB_USER=postgres
-DB_PASSWORD=sua_senha
-DB_HOST=localhost
-DB_PORT=5432
+DATABASE_URL=postgresql://user:password@host/db?sslmode=require
 ```
 
 ---
@@ -886,12 +894,12 @@ npm run build
 
 | Plataforma | Backend | Frontend |
 |------------|---------|----------|
-| Railway | <i class="fas fa-check-circle text-success"></i> | — |
-| Render | <i class="fas fa-check-circle text-success"></i> | <i class="fas fa-check-circle text-success"></i> |
-| Heroku | <i class="fas fa-check-circle text-success"></i> | — |
-| Vercel | — | <i class="fas fa-check-circle text-success"></i> |
-| Netlify | — | <i class="fas fa-check-circle text-success"></i> |
-| VPS (Ubuntu + Nginx) | <i class="fas fa-check-circle text-success"></i> | <i class="fas fa-check-circle text-success"></i> |
+| Railway | ✅ | — |
+| Render | ✅ | — |
+| Heroku | ✅ | — |
+| Vercel | — | — |
+| Netlify | — | — |
+| VPS Ubuntu + Nginx | ✅ | — |
 
 ---
 
@@ -952,22 +960,14 @@ git checkout -b fix/descricao-do-bug
 **O servidor inicia mesmo sem o `firebase-credentials.json`?**
 Sim. O Firebase Admin é inicializado com degradação graciosa — se o arquivo não for encontrado ou estiver corrompido, um aviso é exibido no console e o servidor continua funcionando. As funcionalidades que dependem do Firebase Admin (Firestore, verificação de token) ficam desabilitadas, mas login/logout via Django funcionam normalmente.
 
-**Preciso do PostgreSQL instalado para rodar o projeto?**
-Sim. O projeto usa PostgreSQL como banco de dados. Certifique-se de ter o PostgreSQL instalado, o banco `nexuslife` criado e o serviço em execução antes de rodar as migrações.
+**Preciso instalar PostgreSQL localmente?**
+Não. O projeto usa Neon (PostgreSQL na nuvem). Basta criar uma conta gratuita no Neon e configurar a `DATABASE_URL` no `.env`.
 
-**Posso usar SQLite em vez de PostgreSQL?**
-Sim, para desenvolvimento rápido. Substitua o bloco `DATABASES` no `settings.py`:
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-```
+**Posso usar SQLite em desenvolvimento?**
+Sim, para testes rápidos. Altere a configuração em `settings.py` para usar SQLite, mas o recomendado é usar Neon PostgreSQL para consistência com produção.
 
 **O frontend React é obrigatório?**
-Não. O backend Django possui seus próprios templates HTML (Bootstrap 5) e funciona de forma completamente independente. O frontend é uma SPA separada para quem quiser evoluir o projeto para uma arquitetura desacoplada.
+Não. O backend Django possui templates HTML completos com Bootstrap 5. O frontend React é opcional e pode ser desenvolvido separadamente se desejar uma SPA moderna.
 
 **Como adicionar novos campos ao perfil do usuário?**
 Estenda o `UserUpdateForm` em `core/forms.py` e atualize a view `profile_view` em `core/views.py`. Para campos extras além do modelo `User` padrão do Django, crie um modelo `Profile` com `OneToOneField(User)`.
