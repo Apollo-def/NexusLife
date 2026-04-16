@@ -465,6 +465,7 @@ docker run -p 8000:8000 nexuslife
 
 ---
 
+
 ## Tecnologias Utilizadas
 
 ### Backend
