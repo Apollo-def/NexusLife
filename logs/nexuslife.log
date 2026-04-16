@@ -3612,3 +3612,16 @@ LINE 1: ...", "marketplace_freelancerprofile"."person_type", "marketpla...
 
 ERROR 2026-04-16 11:15:34,149 basehttp 13520 26392 "GET /home/ HTTP/1.1" 500 144754
 INFO 2026-04-16 11:16:01,813 firebase_config 25836 14992 Firebase Admin SDK inicializado com sucesso!
+INFO 2026-04-16 11:16:23,813 basehttp 13520 26392 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-16 11:16:25,507 basehttp 13520 26392 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 30383
+INFO 2026-04-16 11:16:31,365 basehttp 13520 26392 "GET /marketplace/ HTTP/1.1" 200 6709
+INFO 2026-04-16 11:16:37,699 basehttp 13520 26392 "GET /chatbot/ HTTP/1.1" 200 16140
+INFO 2026-04-16 11:16:39,188 basehttp 13520 26392 "GET /profile/ HTTP/1.1" 200 16995
+WARNING 2026-04-16 11:17:15,896 log 13520 26392 Forbidden (CSRF token from POST incorrect.): /register/
+WARNING 2026-04-16 11:17:15,897 basehttp 13520 26392 "POST /register/ HTTP/1.1" 403 2519
+INFO 2026-04-16 11:17:17,726 basehttp 13520 26392 "GET /register/ HTTP/1.1" 200 20757
+INFO 2026-04-16 11:17:21,698 basehttp 13520 26392 - Broken pipe from ('127.0.0.1', 64847)
+INFO 2026-04-16 11:17:22,553 basehttp 13520 22536 "GET /chatbot/ HTTP/1.1" 200 16140
+INFO 2026-04-16 11:17:25,621 basehttp 13520 22536 "GET /home/ HTTP/1.1" 302 0
+INFO 2026-04-16 11:17:27,226 basehttp 13520 22536 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29772
+INFO 2026-04-16 11:18:05,165 basehttp 13520 22536 "GET /marketplace/dashboard/pf/ HTTP/1.1" 200 29772
